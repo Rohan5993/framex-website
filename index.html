@@ -777,6 +777,41 @@ footer{padding:22px 0 26px !important}
 .fx-hs-on .fx-hs-viewport{padding-bottom:0}
 .fx-hs-on .fx-hs-meter{padding-top:30px;padding-bottom:0}
 .fx-pill{margin-top:28px}
+/* ---------- v21 ---------- */
+/* Problem mocks: natural height (never clipped), Fix pill pinned to the bottom of every card */
+.vz{align-self:stretch;height:100%;gap:0}
+.vz .li{flex:0 0 auto;overflow:visible}
+.vz .li-prof,.vz .li-mem{overflow:hidden}
+.fx-pill{margin-top:auto !important}
+.vz .li + .fx-pill{margin-top:auto}
+.vz::after{content:"";flex:0 0 22px;order:1}
+.fx-pill{order:2}
+
+/* Ledger: number and bar animate together (driven by script) */
+.fx-count{counter-reset:none !important;animation:none !important}
+.fx-count::after{content:none !important}
+.fx-js .fx-reveal .fx-ticks-fill{transition:none !important}
+
+/* Sprint phases: steps on a system line */
+.fx-steps{position:relative;list-style:none;margin:2px 0 0;padding:0;display:flex;flex-direction:column;gap:16px}
+.fx-steps::before{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:1.5px;background:rgba(12,14,13,.14)}
+.fx-steps::after{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:1.5px;background:#FF5B2E;transform-origin:top}
+.fx-seg-build .fx-steps::before{background:rgba(250,248,244,.2)}
+.fx-seg-build .fx-steps::after{background:#FFA46B}
+.fx-steps li{position:relative;display:grid;grid-template-columns:14px minmax(0,1fr);column-gap:12px;row-gap:2px;align-items:start}
+.fx-step-dot{grid-row:1/3;width:13px;height:13px;margin-top:3px;border-radius:50%;border:1.5px solid #FF5B2E;background:#FF5B2E;position:relative;z-index:1}
+.fx-seg-build .fx-step-dot{border-color:#FFA46B;background:#FFA46B}
+.fx-step-n{font-size:14px;font-weight:600;line-height:1.3}
+.fx-step-t{font-family:'Spline Sans Mono',ui-monospace,monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#5F5B53}
+.fx-seg-build .fx-step-n{color:#FAF8F4}
+.fx-seg-build .fx-step-t{color:#C9C4B9}
+.fx-js .fx-steps::after{transform:scaleY(0);transition:transform 1.1s cubic-bezier(.4,0,.2,1) calc(var(--i) * .2s + .9s)}
+.fx-js .fx-step-dot{background:transparent;transform:scale(.6);transition:background-color .4s ease,transform .5s cubic-bezier(.2,.8,.2,1.5);transition-delay:calc(var(--i) * .2s + var(--d) * .35s + .9s)}
+.fx-js .fx-seg-build .fx-step-dot{background:transparent}
+.fx-js .fx-vis .fx-steps::after{transform:none}
+.fx-js .fx-vis .fx-step-dot{background:#FF5B2E;transform:none}
+.fx-js .fx-vis .fx-seg-build .fx-step-dot{background:#FFA46B}
+.fx-seg{min-height:330px}
 
 /* standalone site extras */
 html{scroll-behavior:smooth}
@@ -864,11 +899,11 @@ html{scroll-behavior:smooth}
   <section aria-label="Market evidence" style="border-bottom: 1px solid #E2DDD3; background: #FFFFFF">
     <div class="fx-wrap" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr))">
       <div class="fx-reveal" style="padding: 40px 32px 40px 0; display: flex; gap: 24px; align-items: baseline">
-        <span class="fx-display" style="font-size: clamp(52px, 5vw, 72px); line-height: 1"><span class="fx-count" style="--to: 94" aria-hidden="true"></span><span class="fx-sr">94</span>%</span>
+        <span class="fx-display" style="font-size: clamp(52px, 5vw, 72px); line-height: 1"><span class="fx-count" data-to="94" aria-hidden="true">94</span><span class="fx-sr">94</span>%</span>
         <div style="display: flex; flex-direction: column; gap: 10px"><p style="margin: 0; font-size: 17px; line-height: 1.5">of buying groups rank their shortlist before contacting a vendor.</p><span class="fx-chip" style="align-self: flex-start">6sense</span></div>
       </div>
       <div class="fx-reveal" style="padding: 40px 0 40px 32px; display: flex; gap: 24px; align-items: baseline; border-left: 1px solid #E2DDD3">
-        <span class="fx-display" style="font-size: clamp(52px, 5vw, 72px); line-height: 1"><span class="fx-count" style="--to: 71" aria-hidden="true"></span><span class="fx-sr">71</span>%</span>
+        <span class="fx-display" style="font-size: clamp(52px, 5vw, 72px); line-height: 1"><span class="fx-count" data-to="71" aria-hidden="true">71</span><span class="fx-sr">71</span>%</span>
         <div style="display: flex; flex-direction: column; gap: 10px"><p style="margin: 0; font-size: 17px; line-height: 1.5">of the "hidden" buyers in a deal have little or no contact with sales.</p><span class="fx-chip" style="align-self: flex-start">Edelman–LinkedIn</span></div>
       </div>
     </div>
@@ -1022,17 +1057,17 @@ html{scroll-behavior:smooth}
       <!-- Ledger -->
       <ol style="list-style: none; margin: clamp(80px, 9vw, 136px) 0 0; padding: 0; border-bottom: 1px solid #D9D3C7">
         <li class="fx-reveal fx-ledger">
-          <span class="fx-display fx-ledger-num"><span class="fx-count" style="--to: 94" aria-hidden="true"></span><span class="fx-sr">94</span><span class="pct">%</span></span>
+          <span class="fx-display fx-ledger-num"><span class="fx-count" data-to="94" aria-hidden="true">94</span><span class="fx-sr">94</span><span class="pct">%</span></span>
           <div class="fx-ledger-text"><h3>The ranking happens before you're called.</h3><p>94% of buying groups rank preferred vendors before first contact, and buy from that pre-contact favourite 77% of the time.</p></div>
           <div class="fx-ledger-viz"><div class="fx-ticks" aria-hidden="true"><div class="fx-ticks-fill" style="--p: 94%"></div></div><span class="fx-chip">6sense</span></div>
         </li>
         <li class="fx-reveal fx-ledger">
-          <span class="fx-display fx-ledger-num"><span class="fx-count" style="--to: 67" aria-hidden="true"></span><span class="fx-sr">67</span><span class="pct">%</span></span>
+          <span class="fx-display fx-ledger-num"><span class="fx-count" data-to="67" aria-hidden="true">67</span><span class="fx-sr">67</span><span class="pct">%</span></span>
           <div class="fx-ledger-text"><h3>Buyers want to vet without being sold to.</h3><p>67% prefer a rep-free buying experience, but 69% still want a human to validate what AI told them.</p></div>
           <div class="fx-ledger-viz"><div class="fx-ticks" aria-hidden="true"><div class="fx-ticks-fill" style="--p: 67%"></div></div><span class="fx-chip">Gartner</span></div>
         </li>
         <li class="fx-reveal fx-ledger">
-          <span class="fx-display fx-ledger-num"><span class="fx-count" style="--to: 71" aria-hidden="true"></span><span class="fx-sr">71</span><span class="pct">%</span></span>
+          <span class="fx-display fx-ledger-num"><span class="fx-count" data-to="71" aria-hidden="true">71</span><span class="fx-sr">71</span><span class="pct">%</span></span>
           <div class="fx-ledger-text"><h3>Most of the committee never meets you.</h3><p>71% of hidden buyers have little or no contact with sales, yet 95% say strong thought leadership makes them more receptive to outreach.</p></div>
           <div class="fx-ledger-viz"><div class="fx-ticks" aria-hidden="true"><div class="fx-ticks-fill" style="--p: 71%"></div></div><span class="fx-chip">Edelman–LinkedIn</span></div>
         </li>
@@ -1517,41 +1552,41 @@ html{scroll-behavior:smooth}
               <div class="fx-seg fx-seg-build" style="--i: 0">
                 <div class="fx-seg-top"><span class="fx-seg-ic"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="#FFA46B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16M6 20V10l6-5 6 5v10M10 20v-5h4v5"></path></svg></span><span class="fx-seg-time">~4 hrs of yours</span></div>
                 <div class="fx-seg-head"><span class="fx-seg-t">Build</span><span class="fx-seg-range">Days 1–14</span></div>
-                <ul class="fx-tasks">
-                    <li style="--d: 0"><span class="fx-tick" aria-hidden="true"><svg viewBox="0 0 12 12" width="10" height="10"><path d="M2.5 6.2l2.3 2.3 4.7-4.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="fx-task-n">Interviews, audit</span><b><i style="--s: 0%; --w: 42%; --d: 0"></i></b></li>
-                    <li style="--d: 1"><span class="fx-tick" aria-hidden="true"><svg viewBox="0 0 12 12" width="10" height="10"><path d="M2.5 6.2l2.3 2.3 4.7-4.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="fx-task-n">Leak map</span><b><i style="--s: 30%; --w: 30%; --d: 1"></i></b></li>
-                    <li style="--d: 2"><span class="fx-tick" aria-hidden="true"><svg viewBox="0 0 12 12" width="10" height="10"><path d="M2.5 6.2l2.3 2.3 4.7-4.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="fx-task-n">Build and approve</span><b><i style="--s: 42%; --w: 58%; --d: 2"></i></b></li>
-                </ul>
+                <ol class="fx-steps">
+                  <li style="--d: 0"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Interviews and audit</span><span class="fx-step-t">Week 1</span></li>
+                  <li style="--d: 1"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Leak map</span><span class="fx-step-t">Week 1–2</span></li>
+                  <li style="--d: 2"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Build and approve</span><span class="fx-step-t">Week 2</span></li>
+                </ol>
                 <div class="fx-seg-out"><span>Outcome</span><strong>Every system approved</strong></div>
               </div>
               <div class="fx-seg fx-seg-m1" style="--i: 1">
                 <div class="fx-seg-top"><span class="fx-seg-ic"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="#FF5B2E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h12M13 6l6 6-6 6"></path></svg></span><span class="fx-seg-time">~30 min / week</span></div>
                 <div class="fx-seg-head"><span class="fx-seg-t">Execute</span><span class="fx-seg-range">Days 15–30</span></div>
-                <ul class="fx-tasks">
-                    <li style="--d: 0"><span class="fx-tick" aria-hidden="true"><svg viewBox="0 0 12 12" width="10" height="10"><path d="M2.5 6.2l2.3 2.3 4.7-4.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="fx-task-n">Founder posts</span><b><i style="--s: 6%; --w: 94%; --d: 0"></i></b></li>
-                    <li style="--d: 1"><span class="fx-tick" aria-hidden="true"><svg viewBox="0 0 12 12" width="10" height="10"><path d="M2.5 6.2l2.3 2.3 4.7-4.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="fx-task-n">Flagship resource</span><b><i style="--s: 10%; --w: 34%; --d: 1"></i></b></li>
-                    <li style="--d: 2"><span class="fx-tick" aria-hidden="true"><svg viewBox="0 0 12 12" width="10" height="10"><path d="M2.5 6.2l2.3 2.3 4.7-4.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="fx-task-n">Conversations</span><b><i style="--s: 14%; --w: 86%; --d: 2"></i></b></li>
-                </ul>
+                <ol class="fx-steps">
+                  <li style="--d: 0"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Profile and first posts live</span><span class="fx-step-t">Day 15</span></li>
+                  <li style="--d: 1"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Flagship resource launch</span><span class="fx-step-t">Week 3</span></li>
+                  <li style="--d: 2"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Signal-led conversations</span><span class="fx-step-t">Daily</span></li>
+                </ol>
                 <div class="fx-seg-out"><span>Outcome</span><strong>Initial traction</strong></div>
               </div>
               <div class="fx-seg fx-seg-m2" style="--i: 2">
                 <div class="fx-seg-top"><span class="fx-seg-ic"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="#FF5B2E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="4"></circle><circle cx="12" cy="12" r="0.8"></circle></svg></span><span class="fx-seg-time">Monthly review</span></div>
                 <div class="fx-seg-head"><span class="fx-seg-t">Sharpen</span><span class="fx-seg-range">Days 31–60</span></div>
-                <ul class="fx-tasks">
-                    <li style="--d: 0"><span class="fx-tick" aria-hidden="true"><svg viewBox="0 0 12 12" width="10" height="10"><path d="M2.5 6.2l2.3 2.3 4.7-4.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="fx-task-n">Refine</span><b><i style="--s: 16%; --w: 44%; --d: 0"></i></b></li>
-                    <li style="--d: 1"><span class="fx-tick" aria-hidden="true"><svg viewBox="0 0 12 12" width="10" height="10"><path d="M2.5 6.2l2.3 2.3 4.7-4.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="fx-task-n">Double down</span><b><i style="--s: 44%; --w: 56%; --d: 1"></i></b></li>
-                    <li style="--d: 2"><span class="fx-tick" aria-hidden="true"><svg viewBox="0 0 12 12" width="10" height="10"><path d="M2.5 6.2l2.3 2.3 4.7-4.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="fx-task-n">Always on</span><b><i style="--s: 0%; --w: 100%; --d: 2"></i></b></li>
-                </ul>
+                <ol class="fx-steps">
+                  <li style="--d: 0"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Review what moved</span><span class="fx-step-t">Week 5</span></li>
+                  <li style="--d: 1"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Refine positioning and triggers</span><span class="fx-step-t">Week 6</span></li>
+                  <li style="--d: 2"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Double down on what converts</span><span class="fx-step-t">Week 7–8</span></li>
+                </ol>
                 <div class="fx-seg-out"><span>Outcome</span><strong>Sharper targeting</strong></div>
               </div>
               <div class="fx-seg fx-seg-m3" style="--i: 3">
                 <div class="fx-seg-top"><span class="fx-seg-ic"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="#E04A1F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18l6-6 4 4 6-8"></path><path d="M15 8h5v5"></path></svg></span><span class="fx-seg-time">Quarterly review</span></div>
                 <div class="fx-seg-head"><span class="fx-seg-t">Compound</span><span class="fx-seg-range">Days 61–90</span></div>
-                <ul class="fx-tasks">
-                    <li style="--d: 0"><span class="fx-tick" aria-hidden="true"><svg viewBox="0 0 12 12" width="10" height="10"><path d="M2.5 6.2l2.3 2.3 4.7-4.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="fx-task-n">Deeper coverage</span><b><i style="--s: 20%; --w: 80%; --d: 0"></i></b></li>
-                    <li style="--d: 1"><span class="fx-tick" aria-hidden="true"><svg viewBox="0 0 12 12" width="10" height="10"><path d="M2.5 6.2l2.3 2.3 4.7-4.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="fx-task-n">Shortlisted</span><b><i style="--s: 50%; --w: 50%; --d: 1"></i></b></li>
-                    <li style="--d: 2"><span class="fx-tick" aria-hidden="true"><svg viewBox="0 0 12 12" width="10" height="10"><path d="M2.5 6.2l2.3 2.3 4.7-4.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="fx-task-n">Always on</span><b><i style="--s: 0%; --w: 100%; --d: 2"></i></b></li>
-                </ul>
+                <ol class="fx-steps">
+                  <li style="--d: 0"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Next resource</span><span class="fx-step-t">Week 9</span></li>
+                  <li style="--d: 1"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Deeper account coverage</span><span class="fx-step-t">Week 10–12</span></li>
+                  <li style="--d: 2"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Committees shortlist you</span><span class="fx-step-t">Day 90</span></li>
+                </ol>
                 <div class="fx-seg-out"><span>Outcome</span><strong>Committees shortlist you</strong></div>
               </div>
             </div>
@@ -1581,8 +1616,8 @@ html{scroll-behavior:smooth}
         <p class="fx-label" style="margin: 0">FAQ</p>
         <h2 class="fx-display fx-h2 fx-faq-h">Questions<br><em>founders ask</em><br>first.</h2>
       </div>
-      <div class="fx-faq fx-faq-r" style="min-width: 0; border-top: 1px solid #0C0E0D">
-        <details style="border-bottom: 1px solid #D9D3C7"><summary>"We get most of our business through referrals. Why change?"</summary><p class="fx-faq-a" style="margin: 0 0 24px; max-width: 64ch; font-size: 17px; line-height: 1.65; color: #3F3C36">Don't replace referrals; extend them. Referrals work because trust transfers. The limit is reach: they can't get you to buyers outside your network, and even referred buyers check you out first. Hinge found more than half of buyers had ruled out a referred firm before speaking to it, most often because they couldn't tell what the firm did. We make sure a referral lands on positioning that confirms it. <span class="fx-chip">Hinge</span></p></details>
+      <div class="fx-faq fx-faq-r" style="min-width: 0">
+        <details style="border-bottom: 1px solid #D9D3C7"><summary>"We get most of our business through referrals. Why change?"</summary><p class="fx-faq-a" style="margin: 0 0 24px; max-width: 64ch; font-size: 17px; line-height: 1.65; color: #3F3C36">Don't replace referrals; extend them. Referrals work because trust transfers. The limit is reach: they can't get you to buyers outside your network, and even referred buyers check you out first. Research found more than half of buyers had ruled out a referred firm before speaking to it, most often because they couldn't tell what the firm did. We make sure a referral lands on positioning that confirms it.</p></details>
         <details style="border-bottom: 1px solid #D9D3C7"><summary>"We tried LinkedIn. It didn't work."</summary><p class="fx-faq-a" style="margin: 0 0 24px; max-width: 64ch; font-size: 17px; line-height: 1.65; color: #3F3C36">Usually one of three things went wrong. The profile didn't say who you're for, the content was about you rather than the buyer's decisions, or the outreach opened with a pitch. Those are positioning and conversation problems, not channel problems. The diagnostic will show which one it was. If LinkedIn genuinely isn't your leak, we'll tell you.</p></details>
         <details style="border-bottom: 1px solid #D9D3C7"><summary>"Our founder has no time."</summary><p class="fx-faq-a" style="margin: 0 0 24px; max-width: 64ch; font-size: 17px; line-height: 1.65; color: #3F3C36">The system is built around that. Expect about four hours in the first 14 days, mostly interviews and approvals. After that, it's a 30-minute monthly interview, a monthly review call, and a few minutes a week approving content. What we can't replace is the founder's judgment. That's the asset, and we need access to it, not hours of it.</p></details>
         <details style="border-bottom: 1px solid #D9D3C7"><summary>"How fast will we see something happen?"</summary><p class="fx-faq-a" style="margin: 0 0 24px; max-width: 64ch; font-size: 17px; line-height: 1.65; color: #3F3C36">Setup takes 14 days and execution starts on day 15, so month 1 is a working month. In month 1 we aim for initial traction: target accounts viewing the profile, fit accounts downloading the first resource, and the first trigger-led conversations. Qualified opportunities in a committee-driven sale usually take longer to form, which is why we review every month and recommend at least three months together.</p></details>
@@ -1674,6 +1709,36 @@ html{scroll-behavior:smooth}
     cards.forEach(function (c, i) { if (c && i < n) c.classList.add('in'); });
   }
 
+  function animateCount(el) {
+    var counts = Array.prototype.slice.call(el.querySelectorAll('.fx-count'));
+    var fills = Array.prototype.slice.call(el.querySelectorAll('.fx-ticks-fill'));
+    if (!counts.length && !fills.length) return;
+    var targets = fills.map(function (f) { return parseFloat(getComputedStyle(f).getPropertyValue('--p')) || 0; });
+    var t0 = performance.now(), dur = 1800, delay = 250;
+    counts.forEach(function (c) { c.textContent = '0'; });
+    (function step(now) {
+      var t = Math.max(0, Math.min(1, (now - t0 - delay) / dur));
+      var e = 1 - Math.pow(1 - t, 3);
+      counts.forEach(function (c) { c.textContent = String(Math.round((+c.getAttribute('data-to') || 0) * e)); });
+      fills.forEach(function (f, i) { f.style.clipPath = 'inset(0 ' + (100 - targets[i] * e).toFixed(2) + '% 0 0)'; });
+      if (t < 1) requestAnimationFrame(step);
+    })(t0);
+  }
+
+  function fitMocks() {
+    cards.forEach(function (c) {
+      if (!c) return;
+      var li = c.querySelector('.li');
+      if (!li) return;
+      li.style.zoom = '';
+      var over = c.scrollHeight - c.clientHeight;
+      if (over > 0) {
+        var h = li.offsetHeight;
+        li.style.zoom = String(Math.max(0.6, (h - over - 6) / h).toFixed(3));
+      }
+    });
+  }
+
   function measure() {
     var H = window.innerHeight;
     if (pinned) {
@@ -1685,6 +1750,7 @@ html{scroll-behavior:smooth}
       track.style.transform = '';
       cards.forEach(function (c) { if (c) { c.style.transform = ''; c.style.opacity = ''; } });
     }
+    fitMocks();
     stage.style.removeProperty('--cardh');
     if (stackOn) {
       var tallest = sys.reduce(function (m, c) { return Math.max(m, c ? c.offsetHeight : 0); }, 0);
@@ -1812,7 +1878,7 @@ html{scroll-behavior:smooth}
   if (!reduced && 'IntersectionObserver' in window) {
     root.classList.add('fx-js');
     var io = new IntersectionObserver(function (es) {
-      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('fx-vis'); io.unobserve(e.target); } });
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('fx-vis'); animateCount(e.target); io.unobserve(e.target); } });
     }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
     all('.fx-reveal, .fx-draw, .fx-pop').forEach(function (el) { io.observe(el); });
   }
