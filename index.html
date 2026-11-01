@@ -873,6 +873,14 @@ footer{padding:22px 0 26px !important}
   .fx-tl-node,.fx-tl-col:first-child .fx-tl-node{position:static;margin-top:-44px;margin-bottom:4px}
 }
 @media (max-width:560px){.fx-tl-cols{grid-template-columns:1fr}}
+/* ---------- v23 ---------- */
+.fx-marquee-track span{font-size:clamp(16px,1.5vw,21px);gap:22px;padding:13px 12px}
+.fx-bpm .fx-fvc{background:#FF5B2E !important;color:#0C0E0D !important}
+.fx-tl{padding-top:64px}
+.fx-tl-live{top:-40px}
+.fx-tl-live::after{height:32px}
+@media (min-width:900px){.fx-tl-out strong{white-space:nowrap;font-size:clamp(16px,1.35vw,20px)}}
+.fx-js .fx-reveal .fx-ticks-fill{clip-path:inset(0 100% 0 0)}
 
 /* standalone site extras */
 html{scroll-behavior:smooth}
@@ -1781,6 +1789,26 @@ html{scroll-behavior:smooth}
     })(t0);
   }
 
+  var countEls = null;
+  function scrollCounts() {
+    if (reduced) return;
+    if (!countEls) {
+      countEls = all('.fx-count, .fx-ticks-fill').map(function (el) {
+        return { el: el, box: el.closest('.fx-ledger') || el.closest('.fx-reveal') || el,
+          to: el.classList.contains('fx-count') ? (+el.getAttribute('data-to') || 0) : null,
+          p: el.classList.contains('fx-ticks-fill') ? (parseFloat(getComputedStyle(el).getPropertyValue('--p')) || 0) : null };
+      });
+    }
+    var H = window.innerHeight;
+    countEls.forEach(function (c) {
+      var r = c.box.getBoundingClientRect();
+      var t = cl((H * 0.92 - r.top) / (H * 0.45));
+      var e = 1 - Math.pow(1 - t, 3);
+      if (c.to !== null) { var v = String(Math.round(c.to * e)); if (c.el.textContent !== v) c.el.textContent = v; }
+      else c.el.style.clipPath = 'inset(0 ' + (100 - c.p * e).toFixed(2) + '% 0 0)';
+    });
+  }
+
   function fitMocks() {
     cards.forEach(function (c) {
       if (!c) return;
@@ -1837,6 +1865,7 @@ html{scroll-behavior:smooth}
 
   function tick() {
     var H = window.innerHeight, W = window.innerWidth, y = window.scrollY;
+    scrollCounts();
 
     if (nav && !reduced) {
       var sr = sys[0] ? sys[0].parentElement.getBoundingClientRect() : null;
@@ -1934,7 +1963,7 @@ html{scroll-behavior:smooth}
   if (!reduced && 'IntersectionObserver' in window) {
     root.classList.add('fx-js');
     var io = new IntersectionObserver(function (es) {
-      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('fx-vis'); animateCount(e.target); io.unobserve(e.target); } });
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('fx-vis'); io.unobserve(e.target); } });
     }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
     all('.fx-reveal, .fx-draw, .fx-pop').forEach(function (el) { io.observe(el); });
   }
