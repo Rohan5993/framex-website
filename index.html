@@ -1,0 +1,1836 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FrameX | Authority-to-Pipeline System for B2B Tech Companies</title>
+<meta name="description" content="FrameX builds the infrastructure for how the market finds, understands, trusts, and buys your technical expertise.">
+<meta property="og:title" content="FrameX | Authority-to-Pipeline System for B2B Tech Companies">
+<meta property="og:description" content="We build infrastructure for how the market finds, understands, trusts, and buys.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&amp;family=Schibsted+Grotesk:wght@400;500;600&amp;family=Spline+Sans+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#FAF8F4}
+a{color:#B83A14}a:hover{color:#8F2C0F}
+.fx{position:relative;overflow:clip;background:#FAF8F4;color:#0C0E0D;font-family:'Schibsted Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.fx *{box-sizing:border-box}
+.fx a:focus-visible,.fx button:focus-visible,.fx summary:focus-visible{outline:2px solid #B83A14;outline-offset:3px}
+.fx-body{position:relative;z-index:1}
+.fx-wrap{max-width:1240px;margin:0 auto;padding-left:clamp(20px,5vw,64px);padding-right:clamp(20px,5vw,64px)}
+.fx-sec{padding:clamp(88px,10vw,148px) 0}
+.fx-label{font-family:'Spline Sans Mono',ui-monospace,monospace;font-size:12px;line-height:1.4;letter-spacing:.16em;text-transform:uppercase;color:#5F5B53}
+.fx-sig{color:#B83A14;font-weight:500}
+.fx-display{font-family:'Newsreader',Georgia,serif;font-weight:300;letter-spacing:-.02em;color:#0C0E0D;margin:0}
+.fx-display em{font-style:italic;color:#E04A1F}
+.fx-h2{font-size:clamp(36px,4.3vw,62px);line-height:1.03}
+.fx-lede{margin:0;font-size:clamp(17px,1.35vw,19px);line-height:1.6;color:#3F3C36}
+.fx-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:14px 26px;font:600 17px/1.2 'Schibsted Grotesk',system-ui,sans-serif;text-decoration:none;border-radius:0;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}
+.fx-btn-primary{background:#FF5B2E;color:#0C0E0D;border:1px solid #FF5B2E}
+.fx-btn-primary:hover{background:#0C0E0D;color:#FAF8F4;border-color:#0C0E0D}
+.fx-btn-secondary{background:transparent;color:#0C0E0D;border:1px solid #0C0E0D;font-weight:500}
+.fx-btn-secondary:hover{background:#0C0E0D;color:#FAF8F4}
+.fx-nav a{color:#3F3C36;text-decoration:none;font-size:15px}
+.fx-nav a:hover{color:#0C0E0D}
+.fx-card{background:#FFFFFF;border:1px solid #E2DDD3}
+.fx-chip{display:inline-block;font-family:'Spline Sans Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.06em;color:#5F5B53;border:1px solid #E2DDD3;background:#FFFFFF;padding:3px 8px;white-space:nowrap}
+.fx-gridbg{background-color:#FFFFFF;background-image:linear-gradient(#EFEBE4 1px,transparent 1px),linear-gradient(90deg,#EFEBE4 1px,transparent 1px);background-size:40px 40px}
+.fx-halftone{background-image:radial-gradient(#0C0E0D 1px,transparent 1.3px);background-size:12px 12px}
+.fx-split{display:flex;flex-wrap:wrap;gap:clamp(32px,5vw,80px)}
+.fx-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.fx-toggle{all:unset;box-sizing:border-box;cursor:pointer;min-height:44px;padding:10px 18px;font:500 15px/1.2 'Schibsted Grotesk',system-ui,sans-serif;color:#5F5B53;transition:background-color .25s,color .25s}
+.fx-toggle-on{background:#0C0E0D;color:#FAF8F4}
+.fx-conn{transition:background-color .5s ease,opacity .5s ease}
+.fx-mod{transition:opacity .5s ease,border-color .5s ease}
+.fx-faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:24px;align-items:baseline;padding:24px 0;font-family:'Newsreader',Georgia,serif;font-size:clamp(21px,1.9vw,26px);line-height:1.25}
+.fx-faq summary::-webkit-details-marker{display:none}
+.fx-faq summary::after{content:'+';font-family:'Spline Sans Mono',monospace;font-size:20px;color:#B83A14;transition:transform .3s ease}
+.fx-faq details[open] summary::after{transform:rotate(45deg)}
+.fx-faq details[open] .fx-faq-a{animation:fxfade .4s ease both}
+.fx-menu{display:none}
+@media (max-width:900px){.fx-hide-sm{display:none !important}.fx-menu{display:inline-flex}}
+
+/* ---------- Motion ---------- */
+@keyframes fxfade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes fxrise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes fxgap{from{gap:28px;width:70%}to{gap:3px;width:100%}}
+@keyframes fxnote{from{opacity:1}to{opacity:0}}
+@keyframes fxmod{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes fxdraw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes fxpop{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:scale(1)}}
+@keyframes fxhero{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:no-preference){
+  .fx-in{animation:fxhero .9s cubic-bezier(.2,.7,.2,1) both}
+  .fx-in-2{animation-delay:.12s}.fx-in-3{animation-delay:.24s}.fx-in-4{animation-delay:.36s}
+  .fx-gap-row{animation:fxgap 1.6s cubic-bezier(.6,0,.2,1) 1.1s both}
+  .fx-gap-note{animation:fxnote .8s ease 1.6s both}
+  .fx-gap-mod{animation:fxmod .7s cubic-bezier(.2,.7,.2,1) both}
+  .fx-gap-mod:nth-child(1){animation-delay:2.1s}.fx-gap-mod:nth-child(2){animation-delay:2.2s}.fx-gap-mod:nth-child(3){animation-delay:2.3s}.fx-gap-mod:nth-child(4){animation-delay:2.4s}.fx-gap-mod:nth-child(5){animation-delay:2.5s}
+  @supports (animation-timeline: view()){
+    .fx-gap-row{animation:fxgap linear both;animation-timeline:view();animation-range:cover 30% cover 58%}
+    .fx-gap-note{animation:fxnote linear both;animation-timeline:view();animation-range:cover 32% cover 48%}
+    .fx-gap-mod{animation:fxmod linear both;animation-timeline:view();animation-delay:0s !important}
+    .fx-gap-mod:nth-child(1){animation-range:cover 44% cover 54%}.fx-gap-mod:nth-child(2){animation-range:cover 46% cover 56%}.fx-gap-mod:nth-child(3){animation-range:cover 48% cover 58%}.fx-gap-mod:nth-child(4){animation-range:cover 50% cover 60%}.fx-gap-mod:nth-child(5){animation-range:cover 52% cover 62%}
+  }
+}
+.fx ::selection{background:#FFD9CC;color:#0C0E0D}
+.fx-nav a{background:linear-gradient(#0C0E0D,#0C0E0D) 0 100%/0 1px no-repeat;padding-bottom:3px;transition:background-size .3s ease,color .2s}
+.fx-nav a:hover{background-size:100% 1px}
+.fx-leak{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:6px;padding:16px 18px;min-height:76px;background:#FFFFFF;border:1px solid #E2DDD3;transition:border-color .25s,box-shadow .25s}
+.fx-leak:hover{border-color:#0C0E0D}
+.fx-leak-on{border-color:#FF5B2E;box-shadow:inset 0 3px 0 #FF5B2E}
+.fx-leak-on:hover{border-color:#FF5B2E}
+.fx-ticks{position:relative;height:30px;background-image:linear-gradient(90deg,#D9D3C7 0 1.5px,transparent 1.5px);background-size:calc(100% / 50) 100%}
+.fx-ticks-fill{position:absolute;inset:0;background-image:linear-gradient(90deg,#FF5B2E 0 2px,transparent 2px);background-size:calc(100% / 50) 100%;clip-path:inset(0 calc(100% - var(--p)) 0 0)}
+.fx-ledger{display:grid;grid-template-columns:minmax(150px,230px) minmax(0,1.2fr) minmax(0,1fr);gap:20px clamp(24px,4vw,56px);align-items:center;padding:clamp(28px,3.5vw,44px) 0;border-top:1px solid #D9D3C7}
+.fx-ledger-num{font-size:clamp(64px,7vw,104px);line-height:.9;letter-spacing:-.04em}
+.fx-ledger-num .pct{font-size:.45em;color:#E04A1F;margin-left:2px}
+.fx-ledger-text h3{margin:0 0 8px;font-size:20px;font-weight:600;line-height:1.3}
+.fx-ledger-text p{margin:0;font-size:16px;line-height:1.6;color:#3F3C36;max-width:48ch}
+.fx-ledger-viz{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.fx-ledger-viz .fx-ticks{width:100%}
+.fx-touch{display:flex;flex-direction:column;gap:6px;background:#FFFFFF;border:1px solid #FF5B2E;padding:12px 14px}
+.fx-touch-dot{width:9px;height:9px;border-radius:50%;background:#FF5B2E}
+.fx-map-dot{position:absolute;left:0;top:4px;width:13px;height:13px;border-radius:50%;border:1.5px solid #0C0E0D;background:#F3EFE8}
+.fx-map-link{color:#3F3C36;text-decoration:none;font-size:15px;display:inline-flex;gap:8px;align-items:baseline;transition:color .2s}
+.fx-map-link:hover{color:#0C0E0D}
+.fx-outline-num{font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:clamp(88px,9vw,132px);line-height:.8;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1px #0C0E0D}
+.fx-file{display:grid;grid-template-columns:minmax(150px,210px) minmax(0,1fr) auto;gap:6px 20px;align-items:baseline;padding:14px 18px;border-top:1px solid #F0ECE5}
+.fx-file-name{font-family:'Spline Sans Mono',ui-monospace,monospace;font-size:13px;color:#0C0E0D}
+.fx-file-name::before{content:'\25AA\00a0';color:#FF5B2E}
+.fx-file-desc{font-size:15px;line-height:1.5;color:#3F3C36}
+.fx-file-cad{font-family:'Spline Sans Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#5F5B53;white-space:nowrap}
+.fx-run{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);margin-top:14px;border:1px solid #E2DDD3;background:#FFFFFF;transition:border-color .25s}
+.fx-run:hover{border-color:#0C0E0D}
+.fx-run-branch{position:absolute;left:-11px;top:50%;width:10px;border-top:1.5px dashed #A9A59B}
+.fx-run-if,.fx-run-then{padding:16px 18px;display:flex;flex-direction:column;gap:6px}
+.fx-run-if{border-right:1px solid #E2DDD3}
+.fx-run p{margin:0;font-size:15px;line-height:1.45;color:#3F3C36}
+.fx-run-then strong{display:block;font-weight:600;color:#0C0E0D;font-size:16px;margin-bottom:2px}
+@media (max-width:900px){.fx-ledger{grid-template-columns:1fr}}
+@media (max-width:640px){.fx-file{grid-template-columns:1fr}.fx-run{grid-template-columns:1fr}.fx-run-if{border-right:0;border-bottom:1px solid #E2DDD3}}
+@keyframes fxclip{from{clip-path:inset(0 100% 0 0)}}
+/* ---------- Ambient cursor light (restored) ---------- */
+.fx-light{position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.fx-spot{position:absolute;left:0;top:0;width:960px;height:960px;opacity:0;transition:opacity .9s ease;will-change:transform;background:radial-gradient(circle at center,rgba(255,91,46,.07) 0%,rgba(255,128,84,.04) 22%,rgba(244,226,210,.02) 42%,rgba(250,248,244,0) 64%)}
+@media (hover:none),(pointer:coarse){.fx-spot{display:none}}
+
+/* ---------- Scroll progress ---------- */
+.fx-prog{position:fixed;left:0;top:0;width:100%;height:3px;z-index:20;background:linear-gradient(110deg,#FF5B2E,#FFA46B);transform-origin:left;transform:scaleX(0);pointer-events:none}
+
+/* ---------- Problem: pinned horizontal ---------- */
+.fx-hs-viewport{overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:40px 0 8px}
+.fx-hs-track{display:flex;gap:28px;width:max-content;padding:8px max(20px,calc((100vw - 1240px) / 2 + 64px)) 24px}
+.fx-hs-meter{display:flex;align-items:center;gap:18px;width:100%}
+.fx-hs-bar{position:relative;flex:1;height:2px;background:#E3DCCD;overflow:hidden}
+.fx-hs-bar span{position:absolute;left:0;top:0;bottom:0;width:100%;background:linear-gradient(110deg,#FF5B2E,#FFA46B);transform-origin:left;transform:scaleX(.143)}
+.fx-hs-on{padding:0 !important}
+.fx-hs-on .fx-hs-sticky{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;padding:104px 0 28px;overflow:hidden}
+.fx-hs-on .fx-hs-head .fx-h2{font-size:clamp(34px,3.8vw,56px)}
+.fx-hs-on .fx-hs-viewport{flex:1;min-height:0;overflow:hidden;scroll-snap-type:none;padding:28px 0 12px;display:flex;align-items:stretch}
+.fx-hs-on .fx-hs-track{height:100%;align-items:center;padding-top:0;padding-bottom:0;will-change:transform}
+.fx-hs-on .fx-stk{flex-basis:min(68vw,880px);height:min(100%,500px);min-height:0}
+.fx-stk{position:relative;flex:0 0 min(84vw,900px);min-height:min(62vh,440px);scroll-snap-align:center;background:#FFFDF8;border:1px solid #E3DCCD;border-radius:34px;padding:44px;display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center;box-shadow:0 30px 70px -40px rgba(120,90,40,.4);overflow:hidden;transform-origin:50% 50%}
+.fx-stk::before{content:"";position:absolute;right:-90px;top:-90px;width:300px;height:300px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,110,60,.18),transparent);transition:transform 1.4s}
+.fx-stk:hover::before{transform:scale(1.5)}
+.fx-stk-hot{border:1.5px solid transparent;background:linear-gradient(#FFFDF8,#FFFDF8) padding-box,linear-gradient(110deg,#FF5B2E,#FFA46B) border-box}
+.fx-stk-head{position:relative}
+.fx-stk-no{display:inline-block;font-family:'Newsreader',Georgia,serif;font-size:clamp(70px,9vw,132px);font-weight:300;line-height:1.2;letter-spacing:-.02em;background:linear-gradient(110deg,#FF5B2E,#FFA46B);-webkit-background-clip:text;background-clip:text;color:transparent;opacity:.9}
+.fx-stk h3{margin:10px 0 0;font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:clamp(28px,3.3vw,48px);line-height:1.04;letter-spacing:-.02em}
+.fx-stk.in .fx-stk-no{animation:fxnum .9s cubic-bezier(.2,.8,.2,1) both}
+.fx-stk.in h3{animation:fxnum .9s cubic-bezier(.2,.8,.2,1) .12s both}
+@keyframes fxnum{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.fx-pill{display:inline-block;font-size:12px;border:1px solid #E3DCCD;border-radius:999px;padding:3px 12px;color:#625F57;margin-top:14px;background:#FAF8F4}
+.vz{position:relative}
+.vz svg{width:100%;height:auto;max-height:100%;display:block;overflow:visible}
+.vz text{font-family:'Schibsted Grotesk',sans-serif}
+.vz .a{opacity:0;transform-box:fill-box;transform-origin:center}
+.fx-stk.in .vz .a{animation:fxpop2 .8s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--k)*.14s + .2s)}
+@keyframes fxpop2{from{opacity:0;transform:translateY(12px) scale(.96)}to{opacity:1;transform:none}}
+.vz .dr{stroke-dasharray:var(--L,400);stroke-dashoffset:var(--L,400)}
+.fx-stk.in .vz .dr{animation:fxdw 2s ease forwards .4s}
+@keyframes fxdw{to{stroke-dashoffset:0}}
+.vz .nd0{transform-origin:160px 160px;transform:rotate(-90deg)}
+.fx-stk.in .vz .nd0{animation:fxnd 2.4s cubic-bezier(.3,.7,.2,1) forwards .4s}
+@keyframes fxnd{to{transform:rotate(-38deg)}}
+.vz .pu{transform-box:fill-box;transform-origin:center;animation:fxpu 2.4s ease-in-out infinite}
+@keyframes fxpu{50%{transform:scale(1.12)}}
+@media (max-width:860px){.fx-stk{grid-template-columns:1fr;padding:30px;flex-basis:86vw}}
+
+/* ---------- System: pinned stack ---------- */
+.fx-sys{padding:clamp(88px,10vw,148px) 0}
+.fx-sys-h2{font-size:clamp(36px,4.3vw,62px);line-height:1.03}
+.fx-sys-body{display:flex;flex-wrap:wrap;gap:clamp(32px,5vw,72px);align-items:flex-start;margin-top:clamp(40px,5vw,72px)}
+.fx-sys-map{flex:0 0 230px;position:sticky;top:104px}
+.fx-sys-line{position:absolute;left:6px;top:10px;bottom:26px;width:1.5px;background:#FF5B2E;transform-origin:top;transform:scaleY(0)}
+.fx-map-dot{position:absolute;left:0;top:5px;width:13px;height:13px;border-radius:50%;border:1.5px solid #0C0E0D;background:#F3EFE8;transition:background-color .35s,border-color .35s,box-shadow .35s}
+.fx-map-dot-on{background:#FF5B2E;border-color:#FF5B2E}
+.fx-map-btn{all:unset;cursor:pointer;display:inline-flex;gap:8px;align-items:baseline;font-size:15px;color:#5F5B53;min-height:24px;transition:color .25s,transform .35s cubic-bezier(.2,.8,.2,1)}
+.fx-map-btn:hover{color:#0C0E0D}
+.fx-map-btn:focus-visible{outline:2px solid #B83A14;outline-offset:3px}
+.fx-map-on{color:#0C0E0D;font-weight:600;transform:translateX(6px)}
+.fx-sys-stage{flex:1 1 560px;min-width:0;list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:18px}
+.fx-sys-card{background:#FFFDF8;border:1px solid #E3DCCD;padding:clamp(24px,3vw,40px);box-shadow:0 30px 70px -40px rgba(120,90,40,.35);transform-origin:50% 0}
+.fx-sys-on{padding:0}
+.fx-sys-on .fx-sys-sticky{position:sticky;top:0;height:100vh;padding:100px 0 28px;overflow:hidden}
+.fx-sys-on .fx-sys-inner{height:100%;display:flex;flex-direction:column}
+.fx-sys-on .fx-sys-h2{font-size:clamp(32px,3.4vw,50px)}
+.fx-sys-on .fx-sys-lede{font-size:16px}
+.fx-sys-on .fx-sys-body{flex:1;min-height:0;flex-wrap:nowrap;align-items:stretch;margin-top:28px}
+.fx-sys-on .fx-sys-map{position:relative;top:auto}
+.fx-sys-on .fx-sys-stage{position:relative;display:block}
+.fx-sys-on .fx-sys-card{position:absolute;left:0;right:0;top:var(--o);bottom:0;overflow:auto;will-change:transform}
+.fx-sys-on .fx-outline-num{font-size:clamp(72px,7vw,104px)}
+
+/* ---------- More motion ---------- */
+.fx-ln{display:block;overflow:hidden;padding-bottom:.08em}
+.fx-ln>span{display:block}
+.fx-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@property --fxn{syntax:'<integer>';inherits:false;initial-value:0}
+.fx-count{--fxn:var(--to);counter-reset:fxn var(--fxn)}
+.fx-count::after{content:counter(fxn)}
+.fx-marquee{overflow:hidden;border-top:1px solid #E2DDD3;border-bottom:1px solid #E2DDD3;background:#FFFFFF}
+.fx-marquee-track{display:flex;width:max-content}
+.fx-marquee-track span{display:inline-flex;align-items:center;gap:28px;padding:18px 14px;font-family:'Newsreader',Georgia,serif;font-size:clamp(22px,2.2vw,30px);font-weight:300;white-space:nowrap}
+.fx-marquee-track i{font-style:normal;color:#FF5B2E;font-size:.7em}
+.fx-marquee:hover .fx-marquee-track{animation-play-state:paused}
+.fx-pov{transition:background-color .35s}
+.fx-pov p{transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.fx-pov:hover{background:linear-gradient(90deg,rgba(255,91,46,.06),rgba(255,91,46,0))}
+.fx-pov:hover p{transform:translateX(10px)}
+.fx-btn{position:relative;overflow:hidden;transition:background-color .2s,color .2s,border-color .2s,transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.fx-btn:hover{transform:translateY(-2px)}
+.fx-btn-primary:hover{box-shadow:0 14px 30px -14px rgba(255,91,46,.7)}
+.fx-btn-primary::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);transition:left .7s ease}
+.fx-btn-primary:hover::after{left:130%}
+.fx-fvc{animation:fxring 2.2s ease-out infinite}
+@keyframes fxring{0%{box-shadow:0 0 0 0 rgba(255,91,46,.45)}100%{box-shadow:0 0 0 14px rgba(255,91,46,0)}}
+.fx-breathe{position:absolute;left:50%;bottom:-45%;width:110%;aspect-ratio:2/1;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(255,110,60,.16),transparent);pointer-events:none;animation:fxbreathe 9s ease-in-out infinite alternate}
+@keyframes fxbreathe{to{transform:translateX(-46%) scale(1.15)}}
+.fx-h2 em,.fx-sys-h2 em{background-image:linear-gradient(#FF5B2E,#FF5B2E);background-repeat:no-repeat;background-position:0 92%;background-size:100% 2px;padding-bottom:2px}
+.fx-ledger{transition:background-color .35s}
+.fx-ledger:hover{background:linear-gradient(90deg,rgba(255,91,46,.05),rgba(255,91,46,0))}
+.fx-faq summary{transition:color .25s}
+.fx-faq summary:hover{color:#B83A14}
+@keyframes fxup{from{transform:translateY(110%)}to{transform:none}}
+@keyframes fxcount{from{--fxn:0}}
+@keyframes fxmarq{to{transform:translateX(-50%)}}
+@keyframes fxul{from{background-size:0 2px}to{background-size:100% 2px}}
+@media (prefers-reduced-motion:no-preference){
+  .fx-ln>span{animation:fxup 1.1s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--d) * .14s + .15s)}
+  .fx-count{animation:fxcount 2s cubic-bezier(.2,.7,.2,1) .4s both}
+  .fx-marquee-track{animation:fxmarq 38s linear infinite}
+  @supports (animation-timeline: view()){
+    .fx-count{animation:fxcount linear both;animation-timeline:view();animation-range:entry 10% cover 40%;animation-delay:0s}
+  }
+}
+@media (prefers-reduced-motion:reduce){.vz .pu,.fx-fvc,.fx-breathe{animation:none}.vz .a{opacity:1}.vz .dr{stroke-dashoffset:0}.vz .nd0{transform:rotate(-38deg)}}
+/* ---------- v4: dynamic layer ---------- */
+.fx-navbar{transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.fx-navbar-hide{transform:translateY(-100%)}
+
+/* JS-driven reveals (work in every browser) */
+.fx-js .fx-reveal{opacity:0;transform:translateY(36px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+.fx-js .fx-reveal.fx-vis{opacity:1;transform:none}
+.fx-js .fx-draw{transform:scaleX(0);transform-origin:left center;transition:transform 1.4s cubic-bezier(.7,0,.2,1) .2s}
+.fx-js .fx-draw.fx-vis{transform:none}
+.fx-js .fx-pop{opacity:0;transform:scale(.4);transition:opacity .6s ease,transform .7s cubic-bezier(.2,.8,.2,1.4)}
+.fx-js .fx-pop.fx-vis{opacity:1;transform:none}
+.fx-js .fx-reveal .fx-ticks-fill{clip-path:inset(0 100% 0 0);transition:clip-path 1.8s cubic-bezier(.2,.7,.2,1) .35s}
+.fx-js .fx-reveal.fx-vis .fx-ticks-fill{clip-path:inset(0 calc(100% - var(--p)) 0 0)}
+.fx-js .fx-reveal .fx-h2 em{background-size:0 2px;transition:background-size 1.2s cubic-bezier(.7,0,.2,1) .5s}
+.fx-js .fx-reveal.fx-vis .fx-h2 em{background-size:100% 2px}
+.fx-js .fx-pov:nth-child(2){transition-delay:.08s}.fx-js .fx-pov:nth-child(3){transition-delay:.16s}.fx-js .fx-pov:nth-child(4){transition-delay:.24s}.fx-js .fx-pov:nth-child(5){transition-delay:.32s}
+
+/* Hero: the bridge */
+.fx-bridge{position:relative;height:clamp(300px,30vw,400px);border:1px solid #E2DDD3;background-color:#FFFFFF;background-image:linear-gradient(#EFEBE4 1px,transparent 1px),linear-gradient(90deg,#EFEBE4 1px,transparent 1px);background-size:40px 40px;overflow:hidden}
+.fx-cliff{position:absolute;bottom:0;width:22%;height:60%;padding:18px;display:flex;flex-direction:column;gap:6px;z-index:2}
+.fx-cliff-l{left:0;background:#0C0E0D;color:#FAF8F4}
+.fx-cliff-r{right:0;background:#F3EFE8;border-left:1.5px solid #0C0E0D;border-top:1.5px solid #0C0E0D}
+.fx-cliff-t{font-family:'Newsreader',Georgia,serif;font-size:clamp(18px,1.8vw,24px);line-height:1.1}
+.fx-cliff-s{font-size:12px;line-height:1.4;opacity:.75}
+.fx-bridge-stages{position:absolute;left:22%;right:22%;top:calc(40% - 44px);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));text-align:center;z-index:2}
+.fx-bridge-stages span{font-family:'Spline Sans Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#5F5B53}
+.fx-void{position:absolute;left:22%;right:22%;top:calc(40% + 74px);bottom:0;display:grid;place-items:center;background-image:radial-gradient(#C9C2B4 1px,transparent 1.3px);background-size:10px 10px;-webkit-mask-image:linear-gradient(180deg,transparent,#000 40%);mask-image:linear-gradient(180deg,transparent,#000 40%)}
+.fx-void span{grid-area:1/1;background:#FFFFFF;padding:6px 12px;font-family:'Spline Sans Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;text-align:center}
+.fx-void-a{color:#5F5B53;opacity:0}
+.fx-void-b{color:#B83A14;font-weight:500}
+.fx-planks{position:absolute;left:22%;right:22%;top:40%;margin:0;padding:0 3px;list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;z-index:3}
+.fx-planks li{height:66px;background:#FFFFFF;border:1px solid #0C0E0D;border-top:3px solid #FF5B2E;padding:8px 10px;display:flex;flex-direction:column;gap:3px;font-size:13px;font-weight:500;line-height:1.2;box-shadow:0 14px 24px -18px rgba(12,14,13,.5)}
+.fx-walker{position:absolute;top:calc(40% - 16px);left:9%;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:#FF5B2E;box-shadow:0 0 0 6px rgba(255,91,46,.2);z-index:4}
+@keyframes fxplank{from{opacity:0;transform:translateY(-170px) rotate(-7deg)}to{opacity:1;transform:none}}
+@keyframes fxwalk{0%,12%{left:9%}50%{left:50%}88%,100%{left:91%}}
+@keyframes fxshow{from{opacity:0}to{opacity:1}}
+@keyframes fxhide{from{opacity:1}to{opacity:0}}
+@media (max-width:700px){.fx-planks li .nm{display:none}.fx-planks li{height:44px;align-items:center;justify-content:center}.fx-cliff{padding:10px}.fx-cliff-s{display:none}.fx-cliff-t{font-size:14px}.fx-bridge-stages span{font-size:9px;letter-spacing:.06em}}
+@media (prefers-reduced-motion:no-preference){
+  .fx-planks li{animation:fxplank .9s cubic-bezier(.2,.8,.2,1) both}
+  .fx-planks li:nth-child(1){animation-delay:1.1s}.fx-planks li:nth-child(2){animation-delay:1.25s}.fx-planks li:nth-child(3){animation-delay:1.4s}.fx-planks li:nth-child(4){animation-delay:1.55s}.fx-planks li:nth-child(5){animation-delay:1.7s}
+  .fx-void-a{animation:fxhide .6s ease 1.6s both}
+  .fx-void-b{animation:fxshow .6s ease 2.1s both}
+  .fx-walker{animation:fxwalk 6s cubic-bezier(.6,0,.4,1) 2.4s infinite,fxshow .5s ease 2.3s both}
+}
+
+/* Problem cards: supporting copy */
+.fx-stk-p{margin:14px 0 0;font-size:16px;line-height:1.55;color:#3F3C36;max-width:38ch}
+.fx-stk.in .fx-stk-p{animation:fxnum .9s cubic-bezier(.2,.8,.2,1) .24s both}
+.fx-hs-on .fx-stk-no{font-size:clamp(60px,6.5vw,104px)}
+
+/* Buying path map */
+.fx-bpm{position:relative;min-width:980px}
+.fx-bpm-line{position:absolute;left:8.333%;right:8.333%;top:20px;height:2px;background:linear-gradient(90deg,#FF5B2E,#FFA46B);transform-origin:left;transform:scaleX(1);transition:transform .25s linear}
+.fx-node{width:42px;height:42px;border-radius:50%;border:1.5px solid #0C0E0D;background:#FFFFFF;display:grid;place-items:center;font-family:'Spline Sans Mono',ui-monospace,monospace;font-size:12px;font-weight:500;color:#0C0E0D;position:relative;z-index:1;transition:background-color .5s,border-color .5s,transform .5s cubic-bezier(.2,.8,.2,1.4)}
+.fx-node-on{background:#FF5B2E;border-color:#FF5B2E;transform:scale(1.08)}
+.fx-node-cur{animation:fxring 1.8s ease-out infinite}
+.fx-touch{width:100%}
+.fx-touch,.fx-bpm-note{opacity:.28;transform:translateY(12px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.8,.2,1),border-color .6s}
+.fx-bpm-note{display:flex;flex-direction:column;gap:6px;padding:12px 0;text-align:center}
+.fx-touch-on{opacity:1;transform:none}
+
+/* Getting started: sprint */
+.fx-sprint{position:relative;min-width:900px;padding-top:44px}
+.fx-sprint-row{display:grid;grid-template-columns:14fr 16fr 30fr 30fr;gap:4px;height:clamp(240px,22vw,290px)}
+.fx-seg{position:relative;display:flex;flex-direction:column;justify-content:space-between;padding:20px;overflow:hidden;transform-origin:left center}
+.fx-seg-in{display:flex;flex-direction:column;gap:8px;position:relative;z-index:1}
+.fx-seg-t{font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:clamp(26px,2.4vw,36px);line-height:1;letter-spacing:-.02em}
+.fx-seg-p{font-size:14px;line-height:1.45;max-width:30ch}
+.fx-seg-time{position:relative;z-index:1;align-self:flex-start;font-family:'Spline Sans Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;border:1px solid #D9D3C7;padding:4px 8px}
+.fx-seg-build{background:#0C0E0D;color:#FAF8F4}
+.fx-seg-build .fx-seg-p{color:#C9C4B9}
+.fx-seg-m1{background:#FFFFFF;border:1px solid #0C0E0D;border-top:3px solid #FF5B2E}
+.fx-seg-m1 .fx-seg-p,.fx-seg-m2 .fx-seg-p{color:#3F3C36}
+.fx-seg-m2{background:#FFF4EF;border:1px solid #F2C5B5}
+.fx-seg-m3{background:linear-gradient(110deg,#FF5B2E,#FFA46B);color:#0C0E0D}
+.fx-grow{position:absolute;right:18px;bottom:18px;width:44%;height:52%;display:flex;align-items:flex-end;gap:6px}
+.fx-grow i{flex:1;height:var(--h);background:#FF5B2E;opacity:.55;transform-origin:bottom}
+.fx-grow-ink i{background:#0C0E0D;opacity:.85}
+.fx-sprint-live{position:absolute;left:15.5%;top:0;bottom:30px;width:2px;margin-left:-1px;background:#FF5B2E;z-index:2}
+.fx-sprint-live span{position:absolute;top:0;left:50%;transform:translateX(-50%);background:#FF5B2E;color:#0C0E0D;padding:5px 10px;font-size:11px;white-space:nowrap}
+.fx-sprint-ticks{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:12px}
+.fx-sprint-ticks span:last-child{position:absolute;right:0;top:0}
+.fx-js .fx-seg{transform:scaleX(0);transition:transform .9s cubic-bezier(.7,0,.2,1) calc(var(--i) * .22s + .2s)}
+.fx-js .fx-seg > *{opacity:0;transition:opacity .6s ease calc(var(--i) * .22s + .8s)}
+.fx-js .fx-grow i{transform:scaleY(0);transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.fx-js .fx-vis .fx-seg{transform:none}
+.fx-js .fx-vis .fx-seg > *{opacity:1}
+.fx-js .fx-vis .fx-grow i{transform:none}
+.fx-js .fx-vis .fx-seg-m2 .fx-grow i:nth-child(1){transition-delay:1.3s}.fx-js .fx-vis .fx-seg-m2 .fx-grow i:nth-child(2){transition-delay:1.4s}.fx-js .fx-vis .fx-seg-m2 .fx-grow i:nth-child(3){transition-delay:1.5s}.fx-js .fx-vis .fx-seg-m2 .fx-grow i:nth-child(4){transition-delay:1.6s}
+.fx-js .fx-vis .fx-seg-m3 .fx-grow i:nth-child(1){transition-delay:1.6s}.fx-js .fx-vis .fx-seg-m3 .fx-grow i:nth-child(2){transition-delay:1.7s}.fx-js .fx-vis .fx-seg-m3 .fx-grow i:nth-child(3){transition-delay:1.8s}.fx-js .fx-vis .fx-seg-m3 .fx-grow i:nth-child(4){transition-delay:1.9s}
+
+/* System: deck of cards, each new one sits just below the last one's title bar */
+.fx-sys-card{padding:0;box-shadow:0 -16px 36px -28px rgba(120,90,40,.5),0 30px 70px -40px rgba(120,90,40,.35)}
+.fx-sys-bar{display:flex;align-items:center;gap:16px;height:52px;padding:0 24px;border-bottom:1px solid #E3DCCD;background:#FFFDF8}
+.fx-sys-bar-t{margin:0;flex:1;min-width:0;font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:21px;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fx-sys-body-in{padding:clamp(20px,2.6vw,32px) clamp(22px,3vw,36px)}
+.fx-sys-on .fx-sys-lede{display:none}
+.fx-sys-on .fx-sys-card{top:calc(var(--o) * 52px);bottom:auto;height:calc(100% - 260px);overflow:hidden}
+.fx-sys-on .fx-sys-body-in{height:calc(100% - 52px);overflow:auto;padding-top:18px;padding-bottom:18px}
+.fx-sys-on .fx-outline-num{font-size:clamp(56px,5.5vw,84px)}
+.fx-sys-on .fx-file{padding-top:10px;padding-bottom:10px}
+/* ---------- v5 ---------- */
+/* Problem cards: LinkedIn-style mockups */
+.li{position:relative;background:#FFFFFF;border:1px solid #E3DCCD;border-radius:18px;padding:14px 16px;font-size:13px;line-height:1.35;color:#0C0E0D;box-shadow:0 22px 46px -30px rgba(120,90,40,.55);text-align:left}
+.li-col{display:flex;flex-direction:column;min-width:0;flex:1}
+.li-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-top:1px solid #F0ECE5}
+.li-av{width:30px;height:30px;border-radius:50%;background:#ECE5D6;flex:none}
+.li-av-ink{background:#0C0E0D;color:#FAF8F4;display:grid;place-items:center;font-family:'Newsreader',Georgia,serif;font-size:13px}
+.li-av-sig{background:linear-gradient(110deg,#FF5B2E,#FFA46B)}
+.li-av-lg{width:58px;height:58px;font-size:20px;margin-top:-30px;border:3px solid #FFFFFF}
+.li-name{font-weight:600;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.li-sub{font-size:11.5px;color:#625F57;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.li-tag{font-size:10.5px;font-weight:600;border-radius:999px;padding:3px 9px;background:#F5F1E9;color:#625F57;white-space:nowrap;flex:none}
+.li-tag-bad{background:#FFE9E1;color:#B83A14}
+.li-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:8px}
+.li-search{display:flex;align-items:center;gap:8px;border:1px solid #E3DCCD;border-radius:999px;padding:7px 12px;background:#F8F6F2}
+.li-type{display:inline-block;overflow:hidden;white-space:nowrap;width:var(--w);border-right:1.5px solid #0C0E0D;font-size:13px}
+.li-tabs{display:flex;gap:14px;padding:10px 2px 6px;font-size:12px;color:#625F57}
+.li-tabs .on{color:#0C0E0D;font-weight:600;box-shadow:inset 0 -2px 0 #FF5B2E;padding-bottom:4px}
+.li-you{border:1.5px dashed #FF5B2E;border-radius:12px;padding:8px 10px;margin-top:6px;background:#FFF8F5}
+.li-prof{padding:0 16px 16px;overflow:hidden}
+.li-banner{height:58px;margin:0 -16px 0;background:linear-gradient(110deg,#ECE5D6,#F5F1E9)}
+.li-jargon{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.li-jargon span{position:relative;font-size:12px;background:#F5F1E9;border:1px solid #E3DCCD;border-radius:999px;padding:4px 10px;color:#625F57}
+.li-jargon span::after{content:"";position:absolute;left:8px;right:8px;top:50%;height:1.5px;background:#B83A14;transform:scaleX(0);transform-origin:left}
+.li-viewer{display:flex;align-items:flex-end;gap:8px;margin-top:14px}
+.li-bubble{position:relative;background:#0C0E0D;color:#FAF8F4;font-size:13px;font-weight:500;padding:9px 13px;border-radius:14px 14px 14px 4px}
+.li-sec{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #F0ECE5}
+.li-empty{font-size:12px;color:#A9A59B;font-style:italic}
+.li-meter{padding-top:12px}
+.li-meter-top{display:flex;justify-content:space-between;align-items:center}
+.li-bar{height:10px;border-radius:999px;background:#ECE5D6;margin-top:10px;overflow:hidden}
+.li-bar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(110deg,#FF5B2E,#FFA46B)}
+.li-scale{display:flex;justify-content:space-between;font-size:10.5px;color:#625F57;margin-top:6px;text-transform:uppercase;letter-spacing:.08em}
+.li-chat{display:flex;flex-direction:column;gap:8px}
+.li-chat-h{display:flex;gap:10px;align-items:center;padding-bottom:8px;border-bottom:1px solid #F0ECE5}
+.li-msg{max-width:82%;padding:8px 12px;border-radius:14px;font-size:12.5px}
+.li-in{align-self:flex-start;background:#F5F1E9;border-radius:14px 14px 14px 4px}
+.li-out{align-self:flex-end;background:#0C0E0D;color:#FAF8F4;border-radius:14px 14px 4px 14px}
+.li-event{align-self:center;display:flex;align-items:center;gap:6px;font-size:11px;color:#B83A14;font-weight:600}
+.li-dot{width:6px;height:6px;border-radius:50%;background:#FF5B2E}
+.li-target{box-shadow:0 0 0 0 rgba(255,91,46,.5)}
+.li-note{display:flex;gap:10px;align-items:center;padding:8px 0;border-top:1px solid #F0ECE5}
+.li-ic{width:28px;height:28px;flex:none;border-radius:50%;display:grid;place-items:center;background:#FFE9E1;color:#B83A14;font-size:13px}
+.li-gap{display:flex;align-items:center;gap:10px;padding:6px 0;font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#625F57}
+.li-gap::before,.li-gap::after{content:"";flex:1;border-top:1.5px dashed #CFC6B3}
+.li-ghost{opacity:.45}
+.li-ghost .li-ic{background:#F5F1E9;color:#625F57}
+.li-mem{min-height:240px;overflow:hidden}
+.li-ln{display:block;height:7px;border-radius:4px;background:#ECE5D6}
+.li-badge{font-size:10.5px;font-weight:600;border-radius:999px;padding:3px 9px;background:#FF5B2E;color:#0C0E0D}
+.li-sticky{position:absolute;max-width:150px;background:#FFE9E1;border:1px solid #F2C5B5;padding:9px 11px;font-size:12px;font-weight:600;line-height:1.3;color:#0C0E0D;box-shadow:0 12px 22px -14px rgba(120,90,40,.7);transform:rotate(var(--r));opacity:0}
+.fx-stk .an{opacity:0}
+@keyframes fxtype{from{width:0}to{width:var(--w)}}
+@keyframes fxcaret{50%{border-color:transparent}}
+@keyframes fxstrike{to{transform:scaleX(1)}}
+@keyframes fxfill{0%{width:0}70%{width:calc(var(--to) + 8%)}100%{width:var(--to)}}
+@keyframes fxdrop{from{opacity:0;transform:translateY(-34px) rotate(calc(var(--r) * -2))}to{opacity:1;transform:rotate(var(--r))}}
+@keyframes fxghost{0%,100%{opacity:.45}50%{opacity:.2}}
+@keyframes fxwob{0%,100%{transform:translateX(0)}25%{transform:translateX(-3px)}75%{transform:translateX(3px)}}
+@keyframes fxping{0%{box-shadow:0 0 0 0 rgba(255,91,46,.5)}100%{box-shadow:0 0 0 12px rgba(255,91,46,0)}}
+@keyframes fxfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@media (prefers-reduced-motion:no-preference){
+  .fx-stk.in .an{animation:fxpop2 .7s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--k) * .22s + .35s)}
+  .fx-stk .li-type{width:0}
+  .fx-stk.in .li-type{animation:fxtype 1.3s steps(24) .3s forwards,fxcaret .8s step-end infinite}
+  .fx-stk.in .li-you{animation:fxpop2 .7s cubic-bezier(.2,.8,.2,1) forwards,fxwob .5s ease 2.4s 2;animation-delay:calc(var(--k) * .22s + .35s),2.4s}
+  .fx-stk.in .li-jargon span::after{animation:fxstrike .5s ease forwards;animation-delay:calc(var(--k) * .22s + 1.5s)}
+  .fx-stk.in .li-bubble{animation:fxfloat 2.6s ease-in-out 2s infinite}
+  .fx-stk.in .li-bar i{animation:fxfill 1.8s cubic-bezier(.2,.8,.2,1) 1.4s forwards}
+  .fx-stk.in .li-target{animation:fxping 1.6s ease-out 2s infinite}
+  .fx-stk.in .li-ghost{animation:fxpop2 .7s forwards,fxghost 2.4s ease-in-out 2.6s infinite;animation-delay:calc(var(--k) * .22s + .35s),2.6s}
+  .fx-stk.in .li-sticky{animation:fxdrop .7s cubic-bezier(.2,.8,.2,1.3) forwards;animation-delay:calc(var(--k) * .25s + .4s)}
+  .fx-stk.in .li-badge{animation:fxpop2 .6s forwards,fxping 1.6s ease-out 1.4s infinite;animation-delay:.6s,1.4s}
+}
+@media (prefers-reduced-motion:reduce){.fx-stk .an,.li-sticky{opacity:1}.li-bar i{width:var(--to)}.li-jargon span::after{transform:scaleX(1)}}
+
+/* System deck: full-height cards, no inner scroll */
+.fx-sys-on .fx-sys-stage{transform-origin:top center}
+.fx-sys-on .fx-sys-card{height:auto;overflow:visible}
+.fx-sys-on .fx-sys-body-in{height:auto;overflow:visible}
+.fx-close{position:relative;overflow:hidden;margin-top:18px;display:flex;align-items:center;gap:16px;padding:18px 22px;background:linear-gradient(110deg,#FF5B2E,#FFA46B,#FF7A45,#FF5B2E);background-size:300% 100%;color:#0C0E0D}
+.fx-close strong{display:block;font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:clamp(22px,2vw,28px);line-height:1.1;letter-spacing:-.01em}
+.fx-close span.fx-close-sub{display:block;font-size:14px;font-weight:500;margin-top:4px}
+.fx-close-check{flex:none;width:44px;height:44px;border-radius:50%;background:#FFFFFF;display:grid;place-items:center;box-shadow:0 8px 20px -10px rgba(12,14,13,.5)}
+.fx-close-check path{stroke-dasharray:24;stroke-dashoffset:0}
+.fx-close::after{content:"";position:absolute;top:0;bottom:0;left:-40%;width:30%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg)}
+.fx-spark{position:absolute;bottom:-6px;width:6px;height:6px;border-radius:50%;background:#FFFFFF;opacity:0}
+@keyframes fxflow{to{background-position:300% 0}}
+@keyframes fxshine{0%{left:-40%}60%,100%{left:130%}}
+@keyframes fxcheck{from{stroke-dashoffset:24}to{stroke-dashoffset:0}}
+@keyframes fxstamp{0%{transform:scale(.9);opacity:.4}60%{transform:scale(1.03);opacity:1}100%{transform:none}}
+@keyframes fxspark{0%{opacity:0;transform:translateY(0) scale(.6)}20%{opacity:.9}100%{opacity:0;transform:translateY(-70px) scale(1)}}
+@media (prefers-reduced-motion:no-preference){
+  .fx-close{animation:fxflow 6s linear infinite}
+  .fx-close::after{animation:fxshine 3.2s ease-in-out infinite}
+  .fx-close-on{animation:fxflow 6s linear infinite,fxstamp .7s cubic-bezier(.2,.8,.2,1.2)}
+  .fx-close-on .fx-close-check path{animation:fxcheck .8s ease .3s both}
+  .fx-spark{animation:fxspark 2.8s ease-out infinite}
+  .fx-spark:nth-of-type(1){left:58%;animation-delay:.2s}.fx-spark:nth-of-type(2){left:70%;animation-delay:1.1s}.fx-spark:nth-of-type(3){left:82%;animation-delay:1.9s}.fx-spark:nth-of-type(4){left:92%;animation-delay:.7s}
+}
+
+/* Buying path map: contact tag below, with room */
+.fx-bpm-foot{position:relative;height:84px;border-top:1px dashed #E2DDD3}
+
+/* Sprint view */
+.fx-sprint{padding-top:72px}
+.fx-sprint-weeks{position:absolute;left:0;right:0;top:0;display:grid;grid-template-columns:repeat(13,minmax(0,1fr));font-family:'Spline Sans Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.08em;color:#A9A59B}
+.fx-sprint-weeks span{border-left:1px solid #E2DDD3;padding-left:6px;height:18px}
+.fx-sprint-live{top:26px}
+.fx-sprint-row{height:clamp(270px,24vw,310px)}
+.fx-seg-m2{background:#FFFFFF;border:1px solid #E2DDD3;border-top:3px solid #FFA46B}
+.fx-seg-m3{background:#FFF4EF;border:1px solid #F2C5B5;border-top:3px solid #FF5B2E;color:#0C0E0D}
+.fx-gantt{display:flex;flex-direction:column;gap:7px;margin:14px 0 12px}
+.fx-gantt div{position:relative;height:22px}
+.fx-gantt span{position:relative;z-index:1;display:block;font-size:11px;line-height:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fx-gantt i{position:absolute;left:var(--s);width:var(--w);bottom:0;height:7px;border-radius:999px;background:#FF5B2E;transform-origin:left}
+.fx-seg-build .fx-gantt span{color:#C9C4B9}
+.fx-seg-build .fx-gantt i{background:#FFA46B}
+.fx-seg-m1 .fx-gantt span,.fx-seg-m2 .fx-gantt span{color:#3F3C36}
+.fx-seg-m2 .fx-gantt i{background:linear-gradient(90deg,#FFA46B,#FF5B2E)}
+.fx-seg-m3 .fx-gantt i{background:linear-gradient(90deg,#FF5B2E,#E04A1F)}
+.fx-js .fx-gantt i{transform:scaleX(0);transition:transform .9s cubic-bezier(.2,.8,.2,1) calc(var(--i) * .22s + var(--d) * .12s + 1s)}
+.fx-js .fx-vis .fx-gantt i{transform:none}
+
+/* CTA agenda */
+.fx-agenda{background:#FFFFFF;border:1px solid #E2DDD3;box-shadow:0 40px 80px -50px rgba(120,90,40,.55)}
+.fx-agenda-head{display:flex;align-items:center;gap:18px;padding:22px 24px;border-bottom:1px solid #E2DDD3}
+.fx-clock{position:relative;width:72px;height:72px;flex:none}
+.fx-clock svg{width:100%;height:100%;display:block}
+.fx-clock-ring{stroke-dasharray:176;stroke-dashoffset:0}
+.fx-clock span{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Spline Sans Mono',ui-monospace,monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#5F5B53;line-height:1}
+.fx-clock b{font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:24px;letter-spacing:0;color:#0C0E0D;text-transform:none;margin-bottom:2px}
+.fx-agenda-list{list-style:none;margin:0;padding:0}
+.fx-agenda-list li{position:relative;display:grid;grid-template-columns:86px minmax(0,1fr);gap:14px;padding:18px 24px;border-bottom:1px solid #F0ECE5;transition:background-color .3s}
+.fx-agenda-list li::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:#FF5B2E;transform:scaleY(0);transform-origin:top;transition:transform .4s ease}
+.fx-agenda-list li:hover{background:#FFF8F5}
+.fx-agenda-list li:hover::before{transform:none}
+.fx-agenda-t{font-family:'Spline Sans Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.06em;color:#B83A14;font-weight:500;padding-top:3px}
+.fx-agenda-list strong{display:block;font-size:17px;font-weight:600}
+.fx-agenda-list li span:not(.fx-agenda-t){display:block;font-size:14px;color:#5F5B53;margin-top:3px}
+.fx-agenda-out{display:flex;align-items:center;gap:12px;padding:16px 24px;background:linear-gradient(110deg,#FF5B2E,#FFA46B);font-weight:600;font-size:15px;color:#0C0E0D}
+.fx-js .fx-agenda .fx-clock-ring{stroke-dashoffset:176;transition:stroke-dashoffset 2s cubic-bezier(.2,.7,.2,1) .4s}
+.fx-js .fx-agenda.fx-vis .fx-clock-ring{stroke-dashoffset:0}
+.fx-js .fx-agenda .fx-agenda-list li{opacity:0;transform:translateX(20px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.8,.2,1),background-color .3s;transition-delay:calc(var(--k) * .18s + .6s),calc(var(--k) * .18s + .6s),0s}
+.fx-js .fx-agenda.fx-vis .fx-agenda-list li{opacity:1;transform:none}
+/* ---------- v6 ---------- */
+.vz .li svg{width:14px;height:14px;display:inline-block;flex:none;max-height:none}
+.li{padding:38px 18px 16px;border-radius:20px;font-size:13.5px;box-shadow:0 1px 0 #FFFFFF inset,0 28px 56px -32px rgba(120,90,40,.55)}
+.li::before{content:"";position:absolute;left:16px;top:13px;width:40px;height:8px;background:radial-gradient(circle at 4px 4px,#E3DCCD 3.5px,transparent 4px),radial-gradient(circle at 18px 4px,#E3DCCD 3.5px,transparent 4px),radial-gradient(circle at 32px 4px,#E3DCCD 3.5px,transparent 4px)}
+.li::after{content:"";position:absolute;left:0;right:0;top:30px;border-top:1px solid #F0ECE5}
+.li-prof{padding-top:30px}
+.li-prof::after{display:none}
+.li-search{padding:9px 14px;font-size:13.5px}
+.li-row{padding:9px 0}
+.li-head,.li-chat-h{padding-top:4px}
+.fx-sys-on .fx-sys-card{top:calc(var(--o) * 48px)}
+.fx-sys-bar{height:48px}
+.fx-sys-on .fx-outline-num{display:none}
+.fx-sys-on .fx-sys-body-in{padding:20px 28px 22px}
+.fx-sys-on .fx-sys-body-in > div:first-child p{font-size:clamp(22px,2vw,28px) !important;margin:0 !important}
+.fx-sys-on .fx-files{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;background:transparent !important;border:0 !important}
+.fx-sys-on .fx-files-h{display:none !important}
+.fx-sys-on .fx-file{grid-template-columns:1fr;gap:5px;border:1px solid #E8E2D7;background:#FFFFFF;padding:14px 16px}
+.fx-sys-on .fx-file-desc{font-size:15px}
+.fx-sys-on .fx-close{margin-top:14px}
+.fx-sprint-row{height:clamp(240px,21vw,270px)}
+.fx-start-cta{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px;margin-top:40px;padding:24px 28px;background:#FFFFFF;border:1px solid #E2DDD3}
+/* ---------- v7 ---------- */
+.li-type{width:auto;max-width:var(--w);padding-right:2px}
+@keyframes fxtype2{from{max-width:0}to{max-width:var(--w)}}
+@media (prefers-reduced-motion:no-preference){.fx-stk .li-type{width:auto;max-width:0}.fx-stk.in .li-type{animation:fxtype2 1.3s steps(24) .3s forwards,fxcaret .8s step-end infinite}}
+
+/* System deck: bigger, full-width cards */
+.fx-sys-on .fx-sys-bar{height:48px;padding:0 28px}
+.fx-sys-on .fx-sys-bar-t{font-size:23px}
+.fx-sys-on .fx-sys-body-in{padding:26px 32px 28px}
+.fx-sys-on .fx-sys-body-in > div:first-child p{font-size:clamp(24px,2.3vw,32px) !important}
+.fx-sys-on .fx-files{gap:12px;margin-top:20px !important}
+.fx-sys-on .fx-file{padding:18px 20px;gap:7px}
+.fx-sys-on .fx-file-name{font-size:14px}
+.fx-sys-on .fx-file-desc{font-size:16.5px;line-height:1.5}
+.fx-sys-on .fx-file-cad{font-size:11.5px}
+.fx-sys-on .fx-close strong{font-size:clamp(24px,2.2vw,30px)}
+
+/* Sprint segments: cleaner inside */
+.fx-seg{justify-content:flex-start;gap:12px;padding:20px 20px 22px}
+.fx-seg-top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.fx-seg-t{display:block;padding-bottom:14px;border-bottom:1px solid rgba(12,14,13,.1)}
+.fx-seg-build .fx-seg-t{border-bottom-color:rgba(250,248,244,.16)}
+.fx-seg-time{font-size:9.5px;padding:3px 8px;border-radius:999px;align-self:auto}
+.fx-gantt{gap:12px;margin:4px 0 0}
+.fx-gantt div{display:flex;flex-direction:column;gap:6px;height:auto}
+.fx-gantt span{font-size:12px;font-weight:500}
+.fx-gantt b{position:relative;display:block;height:8px;border-radius:999px;background:rgba(12,14,13,.07);overflow:hidden}
+.fx-seg-build .fx-gantt b{background:rgba(250,248,244,.12)}
+.fx-gantt i{height:100%}
+.fx-sprint-row{height:auto;min-height:clamp(250px,21vw,280px)}
+@media (max-width:900px){
+  .fx-sprint{min-width:0;padding-top:0}
+  .fx-sprint-weeks,.fx-sprint-live,.fx-sprint-ticks{display:none}
+  .fx-sprint-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;min-height:0}
+  .fx-seg{min-height:230px}
+  .fx-seg-m1::before{content:"Day 15 · Live";position:absolute;top:0;right:0;background:#FF5B2E;color:#0C0E0D;font-family:'Spline Sans Mono',ui-monospace,monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;padding:4px 8px}
+  .fx-seg-m1 .fx-seg-top{padding-right:96px}
+  .fx-js .fx-seg{transform:translateY(24px);opacity:0;transition:transform .8s cubic-bezier(.2,.8,.2,1) calc(var(--i) * .15s),opacity .8s ease calc(var(--i) * .15s)}
+  .fx-js .fx-vis .fx-seg{transform:none;opacity:1}
+  .fx-start-cta{padding:20px}
+}
+@media (max-width:560px){.fx-sprint-row{grid-template-columns:1fr}.fx-seg{min-height:0}}
+/* ---------- v8 ---------- */
+/* Problem cards: equal rhythm */
+.fx-hs-on .fx-stk{height:min(100%,560px)}
+.fx-stk{min-height:min(66vh,480px);align-items:center}
+.fx-stk-head{display:flex;flex-direction:column;align-self:center}
+.fx-stk h3{min-height:2.08em;display:flex;align-items:flex-end}
+.fx-stk-p{min-height:calc(4 * 1.55em);display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+/* CTA + footer in one frame */
+#contact .fx-agenda-head{padding:16px 22px}
+#contact .fx-clock{width:60px;height:60px}
+#contact .fx-agenda-list li{padding:13px 22px}
+#contact .fx-agenda-out{padding:13px 22px}
+footer{padding:22px 0 26px !important}
+/* Rising circles on every button */
+.fx-btn{isolation:isolate}
+.fx-btn::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background-image:radial-gradient(circle,rgba(255,255,255,.95) 0 2.5px,transparent 3px),radial-gradient(circle,rgba(255,255,255,.8) 0 2px,transparent 2.5px),radial-gradient(circle,rgba(255,255,255,.9) 0 3px,transparent 3.5px),radial-gradient(circle,rgba(255,255,255,.75) 0 2px,transparent 2.5px);
+  background-size:8px 8px;background-repeat:no-repeat;background-position:18% 130%,42% 160%,66% 140%,86% 170%}
+.fx-btn-secondary::before{background-image:radial-gradient(circle,rgba(255,91,46,.9) 0 2.5px,transparent 3px),radial-gradient(circle,rgba(255,91,46,.7) 0 2px,transparent 2.5px),radial-gradient(circle,rgba(255,91,46,.85) 0 3px,transparent 3.5px),radial-gradient(circle,rgba(255,91,46,.7) 0 2px,transparent 2.5px)}
+.fx-btn-secondary:hover::before{opacity:.9}
+@keyframes fxrise2{0%{background-position:18% 130%,42% 160%,66% 140%,86% 170%;opacity:0}15%{opacity:1}100%{background-position:18% -40%,42% -20%,66% -50%,86% -30%;opacity:0}}
+@media (prefers-reduced-motion:no-preference){
+  .fx-btn::before{animation:fxrise2 3.2s ease-out infinite}
+  .fx-btn:hover::before{animation-duration:1.4s}
+}
+/* ---------- v9 ---------- */
+/* Outline buttons: circles only on hover */
+.fx-btn-secondary::before{animation:none !important;opacity:0}
+@media (prefers-reduced-motion:no-preference){.fx-btn-secondary:hover::before{opacity:1;animation:fxrise2 1.4s ease-out infinite !important}}
+
+/* Problem cards: mock fills the column, Fix pill pinned to the same spot */
+.fx-stk{align-items:stretch;padding:40px 44px}
+.fx-stk-head{justify-content:center}
+.vz{display:flex;flex-direction:column;min-height:0}
+.vz .li{flex:1 1 auto;min-height:0;overflow:hidden;padding-top:34px}
+.vz .li::after{top:27px}
+.vz .li::before{top:10px}
+.vz .li-row,.vz .li-note{padding:7px 0}
+.vz .li-tabs{padding:8px 2px 4px}
+.vz .li-you{padding:7px 10px;margin-top:4px}
+.fx-pill{flex:none;align-self:flex-start;margin-top:16px}
+.fx-hs-on .fx-stk{height:min(100%,580px)}
+.fx-hs-on .fx-hs-sticky{padding-top:92px;padding-bottom:20px}
+.fx-hs-on .fx-hs-viewport{padding-top:20px}
+
+/* Six-step deck: wider, taller, larger type */
+.fx-sys-on .fx-sys-inner{max-width:1420px}
+.fx-sys-on .fx-sys-sticky{padding-top:88px;padding-bottom:22px}
+.fx-sys-on .fx-sys-body{gap:40px;margin-top:22px}
+.fx-sys-on .fx-sys-map{flex-basis:200px}
+.fx-sys-on .fx-sys-h2{font-size:clamp(30px,3vw,44px)}
+.fx-sys-on .fx-sys-bar-t{font-size:26px}
+.fx-sys-on .fx-sys-bar .fx-label{font-size:13px !important}
+.fx-sys-on .fx-sys-bar .fx-chip{font-size:12.5px;padding:4px 10px}
+.fx-sys-on .fx-sys-body-in{padding:30px 38px 32px}
+.fx-sys-on .fx-sys-body-in > div:first-child p{font-size:clamp(26px,2.5vw,36px) !important}
+.fx-sys-on .fx-files{gap:14px;margin-top:22px !important}
+.fx-sys-on .fx-file{padding:20px 22px;gap:8px}
+.fx-sys-on .fx-file-name{font-size:15.5px}
+.fx-sys-on .fx-file-desc{font-size:18px;line-height:1.5}
+.fx-sys-on .fx-file-cad{font-size:12.5px}
+.fx-sys-on .fx-close strong{font-size:clamp(26px,2.4vw,34px)}
+.fx-sys-on .fx-close .fx-close-sub{font-size:16px}
+.fx-sys-on .fx-sys-body-in > p{font-size:17px !important}
+/* ---------- v10 ---------- */
+.fx-sys-on .fx-sys-sticky{padding-top:84px;padding-bottom:16px}
+.fx-sys-on .fx-sys-body{margin-top:clamp(40px,4.5vh,56px)}
+.fx-sys-bar,.fx-sys-on .fx-sys-bar{height:44px}
+.fx-sys-on .fx-sys-card{top:calc(var(--o) * 44px)}
+.fx-sys-on .fx-sys-bar-t{font-size:27px}
+.fx-sys-on .fx-sys-body-in{padding:32px 40px 34px}
+.fx-sys-on .fx-sys-body-in > div:first-child p{font-size:clamp(28px,2.7vw,40px) !important}
+.fx-sys-on .fx-file{padding:22px 24px}
+.fx-sys-on .fx-file-name{font-size:16.5px}
+.fx-sys-on .fx-file-desc{font-size:19px}
+.fx-sys-on .fx-file-cad{font-size:13px}
+.fx-sys-on .fx-close strong{font-size:clamp(28px,2.6vw,36px)}
+.fx-sys-on .fx-close .fx-close-sub{font-size:17px}
+.fx-sys-on .fx-sys-body-in > p{font-size:18px !important}
+/* ---------- v11 ---------- */
+.fx-sys-bar,.fx-sys-on .fx-sys-bar{height:56px}
+.fx-sys-on .fx-sys-card{top:calc(var(--o) * 56px)}
+.fx-sys-bar-t,.fx-sys-on .fx-sys-bar-t{font-size:clamp(26px,2.4vw,33px);line-height:1}
+.fx-fixes{display:inline-flex;align-items:center;gap:7px;color:#0C0E0D;border-color:#F2C5B5;background:#FFF4EF}
+.fx-fixes i{width:7px;height:7px;border-radius:50%;background:#FF5B2E}
+.fx-faq summary{font-size:clamp(21px,1.9vw,26px)}
+/* ---------- v12 ---------- */
+.fx-faq summary{text-wrap:balance}
+.fx-faq summary::after{flex:none}
+.fx-sys-bar,.fx-sys-on .fx-sys-bar{height:auto;min-height:68px;padding-top:16px;padding-bottom:16px}
+.fx-sys-on .fx-sys-card{top:calc(var(--o) * 54px)}
+.fx-sys-on .fx-sys-body-in{padding:36px 40px 38px}
+.fx-sys-on .fx-files{gap:16px;margin-top:26px !important}
+.fx-sys-on .fx-file{min-height:128px;padding:26px 26px;align-content:start}
+/* ---------- v13 ---------- */
+@media (min-width:1200px){.fx-faq summary{white-space:nowrap;font-size:clamp(19px,1.55vw,23px)}}
+.fx-sys-on .fx-sys-sticky{padding-bottom:8px}
+.fx-sys-on .fx-sys-card{top:calc(var(--o) * var(--step, 54px))}
+.fx-sys-bar,.fx-sys-on .fx-sys-bar{min-height:70px;padding-top:12px;padding-bottom:22px;align-items:flex-start}
+.fx-sys-on .fx-sys-bar .fx-chip{margin-top:4px}
+.fx-sys-on .fx-sys-bar > .fx-label{padding-top:9px}
+.fx-sys-on .fx-sys-body-in > div:first-child p{font-size:clamp(30px,2.9vw,44px) !important}
+.fx-sys-on .fx-file{min-height:156px;padding:28px 28px;gap:10px}
+.fx-sys-on .fx-file-name{font-size:18px}
+.fx-sys-on .fx-file-desc{font-size:21px;line-height:1.45}
+.fx-sys-on .fx-file-cad{font-size:14px}
+.fx-sys-on .fx-sys-body-in > p{font-size:19px !important}
+.fx-sys-on .fx-close strong{font-size:clamp(30px,2.8vw,40px)}
+.fx-sys-on .fx-close .fx-close-sub{font-size:18px}
+/* ---------- v14 ---------- */
+/* Deck: every title strip fully visible */
+.fx-sys-bar,.fx-sys-on .fx-sys-bar{height:64px;min-height:0;padding-top:0;padding-bottom:0;align-items:center}
+.fx-sys-on .fx-sys-bar > .fx-label{padding-top:0}
+.fx-sys-on .fx-sys-bar .fx-chip{margin-top:0}
+.fx-sys-bar-t,.fx-sys-on .fx-sys-bar-t{font-size:clamp(24px,2.1vw,30px);line-height:1.15}
+.fx-sys-on .fx-file{min-height:0;padding:22px 24px}
+.fx-sys-on .fx-file-desc{font-size:19px}
+.fx-sys-on .fx-file-name{font-size:17px}
+.fx-sys-on .fx-close{margin-top:28px}
+.fx-close{margin-top:28px}
+
+/* Sprint phases: richer cards */
+.fx-sprint{padding-top:56px}
+.fx-sprint-weeks,.fx-sprint-ticks{display:none}
+.fx-sprint-row{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;min-height:0;height:auto}
+.fx-sprint-live{left:25%;top:12px;bottom:0;margin-left:-7px}
+.fx-seg{gap:16px;padding:22px 22px 0;min-height:340px}
+.fx-seg-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.fx-seg-ic{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#FFF1EA;border:1px solid #F6D2C2}
+.fx-seg-build .fx-seg-ic{background:rgba(250,248,244,.08);border-color:rgba(250,248,244,.18)}
+.fx-seg-head{display:flex;flex-direction:column;gap:6px;padding-bottom:16px;border-bottom:1px solid rgba(12,14,13,.1)}
+.fx-seg-build .fx-seg-head{border-bottom-color:rgba(250,248,244,.16)}
+.fx-seg-t{font-size:clamp(30px,2.6vw,40px);padding:0;border:0}
+.fx-seg-range{font-family:'Spline Sans Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#B83A14;font-weight:500}
+.fx-seg-build .fx-seg-range{color:#FFA46B}
+.fx-tasks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.fx-tasks li{display:grid;grid-template-columns:20px minmax(0,1fr);grid-template-rows:auto 6px;column-gap:10px;row-gap:6px;align-items:center}
+.fx-tick{grid-row:1/3;align-self:start;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;background:#FF5B2E;color:#0C0E0D;margin-top:-1px}
+.fx-seg-build .fx-tick{background:#FFA46B}
+.fx-task-n{font-size:13.5px;font-weight:500;line-height:1.2}
+.fx-seg-build .fx-task-n{color:#FAF8F4}
+.fx-tasks b{position:relative;display:block;height:6px;border-radius:999px;background:rgba(12,14,13,.07);overflow:hidden}
+.fx-seg-build .fx-tasks b{background:rgba(250,248,244,.12)}
+.fx-tasks i{position:absolute;left:var(--s);width:var(--w);top:0;bottom:0;border-radius:999px;background:linear-gradient(90deg,#FFA46B,#FF5B2E);transform-origin:left}
+.fx-seg-build .fx-tasks i{background:#FFA46B}
+.fx-seg-out{margin-top:auto;margin-left:-22px;margin-right:-22px;padding:14px 22px;display:flex;flex-direction:column;gap:3px;border-top:1px solid rgba(12,14,13,.08);background:rgba(255,91,46,.06)}
+.fx-seg-out span{font-family:'Spline Sans Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#5F5B53}
+.fx-seg-out strong{font-size:15px;font-weight:600}
+.fx-seg-build .fx-seg-out{background:rgba(250,248,244,.06);border-top-color:rgba(250,248,244,.14)}
+.fx-seg-build .fx-seg-out span{color:#C9C4B9}
+.fx-seg-m3 .fx-seg-out{background:#FF5B2E}
+.fx-seg-m3 .fx-seg-out span{color:#0C0E0D}
+.fx-js .fx-tasks i{transform:scaleX(0);transition:transform .9s cubic-bezier(.2,.8,.2,1) calc(var(--i) * .2s + var(--d) * .12s + .9s)}
+.fx-js .fx-tick{transform:scale(0);transition:transform .5s cubic-bezier(.2,.8,.2,1.5) calc(var(--i) * .2s + var(--d) * .12s + .8s)}
+.fx-js .fx-vis .fx-tasks i,.fx-js .fx-vis .fx-tick{transform:none}
+@media (max-width:900px){.fx-sprint{padding-top:0}.fx-sprint-row{grid-template-columns:repeat(2,minmax(0,1fr))}.fx-seg{min-height:0}}
+@media (max-width:560px){.fx-sprint-row{grid-template-columns:1fr}}
+/* ---------- v15 ---------- */
+/* FAQ: one line per question on laptop and desktop */
+@media (min-width:1024px){.fx-faq summary{white-space:nowrap;font-size:clamp(18px,1.6vw,24px)}}
+
+/* Six-step: natural sticky stack, readable at every screen size (no shrinking) */
+.fx-sys-sticky{position:static}
+.fx-sys-body{align-items:flex-start;margin-top:clamp(40px,5vw,64px)}
+.fx-sys-map{position:sticky;top:104px}
+.fx-sys-stage{gap:0}
+.fx-sys-card{position:relative;margin-bottom:28px}
+.fx-sys-card:last-child{margin-bottom:0}
+.fx-sys-bar{height:64px;padding:0 28px;align-items:center}
+.fx-sys-bar-t{font-size:clamp(24px,2.2vw,30px);line-height:1.15}
+.fx-sys-bar .fx-label{font-size:13px !important}
+.fx-sys-bar .fx-chip{font-size:12.5px;padding:4px 10px}
+.fx-sys-body-in{padding:clamp(24px,3vw,36px) clamp(22px,3vw,40px) clamp(28px,3vw,38px)}
+.fx-sys-body-in > div:first-child{align-items:center !important}
+.fx-sys-body-in > div:first-child .fx-outline-num{display:none}
+.fx-sys-body-in > div:first-child p{font-size:clamp(26px,2.6vw,38px) !important;margin:0 !important}
+.fx-files{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:24px !important;background:transparent !important;border:0 !important}
+.fx-files-h{display:none !important}
+.fx-file{grid-template-columns:1fr;gap:10px;border:1px solid #E8E2D7;background:#FFFFFF;padding:24px 26px;min-height:150px;align-content:start}
+.fx-file-name{font-size:17px}
+.fx-file-desc{font-size:clamp(18px,1.5vw,20px);line-height:1.5}
+.fx-file-cad{font-size:13.5px}
+.fx-close strong{font-size:clamp(28px,2.6vw,38px)}
+.fx-close .fx-close-sub{font-size:17px}
+.fx-sys-body-in > p{font-size:18px !important}
+@media (min-width:900px){
+  .fx-sys-card{position:sticky;top:calc(104px + var(--o) * var(--step, 64px))}
+}
+@media (max-width:640px){.fx-files{grid-template-columns:1fr}.fx-file{min-height:0}.fx-sys-bar{padding:0 18px}}
+/* ---------- v16 ---------- */
+@media (min-width:900px){.fx-faq-l{flex:0 0 calc(30% - 40px)}.fx-faq-r{flex:0 0 70%}}
+@media (max-width:899px){.fx-faq-l,.fx-faq-r{flex:1 1 100%}}
+.fx-faq-h{font-size:clamp(34px,3.4vw,52px) !important}
+.fx-faq-h em{white-space:nowrap}
+
+/* Six-step: compact enough to always fit, still large type */
+.fx-sys-body-in{padding:24px 32px 28px}
+.fx-sys-body-in > div:first-child p{font-size:clamp(24px,2.2vw,32px) !important}
+.fx-files{gap:12px;margin-top:18px !important}
+.fx-file{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"n c" "d d";gap:8px 12px;min-height:0;padding:18px 20px}
+.fx-file-name{grid-area:n;font-size:17px}
+.fx-file-cad{grid-area:c;font-size:12.5px;align-self:center}
+.fx-file-desc{grid-area:d;font-size:18px;line-height:1.45}
+.fx-close{margin-top:22px;padding:16px 22px}
+.fx-close strong{font-size:clamp(26px,2.3vw,34px)}
+.fx-sys-body-in > p{margin-top:14px !important}
+@media (max-width:640px){.fx-file{grid-template-columns:1fr;grid-template-areas:"n" "d" "c"}}
+/* ---------- v17 ---------- */
+.fx-faq-wrap{gap:80px !important}
+@media (min-width:900px){.fx-faq-l{flex:0 0 calc(30% - 24px)}.fx-faq-r{flex:0 0 calc(70% - 56px)}}
+.fx-sys{padding-bottom:clamp(56px,6vw,96px)}
+@media (min-width:900px){.fx-sys-stage .fx-sys-bar{height:var(--step,64px)}}
+.fx-sys-body-in{padding:20px 28px 24px}
+.fx-sys-body-in > div:first-child p{font-size:clamp(22px,2vw,28px) !important}
+.fx-files{gap:10px;margin-top:14px !important}
+.fx-file{grid-template-columns:1fr;grid-template-areas:"n" "d" "c";gap:6px;padding:14px 18px}
+.fx-file-desc{font-size:17px;line-height:1.45}
+.fx-file-cad{align-self:start;font-size:12px}
+.fx-close{margin-top:18px;padding:14px 20px}
+.fx-close strong{font-size:clamp(24px,2.1vw,30px)}
+/* ---------- v18 ---------- */
+/* release the whole stack together at the end: every card's margin box ends at the same line */
+@media (min-width:900px){
+  .fx-sys-stage{gap:28px}
+  .fx-sys-card,.fx-sys-card:last-child{margin-bottom:calc((5 - var(--o)) * var(--step, 64px)) !important}
+}
+.fx-sys-bar-t,.fx-sys-on .fx-sys-bar-t{font-size:clamp(20px,1.8vw,25px) !important}
+@media (min-width:900px){.fx-sys-card{box-sizing:border-box;min-height:var(--cardh,auto) !important}}
+/* ---------- v19 ---------- */
+.fx-stk-no{font-size:clamp(56px,7.5vw,112px);line-height:1.05}
+.fx-hs-on .fx-stk-no{font-size:clamp(50px,5.6vw,90px)}
+/* ---------- v20 ---------- */
+.fx-stk-head{justify-content:flex-start;align-self:start;padding-top:6px}
+.fx-stk-no,.fx-hs-on .fx-stk-no{font-size:clamp(46px,5vw,80px);line-height:1;margin:0 0 18px}
+.fx-stk h3{margin:0;font-size:clamp(24px,2.6vw,38px);min-height:2.1em}
+.fx-stk-p{margin-top:12px;font-size:15px;line-height:1.55;min-height:calc(4 * 1.55em)}
+.fx-stk h3{align-items:flex-start !important}
+.fx-hs-meter{padding-top:22px;padding-bottom:8px;align-items:center}
+.fx-hs-on .fx-hs-sticky{padding-bottom:30px}
+.fx-hs-on .fx-hs-viewport{padding-bottom:0}
+.fx-hs-on .fx-hs-meter{padding-top:30px;padding-bottom:0}
+.fx-pill{margin-top:28px}
+
+/* standalone site extras */
+html{scroll-behavior:smooth}
+@media (max-width:900px){.fx-navbar.fx-nav-open .fx-nav{display:flex !important;position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;background:#FAF8F4;border-bottom:1px solid #E2DDD3;padding:8px 20px 16px}.fx-navbar.fx-nav-open .fx-nav a{padding:12px 0;font-size:17px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="fx " data-ref="Root">
+  <div class="fx-light" aria-hidden="true" style="opacity: 1"><div class="fx-spot" data-ref="Spot"></div></div>
+  <div class="fx-prog" aria-hidden="true" data-ref="Prog"></div>
+  <div class="fx-body">
+
+  <!-- NAV -->
+  <header class="fx-navbar" data-ref="Nav" style="position: sticky; top: 0; z-index: 5; background: #FAF8F4; border-bottom: 1px solid #E2DDD3">
+    <div class="fx-wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 72px">
+      <a href="#top" style="text-decoration: none; color: #0C0E0D; font-family: 'Newsreader', Georgia, serif; font-size: 28px; letter-spacing: -0.01em">Frame<span style="font-style: italic; color: #E04A1F">X</span></a>
+      <nav class="fx-nav fx-hide-sm" aria-label="Primary" style="display: flex; gap: 32px">
+        <a href="#problem">The Problem</a>
+        <a href="#system">The System</a>
+        <a href="#start">Getting started</a>
+      </nav>
+      <div style="display: flex; gap: 12px; align-items: center">
+        <a class="fx-btn fx-btn-secondary fx-hide-sm" href="#contact" style="min-height: 44px; padding: 10px 20px; font-size: 15px">Book a call</a>
+        <button type="button" class="fx-btn fx-btn-secondary fx-menu" aria-label="Open menu" aria-expanded="false" data-ref="Menu" style="min-height: 44px; padding: 10px 16px; font-size: 15px">Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 01 HERO -->
+  <section id="top" style="position: relative; padding: clamp(56px, 8vw, 112px) 0 clamp(72px, 8vw, 120px)">
+    <div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; background: radial-gradient(55% 60% at 92% 0%, rgba(255,91,46,0.08) 0%, rgba(255,91,46,0.025) 45%, rgba(255,91,46,0) 72%), radial-gradient(45% 50% at 0% 100%, rgba(240,235,226,0.9) 0%, rgba(240,235,226,0) 70%)"></div>
+    <div class="fx-wrap" style="position: relative">
+      <p class="fx-label fx-in" style="margin: 0 0 28px">Authority-to-Pipeline System for B2B Tech Companies</p>
+      <h1 class="fx-display" style="font-size: clamp(36px, 4.6vw, 70px); line-height: 1.02; max-width: 22ch"><span class="fx-ln"><span style="--d: 0">We build <em>infrastructure</em></span></span><span class="fx-ln"><span style="--d: 1">for how the market finds,</span></span><span class="fx-ln"><span style="--d: 2">understands, trusts, and buys.</span></span></h1>
+      <p class="fx-lede fx-in fx-in-3" style="margin: 28px 0 0; max-width: 58ch">Your delivery is ahead of your market position. FrameX builds the system that closes the gap, on the channel where your buyers already vet you.</p>
+      <div class="fx-in fx-in-3" style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px">
+        <a class="fx-btn fx-btn-primary" href="#system">See how the system works <span aria-hidden="true">↓</span></a>
+        <a class="fx-btn fx-btn-secondary" href="#contact">Book a call</a>
+      </div>
+      <p class="fx-label fx-in fx-in-4" style="margin: 28px 0 0; display: flex; flex-wrap: wrap; gap: 8px 22px"><span>Built in 14 days</span><span aria-hidden="true" style="color: #FF5B2E">/</span><span>Live on day 15</span><span aria-hidden="true" style="color: #FF5B2E">/</span><span>In your voice</span></p>
+
+      <!-- The gap: the system builds the bridge -->
+      <figure class="fx-in fx-in-4" aria-label="The technical-to-commercial gap: what you deliver on one side, where buyers decide on the other. Five FrameX systems drop in as the bridge between them." style="margin: clamp(56px, 7vw, 96px) 0 0">
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 16px">
+          <span class="fx-label">The technical-to-commercial gap</span>
+        </div>
+        <div class="fx-bridge">
+          <div class="fx-cliff fx-cliff-l">
+            <span class="fx-label" style="font-size: 10px; color: #C9C4B9">Your side</span>
+            <span class="fx-cliff-t">What you can deliver</span>
+            <span class="fx-cliff-s">Expertise, capability, delivery record</span>
+          </div>
+          <div class="fx-cliff fx-cliff-r">
+            <span class="fx-label" style="font-size: 10px">Buyer's side</span>
+            <span class="fx-cliff-t">Where buyers decide</span>
+            <span class="fx-cliff-s">Shortlist, validation, decision</span>
+          </div>
+
+          <div class="fx-bridge-stages" aria-hidden="true"><span>Find</span><span>Understand</span><span>Trust</span><span>Buy</span></div>
+
+          <div class="fx-void" aria-hidden="true">
+            <span class="fx-void-a">Without a system, buyers fall through here</span>
+            <span class="fx-void-b">FrameX builds the path across</span>
+          </div>
+
+          <ol class="fx-planks">
+            <li><span class="fx-label fx-sig" style="font-size: 10px">01</span><span class="nm">Positioning</span></li>
+            <li><span class="fx-label fx-sig" style="font-size: 10px">02</span><span class="nm">Authority content</span></li>
+            <li><span class="fx-label fx-sig" style="font-size: 10px">03</span><span class="nm">Sales resources</span></li>
+            <li><span class="fx-label fx-sig" style="font-size: 10px">04</span><span class="nm">Signal intelligence</span></li>
+            <li><span class="fx-label fx-sig" style="font-size: 10px">05</span><span class="nm">Conversations</span></li>
+          </ol>
+
+          <span class="fx-walker" aria-hidden="true"></span>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="fx-marquee" aria-hidden="true"><div class="fx-marquee-track"><span>Positioning Architecture<i aria-hidden="true">✦</i></span><span>Authority Content<i aria-hidden="true">✦</i></span><span>Sales Resources<i aria-hidden="true">✦</i></span><span>Signal Intelligence<i aria-hidden="true">✦</i></span><span>Conversation Framework<i aria-hidden="true">✦</i></span><span>Pipeline Revenue<i aria-hidden="true">✦</i></span><span>Built in 14 days<i aria-hidden="true">✦</i></span><span>Live on day 15<i aria-hidden="true">✦</i></span><span>Positioning Architecture<i aria-hidden="true">✦</i></span><span>Authority Content<i aria-hidden="true">✦</i></span><span>Sales Resources<i aria-hidden="true">✦</i></span><span>Signal Intelligence<i aria-hidden="true">✦</i></span><span>Conversation Framework<i aria-hidden="true">✦</i></span><span>Pipeline Revenue<i aria-hidden="true">✦</i></span><span>Built in 14 days<i aria-hidden="true">✦</i></span><span>Live on day 15<i aria-hidden="true">✦</i></span></div></div>
+
+  <!-- 02 CREDIBILITY STRIP -->
+  <section aria-label="Market evidence" style="border-bottom: 1px solid #E2DDD3; background: #FFFFFF">
+    <div class="fx-wrap" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr))">
+      <div class="fx-reveal" style="padding: 40px 32px 40px 0; display: flex; gap: 24px; align-items: baseline">
+        <span class="fx-display" style="font-size: clamp(52px, 5vw, 72px); line-height: 1"><span class="fx-count" style="--to: 94" aria-hidden="true"></span><span class="fx-sr">94</span>%</span>
+        <div style="display: flex; flex-direction: column; gap: 10px"><p style="margin: 0; font-size: 17px; line-height: 1.5">of buying groups rank their shortlist before contacting a vendor.</p><span class="fx-chip" style="align-self: flex-start">6sense</span></div>
+      </div>
+      <div class="fx-reveal" style="padding: 40px 0 40px 32px; display: flex; gap: 24px; align-items: baseline; border-left: 1px solid #E2DDD3">
+        <span class="fx-display" style="font-size: clamp(52px, 5vw, 72px); line-height: 1"><span class="fx-count" style="--to: 71" aria-hidden="true"></span><span class="fx-sr">71</span>%</span>
+        <div style="display: flex; flex-direction: column; gap: 10px"><p style="margin: 0; font-size: 17px; line-height: 1.5">of the "hidden" buyers in a deal have little or no contact with sales.</p><span class="fx-chip" style="align-self: flex-start">Edelman–LinkedIn</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 PROBLEM: pinned; scrolls sideways through the seven leaks -->
+  <section id="problem" class="fx-sec fx-hs-pin " data-ref="Pin" style="padding-bottom: clamp(48px, 5vw, 72px)">
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true"><defs><linearGradient id="vg" x1="0" x2="1"><stop offset="0" stop-color="#FF5B2E"></stop><stop offset="1" stop-color="#FFA46B"></stop></linearGradient></defs></svg>
+    <div class="fx-hs-sticky">
+      <div class="fx-wrap fx-hs-head">
+        <div class="fx-split" style="align-items: flex-end; row-gap: 14px">
+          <div style="flex: 1 1 460px; display: flex; flex-direction: column; gap: 14px">
+            <p class="fx-label" style="margin: 0">The problem</p>
+            <h2 class="fx-display fx-h2">Where is your revenue <em>leaking</em> from?</h2>
+          </div>
+          <p class="fx-lede" style="flex: 1 1 320px; max-width: 44ch">More content or DMs doesn't fix a broken commercial path. We find the leak first, then build the right system.</p>
+        </div>
+      </div>
+      <div class="fx-hs-viewport" data-ref="Viewport">
+        <div class="fx-hs-track" data-ref="Track">
+              <article class="fx-stk " data-card="0">
+                <div class="fx-stk-head"><div class="fx-stk-no">01</div><h3>“They can’t find us.”</h3><p class="fx-stk-p">Buyers search the problem, ask peers and AI assistants, and build a shortlist. You're not on it, so your best work never gets evaluated.</p></div>
+                <div class="vz"><div class="li">
+  <div class="li-search"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="4.5" fill="none" stroke="#625F57" stroke-width="1.6"></circle><path d="M10.5 10.5l3 3" stroke="#625F57" stroke-width="1.6" stroke-linecap="round"></path></svg><span class="li-type" style="--w: 26ch">managed security partner</span></div>
+  <div class="li-tabs"><span class="on">People</span><span>Companies</span><span>Posts</span></div>
+  <div class="li-row an" style="--k: 2"><span class="li-av"></span><div class="li-col"><span class="li-name">Competitor A</span><span class="li-sub">"We help fintechs pass SOC 2"</span></div><span class="li-tag">Follow</span></div>
+  <div class="li-row an" style="--k: 3"><span class="li-av"></span><div class="li-col"><span class="li-name">Competitor B</span><span class="li-sub">"Security your board will sign off"</span></div><span class="li-tag">Follow</span></div>
+  <div class="li-row an" style="--k: 4"><span class="li-av"></span><div class="li-col"><span class="li-name">Competitor C</span><span class="li-sub">"The MSSP for regulated teams"</span></div><span class="li-tag">Follow</span></div>
+  <div class="li-row li-you an" style="--k: 6"><span class="li-av li-av-sig"></span><div class="li-col"><span class="li-name">Your firm</span><span class="li-sub">Page 4, where nobody scrolls</span></div><span class="li-tag li-tag-bad">Not seen</span></div>
+</div><span class="fx-pill">Fix: Profile, search, category association</span></div>
+              </article>
+              <article class="fx-stk " data-card="1">
+                <div class="fx-stk-head"><div class="fx-stk-no">02</div><h3>“They find us, but don’t get it.”</h3><p class="fx-stk-p">Your site and profile describe capabilities, not outcomes. Buyers leave unable to explain what you do, or why it matters to them.</p></div>
+                <div class="vz"><div class="li li-prof">
+  <div class="li-banner"></div>
+  <div class="li-av li-av-ink li-av-lg">YF</div>
+  <span class="li-name" style="font-size: 15px">Founder, your firm</span>
+  <div class="li-jargon">
+    <span class="an" style="--k: 1">Digital transformation</span>
+    <span class="an" style="--k: 2">Trusted partner</span>
+    <span class="an" style="--k: 3">Innovation</span>
+    <span class="an" style="--k: 4">End-to-end solutions</span>
+  </div>
+  <div class="li-viewer an" style="--k: 6"><span class="li-av"></span><div class="li-bubble">So… what do you actually do?</div></div>
+</div><span class="fx-pill">Fix: Buyer language, problem framing</span></div>
+              </article>
+              <article class="fx-stk " data-card="2">
+                <div class="fx-stk-head"><div class="fx-stk-no">03</div><h3>“They don’t trust us yet.”</h3><p class="fx-stk-p">Interest without proof stalls. Without visible expertise and decision resources, you never move from interesting to shortlisted.</p></div>
+                <div class="vz"><div class="li">
+  <div class="li-sec an" style="--k: 1"><span class="li-sub">Featured</span><span class="li-empty">Nothing here yet</span></div>
+  <div class="li-sec an" style="--k: 2"><span class="li-sub">Activity</span><span class="li-empty">Last post · 4 months ago</span></div>
+  <div class="li-sec an" style="--k: 3"><span class="li-sub">Proof</span><span class="li-empty">No case studies, no resources</span></div>
+  <div class="li-meter an" style="--k: 4">
+    <div class="li-meter-top"><span class="li-name">Buyer trust</span><span class="li-tag li-tag-bad">Not shortlisted</span></div>
+    <div class="li-bar"><i style="--to: 24%"></i></div>
+    <div class="li-scale"><span>No trust</span><span>Shortlisted</span></div>
+  </div>
+</div><span class="fx-pill">Fix: Expertise content, sample work, decision resources</span></div>
+              </article>
+              <article class="fx-stk fx-stk-hot " data-card="3">
+                <div class="fx-stk-head"><div class="fx-stk-no">04</div><h3>“Referrals work, until they don’t.”</h3><p class="fx-stk-p">Trust transfers inside your network and stops at its edge. Even referred buyers check you out first.</p></div>
+                <div class="vz"><div class="li li-chat">
+  <div class="li-chat-h"><span class="li-av"></span><div class="li-col"><span class="li-name">Head of IT, fintech</span><span class="li-sub">Messaging</span></div></div>
+  <div class="li-msg li-in an" style="--k: 1">Anyone you'd recommend for SOC 2 prep?</div>
+  <div class="li-msg li-out an" style="--k: 2">Talk to <b>your firm</b>. They're great.</div>
+  <div class="li-event an" style="--k: 4"><span class="li-dot"></span>Viewed your profile for 12 seconds</div>
+  <div class="li-msg li-in an" style="--k: 6">Couldn't tell what they do. Went with someone else.</div>
+</div><span class="fx-pill">Fix: Make the referral land on clear positioning</span></div>
+              </article>
+              <article class="fx-stk " data-card="4">
+                <div class="fx-stk-head"><div class="fx-stk-no">05</div><h3>“Wrong people in the conversation.”</h3><p class="fx-stk-p">Outreach lands with whoever fits a filter. Without an ICP and triggers, conversations start with people who can't or won't buy.</p></div>
+                <div class="vz"><div class="li">
+  <div class="li-head"><span class="li-name">Messaging</span><span class="li-tag">Focused</span></div>
+  <div class="li-row an" style="--k: 1"><span class="li-av"></span><div class="li-col"><span class="li-name">Sales rep, another agency</span><span class="li-sub">"Quick question about your pipeline…"</span></div><span class="li-tag li-tag-bad">Pitching you</span></div>
+  <div class="li-row an" style="--k: 2"><span class="li-av"></span><div class="li-col"><span class="li-name">Student</span><span class="li-sub">"Love your content!"</span></div><span class="li-tag">Not a buyer</span></div>
+  <div class="li-row an" style="--k: 3"><span class="li-av"></span><div class="li-col"><span class="li-name">Recruiter</span><span class="li-sub">"Open to new roles?"</span></div><span class="li-tag">Not a buyer</span></div>
+  <div class="li-row li-you an" style="--k: 5"><span class="li-av li-av-sig li-target"></span><div class="li-col"><span class="li-name">CISO, fintech</span><span class="li-sub">The person who can actually buy</span></div><span class="li-tag li-tag-bad">Not in inbox</span></div>
+</div><span class="fx-pill">Fix: ICP, triggers, signal map</span></div>
+              </article>
+              <article class="fx-stk " data-card="5">
+                <div class="fx-stk-head"><div class="fx-stk-no">06</div><h3>“Interest appears, then disappears.”</h3><p class="fx-stk-p">A profile visit, a download, a reply, then silence. Without nurture and a champion kit, momentum dies between touchpoints.</p></div>
+                <div class="vz"><div class="li">
+  <div class="li-head"><span class="li-name">Notifications</span><span class="li-tag">This quarter</span></div>
+  <div class="li-note an" style="--k: 1"><span class="li-ic">◉</span><div class="li-col"><span class="li-name">A CISO viewed your profile</span><span class="li-sub">Monday</span></div></div>
+  <div class="li-note an" style="--k: 2"><span class="li-ic">↓</span><div class="li-col"><span class="li-name">They downloaded your guide</span><span class="li-sub">Tuesday</span></div></div>
+  <div class="li-note an" style="--k: 3"><span class="li-ic">✉</span><div class="li-col"><span class="li-name">"Interesting. Let's talk next month."</span><span class="li-sub">Thursday</span></div></div>
+  <div class="li-gap an" style="--k: 5"><span>47 days later</span></div>
+  <div class="li-note li-ghost an" style="--k: 6"><span class="li-ic">…</span><div class="li-col"><span class="li-name">No follow-up sent</span><span class="li-sub">They signed with someone else</span></div></div>
+</div><span class="fx-pill">Fix: Conversation architecture, nurture, champion enablement</span></div>
+              </article>
+              <article class="fx-stk " data-card="6">
+                <div class="fx-stk-head"><div class="fx-stk-no">07</div><h3>“It runs on someone’s memory.”</h3><p class="fx-stk-p">Follow-ups, context and notes live in one person's head. When they're busy, the pipeline stalls.</p></div>
+                <div class="vz"><div class="li li-mem">
+  <div class="li-head"><span class="li-name">Messaging</span><span class="li-badge an" style="--k: 1">23 unread</span></div>
+  <div class="li-row"><span class="li-av"></span><div class="li-col" style="flex: 1"><span class="li-ln" style="width: 60%"></span><span class="li-ln" style="width: 85%; margin-top: 6px"></span></div></div>
+  <div class="li-row"><span class="li-av"></span><div class="li-col" style="flex: 1"><span class="li-ln" style="width: 50%"></span><span class="li-ln" style="width: 75%; margin-top: 6px"></span></div></div>
+  <div class="li-row"><span class="li-av"></span><div class="li-col" style="flex: 1"><span class="li-ln" style="width: 66%"></span><span class="li-ln" style="width: 80%; margin-top: 6px"></span></div></div>
+  <div class="li-row"><span class="li-av"></span><div class="li-col" style="flex: 1"><span class="li-ln" style="width: 45%"></span><span class="li-ln" style="width: 70%; margin-top: 6px"></span></div></div>
+  <span class="li-sticky" style="--r: -5deg; --k: 3; top: 46px; right: 10px">Follow up with the CISO??</span>
+  <span class="li-sticky" style="--r: 4deg; --k: 4; top: 112px; left: 30px">Who has the deck?</span>
+  <span class="li-sticky" style="--r: -2deg; --k: 5; bottom: 16px; right: 34px">Call back Tuesday (which one?)</span>
+</div><span class="fx-pill">Fix: CRM and automation, supporting one clear process</span></div>
+              </article>
+        </div>
+      </div>
+      <div class="fx-wrap fx-hs-meter" aria-hidden="true">
+        <span class="fx-label" style="font-size: 11px; color: #0C0E0D"><b data-ref="LeakNum" style="font-weight:inherit">01</b> / 07</span>
+        <span class="fx-hs-bar"><span data-ref="Bar"></span></span>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 POINT OF VIEW -->
+  <section class="fx-sec" style="background: linear-gradient(180deg, #FAF8F4 0%, #F3EFE8 18%, #F3EFE8 82%, #FAF8F4 100%)">
+    <div class="fx-wrap fx-split">
+      <div class="fx-reveal" style="flex: 1 1 360px; display: flex; flex-direction: column; gap: 22px">
+        <p class="fx-label" style="margin: 0">Our point of view</p>
+        <h2 class="fx-display fx-h2">More content or DMs doesn't fix a <em>broken commercial path.</em></h2>
+      </div>
+      <ol style="flex: 1.2 1 440px; list-style: none; margin: 0; padding: 0">
+        <li class="fx-reveal fx-pov" style="display: grid; grid-template-columns: 56px 1fr; gap: 12px; padding: 22px 0; border-top: 1px solid #0C0E0D"><span class="fx-label fx-sig">01</span><p style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(21px, 1.9vw, 26px); line-height: 1.3">Buyers purchase a safer path to an outcome, not capability.</p></li>
+        <li class="fx-reveal fx-pov" style="display: grid; grid-template-columns: 56px 1fr; gap: 12px; padding: 22px 0; border-top: 1px solid #D9D3C7"><span class="fx-label fx-sig">02</span><p style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(21px, 1.9vw, 26px); line-height: 1.3">Marketing for complex technology must help the buyer decide and defend it.</p></li>
+        <li class="fx-reveal fx-pov" style="display: grid; grid-template-columns: 56px 1fr; gap: 12px; padding: 22px 0; border-top: 1px solid #D9D3C7"><span class="fx-label fx-sig">03</span><p style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(21px, 1.9vw, 26px); line-height: 1.3">Authority comes from being linked to the problems that matter, not from how often you post.</p></li>
+        <li class="fx-reveal fx-pov" style="display: grid; grid-template-columns: 56px 1fr; gap: 12px; padding: 22px 0; border-top: 1px solid #D9D3C7"><span class="fx-label fx-sig">04</span><p style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(21px, 1.9vw, 26px); line-height: 1.3">Outbound should start with business context, not a service pitch.</p></li>
+        <li class="fx-reveal fx-pov" style="display: grid; grid-template-columns: 56px 1fr; gap: 12px; padding: 22px 0; border-top: 1px solid #D9D3C7; border-bottom: 1px solid #D9D3C7"><span class="fx-label fx-sig">05</span><p style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(21px, 1.9vw, 26px); line-height: 1.3">Automation should support a clear process, not hide a broken one.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 05 WHY LINKEDIN: stat ledger, no boxes -->
+  <section id="linkedin" class="fx-sec">
+    <div class="fx-wrap">
+      <div class="fx-reveal" style="display: flex; flex-direction: column; gap: 22px; max-width: 820px">
+        <p class="fx-label" style="margin: 0">Why LinkedIn for B2B tech companies</p>
+        <h2 class="fx-display fx-h2">You are not late to take your piece of the pie, <em>yet!</em></h2>
+      </div>
+
+      <!-- Lead figure -->
+      <div class="fx-split fx-reveal" style="margin-top: clamp(72px, 8vw, 120px); align-items: center">
+        <div style="flex: 1 1 380px">
+          <span class="fx-display" style="display: block; font-size: clamp(72px, 9.5vw, 144px); line-height: 0.85; letter-spacing: -0.045em">0.3<span style="font-size: 0.5em; color: #E04A1F">%</span></span>
+        </div>
+        <div style="flex: 1.2 1 420px; display: flex; flex-direction: column; gap: 18px">
+          <p style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(24px, 2.2vw, 30px); line-height: 1.25">of B2B tech companies post more than 2 times a week on LinkedIn.</p>
+          <div class="fx-ticks" aria-hidden="true"><div class="fx-ticks-fill" style="--p: 0.6%"></div></div>
+          <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #3F3C36; max-width: 52ch">It's where B2B technology buyers check a firm's thinking before deciding whether to talk to it.</p>
+        </div>
+      </div>
+
+      <!-- Ledger -->
+      <ol style="list-style: none; margin: clamp(80px, 9vw, 136px) 0 0; padding: 0; border-bottom: 1px solid #D9D3C7">
+        <li class="fx-reveal fx-ledger">
+          <span class="fx-display fx-ledger-num"><span class="fx-count" style="--to: 94" aria-hidden="true"></span><span class="fx-sr">94</span><span class="pct">%</span></span>
+          <div class="fx-ledger-text"><h3>The ranking happens before you're called.</h3><p>94% of buying groups rank preferred vendors before first contact, and buy from that pre-contact favourite 77% of the time.</p></div>
+          <div class="fx-ledger-viz"><div class="fx-ticks" aria-hidden="true"><div class="fx-ticks-fill" style="--p: 94%"></div></div><span class="fx-chip">6sense</span></div>
+        </li>
+        <li class="fx-reveal fx-ledger">
+          <span class="fx-display fx-ledger-num"><span class="fx-count" style="--to: 67" aria-hidden="true"></span><span class="fx-sr">67</span><span class="pct">%</span></span>
+          <div class="fx-ledger-text"><h3>Buyers want to vet without being sold to.</h3><p>67% prefer a rep-free buying experience, but 69% still want a human to validate what AI told them.</p></div>
+          <div class="fx-ledger-viz"><div class="fx-ticks" aria-hidden="true"><div class="fx-ticks-fill" style="--p: 67%"></div></div><span class="fx-chip">Gartner</span></div>
+        </li>
+        <li class="fx-reveal fx-ledger">
+          <span class="fx-display fx-ledger-num"><span class="fx-count" style="--to: 71" aria-hidden="true"></span><span class="fx-sr">71</span><span class="pct">%</span></span>
+          <div class="fx-ledger-text"><h3>Most of the committee never meets you.</h3><p>71% of hidden buyers have little or no contact with sales, yet 95% say strong thought leadership makes them more receptive to outreach.</p></div>
+          <div class="fx-ledger-viz"><div class="fx-ticks" aria-hidden="true"><div class="fx-ticks-fill" style="--p: 71%"></div></div><span class="fx-chip">Edelman–LinkedIn</span></div>
+        </li>
+        <li class="fx-reveal fx-ledger">
+          <span class="fx-display fx-ledger-num">1.6<span class="pct">%</span></span>
+          <div class="fx-ledger-text"><h3>People travel further than logos.</h3><p>Company-page posts reach an estimated 1.6% of followers. What gets read, forwarded and remembered is a founder's perspective.</p></div>
+          <div class="fx-ledger-viz"><div class="fx-ticks" aria-hidden="true"><div class="fx-ticks-fill" style="--p: 2%"></div></div><span class="fx-chip">Algorithm Insights</span></div>
+        </li>
+      </ol>
+
+      <!-- Buying Path Map -->
+      <figure class="fx-reveal" aria-label="Buying path map. Six buying jobs from problem recognised to decision. First vendor contact happens after the shortlist is ranked; everything before it is invisible to your sales team." style="margin: clamp(80px, 9vw, 128px) 0 0">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 28px">
+          <div style="display: flex; flex-direction: column; gap: 14px; max-width: 640px">
+            <span class="fx-label" style="font-size: 11px">Buying path map</span>
+            <p class="fx-display" style="font-size: clamp(30px, 3.2vw, 46px); line-height: 1.08">Most of what decides the deal happens <em>before anyone calls you.</em></p>
+          </div>
+          <div style="display: flex; gap: 20px; flex-wrap: wrap">
+            <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: #3F3C36"><span aria-hidden="true" class="fx-halftone" style="width: 18px; height: 12px; background-color: #EFEAE1"></span>Invisible to sales</span>
+            <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: #3F3C36"><span aria-hidden="true" style="width: 18px; height: 12px; background: #FFFFFF; border: 1px solid #D9D3C7"></span>Visible to sales</span>
+            <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: #3F3C36"><span aria-hidden="true" style="width: 9px; height: 9px; border-radius: 50%; background: #FF5B2E"></span>Touchpoint FrameX builds</span>
+          </div>
+        </div>
+
+        <div class="fx-scroll" style="border: 1px solid #D9D3C7; background: #FFFFFF">
+          <div class="fx-bpm" data-ref="Map">
+            <div aria-hidden="true" class="fx-halftone" style="position: absolute; left: 0; top: 0; bottom: 0; width: 66.666%; background-color: #F3EFE8; opacity: 0.5"></div>
+            <div aria-hidden="true" style="position: absolute; left: 0; top: 0; bottom: 0; width: 66.666%; background: linear-gradient(180deg, rgba(243,239,232,0.85) 0%, rgba(243,239,232,0.6) 100%)"></div>
+
+            <div style="position: relative; display: grid; grid-template-columns: 4fr 2fr; border-bottom: 1px solid #D9D3C7">
+              <div style="padding: 16px 22px; display: flex; justify-content: space-between; gap: 12px"><span class="fx-label" style="font-size: 11px; color: #0C0E0D">Before first contact</span><span class="fx-label" style="font-size: 11px">Invisible to your sales team</span></div>
+              <div style="padding: 16px 22px; display: flex; justify-content: space-between; gap: 12px"><span class="fx-label" style="font-size: 11px; color: #0C0E0D">After first contact</span><span class="fx-label" style="font-size: 11px">Sales starts here</span></div>
+            </div>
+
+            <!-- first contact marker, with room above the stages -->
+            <div aria-hidden="true" style="position: absolute; left: 66.666%; top: 49px; bottom: 42px; width: 2px; margin-left: -1px; background: #FF5B2E"></div>
+            <div style="height: 40px"></div>
+
+            <!-- stages -->
+            <div style="position: relative; padding: 0 0 8px">
+              <div aria-hidden="true" style="position: absolute; left: 8.333%; right: 8.333%; top: 20px; height: 2px; background: #D9D3C7"></div>
+              <div aria-hidden="true" class="fx-bpm-line" data-ref="MapLine"></div>
+              <ol style="position: relative; list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr))">
+                
+                  <li style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; padding: 0 10px">
+                    <span aria-hidden="true" class="fx-node fx-node-on">01</span>
+                    <span style="font-family: 'Newsreader', Georgia, serif; font-size: 21px; line-height: 1.15">Problem recognised</span>
+                  </li>
+                
+                  <li style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; padding: 0 10px">
+                    <span aria-hidden="true" class="fx-node fx-node-on">02</span>
+                    <span style="font-family: 'Newsreader', Georgia, serif; font-size: 21px; line-height: 1.15">Solution explored</span>
+                  </li>
+                
+                  <li style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; padding: 0 10px">
+                    <span aria-hidden="true" class="fx-node fx-node-on">03</span>
+                    <span style="font-family: 'Newsreader', Georgia, serif; font-size: 21px; line-height: 1.15">Requirements built</span>
+                  </li>
+                
+                  <li style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; padding: 0 10px">
+                    <span aria-hidden="true" class="fx-node fx-node-on">04</span>
+                    <span style="font-family: 'Newsreader', Georgia, serif; font-size: 21px; line-height: 1.15">Shortlist ranked</span>
+                  </li>
+                
+                  <li style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; padding: 0 10px">
+                    <span aria-hidden="true" class="fx-node fx-node-on">05</span>
+                    <span style="font-family: 'Newsreader', Georgia, serif; font-size: 21px; line-height: 1.15">Validation</span>
+                  </li>
+                
+                  <li style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; padding: 0 10px">
+                    <span aria-hidden="true" class="fx-node fx-node-on">06</span>
+                    <span style="font-family: 'Newsreader', Georgia, serif; font-size: 21px; line-height: 1.15">Decision</span>
+                  </li>
+                
+              </ol>
+            </div>
+
+            <!-- touchpoints -->
+            <div style="position: relative; padding: 22px 0 30px; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); align-items: start">
+              
+                <div style="padding: 0 10px; display: flex; justify-content: center">
+                  
+                    <div class="fx-touch fx-touch-on"><span class="fx-touch-dot" aria-hidden="true"></span><span style="font-size: 14px; font-weight: 600">A post describes their exact pain</span><span class="fx-label" style="font-size: 10px">→ 02 Authority content</span></div>
+                  
+                  
+                </div>
+              
+                <div style="padding: 0 10px; display: flex; justify-content: center">
+                  
+                    <div class="fx-touch fx-touch-on"><span class="fx-touch-dot" aria-hidden="true"></span><span style="font-size: 14px; font-weight: 600">They view the founder profile</span><span class="fx-label" style="font-size: 10px">→ 01 Positioning</span></div>
+                  
+                  
+                </div>
+              
+                <div style="padding: 0 10px; display: flex; justify-content: center">
+                  
+                    <div class="fx-touch fx-touch-on"><span class="fx-touch-dot" aria-hidden="true"></span><span style="font-size: 14px; font-weight: 600">They download a resource</span><span class="fx-label" style="font-size: 10px">→ 03 Sales resources</span></div>
+                  
+                  
+                </div>
+              
+                <div style="padding: 0 10px; display: flex; justify-content: center">
+                  
+                    <div class="fx-touch fx-touch-on"><span class="fx-touch-dot" aria-hidden="true"></span><span style="font-size: 14px; font-weight: 600">A colleague forwards your post</span><span class="fx-label" style="font-size: 10px">→ 02 · 03</span></div>
+                  
+                  
+                </div>
+              
+                <div style="padding: 0 10px; display: flex; justify-content: center">
+                  
+                  
+                    <div class="fx-bpm-note fx-touch-on"><span style="font-size: 14px; font-weight: 500">Security, finance, procurement</span><span style="font-size: 13px; line-height: 1.45; color: #5F5B53">Your first conversation is often here.</span></div>
+                  
+                </div>
+              
+                <div style="padding: 0 10px; display: flex; justify-content: center">
+                  
+                  
+                    <div class="fx-bpm-note fx-touch-on"><span style="font-size: 14px; font-weight: 500">Contract</span><span style="font-size: 13px; line-height: 1.45; color: #5F5B53">The pre-contact favourite usually wins.</span></div>
+                  
+                </div>
+              
+            </div>
+            <div class="fx-bpm-foot">
+              <span class="fx-label fx-fvc" style="position: absolute; left: 66.666%; top: 50%; transform: translate(-50%, -50%); background: #FF5B2E; color: #0C0E0D; padding: 8px 14px; white-space: nowrap">First vendor contact</span>
+            </div>
+          </div>
+        </div>
+        <figcaption style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-top: 14px; font-size: 13px; color: #5F5B53"><span>94% of buying groups rank preferred vendors before first contact.</span><span class="fx-chip">6sense</span></figcaption>
+      </figure>
+
+      <!-- Founder profile line + is / isn't -->
+      <div class="fx-reveal" style="margin-top: clamp(80px, 9vw, 128px); padding-top: 48px; border-top: 1px solid #0C0E0D">
+        <p class="fx-display" style="font-size: clamp(32px, 3.6vw, 52px); line-height: 1.08; max-width: 22ch">So treat the founder's profile as <em>the most-visited page</em> in your sales process.</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr)); gap: 0 clamp(32px, 5vw, 80px); margin-top: 48px">
+          <div>
+            <p class="fx-label" style="margin: 0 0 6px">What LinkedIn isn't, for us</p>
+            <ul style="list-style: none; margin: 0; padding: 0; font-size: 18px; color: #5F5B53">
+              <li style="padding: 14px 0; border-bottom: 1px solid #E2DDD3; text-decoration: line-through; text-decoration-color: #A9A59B">Blasting connection requests</li>
+              <li style="padding: 14px 0; border-bottom: 1px solid #E2DDD3; text-decoration: line-through; text-decoration-color: #A9A59B">Automating messages</li>
+              <li style="padding: 14px 0; border-bottom: 1px solid #E2DDD3; text-decoration: line-through; text-decoration-color: #A9A59B">Chasing likes from other marketers</li>
+            </ul>
+          </div>
+          <div>
+            <p class="fx-label fx-sig" style="margin: 0 0 6px">What we do instead</p>
+            <ul style="list-style: none; margin: 0; padding: 0; font-size: 18px">
+              <li style="padding: 14px 0; border-bottom: 1px solid #E2DDD3; display: flex; gap: 14px; align-items: baseline"><span class="fx-label fx-sig" style="font-size: 11px">01</span>Everything by hand</li>
+              <li style="padding: 14px 0; border-bottom: 1px solid #E2DDD3; display: flex; gap: 14px; align-items: baseline"><span class="fx-label fx-sig" style="font-size: 11px">02</span>In your voice</li>
+              <li style="padding: 14px 0; border-bottom: 1px solid #E2DDD3; display: flex; gap: 14px; align-items: baseline"><span class="fx-label fx-sig" style="font-size: 11px">03</span>With your approval</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 THE SYSTEM: pinned stack, each card slides over the last -->
+  <section id="system" class="fx-sys " data-ref="SysPin" style="background: linear-gradient(180deg, #FAF8F4 0%, #F3EFE8 8%, #F3EFE8 92%, #FAF8F4 100%)">
+    <div class="fx-sys-sticky">
+      <div class="fx-wrap fx-sys-inner">
+        <div class="fx-split" style="align-items: flex-end; row-gap: 14px">
+          <div style="flex: 1 1 460px; display: flex; flex-direction: column; gap: 14px">
+            <p class="fx-label" style="margin: 0">Our 6-step Authority-to-Pipeline System</p>
+            <h2 class="fx-display fx-sys-h2">Six connected systems. <em>One commercial path.</em></h2>
+          </div>
+          <p class="fx-lede fx-sys-lede" style="flex: 1 1 340px; max-width: 50ch">Each system fixes a specific leak. Together they take a buyer from "never heard of you" to a qualified conversation your team is ready to win. The first five are built in your first 14 days and go live on day 15.</p>
+        </div>
+
+        <div class="fx-sys-body">
+          <nav aria-label="System map" class="fx-sys-map fx-hide-sm">
+            <p class="fx-label" style="margin: 0 0 18px; font-size: 11px">System map · <span class="fx-sig"><b data-ref="SysNum" style="font-weight:inherit">01</b> / 06</span></p>
+            <div style="position: relative">
+              <span aria-hidden="true" style="position: absolute; left: 6px; top: 10px; bottom: 26px; width: 1.5px; background: #D9D3C7"></span>
+              <span aria-hidden="true" class="fx-sys-line" data-ref="SysLine"></span>
+              <ol style="position: relative; list-style: none; margin: 0; padding: 0">
+                
+                  <li style="position: relative; padding: 0 0 16px 30px">
+                    <span aria-hidden="true" class="fx-map-dot fx-map-dot-on"></span>
+                    <button type="button" class="fx-map-btn fx-map-on" data-go="0"><span class="fx-label" style="font-size: 10px">01</span> Positioning</button>
+                  </li>
+                
+                  <li style="position: relative; padding: 0 0 16px 30px">
+                    <span aria-hidden="true" class="fx-map-dot "></span>
+                    <button type="button" class="fx-map-btn " data-go="1"><span class="fx-label" style="font-size: 10px">02</span> Authority content</button>
+                  </li>
+                
+                  <li style="position: relative; padding: 0 0 16px 30px">
+                    <span aria-hidden="true" class="fx-map-dot "></span>
+                    <button type="button" class="fx-map-btn " data-go="2"><span class="fx-label" style="font-size: 10px">03</span> Sales resources</button>
+                  </li>
+                
+                  <li style="position: relative; padding: 0 0 16px 30px">
+                    <span aria-hidden="true" class="fx-map-dot "></span>
+                    <button type="button" class="fx-map-btn " data-go="3"><span class="fx-label" style="font-size: 10px">04</span> Signal intelligence</button>
+                  </li>
+                
+                  <li style="position: relative; padding: 0 0 16px 30px">
+                    <span aria-hidden="true" class="fx-map-dot "></span>
+                    <button type="button" class="fx-map-btn " data-go="4"><span class="fx-label" style="font-size: 10px">05</span> Conversations</button>
+                  </li>
+                
+                  <li style="position: relative; padding: 0 0 16px 30px">
+                    <span aria-hidden="true" class="fx-map-dot "></span>
+                    <button type="button" class="fx-map-btn " data-go="5"><span class="fx-label" style="font-size: 10px">06</span> Pipeline revenue</button>
+                  </li>
+                
+              </ol>
+            </div>
+            <div style="margin-top: 20px; padding-top: 14px; border-top: 1px solid #D9D3C7; display: flex; flex-direction: column; gap: 6px">
+              <span class="fx-label" style="font-size: 10px">Build · days 1–14</span>
+              <span class="fx-label fx-sig" style="font-size: 10px">Live · day 15</span>
+            </div>
+          </nav>
+
+          <ol class="fx-sys-stage" data-ref="SysStage">
+            
+              <li id="m01" class="fx-sys-card" data-sys="0" style="--o: 0">
+                <div class="fx-sys-bar">
+                  <span class="fx-label fx-sig" style="font-size: 11px">01</span>
+                  <h3 class="fx-sys-bar-t">Positioning Architecture</h3>
+                  <span class="fx-chip fx-fixes fx-hide-sm"><i aria-hidden="true"></i>Fixes Understand</span>
+                </div>
+                <div class="fx-sys-body-in">
+                  <div style="display: flex; flex-wrap: wrap; gap: 6px 28px; align-items: flex-end">
+                    <span aria-hidden="true" class="fx-outline-num">01</span>
+                    <p style="flex: 1 1 260px; margin: 0 0 8px; font-family: 'Newsreader', Georgia, serif; font-style: italic; font-size: clamp(22px, 2.2vw, 30px); line-height: 1.2; color: #0C0E0D">Be understood in one read.</p>
+                  </div>
+                  <div class="fx-files" style="margin-top: 18px; background: #FFFFFF; border: 1px solid #E2DDD3">
+                    <div class="fx-files-h" style="display: flex; justify-content: space-between; padding: 9px 18px; border-bottom: 1px solid #E2DDD3; background: #F8F6F2"><span class="fx-label" style="font-size: 10px">You get</span><span class="fx-label" style="font-size: 10px">Cadence</span></div>
+                    
+                      <div class="fx-file">
+                        <span class="fx-file-name">positioning-brief</span>
+                        <span class="fx-file-desc">ICP, buying triggers, three problems you&#x27;ll own</span>
+                        <span class="fx-file-cad">Once</span>
+                      </div>
+                    
+                      <div class="fx-file">
+                        <span class="fx-file-name">message-map</span>
+                        <span class="fx-file-desc">Claim → consequence → proof, by stakeholder</span>
+                        <span class="fx-file-cad">Once</span>
+                      </div>
+                    
+                      <div class="fx-file">
+                        <span class="fx-file-name">founder-profile</span>
+                        <span class="fx-file-desc">Founder profile, plus up to two team profiles</span>
+                        <span class="fx-file-cad">Once</span>
+                      </div>
+                    
+                      <div class="fx-file">
+                        <span class="fx-file-name">translation-table</span>
+                        <span class="fx-file-desc">For your website and sales deck</span>
+                        <span class="fx-file-cad">Once</span>
+                      </div>
+                    
+                  </div>
+                  
+                  
+                </div>
+              </li>
+            
+              <li id="m02" class="fx-sys-card" data-sys="1" style="--o: 1">
+                <div class="fx-sys-bar">
+                  <span class="fx-label fx-sig" style="font-size: 11px">02</span>
+                  <h3 class="fx-sys-bar-t">Authority Content</h3>
+                  <span class="fx-chip fx-fixes fx-hide-sm"><i aria-hidden="true"></i>Fixes Find + Trust</span>
+                </div>
+                <div class="fx-sys-body-in">
+                  <div style="display: flex; flex-wrap: wrap; gap: 6px 28px; align-items: flex-end">
+                    <span aria-hidden="true" class="fx-outline-num">02</span>
+                    <p style="flex: 1 1 260px; margin: 0 0 8px; font-family: 'Newsreader', Georgia, serif; font-style: italic; font-size: clamp(22px, 2.2vw, 30px); line-height: 1.2; color: #0C0E0D">Be associated with the problems that matter.</p>
+                  </div>
+                  <div class="fx-files" style="margin-top: 18px; background: #FFFFFF; border: 1px solid #E2DDD3">
+                    <div class="fx-files-h" style="display: flex; justify-content: space-between; padding: 9px 18px; border-bottom: 1px solid #E2DDD3; background: #F8F6F2"><span class="fx-label" style="font-size: 10px">You get</span><span class="fx-label" style="font-size: 10px">Cadence</span></div>
+                    
+                      <div class="fx-file">
+                        <span class="fx-file-name">editorial-architecture</span>
+                        <span class="fx-file-desc">Themes × stakeholder × buying stage</span>
+                        <span class="fx-file-cad">Once</span>
+                      </div>
+                    
+                      <div class="fx-file">
+                        <span class="fx-file-name">founder-posts</span>
+                        <span class="fx-file-desc">Volume set by need</span>
+                        <span class="fx-file-cad">8–16 / month</span>
+                      </div>
+                    
+                      <div class="fx-file">
+                        <span class="fx-file-name">capture-interview</span>
+                        <span class="fx-file-desc">Your thinking, captured in 30 minutes</span>
+                        <span class="fx-file-cad">Monthly</span>
+                      </div>
+                    
+                  </div>
+                  
+                  
+                    <p style="margin: 12px 0 0; font-size: 15px; color: #3F3C36; display: flex; gap: 10px; align-items: baseline"><span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 50%; background: #FF5B2E; flex: none; transform: translateY(-1px)"></span>Nothing is published without your approval.</p>
+                  
+                </div>
+              </li>
+            
+              <li id="m03" class="fx-sys-card" data-sys="2" style="--o: 2">
+                <div class="fx-sys-bar">
+                  <span class="fx-label fx-sig" style="font-size: 11px">03</span>
+                  <h3 class="fx-sys-bar-t">Sales Resources</h3>
+                  <span class="fx-chip fx-fixes fx-hide-sm"><i aria-hidden="true"></i>Fixes Trust + Buy</span>
+                </div>
+                <div class="fx-sys-body-in">
+                  <div style="display: flex; flex-wrap: wrap; gap: 6px 28px; align-items: flex-end">
+                    <span aria-hidden="true" class="fx-outline-num">03</span>
+                    <p style="flex: 1 1 260px; margin: 0 0 8px; font-family: 'Newsreader', Georgia, serif; font-style: italic; font-size: clamp(22px, 2.2vw, 30px); line-height: 1.2; color: #0C0E0D">Help the champion sell you internally.</p>
+                  </div>
+                  <div class="fx-files" style="margin-top: 18px; background: #FFFFFF; border: 1px solid #E2DDD3">
+                    <div class="fx-files-h" style="display: flex; justify-content: space-between; padding: 9px 18px; border-bottom: 1px solid #E2DDD3; background: #F8F6F2"><span class="fx-label" style="font-size: 10px">You get</span><span class="fx-label" style="font-size: 10px">Cadence</span></div>
+                    
+                      <div class="fx-file">
+                        <span class="fx-file-name">flagship-resource</span>
+                        <span class="fx-file-desc">Plus one or two supporting assets</span>
+                        <span class="fx-file-cad">Quarterly</span>
+                      </div>
+                    
+                      <div class="fx-file">
+                        <span class="fx-file-name">landing-page</span>
+                        <span class="fx-file-desc">Copy and a short follow-up sequence</span>
+                        <span class="fx-file-cad">Per resource</span>
+                      </div>
+                    
+                      <div class="fx-file">
+                        <span class="fx-file-name">champion-kit</span>
+                        <span class="fx-file-desc">Four-sentence pitch, CFO one-pager, security answers</span>
+                        <span class="fx-file-cad">Once</span>
+                      </div>
+                    
+                  </div>
+                  
+                  
+                </div>
+              </li>
+            
+              <li id="m04" class="fx-sys-card" data-sys="3" style="--o: 3">
+                <div class="fx-sys-bar">
+                  <span class="fx-label fx-sig" style="font-size: 11px">04</span>
+                  <h3 class="fx-sys-bar-t">Signal Intelligence</h3>
+                  <span class="fx-chip fx-fixes fx-hide-sm"><i aria-hidden="true"></i>Fixes Find + Timing</span>
+                </div>
+                <div class="fx-sys-body-in">
+                  <div style="display: flex; flex-wrap: wrap; gap: 6px 28px; align-items: flex-end">
+                    <span aria-hidden="true" class="fx-outline-num">04</span>
+                    <p style="flex: 1 1 260px; margin: 0 0 8px; font-family: 'Newsreader', Georgia, serif; font-style: italic; font-size: clamp(22px, 2.2vw, 30px); line-height: 1.2; color: #0C0E0D">Know who&#x27;s moving, and why.</p>
+                  </div>
+                  <div class="fx-files" style="margin-top: 18px; background: #FFFFFF; border: 1px solid #E2DDD3">
+                    <div class="fx-files-h" style="display: flex; justify-content: space-between; padding: 9px 18px; border-bottom: 1px solid #E2DDD3; background: #F8F6F2"><span class="fx-label" style="font-size: 10px">You get</span><span class="fx-label" style="font-size: 10px">Cadence</span></div>
+                    
+                      <div class="fx-file">
+                        <span class="fx-file-name">trigger-map</span>
+                        <span class="fx-file-desc">Buying triggers for your subsegment</span>
+                        <span class="fx-file-cad">Once</span>
+                      </div>
+                    
+                      <div class="fx-file">
+                        <span class="fx-file-name">account-lists</span>
+                        <span class="fx-file-desc">Curated accounts and leads</span>
+                        <span class="fx-file-cad">Ongoing</span>
+                      </div>
+                    
+                      <div class="fx-file">
+                        <span class="fx-file-name">signal-log</span>
+                        <span class="fx-file-desc">Account, trigger, stakeholder, angle</span>
+                        <span class="fx-file-cad">Weekly</span>
+                      </div>
+                    
+                      <div class="fx-file">
+                        <span class="fx-file-name">signal-review</span>
+                        <span class="fx-file-desc">Which signals became conversations</span>
+                        <span class="fx-file-cad">Monthly</span>
+                      </div>
+                    
+                  </div>
+                  
+                  
+                </div>
+              </li>
+            
+              <li id="m05" class="fx-sys-card" data-sys="4" style="--o: 4">
+                <div class="fx-sys-bar">
+                  <span class="fx-label fx-sig" style="font-size: 11px">05</span>
+                  <h3 class="fx-sys-bar-t">Conversation Framework</h3>
+                  <span class="fx-chip fx-fixes fx-hide-sm"><i aria-hidden="true"></i>Fixes Buy</span>
+                </div>
+                <div class="fx-sys-body-in">
+                  <div style="display: flex; flex-wrap: wrap; gap: 6px 28px; align-items: flex-end">
+                    <span aria-hidden="true" class="fx-outline-num">05</span>
+                    <p style="flex: 1 1 260px; margin: 0 0 8px; font-family: 'Newsreader', Georgia, serif; font-style: italic; font-size: clamp(22px, 2.2vw, 30px); line-height: 1.2; color: #0C0E0D">Start with business context, not a pitch.</p>
+                  </div>
+                  <div class="fx-files" style="margin-top: 18px; background: #FFFFFF; border: 1px solid #E2DDD3">
+                    <div class="fx-files-h" style="display: flex; justify-content: space-between; padding: 9px 18px; border-bottom: 1px solid #E2DDD3; background: #F8F6F2"><span class="fx-label" style="font-size: 10px">You get</span><span class="fx-label" style="font-size: 10px">Cadence</span></div>
+                    
+                      <div class="fx-file">
+                        <span class="fx-file-name">conversation-playbook</span>
+                        <span class="fx-file-desc">How every conversation opens and qualifies</span>
+                        <span class="fx-file-cad">Once</span>
+                      </div>
+                    
+                      <div class="fx-file">
+                        <span class="fx-file-name">manual-handling</span>
+                        <span class="fx-file-desc">By hand, every day</span>
+                        <span class="fx-file-cad">Daily</span>
+                      </div>
+                    
+                      <div class="fx-file">
+                        <span class="fx-file-name">qualification-notes</span>
+                        <span class="fx-file-desc">For every handover</span>
+                        <span class="fx-file-cad">Per handover</span>
+                      </div>
+                    
+                      <div class="fx-file">
+                        <span class="fx-file-name">conversation-ledger</span>
+                        <span class="fx-file-desc">Shared, so nothing relies on memory</span>
+                        <span class="fx-file-cad">Ongoing</span>
+                      </div>
+                    
+                  </div>
+                  
+                  
+                </div>
+              </li>
+            
+              <li id="m06" class="fx-sys-card" data-sys="5" style="--o: 5">
+                <div class="fx-sys-bar">
+                  <span class="fx-label fx-sig" style="font-size: 11px">06</span>
+                  <h3 class="fx-sys-bar-t">Pipeline Revenue</h3>
+                  <span class="fx-chip fx-fixes fx-hide-sm"><i aria-hidden="true"></i>Fixes Pipeline</span>
+                </div>
+                <div class="fx-sys-body-in">
+                  <div style="display: flex; flex-wrap: wrap; gap: 6px 28px; align-items: flex-end">
+                    <span aria-hidden="true" class="fx-outline-num">06</span>
+                    <p style="flex: 1 1 260px; margin: 0 0 8px; font-family: 'Newsreader', Georgia, serif; font-style: italic; font-size: clamp(22px, 2.2vw, 30px); line-height: 1.2; color: #0C0E0D">Qualified opportunities, with context.</p>
+                  </div>
+                  <div class="fx-files" style="margin-top: 18px; background: #FFFFFF; border: 1px solid #E2DDD3">
+                    <div class="fx-files-h" style="display: flex; justify-content: space-between; padding: 9px 18px; border-bottom: 1px solid #E2DDD3; background: #F8F6F2"><span class="fx-label" style="font-size: 10px">You get</span><span class="fx-label" style="font-size: 10px">Cadence</span></div>
+                    
+                      <div class="fx-file">
+                        <span class="fx-file-name">opportunity-handover</span>
+                        <span class="fx-file-desc">Problem, trigger, stakeholders and notes</span>
+                        <span class="fx-file-cad">Per opportunity</span>
+                      </div>
+                    
+                  </div>
+                  
+                    <div class="fx-close ">
+                      <span class="fx-close-check" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#0C0E0D" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+                      <div style="position: relative; z-index: 1"><strong>Your team closes.</strong><span class="fx-close-sub">Qualified, with context, ready to win. That's the deal.</span></div>
+                      <i class="fx-spark" aria-hidden="true"></i><i class="fx-spark" aria-hidden="true"></i><i class="fx-spark" aria-hidden="true"></i><i class="fx-spark" aria-hidden="true"></i>
+                    </div>
+                  
+                  
+                </div>
+              </li>
+            
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 GETTING STARTED: 90-day sprint view -->
+  <section id="start" class="fx-sec">
+    <div class="fx-wrap">
+      <div class="fx-split fx-reveal" style="align-items: flex-end">
+        <div style="flex: 1 1 460px; display: flex; flex-direction: column; gap: 22px">
+          <p class="fx-label" style="margin: 0">How to get started</p>
+          <h2 class="fx-display fx-h2">Built in 14 days. Live on day 15. <em>Better every month.</em></h2>
+        </div>
+        <p class="fx-lede" style="flex: 1 1 320px; max-width: 40ch">Two weeks to build. Live on day 15. Sharper every month.</p>
+      </div>
+
+      <figure class="fx-reveal" aria-label="90-day sprint view: build in days 1 to 14, live on day 15, execute in month 1, sharpen in month 2, compound in month 3" style="margin: clamp(48px, 6vw, 80px) 0 0">
+        <div class="fx-scroll">
+          <div class="fx-sprint">
+            <div class="fx-sprint-weeks" aria-hidden="true"><span>W1</span><span>W2</span><span>W3</span><span>W4</span><span>W5</span><span>W6</span><span>W7</span><span>W8</span><span>W9</span><span>W10</span><span>W11</span><span>W12</span><span>W13</span></div>
+            <div class="fx-sprint-live" aria-hidden="true"><span class="fx-label fx-fvc">Day 15 · Live</span></div>
+            <div class="fx-sprint-row">
+              <div class="fx-seg fx-seg-build" style="--i: 0">
+                <div class="fx-seg-top"><span class="fx-seg-ic"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="#FFA46B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16M6 20V10l6-5 6 5v10M10 20v-5h4v5"></path></svg></span><span class="fx-seg-time">~4 hrs of yours</span></div>
+                <div class="fx-seg-head"><span class="fx-seg-t">Build</span><span class="fx-seg-range">Days 1–14</span></div>
+                <ul class="fx-tasks">
+                    <li style="--d: 0"><span class="fx-tick" aria-hidden="true"><svg viewBox="0 0 12 12" width="10" height="10"><path d="M2.5 6.2l2.3 2.3 4.7-4.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="fx-task-n">Interviews, audit</span><b><i style="--s: 0%; --w: 42%; --d: 0"></i></b></li>
+                    <li style="--d: 1"><span class="fx-tick" aria-hidden="true"><svg viewBox="0 0 12 12" width="10" height="10"><path d="M2.5 6.2l2.3 2.3 4.7-4.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="fx-task-n">Leak map</span><b><i style="--s: 30%; --w: 30%; --d: 1"></i></b></li>
+                    <li style="--d: 2"><span class="fx-tick" aria-hidden="true"><svg viewBox="0 0 12 12" width="10" height="10"><path d="M2.5 6.2l2.3 2.3 4.7-4.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="fx-task-n">Build and approve</span><b><i style="--s: 42%; --w: 58%; --d: 2"></i></b></li>
+                </ul>
+                <div class="fx-seg-out"><span>Outcome</span><strong>Every system approved</strong></div>
+              </div>
+              <div class="fx-seg fx-seg-m1" style="--i: 1">
+                <div class="fx-seg-top"><span class="fx-seg-ic"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="#FF5B2E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h12M13 6l6 6-6 6"></path></svg></span><span class="fx-seg-time">~30 min / week</span></div>
+                <div class="fx-seg-head"><span class="fx-seg-t">Execute</span><span class="fx-seg-range">Days 15–30</span></div>
+                <ul class="fx-tasks">
+                    <li style="--d: 0"><span class="fx-tick" aria-hidden="true"><svg viewBox="0 0 12 12" width="10" height="10"><path d="M2.5 6.2l2.3 2.3 4.7-4.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="fx-task-n">Founder posts</span><b><i style="--s: 6%; --w: 94%; --d: 0"></i></b></li>
+                    <li style="--d: 1"><span class="fx-tick" aria-hidden="true"><svg viewBox="0 0 12 12" width="10" height="10"><path d="M2.5 6.2l2.3 2.3 4.7-4.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="fx-task-n">Flagship resource</span><b><i style="--s: 10%; --w: 34%; --d: 1"></i></b></li>
+                    <li style="--d: 2"><span class="fx-tick" aria-hidden="true"><svg viewBox="0 0 12 12" width="10" height="10"><path d="M2.5 6.2l2.3 2.3 4.7-4.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="fx-task-n">Conversations</span><b><i style="--s: 14%; --w: 86%; --d: 2"></i></b></li>
+                </ul>
+                <div class="fx-seg-out"><span>Outcome</span><strong>Initial traction</strong></div>
+              </div>
+              <div class="fx-seg fx-seg-m2" style="--i: 2">
+                <div class="fx-seg-top"><span class="fx-seg-ic"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="#FF5B2E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="4"></circle><circle cx="12" cy="12" r="0.8"></circle></svg></span><span class="fx-seg-time">Monthly review</span></div>
+                <div class="fx-seg-head"><span class="fx-seg-t">Sharpen</span><span class="fx-seg-range">Days 31–60</span></div>
+                <ul class="fx-tasks">
+                    <li style="--d: 0"><span class="fx-tick" aria-hidden="true"><svg viewBox="0 0 12 12" width="10" height="10"><path d="M2.5 6.2l2.3 2.3 4.7-4.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="fx-task-n">Refine</span><b><i style="--s: 16%; --w: 44%; --d: 0"></i></b></li>
+                    <li style="--d: 1"><span class="fx-tick" aria-hidden="true"><svg viewBox="0 0 12 12" width="10" height="10"><path d="M2.5 6.2l2.3 2.3 4.7-4.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="fx-task-n">Double down</span><b><i style="--s: 44%; --w: 56%; --d: 1"></i></b></li>
+                    <li style="--d: 2"><span class="fx-tick" aria-hidden="true"><svg viewBox="0 0 12 12" width="10" height="10"><path d="M2.5 6.2l2.3 2.3 4.7-4.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="fx-task-n">Always on</span><b><i style="--s: 0%; --w: 100%; --d: 2"></i></b></li>
+                </ul>
+                <div class="fx-seg-out"><span>Outcome</span><strong>Sharper targeting</strong></div>
+              </div>
+              <div class="fx-seg fx-seg-m3" style="--i: 3">
+                <div class="fx-seg-top"><span class="fx-seg-ic"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="#E04A1F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18l6-6 4 4 6-8"></path><path d="M15 8h5v5"></path></svg></span><span class="fx-seg-time">Quarterly review</span></div>
+                <div class="fx-seg-head"><span class="fx-seg-t">Compound</span><span class="fx-seg-range">Days 61–90</span></div>
+                <ul class="fx-tasks">
+                    <li style="--d: 0"><span class="fx-tick" aria-hidden="true"><svg viewBox="0 0 12 12" width="10" height="10"><path d="M2.5 6.2l2.3 2.3 4.7-4.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="fx-task-n">Deeper coverage</span><b><i style="--s: 20%; --w: 80%; --d: 0"></i></b></li>
+                    <li style="--d: 1"><span class="fx-tick" aria-hidden="true"><svg viewBox="0 0 12 12" width="10" height="10"><path d="M2.5 6.2l2.3 2.3 4.7-4.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="fx-task-n">Shortlisted</span><b><i style="--s: 50%; --w: 50%; --d: 1"></i></b></li>
+                    <li style="--d: 2"><span class="fx-tick" aria-hidden="true"><svg viewBox="0 0 12 12" width="10" height="10"><path d="M2.5 6.2l2.3 2.3 4.7-4.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="fx-task-n">Always on</span><b><i style="--s: 0%; --w: 100%; --d: 2"></i></b></li>
+                </ul>
+                <div class="fx-seg-out"><span>Outcome</span><strong>Committees shortlist you</strong></div>
+              </div>
+            </div>
+            <div class="fx-sprint-ticks" aria-hidden="true">
+              <span class="fx-label" style="font-size: 10px">Day 1</span>
+              <span class="fx-label" style="font-size: 10px">Day 30</span>
+              <span class="fx-label" style="font-size: 10px">Day 60</span>
+              <span class="fx-label" style="font-size: 10px; text-align: right">Day 90</span>
+            </div>
+          </div>
+        </div>
+      </figure>
+      <div class="fx-reveal fx-start-cta">
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <span style="font-family: 'Newsreader', Georgia, serif; font-size: clamp(22px, 2.2vw, 30px); line-height: 1.15">Ready to start your 14-day build?</span>
+          <span style="font-size: 15px; color: #5F5B53">One 30-minute call to see if it fits.</span>
+        </div>
+        <a class="fx-btn fx-btn-primary" href="#contact">Book a call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14 FAQ -->
+  <section id="faq" class="fx-sec" style="padding-top: clamp(48px, 6vw, 88px)">
+    <div class="fx-wrap fx-split fx-faq-wrap">
+      <div class="fx-reveal fx-faq-l" style="display: flex; flex-direction: column; gap: 22px">
+        <p class="fx-label" style="margin: 0">FAQ</p>
+        <h2 class="fx-display fx-h2 fx-faq-h">Questions<br><em>founders ask</em><br>first.</h2>
+      </div>
+      <div class="fx-faq fx-faq-r" style="min-width: 0; border-top: 1px solid #0C0E0D">
+        <details style="border-bottom: 1px solid #D9D3C7"><summary>"We get most of our business through referrals. Why change?"</summary><p class="fx-faq-a" style="margin: 0 0 24px; max-width: 64ch; font-size: 17px; line-height: 1.65; color: #3F3C36">Don't replace referrals; extend them. Referrals work because trust transfers. The limit is reach: they can't get you to buyers outside your network, and even referred buyers check you out first. Hinge found more than half of buyers had ruled out a referred firm before speaking to it, most often because they couldn't tell what the firm did. We make sure a referral lands on positioning that confirms it. <span class="fx-chip">Hinge</span></p></details>
+        <details style="border-bottom: 1px solid #D9D3C7"><summary>"We tried LinkedIn. It didn't work."</summary><p class="fx-faq-a" style="margin: 0 0 24px; max-width: 64ch; font-size: 17px; line-height: 1.65; color: #3F3C36">Usually one of three things went wrong. The profile didn't say who you're for, the content was about you rather than the buyer's decisions, or the outreach opened with a pitch. Those are positioning and conversation problems, not channel problems. The diagnostic will show which one it was. If LinkedIn genuinely isn't your leak, we'll tell you.</p></details>
+        <details style="border-bottom: 1px solid #D9D3C7"><summary>"Our founder has no time."</summary><p class="fx-faq-a" style="margin: 0 0 24px; max-width: 64ch; font-size: 17px; line-height: 1.65; color: #3F3C36">The system is built around that. Expect about four hours in the first 14 days, mostly interviews and approvals. After that, it's a 30-minute monthly interview, a monthly review call, and a few minutes a week approving content. What we can't replace is the founder's judgment. That's the asset, and we need access to it, not hours of it.</p></details>
+        <details style="border-bottom: 1px solid #D9D3C7"><summary>"How fast will we see something happen?"</summary><p class="fx-faq-a" style="margin: 0 0 24px; max-width: 64ch; font-size: 17px; line-height: 1.65; color: #3F3C36">Setup takes 14 days and execution starts on day 15, so month 1 is a working month. In month 1 we aim for initial traction: target accounts viewing the profile, fit accounts downloading the first resource, and the first trigger-led conversations. Qualified opportunities in a committee-driven sale usually take longer to form, which is why we review every month and recommend at least three months together.</p></details>
+        <details style="border-bottom: 1px solid #D9D3C7"><summary>"Is this lead generation?"</summary><p class="fx-faq-a" style="margin: 0 0 24px; max-width: 64ch; font-size: 17px; line-height: 1.65; color: #3F3C36">No. Lead-gen agencies optimise for meetings booked. We build the conditions for buyers to understand, trust and choose you, and we start conversations only when there's a real reason to talk. You get qualified opportunities with context, not a calendar full of curiosity calls.</p></details>
+        <details style="border-bottom: 1px solid #D9D3C7"><summary>"You don't know our technology."</summary><p class="fx-faq-a" style="margin: 0 0 24px; max-width: 64ch; font-size: 17px; line-height: 1.65; color: #3F3C36">We don't pretend to. We won't impersonate your engineers or your CISO, and we won't publish technical claims you haven't approved. Our expertise is how technology gets bought: the buying committee, evaluation, security review, the business case. You bring the technical truth, and we translate it into what the buyer needs in order to decide.</p></details>
+        <details style="border-bottom: 1px solid #D9D3C7"><summary>"How do you measure progress without promising meetings?"</summary><p class="fx-faq-a" style="margin: 0 0 24px; max-width: 64ch; font-size: 17px; line-height: 1.65; color: #3F3C36">Leading indicators first: profile views from target accounts, reach among ICP titles, resource downloads by fit accounts, trigger-led conversations started and qualified. Then the lagging indicator: opportunities handed over, and how good they are. We review both with you monthly and change what isn't working.</p></details>
+        <details style="border-bottom: 1px solid #D9D3C7"><summary>"Why three months?"</summary><p class="fx-faq-a" style="margin: 0 0 24px; max-width: 64ch; font-size: 17px; line-height: 1.65; color: #3F3C36">Month 1 gets the system live and creates initial traction. Month 2 uses that data to sharpen positioning, content and triggers. Month 3 compounds what works. A buying committee that sees your thinking for one month may remember you; one that sees it for a quarter starts to shortlist you.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 15 FINAL CTA -->
+  <section id="contact" style="position: relative; overflow: hidden; padding: clamp(64px, 7vw, 96px) 0 clamp(88px, 9vw, 136px); background: radial-gradient(70% 85% at 50% 115%, rgba(255,91,46,0.11) 0%, rgba(255,91,46,0.035) 42%, rgba(255,91,46,0) 75%), linear-gradient(180deg, #FAF8F4 0%, #F3EFE8 100%)">
+    <div aria-hidden="true" class="fx-breathe"></div>
+    <div class="fx-wrap fx-split" style="align-items: center; position: relative">
+      <div class="fx-reveal" style="flex: 1.3 1 460px; display: flex; flex-direction: column; align-items: flex-start; gap: 18px">
+        <h2 class="fx-display" style="font-size: clamp(34px, 3.8vw, 56px); line-height: 1.04">Find out where your <em>pipeline is leaking.</em></h2>
+        <p class="fx-lede" style="max-width: 50ch">Book a 30-minute call. We'll review your founder's LinkedIn profile, the content you publish, and how your conversations start, then tell you where we can improve.</p>
+        <a class="fx-btn fx-btn-primary" href="#contact">Book a call</a>
+      </div>
+
+      <div class="fx-reveal fx-agenda" style="flex: 1 1 360px">
+        <div class="fx-agenda-head">
+          <div class="fx-clock" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="28" fill="none" stroke="#ECE5D6" stroke-width="4"></circle><circle class="fx-clock-ring" cx="32" cy="32" r="28" fill="none" stroke="#FF5B2E" stroke-width="4" stroke-linecap="round" transform="rotate(-90 32 32)"></circle></svg>
+            <span><b>30</b>min</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 4px">
+            <span class="fx-label" style="font-size: 11px">On the call</span>
+            <span style="font-family: 'Newsreader', Georgia, serif; font-size: 26px; line-height: 1.1">What we review together</span>
+          </div>
+        </div>
+        <ol class="fx-agenda-list">
+          <li style="--k: 0"><span class="fx-agenda-t">0–10 min</span><div><strong>Your founder's LinkedIn profile</strong><span>Does it say who you help, and why you?</span></div></li>
+          <li style="--k: 1"><span class="fx-agenda-t">10–20 min</span><div><strong>Your LinkedIn content</strong><span>Is it about the buyer's decisions, or about you?</span></div></li>
+          <li style="--k: 2"><span class="fx-agenda-t">20–30 min</span><div><strong>Your conversations</strong><span>Do your DMs open with context, or a pitch?</span></div></li>
+        </ol>
+        <div class="fx-agenda-out">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#0C0E0D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          <span>Then we tell you where we can improve.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top: 1px solid #E2DDD3; padding: 32px 0 40px">
+    <div class="fx-wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; align-items: baseline">
+      <span style="font-family: 'Newsreader', Georgia, serif; font-size: 22px">Frame<span style="font-style: italic; color: #E04A1F">X</span></span>
+      <span class="fx-label" style="font-size: 11px">Authority-to-Pipeline System for B2B Tech Companies</span>
+      <span style="font-size: 13px; color: #5F5B53">© 2026 FrameX</span>
+    </div>
+  </footer>
+
+  </div>
+</div>
+<script>
+(function () {
+  'use strict';
+  var R = function (n) { return document.querySelector('[data-ref="' + n + '"]'); };
+  var all = function (s) { return Array.prototype.slice.call(document.querySelectorAll(s)); };
+  var mq = function (q) { return !!(window.matchMedia && window.matchMedia(q).matches); };
+  var cl = function (v) { return Math.max(0, Math.min(1, v)); };
+
+  var root = R('Root'), spot = R('Spot'), prog = R('Prog'), nav = R('Nav'), menu = R('Menu');
+  var pin = R('Pin'), viewport = R('Viewport'), track = R('Track'), bar = R('Bar'), leakNum = R('LeakNum');
+  var map = R('Map'), mapLine = R('MapLine'), sysLine = R('SysLine'), stage = R('SysStage'), sysNum = R('SysNum');
+  var cards = [0, 1, 2, 3, 4, 5, 6].map(function (i) { return document.querySelector('[data-card="' + i + '"]'); });
+  var sys = [0, 1, 2, 3, 4, 5].map(function (i) { return document.querySelector('[data-sys="' + i + '"]'); });
+  var nodes = all('.fx-node'), touches = all('.fx-touch, .fx-bpm-note');
+  var dots = all('.fx-map-dot'), btns = all('.fx-map-btn'), closeBanner = document.querySelector('.fx-close');
+
+  var reduced = mq('(prefers-reduced-motion: reduce)');
+  var finePointer = mq('(hover: hover) and (pointer: fine)');
+  var cursorOn = finePointer && !reduced;
+  var pinned = false, stackOn = false;
+  var st = { seen: 0, idx: -1, sysIdx: -1, mapStep: -1 };
+  var maxShift = 0, lastY = 0, raf = 0;
+
+  function decide() {
+    pinned = !reduced && finePointer && window.innerWidth >= 900 && window.innerHeight >= 620;
+    stackOn = window.innerWidth >= 900;
+    pin.classList.toggle('fx-hs-on', pinned);
+    if (!pinned) setSeen(7);
+  }
+
+  function setSeen(n) {
+    if (n <= st.seen) return;
+    st.seen = n;
+    cards.forEach(function (c, i) { if (c && i < n) c.classList.add('in'); });
+  }
+
+  function measure() {
+    var H = window.innerHeight;
+    if (pinned) {
+      track.style.transform = '';
+      maxShift = Math.max(0, track.scrollWidth - viewport.clientWidth);
+      pin.style.height = (H + maxShift) + 'px';
+    } else {
+      pin.style.height = '';
+      track.style.transform = '';
+      cards.forEach(function (c) { if (c) { c.style.transform = ''; c.style.opacity = ''; } });
+    }
+    stage.style.removeProperty('--cardh');
+    if (stackOn) {
+      var tallest = sys.reduce(function (m, c) { return Math.max(m, c ? c.offsetHeight : 0); }, 0);
+      stage.style.setProperty('--cardh', tallest + 'px');
+      var step = Math.max(44, Math.min(64, (H - 104 - 16 - tallest) / 5));
+      stage.style.setProperty('--step', step.toFixed(1) + 'px');
+    }
+  }
+
+  function setSys(a) {
+    if (a === st.sysIdx) return;
+    st.sysIdx = a;
+    dots.forEach(function (d, i) { d.classList.toggle('fx-map-dot-on', i <= a); });
+    btns.forEach(function (b, i) { b.classList.toggle('fx-map-on', i === a); });
+    if (sysNum) sysNum.textContent = '0' + (a + 1);
+    if (closeBanner) closeBanner.classList.toggle('fx-close-on', a === 5);
+  }
+
+  function setMapStep(s) {
+    if (s === st.mapStep) return;
+    st.mapStep = s;
+    nodes.forEach(function (n, i) {
+      n.classList.toggle('fx-node-on', i < s);
+      n.classList.toggle('fx-node-cur', i === s - 1 && s < 6);
+    });
+    touches.forEach(function (t, i) { t.classList.toggle('fx-touch-on', i < s); });
+  }
+
+  function tick() {
+    var H = window.innerHeight, W = window.innerWidth, y = window.scrollY;
+
+    if (nav && !reduced) {
+      var sr = sys[0] ? sys[0].parentElement.getBoundingClientRect() : null;
+      var inStack = sr && sr.top < 120 && sr.bottom > H * 0.5;
+      if (y > lastY + 4 && y > 320 && !inStack) nav.classList.add('fx-navbar-hide');
+      else if (y < lastY - 4 || y < 120) nav.classList.remove('fx-navbar-hide');
+    }
+    lastY = y;
+
+    if (map && !reduced) {
+      var mr = map.getBoundingClientRect();
+      var q = cl((H * 0.85 - mr.top) / (H * 0.6));
+      setMapStep(Math.min(6, Math.floor(q * 6 + 0.0001)));
+      if (mapLine) mapLine.style.transform = 'scaleX(' + cl((q * 6 - 1) / 5).toFixed(4) + ')';
+    }
+
+    var docMax = Math.max(1, document.documentElement.scrollHeight - H);
+    if (prog) prog.style.transform = 'scaleX(' + cl(y / docMax).toFixed(4) + ')';
+
+    var p = 0;
+    if (pinned) {
+      var r = pin.getBoundingClientRect();
+      p = cl(-r.top / Math.max(1, pin.offsetHeight - H));
+      track.style.transform = 'translate3d(' + (-p * maxShift).toFixed(1) + 'px,0,0)';
+      var seen = st.seen;
+      cards.forEach(function (c, i) {
+        if (!c) return;
+        var cr = c.getBoundingClientRect();
+        var off = (cr.left + cr.width / 2 - W / 2) / W;
+        var d = Math.min(1, Math.abs(off));
+        c.style.transform = 'scale(' + (1 - d * 0.08).toFixed(3) + ') rotate(' + (off * 2).toFixed(2) + 'deg)';
+        c.style.opacity = (1 - d * 0.55).toFixed(3);
+        if (r.top < H * 0.6 && cr.left < W * 0.82 && i + 1 > seen) seen = i + 1;
+      });
+      setSeen(seen);
+    } else {
+      p = cl(viewport.scrollLeft / Math.max(1, viewport.scrollWidth - viewport.clientWidth));
+    }
+    var idx = Math.round(p * 6);
+    if (idx !== st.idx) { st.idx = idx; if (leakNum) leakNum.textContent = '0' + (idx + 1); }
+    if (bar) bar.style.transform = 'scaleX(' + (0.143 + p * 0.857).toFixed(3) + ')';
+
+    var active = 0;
+    sys.forEach(function (c, i) {
+      if (!c) return;
+      var stick = stackOn ? (parseFloat(getComputedStyle(c).top) || 104) : H * 0.5;
+      if (c.getBoundingClientRect().top <= stick + 4) active = i;
+    });
+    if (sysLine) sysLine.style.transform = 'scaleY(' + (active / 5).toFixed(4) + ')';
+    setSys(active);
+  }
+
+  function onScroll() { if (!raf) raf = requestAnimationFrame(function () { raf = 0; tick(); }); }
+
+  // cursor-following ambient light
+  var tx = 0, ty = 0, cx = 0, cy = 0, shown = false, sraf = 0;
+  function paint() { spot.style.transform = 'translate3d(' + (cx - 480).toFixed(1) + 'px,' + (cy - 480).toFixed(1) + 'px,0)'; }
+  function spotTick() {
+    sraf = 0;
+    cx += (tx - cx) * 0.12; cy += (ty - cy) * 0.12; paint();
+    if (Math.abs(tx - cx) > 0.4 || Math.abs(ty - cy) > 0.4) sraf = requestAnimationFrame(spotTick);
+  }
+  if (cursorOn && spot) {
+    root.addEventListener('pointermove', function (e) {
+      if (e.pointerType && e.pointerType !== 'mouse') return;
+      var r = root.getBoundingClientRect();
+      tx = e.clientX - r.left; ty = e.clientY - r.top;
+      if (!shown) { shown = true; cx = tx; cy = ty; paint(); spot.style.opacity = '1'; }
+      if (!sraf) sraf = requestAnimationFrame(spotTick);
+    }, { passive: true });
+    root.addEventListener('pointerleave', function () { shown = false; spot.style.opacity = '0'; });
+  }
+
+  // system map: jump to a step
+  all('[data-go]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var i = +b.getAttribute('data-go'), c = sys[i];
+      if (!c) return;
+      var parentTop = window.scrollY + c.parentElement.getBoundingClientRect().top;
+      var offset = stackOn ? (104 + i * (parseFloat(getComputedStyle(stage).getPropertyValue('--step')) || 64)) : 104;
+      window.scrollTo({ top: parentTop + c.offsetTop - offset + 2, behavior: reduced ? 'auto' : 'smooth' });
+    });
+  });
+
+  // mobile menu
+  if (menu && nav) {
+    menu.addEventListener('click', function () {
+      var open = nav.classList.toggle('fx-nav-open');
+      menu.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    all('.fx-nav a').forEach(function (a) { a.addEventListener('click', function () { nav.classList.remove('fx-nav-open'); menu.setAttribute('aria-expanded', 'false'); }); });
+  }
+
+  // scroll reveals
+  if (!reduced && 'IntersectionObserver' in window) {
+    root.classList.add('fx-js');
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('fx-vis'); io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    all('.fx-reveal, .fx-draw, .fx-pop').forEach(function (el) { io.observe(el); });
+  }
+
+  decide();
+  measure();
+  tick();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { measure(); tick(); });
+  window.addEventListener('load', function () { measure(); tick(); });
+  window.addEventListener('scroll', onScroll, { passive: true });
+  viewport.addEventListener('scroll', onScroll, { passive: true });
+  var rt = 0;
+  window.addEventListener('resize', function () {
+    clearTimeout(rt);
+    rt = setTimeout(function () { decide(); measure(); tick(); }, 120);
+  });
+})();
+
+</script>
+</body>
+</html>
