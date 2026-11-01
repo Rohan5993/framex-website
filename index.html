@@ -881,6 +881,24 @@ footer{padding:22px 0 26px !important}
 .fx-tl-live::after{height:32px}
 @media (min-width:900px){.fx-tl-out strong{white-space:nowrap;font-size:clamp(16px,1.35vw,20px)}}
 .fx-js .fx-reveal .fx-ticks-fill{clip-path:inset(0 100% 0 0)}
+/* ---------- v24 ---------- */
+#start .fx-h2{font-size:clamp(30px,3.2vw,46px)}
+.fx-hs-on .fx-hs-viewport{padding-top:40px}
+.fx-hs-viewport{padding-top:56px}
+.fx-tl{padding-top:88px}
+.fx-tl-weeks{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:12px}
+.fx-tl-weeks > div{display:flex}
+.fx-tl-weeks span{flex:1;border-left:1px solid #D9D3C7;padding:0 0 0 6px;height:20px;font-family:'Spline Sans Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.08em;color:#8A857B}
+.fx-tl-weeks > div:last-child span:last-child{border-right:1px solid #D9D3C7}
+.fx-tl-live{top:-84px}
+.fx-tl-live::after{height:76px;opacity:.8}
+.fx-js .fx-tl-weeks span{opacity:0;transition:opacity .4s ease}
+.fx-js .fx-vis .fx-tl-weeks span{opacity:1}
+.fx-js .fx-vis .fx-tl-weeks > div:nth-child(1) span{transition-delay:.2s}
+.fx-js .fx-vis .fx-tl-weeks > div:nth-child(2) span{transition-delay:.45s}
+.fx-js .fx-vis .fx-tl-weeks > div:nth-child(3) span{transition-delay:.7s}
+.fx-js .fx-vis .fx-tl-weeks > div:nth-child(4) span{transition-delay:.95s}
+@media (max-width:900px){.fx-tl{padding-top:0}.fx-tl-weeks{display:none}}
 
 /* standalone site extras */
 html{scroll-behavior:smooth}
@@ -1609,11 +1627,11 @@ html{scroll-behavior:smooth}
           <p class="fx-label" style="margin: 0">How to get started</p>
           <h2 class="fx-display fx-h2">Built in 14 days. Live on day 15. <em>Better every month.</em></h2>
         </div>
-        <p class="fx-lede" style="flex: 1 1 320px; max-width: 40ch">Two weeks to build. Live on day 15. Sharper every month.</p>
       </div>
 
       <figure class="fx-reveal" aria-label="90-day sprint view: build in days 1 to 14, live on day 15, execute in month 1, sharpen in month 2, compound in month 3" style="margin: clamp(48px, 6vw, 80px) 0 0">
         <div class="fx-tl">
+          <div class="fx-tl-weeks" aria-hidden="true"><div><span>W1</span><span>W2</span></div><div><span>W3</span><span>W4</span></div><div><span>W5</span><span>W6</span><span>W7</span><span>W8</span></div><div><span>W9</span><span>W10</span><span>W11</span><span>W12</span><span>W13</span></div></div>
           <div class="fx-tl-rail" aria-hidden="true"><i></i><span class="fx-tl-live fx-label">Day 15 · Live</span></div>
           <div class="fx-tl-cols">
             <div class="fx-tl-col" style="--i: 0">
