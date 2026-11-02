@@ -1,0 +1,106 @@
+  <section id="problem" class="fx-sec fx-hs-pin " style="padding-bottom: clamp(48px, 5vw, 72px)">
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true"><defs><linearGradient id="vg" x1="0" x2="1"><stop offset="0" stop-color="#FF5B2E"></stop><stop offset="1" stop-color="#FFA46B"></stop></linearGradient></defs></svg>
+    <div class="fx-hs-sticky">
+      <div class="fx-wrap fx-hs-head">
+        <div class="fx-split" style="align-items: flex-end; row-gap: 14px">
+          <div style="flex: 1 1 460px; display: flex; flex-direction: column; gap: 14px">
+            <p class="fx-label" style="margin: 0">The problem</p>
+            <h2 class="fx-display fx-h2">Where is your revenue <em>leaking</em> from?</h2>
+          </div>
+          <p class="fx-lede" style="flex: 1 1 320px; max-width: 44ch">More content or DMs doesn't fix a broken commercial path. We find the leak first, then build the right system.</p>
+        </div>
+      </div>
+      <div class="fx-hs-viewport" id="fxViewport">
+        <div class="fx-hs-track" id="fxTrack">
+              <article class="fx-stk ">
+                <div class="fx-stk-head"><div class="fx-stk-no">01</div><h3>“They can’t find us.”</h3><p class="fx-stk-p">Buyers search the problem, ask peers and AI assistants, and build a shortlist. You're not on it, so your best work never gets evaluated.</p></div>
+                <div class="vz"><div class="li">
+  <div class="li-search"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="4.5" fill="none" stroke="#625F57" stroke-width="1.6"></circle><path d="M10.5 10.5l3 3" stroke="#625F57" stroke-width="1.6" stroke-linecap="round"></path></svg><span class="li-type" style="--w: 26ch">managed security partner</span></div>
+  <div class="li-tabs"><span class="on">People</span><span>Companies</span><span>Posts</span></div>
+  <div class="li-row an" style="--k: 2"><span class="li-av"></span><div class="li-col"><span class="li-name">Competitor A</span><span class="li-sub">"We help fintechs pass SOC 2"</span></div><span class="li-tag">Follow</span></div>
+  <div class="li-row an" style="--k: 3"><span class="li-av"></span><div class="li-col"><span class="li-name">Competitor B</span><span class="li-sub">"Security your board will sign off"</span></div><span class="li-tag">Follow</span></div>
+  <div class="li-row an" style="--k: 4"><span class="li-av"></span><div class="li-col"><span class="li-name">Competitor C</span><span class="li-sub">"The MSSP for regulated teams"</span></div><span class="li-tag">Follow</span></div>
+  <div class="li-row li-you an" style="--k: 6"><span class="li-av li-av-sig"></span><div class="li-col"><span class="li-name">Your firm</span><span class="li-sub">Page 4, where nobody scrolls</span></div><span class="li-tag li-tag-bad">Not seen</span></div>
+</div><span class="fx-pill">Fix: Profile, search, category association</span></div>
+              </article>
+              <article class="fx-stk ">
+                <div class="fx-stk-head"><div class="fx-stk-no">02</div><h3>“They find us, but don’t get it.”</h3><p class="fx-stk-p">Your site and profile describe capabilities, not outcomes. Buyers leave unable to explain what you do, or why it matters to them.</p></div>
+                <div class="vz"><div class="li li-prof">
+  <div class="li-banner"></div>
+  <div class="li-av li-av-ink li-av-lg">YF</div>
+  <span class="li-name" style="font-size: 15px">Founder, your firm</span>
+  <div class="li-jargon">
+    <span class="an" style="--k: 1">Digital transformation</span>
+    <span class="an" style="--k: 2">Trusted partner</span>
+    <span class="an" style="--k: 3">Innovation</span>
+    <span class="an" style="--k: 4">End-to-end solutions</span>
+  </div>
+  <div class="li-viewer an" style="--k: 6"><span class="li-av"></span><div class="li-bubble">So… what do you actually do?</div></div>
+</div><span class="fx-pill">Fix: Buyer language, problem framing</span></div>
+              </article>
+              <article class="fx-stk ">
+                <div class="fx-stk-head"><div class="fx-stk-no">03</div><h3>“They don’t trust us yet.”</h3><p class="fx-stk-p">Interest without proof stalls. Without visible expertise and decision resources, you never move from interesting to shortlisted.</p></div>
+                <div class="vz"><div class="li">
+  <div class="li-sec an" style="--k: 1"><span class="li-sub">Featured</span><span class="li-empty">Nothing here yet</span></div>
+  <div class="li-sec an" style="--k: 2"><span class="li-sub">Activity</span><span class="li-empty">Last post · 4 months ago</span></div>
+  <div class="li-sec an" style="--k: 3"><span class="li-sub">Proof</span><span class="li-empty">No case studies, no resources</span></div>
+  <div class="li-meter an" style="--k: 4">
+    <div class="li-meter-top"><span class="li-name">Buyer trust</span><span class="li-tag li-tag-bad">Not shortlisted</span></div>
+    <div class="li-bar"><i style="--to: 24%"></i></div>
+    <div class="li-scale"><span>No trust</span><span>Shortlisted</span></div>
+  </div>
+</div><span class="fx-pill">Fix: Expertise content, sample work, decision resources</span></div>
+              </article>
+              <article class="fx-stk fx-stk-hot ">
+                <div class="fx-stk-head"><div class="fx-stk-no">04</div><h3>“Referrals work, until they don’t.”</h3><p class="fx-stk-p">Trust transfers inside your network and stops at its edge. Even referred buyers check you out first.</p></div>
+                <div class="vz"><div class="li li-chat">
+  <div class="li-chat-h"><span class="li-av"></span><div class="li-col"><span class="li-name">Head of IT, fintech</span><span class="li-sub">Messaging</span></div></div>
+  <div class="li-msg li-in an" style="--k: 1">Anyone you'd recommend for SOC 2 prep?</div>
+  <div class="li-msg li-out an" style="--k: 2">Talk to <b>your firm</b>. They're great.</div>
+  <div class="li-event an" style="--k: 4"><span class="li-dot"></span>Viewed your profile for 12 seconds</div>
+  <div class="li-msg li-in an" style="--k: 6">Couldn't tell what they do. Went with someone else.</div>
+</div><span class="fx-pill">Fix: Make the referral land on clear positioning</span></div>
+              </article>
+              <article class="fx-stk ">
+                <div class="fx-stk-head"><div class="fx-stk-no">05</div><h3>“Wrong people in the conversation.”</h3><p class="fx-stk-p">Outreach lands with whoever fits a filter. Without an ICP and triggers, conversations start with people who can't or won't buy.</p></div>
+                <div class="vz"><div class="li">
+  <div class="li-head"><span class="li-name">Messaging</span><span class="li-tag">Focused</span></div>
+  <div class="li-row an" style="--k: 1"><span class="li-av"></span><div class="li-col"><span class="li-name">Sales rep, another agency</span><span class="li-sub">"Quick question about your pipeline…"</span></div><span class="li-tag li-tag-bad">Pitching you</span></div>
+  <div class="li-row an" style="--k: 2"><span class="li-av"></span><div class="li-col"><span class="li-name">Student</span><span class="li-sub">"Love your content!"</span></div><span class="li-tag">Not a buyer</span></div>
+  <div class="li-row an" style="--k: 3"><span class="li-av"></span><div class="li-col"><span class="li-name">Recruiter</span><span class="li-sub">"Open to new roles?"</span></div><span class="li-tag">Not a buyer</span></div>
+  <div class="li-row li-you an" style="--k: 5"><span class="li-av li-av-sig li-target"></span><div class="li-col"><span class="li-name">CISO, fintech</span><span class="li-sub">The person who can actually buy</span></div><span class="li-tag li-tag-bad">Not in inbox</span></div>
+</div><span class="fx-pill">Fix: ICP, triggers, signal map</span></div>
+              </article>
+              <article class="fx-stk ">
+                <div class="fx-stk-head"><div class="fx-stk-no">06</div><h3>“Interest appears, then disappears.”</h3><p class="fx-stk-p">A profile visit, a download, a reply, then silence. Without nurture and a champion kit, momentum dies between touchpoints.</p></div>
+                <div class="vz"><div class="li">
+  <div class="li-head"><span class="li-name">Notifications</span><span class="li-tag">This quarter</span></div>
+  <div class="li-note an" style="--k: 1"><span class="li-ic">◉</span><div class="li-col"><span class="li-name">A CISO viewed your profile</span><span class="li-sub">Monday</span></div></div>
+  <div class="li-note an" style="--k: 2"><span class="li-ic">↓</span><div class="li-col"><span class="li-name">They downloaded your guide</span><span class="li-sub">Tuesday</span></div></div>
+  <div class="li-note an" style="--k: 3"><span class="li-ic">✉</span><div class="li-col"><span class="li-name">"Interesting. Let's talk next month."</span><span class="li-sub">Thursday</span></div></div>
+  <div class="li-gap an" style="--k: 5"><span>47 days later</span></div>
+  <div class="li-note li-ghost an" style="--k: 6"><span class="li-ic">…</span><div class="li-col"><span class="li-name">No follow-up sent</span><span class="li-sub">They signed with someone else</span></div></div>
+</div><span class="fx-pill">Fix: Conversation architecture, nurture, champion enablement</span></div>
+              </article>
+              <article class="fx-stk ">
+                <div class="fx-stk-head"><div class="fx-stk-no">07</div><h3>“It runs on someone’s memory.”</h3><p class="fx-stk-p">Follow-ups, context and notes live in one person's head. When they're busy, the pipeline stalls.</p></div>
+                <div class="vz"><div class="li li-mem">
+  <div class="li-head"><span class="li-name">Messaging</span><span class="li-badge an" style="--k: 1">23 unread</span></div>
+  <div class="li-row"><span class="li-av"></span><div class="li-col" style="flex: 1"><span class="li-ln" style="width: 60%"></span><span class="li-ln" style="width: 85%; margin-top: 6px"></span></div></div>
+  <div class="li-row"><span class="li-av"></span><div class="li-col" style="flex: 1"><span class="li-ln" style="width: 50%"></span><span class="li-ln" style="width: 75%; margin-top: 6px"></span></div></div>
+  <div class="li-row"><span class="li-av"></span><div class="li-col" style="flex: 1"><span class="li-ln" style="width: 66%"></span><span class="li-ln" style="width: 80%; margin-top: 6px"></span></div></div>
+  <div class="li-row"><span class="li-av"></span><div class="li-col" style="flex: 1"><span class="li-ln" style="width: 45%"></span><span class="li-ln" style="width: 70%; margin-top: 6px"></span></div></div>
+  <span class="li-sticky" style="--r: -5deg; --k: 3; top: 46px; right: 10px">Follow up with the CISO??</span>
+  <span class="li-sticky" style="--r: 4deg; --k: 4; top: 112px; left: 30px">Who has the deck?</span>
+  <span class="li-sticky" style="--r: -2deg; --k: 5; bottom: 16px; right: 34px">Call back Tuesday (which one?)</span>
+</div><span class="fx-pill">Fix: CRM and automation, supporting one clear process</span></div>
+              </article>
+        </div>
+      </div>
+      <div class="fx-wrap fx-hs-meter" aria-hidden="true">
+        <span class="fx-label" style="font-size: 11px; color: #0C0E0D">01 / 07</span>
+        <span class="fx-hs-bar"><span id="fxBar"></span></span>
+        
+      </div>
+    </div>
+  </section>

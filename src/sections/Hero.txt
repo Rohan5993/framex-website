@@ -1,0 +1,82 @@
+  <section id="top" style="position: relative; padding: clamp(56px, 8vw, 112px) 0 clamp(72px, 8vw, 120px)">
+    <div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; background: radial-gradient(55% 60% at 92% 0%, rgba(255,91,46,0.08) 0%, rgba(255,91,46,0.025) 45%, rgba(255,91,46,0) 72%), radial-gradient(45% 50% at 0% 100%, rgba(240,235,226,0.9) 0%, rgba(240,235,226,0) 70%)"></div>
+    <div class="fx-wrap" style="position: relative">
+      <!--sp:hero--><div class="fx-hv2" aria-hidden="true"><svg viewBox="0 0 470 520">
+          <defs><pattern id="fxbpGrid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#E6DFD2" stroke-width="1"></path></pattern>
+          <linearGradient id="fxbpFade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"></stop><stop offset="1" stop-color="#fff" stop-opacity="0"></stop></linearGradient>
+          <mask id="fxbpM"><rect width="470" height="520" fill="url(#fxbpFade)"></rect></mask></defs>
+          <rect width="470" height="520" fill="url(#fxbpGrid)" mask="url(#fxbpM)" class="fx-bp2-grid"></rect>
+          <g class="fx-bp2-card">
+            <rect class="d f" pathLength="1" x="70" y="40" width="300" height="300" rx="16" style="--s:0"></rect>
+            <path class="d banner" pathLength="1" d="M71 56 Q71 41 86 41 H354 Q369 41 369 56 V100 H71 Z" style="--s:.15"></path>
+            <circle class="d f" pathLength="1" cx="122" cy="104" r="30" style="--s:.3"></circle>
+            <rect class="d bar" pathLength="1" x="92" y="148" width="150" height="12" rx="3" style="--s:.42"></rect>
+            <rect class="d bar sig" pathLength="1" x="92" y="170" width="220" height="10" rx="3" style="--s:.52"></rect>
+            <rect class="d tile" pathLength="1" x="92" y="206" width="78" height="56" rx="8" style="--s:.62"></rect>
+            <rect class="d tile" pathLength="1" x="181" y="206" width="78" height="56" rx="8" style="--s:.68"></rect>
+            <rect class="d tile" pathLength="1" x="270" y="206" width="78" height="56" rx="8" style="--s:.74"></rect>
+            <rect class="d bar" pathLength="1" x="92" y="282" width="256" height="8" rx="3" style="--s:.8"></rect>
+            <rect class="d bar" pathLength="1" x="92" y="300" width="190" height="8" rx="3" style="--s:.84"></rect>
+          </g>
+          <g class="fx-bp2-post">
+            <rect class="d f" pathLength="1" x="110" y="364" width="300" height="118" rx="14" style="--s:.9"></rect>
+            <circle class="d" pathLength="1" cx="140" cy="394" r="13" style="--s:.95"></circle>
+            <rect class="d bar" pathLength="1" x="162" y="388" width="120" height="8" rx="3" style="--s:1"></rect>
+            <rect class="d bar" pathLength="1" x="130" y="420" width="256" height="8" rx="3" style="--s:1.04"></rect>
+            <rect class="d bar" pathLength="1" x="130" y="436" width="210" height="8" rx="3" style="--s:1.08"></rect>
+            <g class="fx-bp2-react"><circle cx="138" cy="462" r="5"></circle><circle cx="150" cy="462" r="5"></circle><circle cx="162" cy="462" r="5"></circle><text x="176" y="466">Shared by a CISO</text></g>
+          </g>
+          <g class="fx-bp2-notes">
+            <g style="--n:0"><path d="M312 175 H400 V128 H420"></path><circle cx="312" cy="175" r="3"></circle><text x="426" y="124">01</text><text x="426" y="138" class="nt">Positioning</text></g>
+            <g style="--n:1"><path d="M348 234 H440"></path><circle cx="348" cy="234" r="3"></circle><text x="426" y="222">02</text><text x="426" y="252" class="nt">Proof</text></g>
+            <g style="--n:2"><path d="M70 420 H30 V470 H18"></path><circle cx="110" cy="420" r="3"></circle><path d="M110 420 H70"></path><text x="4" y="488">03</text><text x="4" y="502" class="nt">Authority</text></g>
+          </g>
+          <g class="fx-bp2-badge"><circle cx="352" cy="58" r="20"></circle><text x="352" y="63" text-anchor="middle">+12</text></g>
+          <g class="fx-bp2-badgelab"><path d="M372 58 H420 V30 H426"></path><text x="430" y="26">04</text><text x="430" y="40" class="nt">Signals</text></g>
+        </svg><p class="fx-bp2-cap fx-label">12 buyers viewed this week</p></div>
+      <!--/sp:hero--><p class="fx-label fx-in" style="margin: 0 0 28px">Authority-to-Pipeline System for B2B Tech Companies</p>
+      <h1 class="fx-display" style="font-size: clamp(32px, 3.7vw, 56px); line-height: 1.06; max-width: 30ch"><span class="fx-ln"><span style="--d: 0">We build <em>infrastructure</em></span></span><span class="fx-ln"><span style="--d: 1">for how the market finds,</span></span><span class="fx-ln"><span style="--d: 2">understands, trusts, and buys.</span></span></h1>
+      <p class="fx-lede fx-in fx-in-3" style="margin: 28px 0 0; max-width: 58ch">Your delivery is ahead of your market position. FrameX builds the system that closes the gap, on the channel where your buyers already vet you.</p>
+      <div class="fx-in fx-in-3" style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px">
+        <a class="fx-btn fx-btn-primary" href="#system">See how the system works <span aria-hidden="true">↓</span></a>
+        <a class="fx-btn fx-btn-secondary" href="#contact">Book a call</a>
+      </div>
+      <p class="fx-label fx-in fx-in-4" style="margin: 28px 0 0; display: flex; flex-wrap: wrap; gap: 8px 22px"><span>Built in 14 days</span><span aria-hidden="true" style="color: #FF5B2E">/</span><span>Live on day 15</span><span aria-hidden="true" style="color: #FF5B2E">/</span><span>In your voice</span></p>
+
+      <!-- The gap: two sides apart, FrameX moves in between -->
+      <div class="fx-br-pin"><div class="fx-br-sticky"><figure class="fx-in fx-in-4 fx-gap3 fx-gapv fx-gapb" aria-label="Your side holds deep expertise. Your buyers sit on higher ground across a gap, and right now what you know falls short of them. As you scroll, FrameX builds a bridge across the gap that rises all the way: buyers find you, understand you, trust you, and buy.">
+        <div class="fx-br-stage">
+          <svg class="fx-br-svg" viewBox="0 0 1200 420" aria-hidden="true">
+            <defs>
+              <pattern id="fxbrDots" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="1.05" fill="#0C0E0D" fill-opacity=".22"></circle></pattern>
+              <linearGradient id="fxbrFade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"></stop><stop offset="1" stop-color="#fff" stop-opacity="0"></stop></linearGradient>
+              <mask id="fxbrR" maskUnits="userSpaceOnUse" x="0" y="0" width="1200" height="420"><rect class="fx-br-reveal" x="320" y="0" width="560" height="420" fill="#fff"></rect></mask>
+              <mask id="fxbrM" maskUnits="userSpaceOnUse" x="0" y="0" width="1200" height="420"><rect width="1200" height="420" fill="url(#fxbrFade)"></rect></mask>
+            </defs>
+            <g mask="url(#fxbrM)">
+              <path d="M0 290 H330 L354 420 H0Z" fill="url(#fxbrDots)"></path>
+              <path d="M1200 130 H870 L846 420 H1200Z" fill="url(#fxbrDots)"></path>
+              <path class="fx-br-edge" d="M0 290 H330 L354 420"></path>
+              <path class="fx-br-edge" d="M1200 130 H870 L846 420"></path>
+            </g>
+            <g class="fx-br-before">
+              <path class="fx-br-fall" d="M330 290 C 400 290, 460 310, 500 390"></path>
+              <circle class="fx-br-faller" r="5"><animateMotion dur="2.6s" repeatCount="indefinite" path="M300 290 L330 290 C 400 290, 460 310, 500 390"></animateMotion><animate attributeName="opacity" dur="2.6s" repeatCount="indefinite" values="0;1;1;0" keyTimes="0;.15;.6;1"></animate></circle>
+            </g>
+            <g class="fx-br-truss"><line x1="330.0" y1="290.0" x2="337.0" y2="334.0" style="--t:0.00"></line><line x1="330.0" y1="290.0" x2="370.0" y2="331.7" style="--t:0.04"></line><line x1="370.0" y1="287.7" x2="370.0" y2="331.7" style="--t:0.07"></line><line x1="370.0" y1="331.7" x2="408.7" y2="282.1" style="--t:0.11"></line><line x1="408.7" y1="282.1" x2="408.7" y2="326.1" style="--t:0.14"></line><line x1="408.7" y1="282.1" x2="446.4" y2="317.6" style="--t:0.18"></line><line x1="446.4" y1="273.6" x2="446.4" y2="317.6" style="--t:0.21"></line><line x1="446.4" y1="317.6" x2="483.4" y2="262.7" style="--t:0.25"></line><line x1="483.4" y1="262.7" x2="483.4" y2="306.7" style="--t:0.29"></line><line x1="483.4" y1="262.7" x2="519.9" y2="293.8" style="--t:0.33"></line><line x1="519.9" y1="249.8" x2="519.9" y2="293.8" style="--t:0.36"></line><line x1="519.9" y1="293.8" x2="556.2" y2="235.6" style="--t:0.40"></line><line x1="556.2" y1="235.6" x2="556.2" y2="279.6" style="--t:0.43"></line><line x1="556.2" y1="235.6" x2="592.5" y2="264.5" style="--t:0.47"></line><line x1="592.5" y1="220.5" x2="592.5" y2="264.5" style="--t:0.50"></line><line x1="592.5" y1="264.5" x2="629.1" y2="204.9" style="--t:0.54"></line><line x1="629.1" y1="204.9" x2="629.1" y2="248.9" style="--t:0.57"></line><line x1="629.1" y1="204.9" x2="666.3" y2="233.4" style="--t:0.61"></line><line x1="666.3" y1="189.4" x2="666.3" y2="233.4" style="--t:0.64"></line><line x1="666.3" y1="233.4" x2="704.3" y2="174.5" style="--t:0.68"></line><line x1="704.3" y1="174.5" x2="704.3" y2="218.5" style="--t:0.71"></line><line x1="704.3" y1="174.5" x2="743.5" y2="204.6" style="--t:0.75"></line><line x1="743.5" y1="160.6" x2="743.5" y2="204.6" style="--t:0.79"></line><line x1="743.5" y1="204.6" x2="783.9" y2="148.2" style="--t:0.83"></line><line x1="783.9" y1="148.2" x2="783.9" y2="192.2" style="--t:0.86"></line><line x1="783.9" y1="148.2" x2="826.0" y2="181.8" style="--t:0.90"></line><line x1="826.0" y1="137.8" x2="826.0" y2="181.8" style="--t:0.93"></line><line x1="826.0" y1="181.8" x2="870.0" y2="130.0" style="--t:0.97"></line><line x1="870.0" y1="130.0" x2="864.0" y2="174.0" style="--t:1.00"></line></g>
+            <g mask="url(#fxbrR)"><path class="fx-br-low" d="M337 334 L370 332 L409 326 L446 318 L483 307 L520 294 L556 280 L592 264 L629 249 L666 233 L704 218 L743 205 L784 192 L826 182 L864 174"></path>
+            <path class="fx-br-deck" d="M330 290 C520 288 660 160 870 130"></path></g>
+            <g class="fx-br-m" style="--t:0.2"><circle class="fx-br-mh" cx="439" cy="275" r="15"></circle><circle class="fx-br-md" cx="439" cy="275" r="6.5"></circle></g><g class="fx-br-m" style="--t:0.45"><circle class="fx-br-mh" cx="567" cy="231" r="15"></circle><circle class="fx-br-md" cx="567" cy="231" r="6.5"></circle></g><g class="fx-br-m" style="--t:0.7"><circle class="fx-br-mh" cx="697" cy="177" r="15"></circle><circle class="fx-br-md" cx="697" cy="177" r="6.5"></circle></g><g class="fx-br-m" style="--t:0.93"><circle class="fx-br-mh" cx="827" cy="138" r="15"></circle><circle class="fx-br-md" cx="827" cy="138" r="6.5"></circle></g>
+            <g class="fx-br-run"><circle class="fx-br-runner" r="6"><animateMotion dur="3.4s" repeatCount="indefinite" path="M220 290 L330 290 C520 288 660 160 870 130 L1000 130"></animateMotion><animate attributeName="opacity" dur="3.4s" repeatCount="indefinite" values="0;1;1;0" keyTimes="0;.12;.88;1"></animate></circle></g>
+          </svg>
+          <div class="fx-br-lab fx-br-lab-l"><span class="fx-label">Your side</span><span class="fx-br-t">Deep expertise</span></div>
+          <div class="fx-br-lab fx-br-lab-r"><span class="fx-label">Your buyers</span><span class="fx-br-t fx-br-sigt">Growth</span></div>
+          <div class="fx-br-name" aria-hidden="true"><b>Frame<span class="fx-br-x">X</span></b><span>builds the bridge</span></div>
+          <div class="fx-br-gap" aria-hidden="true"><i></i><span>The gap</span></div>
+          <div class="fx-br-mls" aria-hidden="true"><span class="fx-br-ml" style="--t: 0.2; left: 36.58%; top: 59.40%">Finds you</span><span class="fx-br-ml" style="--t: 0.45; left: 47.26%; top: 48.85%">Understands you</span><span class="fx-br-ml" style="--t: 0.7; left: 58.05%; top: 36.05%">Trusts you</span><span class="fx-br-ml" style="--t: 0.93; left: 68.91%; top: 26.59%">Buys</span></div>
+        </div>
+        <ol class="fx-br-steps" aria-hidden="true"><li style="--t: 0.2">Finds you</li><li style="--t: 0.45">Understands you</li><li style="--t: 0.7">Trusts you</li><li style="--t: 0.93">Buys</li></ol>
+        <p class="fx-gv-cap"><span class="fx-gv-cap-a">Your expertise is real. Right now, it falls short of your buyers.</span><span class="fx-gv-cap-b">FrameX builds the bridge, and it only goes up.</span></p>
+      </figure></div></div>
+    </div>
+  </section>

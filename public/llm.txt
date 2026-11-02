@@ -1,0 +1,60 @@
+# FrameX
+
+> FrameX builds the Authority-to-Pipeline System for B2B technology companies — the
+> infrastructure for how the market finds, understands, trusts, and buys from a vendor,
+> built primarily on LinkedIn. Built in 14 days, live on day 15.
+
+## What FrameX does
+
+FrameX closes the gap between a B2B tech company's delivery quality and its market
+position. Most B2B buying committees rank their shortlist, vet vendors, and build trust
+before ever speaking to sales — often on LinkedIn. FrameX builds the system that makes
+sure a company is found, understood, trusted, and chosen during that invisible phase.
+
+## The six-step Authority-to-Pipeline System
+
+1. **Positioning Architecture** — ICP, buying triggers, message map, founder/team
+   profiles. Fixes: being understood in one read.
+2. **Authority Content** — editorial architecture, founder posts (8–16/month), monthly
+   capture interviews. Fixes: being found and trusted.
+3. **Sales Resources** — flagship resource, landing page, champion kit (internal pitch,
+   CFO one-pager, security answers). Fixes: trust and buy-in.
+4. **Signal Intelligence** — trigger map, account lists, weekly signal log, monthly
+   signal review. Fixes: finding the right people at the right time.
+5. **Conversation Framework** — conversation playbook, manual outreach handling,
+   qualification notes, a shared conversation ledger. Fixes: starting with context
+   instead of a pitch.
+6. **Pipeline Revenue** — qualified opportunity handovers with problem, trigger,
+   stakeholders and notes. The client's own sales team closes.
+
+## Engagement model
+
+- Build: days 1–14 (onboarding, positioning brief, profile rebuild, first content and
+  resource — roughly 4 hours of the client's time).
+- Live: from day 15 (profile, posts and flagship resource go live; signal monitoring and
+  trigger-led conversations begin; roughly 30 minutes a week of the client's time).
+- Minimum recommended engagement: three months (month 1 traction, month 2 sharpening,
+  month 3 compounding).
+
+## What FrameX is not
+
+Not a lead-generation agency (it does not optimize for meetings booked) and not a
+technical consultancy (it does not claim domain expertise in the client's product —
+it translates the client's own technical truth into what buyers need to decide).
+
+## Key stats referenced on the site
+
+- 94% of B2B buying groups rank a shortlist before contacting a vendor (6sense); the
+  pre-contact favorite wins 77% of the time.
+- 71% of "hidden" buyers in a deal have little or no contact with sales (Edelman–LinkedIn).
+- Only ~0.3% of B2B tech companies post more than twice a week on LinkedIn.
+
+## Contact
+
+Primary call to action across the site: "Book a call."
+
+## Source
+
+This file is a plain-text, LLM-oriented summary of https://theframex.com/ per the
+llms.txt convention (llmstxt.org). For the full page, see the live site; for structural
+navigation, see /sitemap.txt.

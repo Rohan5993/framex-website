@@ -1,0 +1,47 @@
+  <section id="contact" style="position: relative; overflow: hidden; padding: clamp(64px, 7vw, 96px) 0 clamp(88px, 9vw, 136px); background: radial-gradient(70% 85% at 50% 115%, rgba(255,91,46,0.11) 0%, rgba(255,91,46,0.035) 42%, rgba(255,91,46,0) 75%), linear-gradient(180deg, #FAF8F4 0%, #F3EFE8 100%)">
+    <div aria-hidden="true" class="fx-breathe"></div><!--sp:cta-->
+    <div class="fx-wrap fx-lp2" style="position: relative">
+      <div class="fx-lp2-l">
+        <p class="fx-label" style="margin: 0">Book a call</p>
+        <h2 class="fx-display fx-h2">Find out where your <em>pipeline is leaking.</em></h2>
+        <p class="fx-lede">Most firms lose buyers in the same few places. We'll show you where yours leaks, and what it takes to seal it.</p>
+        <a class="fx-btn fx-btn-primary" href="#contact">Book a call</a>
+      </div>
+      <div class="fx-lp2-r"><figure class="fx-lp" aria-label="A pipeline carrying demand from your market to revenue. It leaks in three places: an unclear profile, no follow-up, and pitch-first outreach. Only a trickle reaches revenue.">
+        <div class="fx-lp-stage">
+          <svg viewBox="0 0 970 400" aria-hidden="true">
+            <defs>
+              <linearGradient id="fxlpFlow" x1="40" x2="930" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FF5B2E"></stop><stop offset=".55" stop-color="#FF5B2E" stop-opacity=".55"></stop><stop offset="1" stop-color="#FF5B2E" stop-opacity=".18"></stop></linearGradient>
+              <pattern id="fxlpDots" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="1" fill="#0C0E0D" fill-opacity=".16"></circle></pattern>
+            </defs>
+            <line class="fx-lp-floor" x1="20" y1="360" x2="950" y2="360"></line>
+            <path class="fx-lp-outer" d="M40 110 H250 Q300 110 300 160 V170 Q300 220 350 220 H630 Q680 220 680 170 V160 Q680 120 730 120 H930"></path>
+            <path class="fx-lp-inner" d="M40 110 H250 Q300 110 300 160 V170 Q300 220 350 220 H630 Q680 220 680 170 V160 Q680 120 730 120 H930"></path>
+            <path class="fx-lp-flow" d="M40 110 H250 Q300 110 300 160 V170 Q300 220 350 220 H630 Q680 220 680 170 V160 Q680 120 730 120 H930"></path>
+            <rect class="fx-lp-flange" x="105" y="84" width="10" height="52" rx="2"></rect><rect class="fx-lp-flange" x="405" y="194" width="10" height="52" rx="2"></rect><rect class="fx-lp-flange" x="565" y="194" width="10" height="52" rx="2"></rect><rect class="fx-lp-flange" x="855" y="94" width="10" height="52" rx="2"></rect>
+            <g class="fx-lp-leak" style="--k:0">
+            <path class="fx-lp-crack" d="M160 129 l5 -7 l5 6 l5 -8 l5 7"></path>
+            <path class="fx-lp-spray" d="M166 131 q-14 10 -22 26 M174 131 q14 10 22 26"></path>
+            <circle class="fx-lp-drop" cx="167" cy="130" r="4" style="--fall:224px;animation-delay:0s;animation-duration:1.5s"></circle><circle class="fx-lp-drop" cx="174" cy="130" r="3" style="--fall:224px;animation-delay:0.55s;animation-duration:1.7s"></circle><circle class="fx-lp-drop" cx="170" cy="130" r="3.4" style="--fall:224px;animation-delay:1.05s;animation-duration:1.4s"></circle><circle class="fx-lp-drop" cx="164" cy="130" r="2.4" style="--fall:224px;animation-delay:0.3s;animation-duration:1.9s"></circle>
+            <ellipse class="fx-lp-pool" cx="170" cy="360" rx="46" ry="7" style="animation-delay:0.0s"></ellipse>
+          </g><g class="fx-lp-leak" style="--k:1">
+            <path class="fx-lp-crack" d="M480 239 l5 -7 l5 6 l5 -8 l5 7"></path>
+            <path class="fx-lp-spray" d="M486 241 q-14 10 -22 26 M494 241 q14 10 22 26"></path>
+            <circle class="fx-lp-drop" cx="487" cy="240" r="4" style="--fall:114px;animation-delay:0s;animation-duration:1.5s"></circle><circle class="fx-lp-drop" cx="494" cy="240" r="3" style="--fall:114px;animation-delay:0.55s;animation-duration:1.7s"></circle><circle class="fx-lp-drop" cx="490" cy="240" r="3.4" style="--fall:114px;animation-delay:1.05s;animation-duration:1.4s"></circle><circle class="fx-lp-drop" cx="484" cy="240" r="2.4" style="--fall:114px;animation-delay:0.3s;animation-duration:1.9s"></circle>
+            <ellipse class="fx-lp-pool" cx="490" cy="360" rx="46" ry="7" style="animation-delay:0.4s"></ellipse>
+          </g><g class="fx-lp-leak" style="--k:2">
+            <path class="fx-lp-crack" d="M795 139 l5 -7 l5 6 l5 -8 l5 7"></path>
+            <path class="fx-lp-spray" d="M801 141 q-14 10 -22 26 M809 141 q14 10 22 26"></path>
+            <circle class="fx-lp-drop" cx="802" cy="140" r="4" style="--fall:214px;animation-delay:0s;animation-duration:1.5s"></circle><circle class="fx-lp-drop" cx="809" cy="140" r="3" style="--fall:214px;animation-delay:0.55s;animation-duration:1.7s"></circle><circle class="fx-lp-drop" cx="805" cy="140" r="3.4" style="--fall:214px;animation-delay:1.05s;animation-duration:1.4s"></circle><circle class="fx-lp-drop" cx="799" cy="140" r="2.4" style="--fall:214px;animation-delay:0.3s;animation-duration:1.9s"></circle>
+            <ellipse class="fx-lp-pool" cx="805" cy="360" rx="46" ry="7" style="animation-delay:0.8s"></ellipse>
+          </g>
+            <g class="fx-lp-in"><path d="M8 92 h22 M8 110 h22 M8 128 h22"></path></g>
+            <g class="fx-lp-out"><circle class="fx-lp-trickle" cx="938" cy="140" r="2.6"></circle><circle class="fx-lp-trickle" cx="938" cy="140" r="2" style="animation-delay:1.1s"></circle><path class="fx-lp-cup" d="M912 236 L922 300 H954 L964 236"></path><path class="fx-lp-level" d="M921 292 H955"></path></g>
+          </svg>
+          <span class="fx-lp-end fx-lp-end-l">Your market</span>
+          <span class="fx-lp-end fx-lp-end-r">Revenue</span>
+          <div class="fx-lp-lab" style="left:17.53%"><b>Leak 01</b><span>Unclear profile</span><em>Buyers can’t tell what you do</em></div><div class="fx-lp-lab" style="left:50.52%"><b>Leak 02</b><span>No follow-up</span><em>Interest goes cold</em></div><div class="fx-lp-lab" style="left:82.99%"><b>Leak 03</b><span>Pitch-first outreach</span><em>Conversations stall</em></div>
+        </div>
+      </figure></div>
+    </div>
+  <!--/sp:cta--></section>
