@@ -1657,6 +1657,50 @@ section[aria-label="Market evidence"] .fx-reveal{align-items:center !important}
   .fx-lp2 .fx-lp-lab span{font-size:12px}
 }
 /* ---------- /v47 ---------- */
+/* ---------- v50 ---------- */
+#start .fx-reveal,#start .fx-tl-col > *,#start .fx-tl-node,#start .fx-tl-live{opacity:1 !important;transform:none !important}
+#start .fx-tl-rail i{transform:none !important}
+#start .fx-tl-run{display:none}
+#start .fx-step-dot{background:#0C0E0D;border-color:#0C0E0D}
+#start .fx-tl-col-last .fx-step-dot{background:#FF5B2E;border-color:#FF5B2E}
+.fx-bn-lede{margin:31px 0 0 auto !important;flex:0 1 420px !important;max-width:40ch !important}
+.fx-bn{list-style:none;margin:clamp(48px,6vw,80px) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.fx-bn-c{background:#FFFDF8;border:1px solid #E3DCCD;border-radius:22px;padding:22px 22px 26px;display:flex;flex-direction:column;gap:10px;transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s}
+.fx-bn-c:hover{transform:translateY(-6px);box-shadow:0 30px 60px -36px rgba(120,90,40,.45)}
+.fx-bn-c svg{width:100%;height:auto;margin-bottom:8px;background:#F6F2EA;border-radius:14px;overflow:hidden}
+.fx-bn-c h3{margin:0;font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:clamp(21px,1.8vw,25px);line-height:1.15}
+.fx-bn-c p{margin:0;font-size:15px;line-height:1.55;color:#3F3C36}
+.bn-t{font-family:'Spline Sans Mono',monospace;font-size:10px;fill:#5F5B53}
+.bn-rank .r{fill:#D9D3C7}
+.bn-rank .you{fill:#FF5B2E;animation:bnRise 4s cubic-bezier(.6,0,.2,1) infinite}
+.bn-rank .r1{animation:bnDown 4s cubic-bezier(.6,0,.2,1) infinite}
+.bn-rank .r2{animation:bnDown 4s cubic-bezier(.6,0,.2,1) infinite}
+@keyframes bnRise{0%,25%{transform:translateY(0)}50%,90%{transform:translateY(-52px)}100%{transform:translateY(0)}}
+@keyframes bnDown{0%,25%{transform:translateY(0)}50%,90%{transform:translateY(26px)}100%{transform:translateY(0)}}
+.bn-jar text{font-family:'Schibsted Grotesk',sans-serif;font-size:13px;fill:#A8A397;animation:bnOut 5s ease infinite}
+.bn-jar text+text{animation-delay:.15s}
+.bn-clear text{font-family:'Schibsted Grotesk',sans-serif;font-size:13px;font-weight:600;fill:#0C0E0D}
+.bn-clear{animation:bnIn 5s ease infinite}
+.bn-clear rect{fill:#FF5B2E;transform-origin:20px 55px;animation:bnLine 5s ease infinite}
+@keyframes bnOut{0%,35%{opacity:1}45%,90%{opacity:0}100%{opacity:1}}
+@keyframes bnIn{0%,40%{opacity:0;transform:translateY(6px)}50%,90%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes bnLine{0%,50%{transform:scaleX(0)}65%,90%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+.bn-dot{fill:#FF5B2E}
+.bn-ring{fill:none;stroke:#FF5B2E;stroke-width:1.5;transform-box:fill-box;transform-origin:center;animation:bnPing 2.4s ease-out infinite}
+.bn-ring.b{animation-delay:1.2s}
+@keyframes bnPing{0%{transform:scale(1);opacity:.8}100%{transform:scale(3.4);opacity:0}}
+.bn-msg{fill:#0C0E0D;animation:bnPop 4s ease infinite}
+.bn-msg2{fill:#FF5B2E;animation:bnPop 4s ease 1.4s infinite;opacity:0}
+@keyframes bnPop{0%,10%{opacity:0;transform:translateY(8px)}20%,80%{opacity:1;transform:none}95%,100%{opacity:0}}
+.bn-bars rect{fill:#0C0E0D;transform-box:fill-box;transform-origin:bottom;animation:bnGrow 3.6s cubic-bezier(.2,.8,.2,1) infinite;animation-delay:calc(var(--i) * .15s)}
+.bn-bars rect.hot{fill:#FF5B2E}
+.bn-base{stroke:#C9C4B9;stroke-width:1.5}
+@keyframes bnGrow{0%{transform:scaleY(.1)}35%,85%{transform:scaleY(1)}100%{transform:scaleY(.1)}}
+@media (max-width:1000px){.fx-bn{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:860px){.fx-bn-lede{margin:0 !important;flex:1 1 auto !important}}
+@media (max-width:560px){.fx-bn{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.fx-bn-c *{animation:none !important}.bn-jar{display:none}.bn-clear,.bn-msg2{opacity:1}}
+/* ---------- /v50 ---------- */
 
 /* standalone site extras */
 html{scroll-behavior:smooth}
@@ -1892,6 +1936,20 @@ html{scroll-behavior:smooth}
         <span class="fx-hs-bar"><span data-ref="Bar"></span></span>
         
       </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section id="benefits" class="fx-sec">
+    <div class="fx-wrap">
+      <div class="fx-split" style="align-items: flex-start">
+        <div style="flex: 1 1 460px; display: flex; flex-direction: column; gap: 14px">
+          <p class="fx-label" style="margin: 0">Benefits</p>
+          <h2 class="fx-display fx-h2">What changes when <em>the system is live.</em></h2>
+        </div>
+        <p class="fx-lede fx-bn-lede">Fix the leaks and the same expertise starts working for you: found earlier, understood faster, trusted before the first call.</p>
+      </div>
+      <ol class="fx-bn"><li class="fx-bn-c" style="--i: 0"><svg viewBox="0 0 236 100" aria-hidden="true"><g class="bn-rank"><rect class="r r1" x="20" y="18" width="150" height="14" rx="4"></rect><rect class="r r2" x="20" y="44" width="120" height="14" rx="4"></rect><rect class="r r3 you" x="20" y="70" width="170" height="14" rx="4"></rect></g><text x="200" y="30" class="bn-t">#1</text><text x="200" y="56" class="bn-t">#2</text><text x="200" y="82" class="bn-t">#3</text></svg><span class="fx-label fx-sig">01</span><h3>Shortlisted earlier</h3><p>Buyers find you while they're still building the list, not after it's ranked.</p></li><li class="fx-bn-c" style="--i: 1"><svg viewBox="0 0 236 100" aria-hidden="true"><g class="bn-jar"><text x="20" y="34">Digital transformation</text><text x="20" y="58">End-to-end solutions</text></g><g class="bn-clear"><text x="20" y="46">We pass fintech SOC 2 in 9 weeks.</text><rect x="20" y="54" width="196" height="3" rx="1.5"></rect></g></svg><span class="fx-label fx-sig">02</span><h3>Understood in one read</h3><p>Your profile says who you help and why you, in a sentence a buyer can repeat.</p></li><li class="fx-bn-c" style="--i: 2"><svg viewBox="0 0 236 100" aria-hidden="true"><circle class="bn-ring" cx="118" cy="50" r="12"></circle><circle class="bn-ring b" cx="118" cy="50" r="12"></circle><circle cx="118" cy="50" r="7" class="bn-dot"></circle><path class="bn-msg" d="M160 30 h56 v26 h-40 l-8 8 v-8 h-8 z"></path><path class="bn-msg2" d="M20 58 h52 v24 h-8 v8 l-8 -8 h-36 z"></path></svg><span class="fx-label fx-sig">03</span><h3>Warmer conversations</h3><p>Outreach starts from a real trigger and business context, so replies come back.</p></li><li class="fx-bn-c" style="--i: 3"><svg viewBox="0 0 236 100" aria-hidden="true"><g class="bn-bars"><rect x="28" y="66" width="22" height="22" rx="3" style="--i:0"></rect><rect x="62" y="56" width="22" height="32" rx="3" style="--i:1"></rect><rect x="96" y="44" width="22" height="44" rx="3" style="--i:2"></rect><rect x="130" y="30" width="22" height="58" rx="3" style="--i:3"></rect><rect x="164" y="14" width="22" height="74" rx="3" style="--i:4" class="hot"></rect></g><line x1="20" y1="89" x2="216" y2="89" class="bn-base"></line></svg><span class="fx-label fx-sig">04</span><h3>Pipeline you can see</h3><p>Every signal and conversation is logged, so you know what moved and what to do next.</p></li></ol>
     </div>
   </section>
 
@@ -2284,7 +2342,7 @@ html{scroll-behavior:smooth}
         </dl>
       </div>
 
-      <figure class="fx-reveal fx-sp fx-tlsp" aria-label="90-day sprint view: build in days 1 to 14, live on day 15, execute in month 1, sharpen in month 2, compound in month 3" style="margin: clamp(48px, 6vw, 80px) 0 0">
+      <figure class="fx-tlfix" aria-label="90-day sprint view: build in days 1 to 14, live on day 15, execute in month 1, sharpen in month 2, compound in month 3" style="margin: clamp(48px, 6vw, 80px) 0 0">
         <div class="fx-tl">
           <div class="fx-tl-weeks" aria-hidden="true"><div><span>Day 1</span></div><div><span>Day 2</span><span>Day 7</span><span>Day 14</span></div><div><span>Day 15</span><span>Month 1</span><span>Month 2</span><span>Ongoing →</span></div></div>
           <div class="fx-tl-rail" aria-hidden="true"><i></i><b class="fx-tl-run"></b><span class="fx-tl-live fx-label">Day 15 · Live</span></div>
