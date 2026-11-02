@@ -1038,6 +1038,46 @@ footer{padding:22px 0 26px !important}
 .fx-gap3{--m:clamp(0,calc((var(--p) - .82) * 6),1)}
 .fx-gap3-bar span{background:color-mix(in srgb,#0C0E0D calc(var(--m) * 100%),#E9E3D8);color:color-mix(in srgb,#FAF8F4 calc(var(--m) * 100%),#0C0E0D);transition:background-color .3s,color .3s}
 .fx-gap3-note{opacity:clamp(0,calc((.8 - var(--p)) * 5),1)}
+/* ---------- v32: the gap, as two sides and FrameX in between ---------- */
+.fx-gapv{--s:clamp(200px,25vw,330px);background:none !important;-webkit-mask-image:none !important;mask-image:none !important;padding:0 !important;display:block !important;margin-top:clamp(56px,7vw,96px) !important}
+.fx-gv-stage{position:relative;height:calc(var(--s) * 1.18);overflow:hidden}
+.fx-gv-c{position:absolute;top:50%;width:var(--s);height:var(--s);margin-top:calc(var(--s) / -2);border-radius:50%;display:flex;align-items:center}
+.fx-gv-l{left:calc(50% - var(--s) / 2 - var(--s) * (1 - .36 * var(--p)));border:1.5px solid #0C0E0D;background:radial-gradient(circle at 35% 40%,rgba(12,14,13,.05),rgba(12,14,13,.01) 70%);justify-content:flex-start}
+.fx-gv-r{left:calc(50% - var(--s) / 2 + var(--s) * (1 - .36 * var(--p)));border:1.5px dashed #C9C2B4;background:radial-gradient(circle at 65% 40%,rgba(255,91,46,.06),rgba(255,91,46,0) 70%);justify-content:flex-end}
+.fx-gv-r{border-color:color-mix(in srgb,#FF5B2E calc(var(--p) * 100%),#C9C2B4);border-style:solid}
+.fx-gv-txt{display:flex;flex-direction:column;gap:8px;width:46%}
+.fx-gv-l .fx-gv-txt{margin-left:14%}
+.fx-gv-r .fx-gv-txt{margin-right:12%;text-align:right;align-items:flex-end}
+.fx-gv-t{font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:clamp(20px,2vw,30px);line-height:1.05;letter-spacing:-.01em}
+.fx-gv-r .fx-gv-t{font-style:italic;color:#E04A1F}
+.fx-gv-gap{position:absolute;left:50%;top:12%;bottom:12%;width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:clamp(0,calc(1 - var(--p) * 2.2),1)}
+.fx-gv-gap i{position:absolute;top:0;bottom:0;left:0;border-left:1.5px dashed #C9C2B4}
+.fx-gv-gap span{position:relative;background:#FAF8F4;padding:6px 10px;font-family:'Spline Sans Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#5F5B53;white-space:nowrap}
+.fx-gv-x{position:absolute;left:50%;top:50%;width:calc(var(--s) * .62);height:calc(var(--s) * .62);border-radius:50%;background:radial-gradient(circle at 35% 30%,#FF8A5C,#FF5B2E 60%,#E04A1F);box-shadow:0 24px 60px -18px rgba(255,91,46,.55);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;transform:translate(-50%,-50%) scale(calc(.2 + .8 * clamp(0,calc((var(--p) - .25) / .55),1)));opacity:clamp(0,calc((var(--p) - .25) * 4),1)}
+.fx-gv-name{font-family:'Newsreader',Georgia,serif;font-size:clamp(24px,2.4vw,36px);color:#0C0E0D;line-height:1}
+.fx-gv-name em{font-style:italic}
+.fx-gv-sub{font-family:'Spline Sans Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#0C0E0D}
+.fx-gv-cap{position:relative;margin:18px auto 0;height:1.6em;text-align:center;font-size:clamp(15px,1.3vw,18px);color:#3F3C36}
+.fx-gv-cap span{position:absolute;left:0;right:0;top:0}
+.fx-gv-cap-a{opacity:clamp(0,calc((.7 - var(--p)) * 5),1)}
+.fx-gv-cap-b{opacity:clamp(0,calc((var(--p) - .75) * 5),1);color:#0C0E0D;font-weight:500}
+@media (max-width:760px){
+  .fx-gapv{--s:40vw}
+  .fx-gv-t{font-size:15px}
+  .fx-gv-txt .fx-label{font-size:8.5px}
+  .fx-gv-cap{height:3.2em}
+}
+/* ---------- v33 ---------- */
+.fx-gapv{--spread:1}
+.fx-gv-l{left:calc(50% - var(--s) / 2 - var(--s) * (.64 + (var(--spread) - .64) * (1 - var(--p))))}
+.fx-gv-r{left:calc(50% - var(--s) / 2 + var(--s) * (.64 + (var(--spread) - .64) * (1 - var(--p))))}
+@media (max-width:760px){
+  .fx-gapv{--s:34vw;--spread:.74}
+  .fx-gv-sub,.fx-gv-txt .fx-label{display:none}
+  .fx-gv-name{font-size:18px}
+  .fx-gv-t{font-size:13px}
+  .fx-gv-gap span{font-size:9px;letter-spacing:.08em;padding:4px 6px}
+}
 
 /* standalone site extras */
 html{scroll-behavior:smooth}
@@ -1080,31 +1120,15 @@ html{scroll-behavior:smooth}
       </div>
       <p class="fx-label fx-in fx-in-4" style="margin: 28px 0 0; display: flex; flex-wrap: wrap; gap: 8px 22px"><span>Built in 14 days</span><span aria-hidden="true" style="color: #FF5B2E">/</span><span>Live on day 15</span><span aria-hidden="true" style="color: #FF5B2E">/</span><span>In your voice</span></p>
 
-      <!-- The gap diagram: scroll closes the gaps -->
-      <figure class="fx-in fx-in-4 fx-gap3" aria-label="The gap diagram. Delivery capability is a long solid bar. How the market finds, understands, trusts and buys it is a shorter bar broken into four blocks with gaps. Five FrameX modules close the gaps.">
-        <div class="fx-gap3-row">
-          <span class="fx-gap3-label">Delivery capability</span>
-          <div class="fx-gap3-top"><span>What your team can actually deliver</span></div>
+      <!-- The gap: two sides apart, FrameX moves in between -->
+      <figure class="fx-in fx-in-4 fx-gap3 fx-gapv" aria-label="On one side, your expertise. On the other, how the market sees you. A gap sits between them. As you scroll, FrameX moves into the gap and connects the two.">
+        <div class="fx-gv-stage">
+          <div class="fx-gv-c fx-gv-l"><div class="fx-gv-txt"><span class="fx-label">Your side</span><span class="fx-gv-t">Deep expertise</span></div></div>
+          <div class="fx-gv-c fx-gv-r"><div class="fx-gv-txt"><span class="fx-label">Your market</span><span class="fx-gv-t">How buyers see you</span></div></div>
+          <div class="fx-gv-gap" aria-hidden="true"><i></i><span>The gap</span></div>
+          <div class="fx-gv-x" aria-hidden="true"><span class="fx-gv-name">Frame<em>X</em></span><span class="fx-gv-sub">closes the gap</span></div>
         </div>
-        <div class="fx-gap3-row">
-          <span class="fx-gap3-label">How the market finds, understands, trusts, and buys it</span>
-          <div class="fx-gap3-wrap">
-            <div class="fx-gap3-bar">
-              <span>Find</span><span>Understand</span><span>Trust</span><span>Buy</span>
-            </div>
-            <div class="fx-gap3-note" aria-hidden="true"><i></i><em>The technical-to-commercial gap</em></div>
-          </div>
-        </div>
-        <div class="fx-gap3-mods">
-          <span class="fx-gap3-closed" aria-hidden="true">Closed by FrameX</span>
-          <ol>
-            <li style="--i: 0"><span>01</span>Positioning Architecture</li>
-            <li style="--i: 1"><span>02</span>Authority Content</li>
-            <li style="--i: 2"><span>03</span>Sales Resources</li>
-            <li style="--i: 3"><span>04</span>Signal Intelligence</li>
-            <li style="--i: 4"><span>05</span>Conversation Framework</li>
-          </ol>
-        </div>
+        <p class="fx-gv-cap"><span class="fx-gv-cap-a">Your expertise is real. The market can't see it yet.</span><span class="fx-gv-cap-b">FrameX connects the two, so buyers see what you can do.</span></p>
       </figure>
     </div>
   </section>
