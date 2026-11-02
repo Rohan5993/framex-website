@@ -936,6 +936,27 @@ footer{padding:22px 0 26px !important}
 .fx-js .fx-vis .fx-specs > div:nth-child(2){transition-delay:.15s}
 .fx-js .fx-vis .fx-specs > div:nth-child(3){transition-delay:.3s}
 @media (max-width:640px){.fx-specs{margin-left:0}}
+/* ---------- v27 ---------- */
+.fx-sys-body-in > div:first-child p{font-size:clamp(16px,1.3vw,19px) !important}
+.fx-cta-center{display:flex;flex-direction:column;align-items:center;gap:clamp(48px,6vw,80px)}
+.fx-cl{position:relative;width:min(760px,100%)}
+.fx-cl-track{position:absolute;left:8.33%;right:8.33%;top:7px;height:2px;background:#E2DDD3;overflow:hidden}
+.fx-cl-track i{position:absolute;inset:0;background:linear-gradient(90deg,#0C0E0D,#FF5B2E);transform-origin:left;transform:scaleX(1)}
+.fx-cl ol{position:relative;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr))}
+.fx-cl li{display:flex;flex-direction:column;align-items:center;gap:12px}
+.fx-cl-dot{width:16px;height:16px;border-radius:50%;border:1.5px solid #0C0E0D;background:#0C0E0D}
+.fx-cl li:last-child .fx-cl-dot{background:#FF5B2E;border-color:#FF5B2E}
+.fx-cl-l{font-family:'Spline Sans Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#5F5B53}
+.fx-cl li:last-child .fx-cl-l{color:#B83A14;font-weight:500}
+@keyframes fxclfill{0%{transform:scaleX(0)}70%,100%{transform:scaleX(1)}}
+@keyframes fxcldot{0%,6%{background:#FAF8F4;transform:scale(.85)}12%,100%{background:#0C0E0D;transform:none}}
+@keyframes fxcllast{0%,62%{background:#FAF8F4;border-color:#0C0E0D;box-shadow:0 0 0 0 rgba(255,91,46,0)}70%{background:#FF5B2E;border-color:#FF5B2E;box-shadow:0 0 0 10px rgba(255,91,46,.18)}100%{background:#FF5B2E;border-color:#FF5B2E;box-shadow:0 0 0 0 rgba(255,91,46,0)}}
+@media (prefers-reduced-motion:no-preference){
+  .fx-cl-track i{animation:fxclfill 6s cubic-bezier(.5,0,.3,1) infinite}
+  .fx-cl li .fx-cl-dot{animation:fxcldot 6s ease infinite;animation-delay:calc(var(--n) * .7s)}
+  .fx-cl li:last-child .fx-cl-dot{animation:fxcllast 6s ease infinite}
+}
+@media (max-width:560px){.fx-cl-l{font-size:9px;letter-spacing:.04em}}
 
 /* standalone site extras */
 html{scroll-behavior:smooth}
@@ -1756,33 +1777,22 @@ html{scroll-behavior:smooth}
   <!-- 15 FINAL CTA -->
   <section id="contact" style="position: relative; overflow: hidden; padding: clamp(64px, 7vw, 96px) 0 clamp(88px, 9vw, 136px); background: radial-gradient(70% 85% at 50% 115%, rgba(255,91,46,0.11) 0%, rgba(255,91,46,0.035) 42%, rgba(255,91,46,0) 75%), linear-gradient(180deg, #FAF8F4 0%, #F3EFE8 100%)">
     <div aria-hidden="true" class="fx-breathe"></div>
-    <div class="fx-wrap fx-split" style="align-items: center; position: relative">
-      <div class="fx-reveal" style="flex: 1.3 1 460px; display: flex; flex-direction: column; align-items: flex-start; gap: 18px">
-        <h2 class="fx-display" style="font-size: clamp(34px, 3.8vw, 56px); line-height: 1.04">Find out where your <em>pipeline is leaking.</em></h2>
-        <p class="fx-lede" style="max-width: 50ch">Book a call. We'll review your founder's LinkedIn profile, the content you publish, and how your conversations start, then tell you where we can improve.</p>
+    <div class="fx-wrap fx-cta-center" style="position: relative">
+      <div class="fx-reveal" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px">
+        <h2 class="fx-display" style="font-size: clamp(36px, 4.4vw, 64px); line-height: 1.04; max-width: 16ch">Find out where your <em>pipeline is leaking.</em></h2>
+        <p class="fx-lede" style="max-width: 52ch">Book a call. We'll review your founder's LinkedIn profile, the content you publish, and how your conversations start, then tell you where we can improve.</p>
         <a class="fx-btn fx-btn-primary" href="#contact">Book a call</a>
       </div>
-
-      <div class="fx-reveal fx-score" style="flex: 1 1 380px">
-        <div class="fx-score-head">
-          <div style="display: flex; flex-direction: column; gap: 4px">
-            <span class="fx-label" style="font-size: 11px">What you leave with</span>
-            <span style="font-family: 'Newsreader', Georgia, serif; font-size: 26px; line-height: 1.1">Your leak scorecard</span>
-          </div>
-          <span class="fx-chip">Sample</span>
-        </div>
-        <ol class="fx-score-list">
-          <li style="--k: 0"><span class="fx-score-n">Positioning</span><span class="fx-score-bar"><i style="--v: 34%"></i></span><span class="fx-score-tag fx-score-leak">Leak</span></li>
-          <li style="--k: 1"><span class="fx-score-n">Authority content</span><span class="fx-score-bar"><i style="--v: 58%"></i></span><span class="fx-score-tag fx-score-weak">Weak</span></li>
-          <li style="--k: 2"><span class="fx-score-n">Sales resources</span><span class="fx-score-bar"><i style="--v: 22%"></i></span><span class="fx-score-tag fx-score-leak">Leak</span></li>
-          <li style="--k: 3"><span class="fx-score-n">Signal intelligence</span><span class="fx-score-bar"><i style="--v: 46%"></i></span><span class="fx-score-tag fx-score-weak">Weak</span></li>
-          <li style="--k: 4"><span class="fx-score-n">Conversations</span><span class="fx-score-bar"><i style="--v: 74%"></i></span><span class="fx-score-tag fx-score-ok">Solid</span></li>
-          <li style="--k: 5"><span class="fx-score-n">Pipeline</span><span class="fx-score-bar"><i style="--v: 40%"></i></span><span class="fx-score-tag fx-score-weak">Weak</span></li>
+      <div class="fx-reveal fx-cl" aria-label="The commercial path: presence, authority, intent, nurture, conversion, scale">
+        <div class="fx-cl-track" aria-hidden="true"><i></i></div>
+        <ol>
+            <li style="--n: 0"><span class="fx-cl-dot" aria-hidden="true"></span><span class="fx-cl-l">Presence</span></li>
+            <li style="--n: 1"><span class="fx-cl-dot" aria-hidden="true"></span><span class="fx-cl-l">Authority</span></li>
+            <li style="--n: 2"><span class="fx-cl-dot" aria-hidden="true"></span><span class="fx-cl-l">Intent</span></li>
+            <li style="--n: 3"><span class="fx-cl-dot" aria-hidden="true"></span><span class="fx-cl-l">Nurture</span></li>
+            <li style="--n: 4"><span class="fx-cl-dot" aria-hidden="true"></span><span class="fx-cl-l">Conversion</span></li>
+            <li style="--n: 5"><span class="fx-cl-dot" aria-hidden="true"></span><span class="fx-cl-l">Scale</span></li>
         </ol>
-        <div class="fx-score-out">
-          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#0C0E0D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-          <span>You'll know where your pipeline leaks first, and what we'd fix.</span>
-        </div>
       </div>
     </div>
   </section>
