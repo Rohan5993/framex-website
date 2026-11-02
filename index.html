@@ -957,6 +957,13 @@ footer{padding:22px 0 26px !important}
   .fx-cl li:last-child .fx-cl-dot{animation:fxcllast 6s ease infinite}
 }
 @media (max-width:560px){.fx-cl-l{font-size:9px;letter-spacing:.04em}}
+/* ---------- v28 ---------- */
+.fx-tl-weeks,.fx-tl-cols{grid-template-columns:repeat(3,minmax(0,1fr)) !important}
+.fx-tl-live{left:66.666%}
+.fx-tl-weeks > div:last-child span:last-child{border-right:0}
+.fx-tl-weeks span{white-space:nowrap}
+@media (max-width:900px){.fx-tl-cols{grid-template-columns:repeat(2,minmax(0,1fr)) !important}}
+@media (max-width:560px){.fx-tl-cols{grid-template-columns:1fr !important}}
 
 /* standalone site extras */
 html{scroll-behavior:smooth}
@@ -1688,58 +1695,47 @@ html{scroll-behavior:smooth}
         <dl class="fx-specs">
           <div><dt>Days to build</dt><dd>14</dd></div>
           <div><dt>Go-live day</dt><dd>15</dd></div>
-          <div><dt>Weeks to compound</dt><dd>12</dd></div>
+          <div><dt>Hours of your time</dt><dd>~4</dd></div>
         </dl>
       </div>
 
       <figure class="fx-reveal" aria-label="90-day sprint view: build in days 1 to 14, live on day 15, execute in month 1, sharpen in month 2, compound in month 3" style="margin: clamp(48px, 6vw, 80px) 0 0">
         <div class="fx-tl">
-          <div class="fx-tl-weeks" aria-hidden="true"><div><span>W0</span><span>W1</span></div><div><span>W2</span><span>W3</span></div><div><span>W4</span><span>W5</span><span>W6</span><span>W7</span></div><div><span>W8</span><span>W9</span><span>W10</span><span>W11</span><span>W12</span></div></div>
+          <div class="fx-tl-weeks" aria-hidden="true"><div><span>Day 1</span></div><div><span>Day 2</span><span>Day 7</span><span>Day 14</span></div><div><span>Day 15</span><span>Month 1</span><span>Month 2</span><span>Ongoing →</span></div></div>
           <div class="fx-tl-rail" aria-hidden="true"><i></i><span class="fx-tl-live fx-label">Day 15 · Live</span></div>
           <div class="fx-tl-cols">
             <div class="fx-tl-col" style="--i: 0">
-              <span class="fx-tl-node" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16M6 20V10l6-5 6 5v10M10 20v-5h4v5"></path></svg></span>
-              <div class="fx-tl-head"><span class="fx-tl-range">Days 1–14</span><span class="fx-tl-time">~4 hrs of yours</span></div>
-              <h3 class="fx-tl-t">Build</h3>
+              <span class="fx-tl-node" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20c1.2-3.6 4-5.5 7-5.5s5.8 1.9 7 5.5"></path></svg></span>
+              <div class="fx-tl-head"><span class="fx-tl-range">Day 1 · Week 0</span><span class="fx-tl-time">Kick-off call</span></div>
+              <h3 class="fx-tl-t">Onboarding</h3>
               <ol class="fx-steps">
-                  <li style="--d: 0"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Interviews and audit</span><span class="fx-step-t">Week 0</span></li>
-                  <li style="--d: 1"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Leak map</span><span class="fx-step-t">Week 0–1</span></li>
-                  <li style="--d: 2"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Build and approve</span><span class="fx-step-t">Week 1</span></li>
+                  <li style="--d: 0"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Founder interview</span><span class="fx-step-t">Day 1</span></li>
+                  <li style="--d: 1"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Won/lost deal review</span><span class="fx-step-t">Week 0</span></li>
+                  <li style="--d: 2"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Profile, website and competitor audit</span><span class="fx-step-t">Week 0</span></li>
               </ol>
-              <div class="fx-tl-out"><span>Outcome</span><strong>Every system approved</strong></div>
+              <div class="fx-tl-out"><span>Outcome</span><strong>Your leak map</strong></div>
             </div>
             <div class="fx-tl-col" style="--i: 1">
-              <span class="fx-tl-node" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h12M13 6l6 6-6 6"></path></svg></span>
-              <div class="fx-tl-head"><span class="fx-tl-range">Days 15–30</span><span class="fx-tl-time">~30 min a week</span></div>
-              <h3 class="fx-tl-t">Execute</h3>
+              <span class="fx-tl-node" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16M6 20V10l6-5 6 5v10M10 20v-5h4v5"></path></svg></span>
+              <div class="fx-tl-head"><span class="fx-tl-range">Days 2–14</span><span class="fx-tl-time">~4 hrs of yours</span></div>
+              <h3 class="fx-tl-t">Build</h3>
               <ol class="fx-steps">
-                  <li style="--d: 0"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Profile and first posts live</span><span class="fx-step-t">Day 15</span></li>
-                  <li style="--d: 1"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Flagship resource launch</span><span class="fx-step-t">Week 2</span></li>
-                  <li style="--d: 2"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Signal-led conversations</span><span class="fx-step-t">Daily</span></li>
+                  <li style="--d: 0"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Positioning brief and message map</span><span class="fx-step-t">Days 2–6</span></li>
+                  <li style="--d: 1"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Profile rebuild, trigger map, account lists</span><span class="fx-step-t">Days 5–10</span></li>
+                  <li style="--d: 2"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Content architecture, first posts, first resource</span><span class="fx-step-t">Days 8–14</span></li>
               </ol>
-              <div class="fx-tl-out"><span>Outcome</span><strong>Initial traction</strong></div>
+              <div class="fx-tl-out"><span>Outcome</span><strong>Everything approved by day 14</strong></div>
             </div>
-            <div class="fx-tl-col" style="--i: 2">
-              <span class="fx-tl-node" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="4"></circle></svg></span>
-              <div class="fx-tl-head"><span class="fx-tl-range">Days 31–60</span><span class="fx-tl-time">Monthly review</span></div>
-              <h3 class="fx-tl-t">Sharpen</h3>
-              <ol class="fx-steps">
-                  <li style="--d: 0"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Review what moved</span><span class="fx-step-t">Week 4</span></li>
-                  <li style="--d: 1"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Refine positioning and triggers</span><span class="fx-step-t">Week 5</span></li>
-                  <li style="--d: 2"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Double down on what converts</span><span class="fx-step-t">Week 6–7</span></li>
-              </ol>
-              <div class="fx-tl-out"><span>Outcome</span><strong>Sharper targeting</strong></div>
-            </div>
-            <div class="fx-tl-col fx-tl-col-last" style="--i: 3">
+            <div class="fx-tl-col fx-tl-col-last" style="--i: 2">
               <span class="fx-tl-node" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18l6-6 4 4 6-8"></path><path d="M15 8h5v5"></path></svg></span>
-              <div class="fx-tl-head"><span class="fx-tl-range">Days 61–90</span><span class="fx-tl-time">Quarterly review</span></div>
-              <h3 class="fx-tl-t">Compound</h3>
+              <div class="fx-tl-head"><span class="fx-tl-range">Day 15 onwards</span><span class="fx-tl-time">~30 min a week</span></div>
+              <h3 class="fx-tl-t">Live</h3>
               <ol class="fx-steps">
-                  <li style="--d: 0"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Next resource</span><span class="fx-step-t">Week 8</span></li>
-                  <li style="--d: 1"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Deeper account coverage</span><span class="fx-step-t">Week 9–11</span></li>
-                  <li style="--d: 2"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Committees shortlist you</span><span class="fx-step-t">Week 12</span></li>
+                  <li style="--d: 0"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Profile, posts and flagship resource go live</span><span class="fx-step-t">Day 15</span></li>
+                  <li style="--d: 1"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Signal monitoring and trigger-led conversations</span><span class="fx-step-t">Daily</span></li>
+                  <li style="--d: 2"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Measure what moved and improve it</span><span class="fx-step-t">Monthly</span></li>
               </ol>
-              <div class="fx-tl-out"><span>Outcome</span><strong>Committees shortlist you</strong></div>
+              <div class="fx-tl-out"><span>Outcome</span><strong>Initial traction in month 1</strong></div>
             </div>
           </div>
         </div>
