@@ -1233,6 +1233,15 @@ footer{padding:22px 0 26px !important}
   .vz::after{display:none}
   .fx-hs-on .fx-hs-meter{padding-top:clamp(18px,3.5vh,32px)}
 }
+/* ---------- v38: one section rhythm ---------- */
+.fx{--sec:clamp(88px,10vw,148px)}
+#top{padding-bottom:var(--sec) !important}
+#problem{padding-bottom:var(--sec) !important}
+#problem.fx-hs-on{padding:0 !important;margin-top:calc(var(--sec) - 56px);margin-bottom:-40px}
+.fx-hs-on .fx-hs-sticky{padding-top:56px !important;padding-bottom:40px !important}
+#system{padding-bottom:var(--sec) !important}
+#faq{padding-top:var(--sec) !important}
+#contact{padding:var(--sec) 0 !important}
 
 /* standalone site extras */
 html{scroll-behavior:smooth}
