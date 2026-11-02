@@ -1775,6 +1775,32 @@ section[aria-label="Market evidence"] .fx-reveal{align-items:center !important}
 .ob-cx{font-family:'Newsreader',Georgia,serif;font-style:italic;font-size:26px;fill:#0C0E0D}
 .ob-cl{font-family:'Newsreader',Georgia,serif;font-size:17px;fill:#0C0E0D}
 /* ---------- /v52 ---------- */
+/* ---------- v53 benefits kinetic ---------- */
+#benefits{background:none !important}
+.fx-kt{margin-top:clamp(48px,6vw,88px);position:relative}
+.fx-kt-pre{margin:0 0 14px}
+.fx-kt-pre em{color:#B83A14;font-style:italic}
+.fx-kt-line{font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:clamp(38px,6vw,88px);line-height:1.06;letter-spacing:-.025em;display:block}
+.fx-kt-fixed{display:block}
+.fx-kt-roll{position:relative;display:block;height:1.2em;overflow:hidden}
+.fx-kt-roll span{position:absolute;left:0;top:0;white-space:nowrap;font-style:italic;color:#E04A1F;opacity:0;animation:ktRoll 12s cubic-bezier(.7,0,.2,1) infinite;animation-delay:calc(var(--i) * 3s)}
+.fx-kt-roll span::after{content:"";display:inline-block;width:.06em;height:.82em;margin-left:.08em;background:#FF5B2E;vertical-align:-.06em;animation:ktCaret .8s steps(1) infinite}
+@keyframes ktRoll{0%{transform:translateY(105%);opacity:1}4%,22%{transform:none;opacity:1}26%{transform:translateY(-105%);opacity:1}27%,100%{transform:translateY(105%);opacity:0}}
+@keyframes ktCaret{50%{opacity:0}}
+.fx-kt-cols{list-style:none;margin:clamp(48px,6vw,88px) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(20px,3vw,44px)}
+.fx-kt-cols li{display:flex;flex-direction:column;gap:10px}
+.fx-kt-bar{display:block;height:3px;background:#E3DCCD;border-radius:3px;overflow:hidden;margin-bottom:10px}
+.fx-kt-bar b{display:block;height:100%;width:0;background:#FF5B2E;animation:ktBar 12s linear infinite;animation-delay:calc(var(--i) * 3s)}
+@keyframes ktBar{0%{width:0}25%{width:100%}25.1%,100%{width:0}}
+.fx-kt-cols .fx-label{animation:ktLab 12s infinite;animation-delay:calc(var(--i) * 3s)}
+@keyframes ktLab{0%,24%{color:#B83A14}26%,100%{color:#5F5B53}}
+.fx-kt-cols h3{margin:0;font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:clamp(20px,1.8vw,25px);line-height:1.15;animation:ktH 12s infinite;animation-delay:calc(var(--i) * 3s)}
+@keyframes ktH{0%,24%{color:#0C0E0D}26%,100%{color:#A8A397}}
+.fx-kt-cols p{margin:0;font-size:15px;line-height:1.55;color:#3F3C36}
+@media (max-width:900px){.fx-kt-cols{grid-template-columns:repeat(2,minmax(0,1fr))}.fx-kt-roll span{white-space:normal;right:0}.fx-kt-roll{height:2.4em}}
+@media (max-width:520px){.fx-kt-cols{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.fx-kt *{animation:none !important}.fx-kt-roll span{position:static;opacity:1;display:block}.fx-kt-roll span+span{display:none}.fx-kt-cols h3{color:#0C0E0D}}
+/* ---------- /v53 ---------- */
 
 /* standalone site extras */
 html{scroll-behavior:smooth}
@@ -2023,17 +2049,10 @@ html{scroll-behavior:smooth}
         </div>
         <p class="fx-lede fx-bn-lede">Fix the leaks and the same expertise starts working for you: found earlier, understood faster, trusted before the first call.</p>
       </div>
-      <div class="fx-ob">
-        <div class="fx-ob-vis"><svg viewBox="-30 -50 660 680" aria-hidden="true"><defs><linearGradient id="obTail" gradientUnits="userSpaceOnUse" x1="32" y1="203" x2="300" y2="15"><stop offset="0" stop-color="#FF5B2E" stop-opacity="0"></stop><stop offset="1" stop-color="#FF5B2E"></stop></linearGradient></defs>
-            <circle class="ob-path" cx="300" cy="300" r="285"></circle>
-            <g class="ob-comet"><path class="ob-tail" d="M32.2 202.5 A285 285 0 0 1 300.0 15.0"></path>
-              <g transform="translate(300.0 15.0)"><g class="ob-cc"><circle class="ob-cglow" r="34"></circle><circle class="ob-chead" r="24"></circle><text class="ob-cx" y="9" text-anchor="middle">X</text><text class="ob-cl" y="-36" text-anchor="middle">FrameX</text></g></g></g>
-            <circle class="ob-star" cx="428.0" cy="300.0" r="1.6"></circle><circle class="ob-star" cx="387.3" cy="393.6" r="1.6"></circle><circle class="ob-star" cx="291.1" cy="427.7" r="1.6"></circle><circle class="ob-star" cx="200.5" cy="380.6" r="1.6"></circle><circle class="ob-star" cx="173.2" cy="282.2" r="1.6"></circle><circle class="ob-star" cx="226.6" cy="195.1" r="1.6"></circle><circle class="ob-star" cx="326.6" cy="174.8" r="1.6"></circle><circle class="ob-star" cx="409.7" cy="234.1" r="1.6"></circle><circle class="ob-star" cx="473.4" cy="340.0" r="1.6"></circle><circle class="ob-star" cx="389.0" cy="454.2" r="1.6"></circle><circle class="ob-star" cx="248.0" cy="470.2" r="1.6"></circle><circle class="ob-star" cx="140.0" cy="378.0" r="1.6"></circle><circle class="ob-star" cx="133.8" cy="236.2" r="1.6"></circle><circle class="ob-star" cx="233.3" cy="135.0" r="1.6"></circle><circle class="ob-star" cx="375.2" cy="138.7" r="1.6"></circle><circle class="ob-star" cx="469.3" cy="245.0" r="1.6"></circle><circle class="ob-star" cx="504.9" cy="399.9" r="1.6"></circle><circle class="ob-star" cx="366.7" cy="518.0" r="1.6"></circle><circle class="ob-star" cx="186.0" cy="497.5" r="1.6"></circle><circle class="ob-star" cx="77.8" cy="351.3" r="1.6"></circle><circle class="ob-star" cx="111.0" cy="172.5" r="1.6"></circle><circle class="ob-star" cx="264.3" cy="74.8" r="1.6"></circle><circle class="ob-star" cx="440.4" cy="120.3" r="1.6"></circle><circle class="ob-star" cx="527.1" cy="280.1" r="1.6"></circle><circle class="ob-star" cx="516.0" cy="475.0" r="1.6"></circle><circle class="ob-star" cx="319.4" cy="577.3" r="1.6"></circle><circle class="ob-star" cx="110.4" cy="503.3" r="1.6"></circle><circle class="ob-star" cx="22.0" cy="300.0" r="1.6"></circle><circle class="ob-star" cx="110.4" cy="96.7" r="1.6"></circle><circle class="ob-star" cx="319.4" cy="22.7" r="1.6"></circle><circle class="ob-star" cx="516.0" cy="125.0" r="1.6"></circle><circle class="ob-star" cx="575.3" cy="338.7" r="1.6"></circle><circle class="ob-ring" cx="300" cy="300" r="110" style="--i:0"></circle><circle class="ob-ring" cx="300" cy="300" r="160" style="--i:1"></circle><circle class="ob-ring" cx="300" cy="300" r="210" style="--i:2"></circle><circle class="ob-ring" cx="300" cy="300" r="260" style="--i:3"></circle>
-            <circle class="ob-glow" cx="300" cy="300" r="80"></circle>
-            <circle class="ob-core" cx="300" cy="300" r="62"></circle>
-            <text class="ob-c1" x="300" y="296" text-anchor="middle">Your</text><text class="ob-c2" x="300" y="320" text-anchor="middle">expertise</text>
-            <g class="ob-spin" style="--d:26s"><g transform="translate(355.0 204.7)"><g class="ob-counter" style="--d:26s"><g class="ob-pl" style="--i:0"><circle class="ob-halo" r="30"></circle><circle class="ob-body" r="22"></circle><text y="5" text-anchor="middle">01</text></g></g></g></g><g class="ob-spin" style="--d:34s"><g transform="translate(422.6 402.8)"><g class="ob-counter" style="--d:34s"><g class="ob-pl" style="--i:1"><circle class="ob-halo" r="30"></circle><circle class="ob-body" r="22"></circle><text y="5" text-anchor="middle">02</text></g></g></g></g><g class="ob-spin" style="--d:44s"><g transform="translate(118.1 405.0)"><g class="ob-counter" style="--d:44s"><g class="ob-pl" style="--i:2"><circle class="ob-halo" r="30"></circle><circle class="ob-body" r="22"></circle><text y="5" text-anchor="middle">03</text></g></g></g></g><g class="ob-spin" style="--d:56s"><g transform="translate(211.1 55.7)"><g class="ob-counter" style="--d:56s"><g class="ob-pl" style="--i:3"><circle class="ob-halo" r="30"></circle><circle class="ob-body" r="22"></circle><text y="5" text-anchor="middle">04</text></g></g></g></g></svg><span class="fx-label fx-ob-cap">FrameX keeps every part of the system moving</span></div>
-        <ol class="fx-ob-list"><li class="ob-i" style="--i: 0"><span class="ob-n">01</span><div><h3>Found earlier</h3><p>Buyers find you while they're still building the list, not after it's ranked.</p></div></li><li class="ob-i" style="--i: 1"><span class="ob-n">02</span><div><h3>Understood in one read</h3><p>Your profile says who you help and why you, in a sentence a buyer can repeat.</p></div></li><li class="ob-i" style="--i: 2"><span class="ob-n">03</span><div><h3>Trusted before the call</h3><p>Proof and perspective do the convincing, so the first call starts at how, not who.</p></div></li><li class="ob-i" style="--i: 3"><span class="ob-n">04</span><div><h3>Conversations that convert</h3><p>Outreach starts from real triggers, and every signal is logged so nothing goes cold.</p></div></li></ol>
+      <div class="fx-kt">
+        <p class="fx-kt-pre fx-label">With Frame<em>X</em> running</p>
+        <div class="fx-kt-line"><span class="fx-kt-fixed">Your buyers</span> <span class="fx-kt-roll" aria-label="find you first, get you in one read, trust you before the call, reply and keep replying"><span style="--i: 0">find you first.</span><span style="--i: 1">get you in one read.</span><span style="--i: 2">trust you before the call.</span><span style="--i: 3">reply, and keep replying.</span></span></div>
+        <ol class="fx-kt-cols"><li style="--i: 0"><i class="fx-kt-bar"><b></b></i><span class="fx-label">01</span><h3>Found earlier</h3><p>Buyers find you while they're still building the list, not after it's ranked.</p></li><li style="--i: 1"><i class="fx-kt-bar"><b></b></i><span class="fx-label">02</span><h3>Understood in one read</h3><p>Your profile says who you help and why you, in a sentence a buyer can repeat.</p></li><li style="--i: 2"><i class="fx-kt-bar"><b></b></i><span class="fx-label">03</span><h3>Trusted before the call</h3><p>Proof and perspective do the convincing, so the first call starts at how, not who.</p></li><li style="--i: 3"><i class="fx-kt-bar"><b></b></i><span class="fx-label">04</span><h3>Conversations that convert</h3><p>Outreach starts from real triggers, and every signal is logged so nothing goes cold.</p></li></ol>
       </div>
     </div>
   </section>
