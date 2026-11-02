@@ -1440,19 +1440,19 @@ section[aria-label="Market evidence"] .fx-reveal{align-items:center !important}
 /* ---------- /v43 ---------- */
 /* ---------- v44 ---------- */
 /* section headers: same heading size, side paragraph top-aligned and pushed right */
-.fx-h2,.fx-sys-h2,.fx-hs-on .fx-hs-head .fx-h2,.fx-faq-h,#start .fx-h2{font-size:clamp(36px,4.3vw,62px) !important;line-height:1.04 !important}
+.fx-h2,.fx-sys-h2,.fx-hs-on .fx-hs-head .fx-h2,.fx-faq-h,#start .fx-h2,.fx-cx-head h2{font-size:clamp(30px,3.2vw,46px) !important;line-height:1.08 !important}
 .fx-hs-head .fx-split,#system .fx-split:has(> .fx-sys-lede),#start .fx-split:has(> .fx-specs){align-items:flex-start !important}
 .fx-hs-head .fx-lede,#system .fx-sys-lede{margin:31px 0 0 auto !important;flex:0 1 420px !important;max-width:40ch !important}
 #start .fx-specs{margin:31px 0 0 auto}
 /* CTA: the dripping headline */
 .fx-cx{display:flex;flex-direction:column;align-items:center;text-align:center}
 .fx-cx-head{display:flex;flex-direction:column;align-items:center;gap:22px}
-.fx-cx-head h2{margin:0;font-size:clamp(44px,6.4vw,104px);line-height:1;max-width:17ch;letter-spacing:-.02em}
+.fx-cx-head h2{margin:0;font-size:clamp(44px,6.4vw,104px);line-height:1;max-width:24ch;letter-spacing:-.01em}
 .fx-drip{position:relative;display:inline-block}
-.fx-drops{position:absolute;left:0;right:0;top:calc(100% - 14px);height:0;--fall:144px}
+.fx-drops{position:absolute;left:0;right:0;top:calc(100% - 8px);height:0;--fall:110px}
 .fx-dr{position:absolute;top:0;width:9px;height:12px;margin-left:-4px;background:#FF5B2E;border-radius:50% 50% 50% 50% / 62% 62% 38% 38%;opacity:0;animation:fxcxDrop var(--t) cubic-bezier(.55,0,.9,.5) var(--d) infinite}
 @keyframes fxcxDrop{0%{transform:translateY(0) scale(.3);opacity:0}12%{transform:translateY(0) scale(1);opacity:1}30%{transform:translateY(4px) scale(1,1.15)}100%{transform:translateY(var(--fall,150px)) scale(.9,1.2);opacity:1}}
-.fx-cx-floor{position:relative;width:min(100%,860px);height:1px;background:linear-gradient(90deg,transparent,#E9A68C 15%,#E9A68C 85%,transparent);margin:130px 0 0}
+.fx-cx-floor{position:relative;width:min(100%,860px);height:1px;background:linear-gradient(90deg,transparent,#E9A68C 15%,#E9A68C 85%,transparent);margin:102px 0 0}
 .fx-rp{position:absolute;top:var(--fall);width:44px;height:10px;margin:-5px 0 0 -22px;border:1.5px solid #FF5B2E;border-radius:50%;opacity:0;animation:fxcxRip var(--t) ease-out var(--d) infinite}
 @keyframes fxcxRip{0%,96%{transform:scale(.1);opacity:0}97%{opacity:.9;transform:scale(.2)}100%{transform:scale(1);opacity:0}}
 .fx-cx-body{display:flex;flex-direction:column;align-items:center;gap:clamp(28px,3vw,40px);margin-top:clamp(40px,4.5vw,64px);width:100%}
@@ -2285,7 +2285,7 @@ html{scroll-behavior:smooth}
       <div class="fx-reveal fx-faq-l" style="display: flex; flex-direction: column; gap: 22px">
         <p class="fx-label" style="margin: 0">FAQ</p>
         <h2 class="fx-display fx-h2 fx-faq-h">Questions<br><em>founders ask</em><br>first.</h2>
-<!--sp:qm--><div class="fx-qm fx-sp" aria-hidden="true"><svg viewBox="0 0 160 220"><path class="fx-qm-ghost" d="M38 62 C38 26 66 12 86 12 C112 12 128 32 128 56 C128 84 104 92 92 104 C84 112 82 120 82 140"></path><path class="fx-qm-line" pathLength="1" d="M38 62 C38 26 66 12 86 12 C112 12 128 32 128 56 C128 84 104 92 92 104 C84 112 82 120 82 140"></path><circle class="fx-qm-ring" cx="82" cy="184" r="12"></circle><circle class="fx-qm-dot" cx="82" cy="184" r="12"></circle></svg><span class="fx-label">Questions from founders like you</span></div>
+<!--sp:qm--><div class="fx-qm fx-sp" aria-hidden="true"><svg viewBox="0 0 160 220"><path class="fx-qm-ghost" d="M38 62 C38 26 66 12 86 12 C112 12 128 32 128 56 C128 84 104 92 92 104 C84 112 82 120 82 140"></path><path class="fx-qm-line" pathLength="1" d="M38 62 C38 26 66 12 86 12 C112 12 128 32 128 56 C128 84 104 92 92 104 C84 112 82 120 82 140"></path><circle class="fx-qm-ring" cx="82" cy="184" r="12"></circle><circle class="fx-qm-dot" cx="82" cy="184" r="12"></circle></svg></div>
       </div><!--/sp:qm-->
       <div class="fx-faq fx-faq-r" style="min-width: 0">
         <details style="border-bottom: 1px solid #D9D3C7"><summary>We get most of our business through referrals. Why change?</summary><p class="fx-faq-a" style="margin: 0 0 24px; max-width: 64ch; font-size: 17px; line-height: 1.65; color: #3F3C36">Don't replace referrals; extend them. Referrals work because trust transfers. The limit is reach: they can't get you to buyers outside your network, and even referred buyers check you out first. Research found more than half of buyers had ruled out a referred firm before speaking to it, most often because they couldn't tell what the firm did. We make sure a referral lands on positioning that confirms it.</p></details>
