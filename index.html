@@ -1242,6 +1242,45 @@ footer{padding:22px 0 26px !important}
 #system{padding-bottom:var(--sec) !important}
 #faq{padding-top:var(--sec) !important}
 #contact{padding:var(--sec) 0 !important}
+/* ---------- v39: problem meter spacing + point of view ---------- */
+@media (min-width:861px){
+  .fx-hs-on .fx-hs-viewport{padding-bottom:26px !important}
+  .fx-hs-on .fx-hs-meter{padding-top:0 !important}
+}
+.fx-pv-head{align-self:flex-start;position:sticky;top:120px}
+.fx-pv-list{flex:1.2 1 440px;list-style:none;margin:0;padding:0 0 0 34px;position:relative}
+.fx-pv-rail{position:absolute;left:0;top:10px;bottom:10px;width:2px;background:#E3DCCD}
+.fx-pv-rail i{position:absolute;inset:0;background:linear-gradient(180deg,#FF5B2E,#FFA46B);transform-origin:top;transform:scaleY(1)}
+.fx-pv-i{position:relative;display:grid;grid-template-columns:76px 1fr;gap:12px;align-items:baseline;padding:clamp(22px,2.6vw,34px) 0;border-top:1px solid #D9D3C7}
+.fx-pv-i:first-of-type{border-top:0}
+.fx-pv-i::before{content:"";position:absolute;left:-39px;top:calc(clamp(22px,2.6vw,34px) + 14px);width:12px;height:12px;border-radius:50%;background:#FF5B2E;box-shadow:0 0 0 5px rgba(255,91,46,.15)}
+.fx-pv-n{font-family:'Newsreader',Georgia,serif;font-size:clamp(34px,3.4vw,52px);line-height:.9;color:#FF5B2E;font-weight:300}
+.fx-pv-t{margin:0;font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:clamp(22px,2.1vw,30px);line-height:1.28;color:#0C0E0D}
+.fx-pv-t em{font-style:italic;color:#B83A14}
+.fx-pv-not{text-decoration:none;color:#A8A397;background:linear-gradient(#FF5B2E,#FF5B2E) no-repeat 0 58%/100% 1.5px;white-space:normal;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+@supports (animation-timeline:view()){
+  @media (prefers-reduced-motion:no-preference){
+    .fx-pv-rail i{animation:fxpvRail linear both;animation-timeline:view();animation-range:entry 40% exit 60%}
+    .fx-pv-list{view-timeline-name:--pvl}
+    .fx-pv-rail i{animation-timeline:--pvl}
+    .fx-pv-i{animation:fxpvItem linear both;animation-timeline:view();animation-range:entry 10% cover 42%}
+    .fx-pv-i::before{animation:fxpvDot linear both;animation-timeline:view();animation-range:entry 30% cover 42%}
+    .fx-pv-not{animation:fxpvStrike linear both;animation-timeline:view();animation-range:cover 30% cover 48%}
+    .fx-pv-t em{animation:fxpvEm linear both;animation-timeline:view();animation-range:entry 30% cover 42%}
+  }
+}
+@keyframes fxpvRail{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes fxpvItem{from{opacity:.18;transform:translateX(28px)}to{opacity:1;transform:none}}
+@keyframes fxpvDot{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+@keyframes fxpvStrike{from{background-size:0% 1.5px;color:#0C0E0D}to{background-size:100% 1.5px;color:#A8A397}}
+@keyframes fxpvEm{from{color:#0C0E0D}to{color:#B83A14}}
+@media (max-width:860px){
+  .fx-pv-head{position:static}
+  .fx-pv-list{padding-left:26px;margin-top:20px}
+  .fx-pv-i{grid-template-columns:1fr;gap:6px}
+  .fx-pv-i::before{left:-31px;width:10px;height:10px;top:calc(clamp(22px,2.6vw,34px) + 10px)}
+  .fx-pv-n{font-size:30px}
+}
 
 /* standalone site extras */
 html{scroll-behavior:smooth}
@@ -1450,17 +1489,18 @@ html{scroll-behavior:smooth}
   <!-- 04 POINT OF VIEW -->
   <section class="fx-sec" style="background: linear-gradient(180deg, #FAF8F4 0%, #F3EFE8 18%, #F3EFE8 82%, #FAF8F4 100%)">
     <div class="fx-wrap fx-split">
-      <div class="fx-reveal" style="flex: 1 1 360px; display: flex; flex-direction: column; gap: 22px">
+      <div class="fx-reveal fx-pv-head" style="flex: 1 1 360px; display: flex; flex-direction: column; gap: 22px">
         <p class="fx-label" style="margin: 0">Our point of view</p>
         <h2 class="fx-display fx-h2">More content or DMs doesn't fix a <em>broken commercial path.</em></h2>
       </div>
-      <ol style="flex: 1.2 1 440px; list-style: none; margin: 0; padding: 0">
-        <li class="fx-reveal fx-pov" style="display: grid; grid-template-columns: 56px 1fr; gap: 12px; padding: 22px 0"><span class="fx-label fx-sig">01</span><p style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(21px, 1.9vw, 26px); line-height: 1.3">Buyers purchase a safer path to an outcome, not capability.</p></li>
-        <li class="fx-reveal fx-pov" style="display: grid; grid-template-columns: 56px 1fr; gap: 12px; padding: 22px 0; border-top: 1px solid #D9D3C7"><span class="fx-label fx-sig">02</span><p style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(21px, 1.9vw, 26px); line-height: 1.3">Marketing for complex technology must help the buyer decide and defend it.</p></li>
-        <li class="fx-reveal fx-pov" style="display: grid; grid-template-columns: 56px 1fr; gap: 12px; padding: 22px 0; border-top: 1px solid #D9D3C7"><span class="fx-label fx-sig">03</span><p style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(21px, 1.9vw, 26px); line-height: 1.3">Authority comes from being linked to the problems that matter, not from how often you post.</p></li>
-        <li class="fx-reveal fx-pov" style="display: grid; grid-template-columns: 56px 1fr; gap: 12px; padding: 22px 0; border-top: 1px solid #D9D3C7"><span class="fx-label fx-sig">04</span><p style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(21px, 1.9vw, 26px); line-height: 1.3">Outbound should start with business context, not a service pitch.</p></li>
-        <li class="fx-reveal fx-pov" style="display: grid; grid-template-columns: 56px 1fr; gap: 12px; padding: 22px 0; border-top: 1px solid #D9D3C7; border-bottom: 1px solid #D9D3C7"><span class="fx-label fx-sig">05</span><p style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: clamp(21px, 1.9vw, 26px); line-height: 1.3">Automation should support a clear process, not hide a broken one.</p></li>
-      </ol>
+      <ol class="fx-pv-list">
+          <span class="fx-pv-rail" aria-hidden="true"><i></i></span>
+          <li class="fx-pv-i"><span class="fx-pv-n">01</span><p class="fx-pv-t">Buyers purchase <em>a safer path to an outcome</em>, <s class="fx-pv-not">not capability.</s></p></li>
+          <li class="fx-pv-i"><span class="fx-pv-n">02</span><p class="fx-pv-t">Marketing for complex technology must help the buyer <em>decide and defend it.</em></p></li>
+          <li class="fx-pv-i"><span class="fx-pv-n">03</span><p class="fx-pv-t">Authority comes from being linked to <em>the problems that matter</em>, <s class="fx-pv-not">not from how often you post.</s></p></li>
+          <li class="fx-pv-i"><span class="fx-pv-n">04</span><p class="fx-pv-t">Outbound should start with <em>business context</em>, <s class="fx-pv-not">not a service pitch.</s></p></li>
+          <li class="fx-pv-i"><span class="fx-pv-n">05</span><p class="fx-pv-t">Automation should support <em>a clear process</em>, <s class="fx-pv-not">not hide a broken one.</s></p></li>
+        </ol>
     </div>
   </section>
 
