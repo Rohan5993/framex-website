@@ -1578,6 +1578,85 @@ section[aria-label="Market evidence"] .fx-reveal{align-items:center !important}
   .fx-lp-wrap .fx-cx-btn{margin-top:72px}
 }
 /* ---------- /v46 ---------- */
+/* ---------- v47 ---------- */
+/* CTA two columns */
+.fx-lp2{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.25fr);gap:clamp(32px,5vw,80px);align-items:center}
+.fx-lp2-l{display:flex;flex-direction:column;align-items:flex-start;gap:22px}
+.fx-lp2-l h2{margin:0}
+.fx-lp2-l .fx-lede{margin:0;max-width:44ch}
+.fx-lp2 .fx-lp{margin:0;max-width:none}
+.fx-lp2 .fx-lp-lab span{font-size:clamp(14px,1.25vw,18px)}
+.fx-lp2 .fx-lp-lab em{font-size:12px}
+.fx-lp2 .fx-lp-stage{padding-bottom:64px}
+.fx-lp2 .fx-lp-lab{top:auto;bottom:0}
+.fx-lp2 .fx-lp-end-r{top:60%;right:-2%}
+/* HERO LinkedIn profile */
+.fx-hv2{display:none !important}
+.fx-li2{position:absolute;right:clamp(20px,5vw,64px);top:-8px;width:min(36%,410px);pointer-events:none}
+.fx-li2-card{position:relative;background:#FFFFFF;border:1px solid #E3DCCD;border-radius:16px;overflow:hidden;box-shadow:0 40px 80px -50px rgba(120,90,40,.45);font-family:'Schibsted Grotesk',system-ui,sans-serif;color:#0C0E0D}
+.fx-li2-card > *{opacity:0;animation:fxliIn .7s cubic-bezier(.2,.8,.2,1) forwards}
+.fx-li2-banner{height:84px;background:radial-gradient(circle at 1px 1px,rgba(12,14,13,.14) 1px,transparent 1.2px) 0 0/8px 8px,linear-gradient(120deg,#F3EFE7,#F6D9CC 60%,#FFB79E);animation-delay:.3s !important}
+.fx-li2-av{position:absolute;left:20px;top:40px;width:82px;height:82px;border-radius:50%;background:#0C0E0D;color:#FAF8F4;border:4px solid #FFFFFF;display:grid;place-items:center;font-family:'Newsreader',Georgia,serif;font-size:30px;animation-delay:.55s !important}
+.fx-li2-badge{position:absolute;right:14px;top:96px;display:flex;align-items:center;gap:6px;background:#FFF3EE;border:1px solid #F6C7B6;border-radius:999px;padding:5px 10px;font-size:11px;color:#3F3C36;animation:fxliPop .5s cubic-bezier(.2,.8,.2,1.5) 3.2s forwards,fxliPulse 2.6s ease-in-out 4s infinite !important}
+.fx-li2-badge b{color:#B83A14}
+.fx-li2-body{padding:46px 20px 16px;animation-delay:.8s !important}
+.fx-li2-name{font-size:19px;font-weight:600}
+.fx-li2-name span{font-weight:400;color:#5F5B53;font-size:14px}
+.fx-li2-head{margin-top:4px;font-size:14px;line-height:1.4}
+.fx-li2-head mark{background:linear-gradient(transparent 58%,rgba(255,91,46,.28) 58%) no-repeat 0 0/0% 100%;color:inherit;animation:fxliMark .9s ease 1.6s forwards}
+.fx-li2-meta{margin-top:6px;font-size:12px;color:#5F5B53}
+.fx-li2-btns{display:flex;gap:8px;margin-top:12px}
+.fx-li2-btns span{border-radius:999px;padding:5px 14px;font-size:12.5px;font-weight:600;border:1.5px solid #0C0E0D}
+.fx-li2-btns .b1{background:#0C0E0D;color:#FAF8F4}
+.fx-li2-btns .b3{border-color:#C9C4B9;color:#5F5B53}
+.fx-li2-sec{border-top:8px solid #F3EFE7;padding:12px 20px 14px}
+.fx-li2-st{font-size:14px;font-weight:600;margin-bottom:8px}
+.fx-li2-feat{animation-delay:1.25s !important}
+.fx-li2-tiles{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.fx-li2-tiles div{border:1px solid #E3DCCD;border-radius:10px;padding:8px;display:flex;flex-direction:column;gap:3px}
+.fx-li2-tiles i{height:34px;border-radius:6px;background:linear-gradient(135deg,#E9E3D8,#F3EFE7)}
+.fx-li2-tiles div:first-child i{background:linear-gradient(135deg,#FF5B2E,#FFA46B)}
+.fx-li2-tiles b{font-size:11.5px;line-height:1.25}
+.fx-li2-tiles span{font-size:10.5px;color:#5F5B53}
+.fx-li2-post{animation-delay:1.7s !important}
+.fx-li2-post p{margin:0;font-size:12.5px;line-height:1.45;color:#3F3C36}
+.fx-li2-react{display:flex;align-items:center;margin-top:8px;font-size:11px;color:#5F5B53}
+.fx-li2-react i{width:14px;height:14px;border-radius:50%;background:#FF5B2E;border:2px solid #FFF;margin-right:-5px}
+.fx-li2-react i:nth-child(2){background:#0C0E0D}.fx-li2-react i:nth-child(3){background:#FFA46B}
+.fx-li2-react span{margin-left:10px}
+.fx-li2-react em{margin-left:auto;font-style:normal;color:#B83A14;font-weight:500;opacity:0;animation:fxliFade .5s ease 3.6s forwards}
+.fx-li2-note{position:absolute;right:calc(100% + 14px);display:flex;align-items:center;gap:6px;white-space:nowrap;font-family:'Spline Sans Mono',ui-monospace,monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#0C0E0D;opacity:0;animation:fxliFade .5s ease forwards}
+.fx-li2-note b{color:#B83A14;font-weight:500}
+.fx-li2-note::after{content:"";width:22px;border-top:1px dashed #B83A14;order:2}
+.fx-li2-note.n1{top:178px;animation-delay:2s}
+.fx-li2-note.n2{top:300px;animation-delay:2.3s}
+.fx-li2-note.n3{top:410px;animation-delay:2.6s}
+.fx-li2-note.n4{top:104px;animation-delay:3.3s}
+@keyframes fxliIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes fxliFade{to{opacity:1}}
+@keyframes fxliPop{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:scale(1)}}
+@keyframes fxliPulse{0%,100%{box-shadow:0 0 0 0 rgba(255,91,46,.35)}50%{box-shadow:0 0 0 6px rgba(255,91,46,0)}}
+@keyframes fxliMark{to{background-size:100% 100%}}
+@media (max-width:1240px){.fx-li2-note{display:none}}
+@media (max-width:1100px){.fx-li2{display:none}}
+@media (prefers-reduced-motion:reduce){.fx-li2 *{animation:none !important;opacity:1 !important}.fx-li2-head mark{background-size:100% 100%}}
+/* responsive pass */
+@media (max-width:1240px) and (min-width:1101px){#top h1{max-width:20ch !important}#top .fx-lede{max-width:46ch !important}}
+@media (max-width:980px){
+  .fx-lp2{grid-template-columns:1fr}
+  .fx-lp2-l{align-items:flex-start}
+}
+@media (max-width:560px){
+  #start .fx-specs{display:grid !important;grid-template-columns:repeat(3,minmax(0,1fr));width:100%}
+  #start .fx-specs > div{padding:0 10px !important;min-width:0}
+  #start .fx-specs > div:first-child{padding-left:0 !important;border-left:0}
+  #start .fx-specs dt{font-size:9px !important;letter-spacing:.06em !important;white-space:normal !important}
+}
+@media (max-width:760px){
+  .fx-lp2 .fx-lp-stage{padding-bottom:52px}
+  .fx-lp2 .fx-lp-lab span{font-size:12px}
+}
+/* ---------- /v47 ---------- */
 
 /* standalone site extras */
 html{scroll-behavior:smooth}
@@ -1611,39 +1690,21 @@ html{scroll-behavior:smooth}
   <section id="top" style="position: relative; padding: clamp(56px, 8vw, 112px) 0 clamp(72px, 8vw, 120px)">
     <div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; background: radial-gradient(55% 60% at 92% 0%, rgba(255,91,46,0.08) 0%, rgba(255,91,46,0.025) 45%, rgba(255,91,46,0) 72%), radial-gradient(45% 50% at 0% 100%, rgba(240,235,226,0.9) 0%, rgba(240,235,226,0) 70%)"></div>
     <div class="fx-wrap" style="position: relative">
-      <!--sp:hero--><div class="fx-hv2" aria-hidden="true"><svg viewBox="0 0 470 520">
-          <defs><pattern id="fxbpGrid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#E6DFD2" stroke-width="1"></path></pattern>
-          <linearGradient id="fxbpFade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"></stop><stop offset="1" stop-color="#fff" stop-opacity="0"></stop></linearGradient>
-          <mask id="fxbpM"><rect width="470" height="520" fill="url(#fxbpFade)"></rect></mask></defs>
-          <rect width="470" height="520" fill="url(#fxbpGrid)" mask="url(#fxbpM)" class="fx-bp2-grid"></rect>
-          <g class="fx-bp2-card">
-            <rect class="d f" pathLength="1" x="70" y="40" width="300" height="300" rx="16" style="--s:0"></rect>
-            <path class="d banner" pathLength="1" d="M71 56 Q71 41 86 41 H354 Q369 41 369 56 V100 H71 Z" style="--s:.15"></path>
-            <circle class="d f" pathLength="1" cx="122" cy="104" r="30" style="--s:.3"></circle>
-            <rect class="d bar" pathLength="1" x="92" y="148" width="150" height="12" rx="3" style="--s:.42"></rect>
-            <rect class="d bar sig" pathLength="1" x="92" y="170" width="220" height="10" rx="3" style="--s:.52"></rect>
-            <rect class="d tile" pathLength="1" x="92" y="206" width="78" height="56" rx="8" style="--s:.62"></rect>
-            <rect class="d tile" pathLength="1" x="181" y="206" width="78" height="56" rx="8" style="--s:.68"></rect>
-            <rect class="d tile" pathLength="1" x="270" y="206" width="78" height="56" rx="8" style="--s:.74"></rect>
-            <rect class="d bar" pathLength="1" x="92" y="282" width="256" height="8" rx="3" style="--s:.8"></rect>
-            <rect class="d bar" pathLength="1" x="92" y="300" width="190" height="8" rx="3" style="--s:.84"></rect>
-          </g>
-          <g class="fx-bp2-post">
-            <rect class="d f" pathLength="1" x="110" y="364" width="300" height="118" rx="14" style="--s:.9"></rect>
-            <circle class="d" pathLength="1" cx="140" cy="394" r="13" style="--s:.95"></circle>
-            <rect class="d bar" pathLength="1" x="162" y="388" width="120" height="8" rx="3" style="--s:1"></rect>
-            <rect class="d bar" pathLength="1" x="130" y="420" width="256" height="8" rx="3" style="--s:1.04"></rect>
-            <rect class="d bar" pathLength="1" x="130" y="436" width="210" height="8" rx="3" style="--s:1.08"></rect>
-            <g class="fx-bp2-react"><circle cx="138" cy="462" r="5"></circle><circle cx="150" cy="462" r="5"></circle><circle cx="162" cy="462" r="5"></circle><text x="176" y="466">Shared by a CISO</text></g>
-          </g>
-          <g class="fx-bp2-notes">
-            <g style="--n:0"><path d="M312 175 H400 V128 H420"></path><circle cx="312" cy="175" r="3"></circle><text x="426" y="124">01</text><text x="426" y="138" class="nt">Positioning</text></g>
-            <g style="--n:1"><path d="M348 234 H440"></path><circle cx="348" cy="234" r="3"></circle><text x="426" y="222">02</text><text x="426" y="252" class="nt">Proof</text></g>
-            <g style="--n:2"><path d="M70 420 H30 V470 H18"></path><circle cx="110" cy="420" r="3"></circle><path d="M110 420 H70"></path><text x="4" y="488">03</text><text x="4" y="502" class="nt">Authority</text></g>
-          </g>
-          <g class="fx-bp2-badge"><circle cx="352" cy="58" r="20"></circle><text x="352" y="63" text-anchor="middle">+12</text></g>
-          <g class="fx-bp2-badgelab"><path d="M372 58 H420 V30 H426"></path><text x="430" y="26">04</text><text x="430" y="40" class="nt">Signals</text></g>
-        </svg><p class="fx-bp2-cap fx-label">12 buyers viewed this week</p></div>
+      <!--sp:hero--><div class="fx-li2" aria-hidden="true">
+        <div class="fx-li2-card">
+          <div class="fx-li2-banner"></div>
+          <div class="fx-li2-av">YF</div>
+          <div class="fx-li2-badge"><b>+12</b> buyers viewed your profile</div>
+          <div class="fx-li2-body">
+            <div class="fx-li2-name">Your Founder <span>· 1st</span></div>
+            <div class="fx-li2-head"><mark>Helping fintech CISOs pass SOC 2</mark> without slowing releases</div>
+            <div class="fx-li2-meta">Founder &amp; CEO, Your Firm · Toronto · 4,812 followers</div>
+            <div class="fx-li2-btns"><span class="b1">Connect</span><span class="b2">Message</span><span class="b3">More</span></div>
+          </div>
+          <div class="fx-li2-sec fx-li2-feat"><div class="fx-li2-st">Featured</div><div class="fx-li2-tiles"><div><i></i><b>SOC 2 readiness guide</b><span>PDF · 14 pages</span></div><div><i></i><b>Audit passed in 9 weeks</b><span>Case study</span></div></div></div>
+          <div class="fx-li2-sec fx-li2-post"><div class="fx-li2-st">Activity</div><p>Most SOC 2 audits fail on evidence, not controls. Here's the checklist we use before every audit…</p><div class="fx-li2-react"><i></i><i></i><i></i><span>128 · 24 comments</span><em>Shared by a CISO</em></div></div>
+        </div>
+      </div>
       <!--/sp:hero--><p class="fx-label fx-in" style="margin: 0 0 28px">Authority-to-Pipeline System for B2B Tech Companies</p>
       <h1 class="fx-display" style="font-size: clamp(32px, 3.7vw, 56px); line-height: 1.06; max-width: 30ch"><span class="fx-ln"><span style="--d: 0">We build <em>infrastructure</em></span></span><span class="fx-ln"><span style="--d: 1">for how the market finds,</span></span><span class="fx-ln"><span style="--d: 2">understands, trusts, and buys.</span></span></h1>
       <p class="fx-lede fx-in fx-in-3" style="margin: 28px 0 0; max-width: 58ch">Your delivery is ahead of your market position. FrameX builds the system that closes the gap, on the channel where your buyers already vet you.</p>
@@ -2436,12 +2497,14 @@ html{scroll-behavior:smooth}
   <!-- 15 FINAL CTA -->
   <section id="contact" style="position: relative; overflow: hidden; padding: clamp(64px, 7vw, 96px) 0 clamp(88px, 9vw, 136px); background: radial-gradient(70% 85% at 50% 115%, rgba(255,91,46,0.11) 0%, rgba(255,91,46,0.035) 42%, rgba(255,91,46,0) 75%), linear-gradient(180deg, #FAF8F4 0%, #F3EFE8 100%)">
     <div aria-hidden="true" class="fx-breathe"></div><!--sp:cta-->
-    <div class="fx-wrap fx-lp-wrap" style="position: relative">
-      <div class="fx-cx-head">
+    <div class="fx-wrap fx-lp2" style="position: relative">
+      <div class="fx-lp2-l">
         <p class="fx-label" style="margin: 0">Book a call</p>
-        <h2 class="fx-display">Find out where your <em>pipeline is leaking.</em></h2>
+        <h2 class="fx-display fx-h2">Find out where your <em>pipeline is leaking.</em></h2>
+        <p class="fx-lede">Most firms lose buyers in the same few places. We'll show you where yours leaks, and what it takes to seal it.</p>
+        <a class="fx-btn fx-btn-primary" href="#contact">Book a call</a>
       </div>
-      <figure class="fx-lp" aria-label="A pipeline carrying demand from your market to revenue. It leaks in three places: an unclear profile, no follow-up, and pitch-first outreach. Only a trickle reaches revenue.">
+      <div class="fx-lp2-r"><figure class="fx-lp" aria-label="A pipeline carrying demand from your market to revenue. It leaks in three places: an unclear profile, no follow-up, and pitch-first outreach. Only a trickle reaches revenue.">
         <div class="fx-lp-stage">
           <svg viewBox="0 0 970 400" aria-hidden="true">
             <defs>
@@ -2476,8 +2539,7 @@ html{scroll-behavior:smooth}
           <span class="fx-lp-end fx-lp-end-r">Revenue</span>
           <div class="fx-lp-lab" style="left:17.53%"><b>Leak 01</b><span>Unclear profile</span><em>Buyers can’t tell what you do</em></div><div class="fx-lp-lab" style="left:50.52%"><b>Leak 02</b><span>No follow-up</span><em>Interest goes cold</em></div><div class="fx-lp-lab" style="left:82.99%"><b>Leak 03</b><span>Pitch-first outreach</span><em>Conversations stall</em></div>
         </div>
-      </figure>
-      <a class="fx-btn fx-btn-primary fx-cx-btn" href="#contact">Book a call</a>
+      </figure></div>
     </div>
   <!--/sp:cta--></section>
 
