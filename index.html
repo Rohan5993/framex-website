@@ -1171,6 +1171,10 @@ footer{padding:22px 0 26px !important}
 @media (prefers-reduced-motion:reduce){.fx-gx-cloud circle,.fx-gx-pulse{animation:none}.fx-gx-lost,.fx-gx-car{display:none}}
 /* ---------- v36: the bridge ---------- */
 .fx-gapb{max-width:1240px;margin-left:auto !important;margin-right:auto !important;--q1:clamp(0,calc((var(--p) - .08) / .25),1);--q2:clamp(0,calc((var(--p) - .2) / .62),1);--done:clamp(0,calc((var(--q2) - .95) * 20),1)}
+.fx-br-pin{position:relative;height:250vh;margin-top:clamp(32px,4vw,64px)}
+.fx-br-sticky{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;justify-content:center}
+.fx-br-sticky .fx-gapb{margin-top:0 !important;width:100%}
+@media (prefers-reduced-motion:reduce){.fx-br-pin{height:auto}.fx-br-sticky{position:static;height:auto}}
 .fx-br-stage{position:relative}
 .fx-br-svg{display:block;width:100%;height:auto;overflow:visible}
 .fx-br-edge{fill:none;stroke:#0C0E0D;stroke-width:2px;vector-effect:non-scaling-stroke;stroke-linejoin:round}
@@ -1205,6 +1209,8 @@ footer{padding:22px 0 26px !important}
 .fx-br-steps{display:none}
 .fx-gapb .fx-gv-cap{margin-top:clamp(20px,3vw,40px)}
 @media (max-width:760px){
+  .fx-br-pin{height:190vh}
+  .fx-br-md{stroke-width:0}.fx-br-deck{stroke-width:3px}
   .fx-br-t{font-size:18px}
   .fx-br-lab .fx-label,.fx-br-mls,.fx-br-name span{display:none}
   .fx-br-lab-l{top:51.19%}.fx-br-lab-r{top:10.71%}
@@ -1259,7 +1265,7 @@ html{scroll-behavior:smooth}
       <p class="fx-label fx-in fx-in-4" style="margin: 28px 0 0; display: flex; flex-wrap: wrap; gap: 8px 22px"><span>Built in 14 days</span><span aria-hidden="true" style="color: #FF5B2E">/</span><span>Live on day 15</span><span aria-hidden="true" style="color: #FF5B2E">/</span><span>In your voice</span></p>
 
       <!-- The gap: two sides apart, FrameX moves in between -->
-      <figure class="fx-in fx-in-4 fx-gap3 fx-gapv fx-gapb" aria-label="Your side holds deep expertise. Your buyers sit on higher ground across a gap, and right now what you know falls short of them. As you scroll, FrameX builds a bridge across the gap that rises all the way: buyers find you, understand you, trust you, and buy.">
+      <div class="fx-br-pin"><div class="fx-br-sticky"><figure class="fx-in fx-in-4 fx-gap3 fx-gapv fx-gapb" aria-label="Your side holds deep expertise. Your buyers sit on higher ground across a gap, and right now what you know falls short of them. As you scroll, FrameX builds a bridge across the gap that rises all the way: buyers find you, understand you, trust you, and buy.">
         <div class="fx-br-stage">
           <svg class="fx-br-svg" viewBox="0 0 1200 420" aria-hidden="true">
             <defs>
@@ -1292,7 +1298,7 @@ html{scroll-behavior:smooth}
         </div>
         <ol class="fx-br-steps" aria-hidden="true"><li style="--t: 0.2">Finds you</li><li style="--t: 0.45">Understands you</li><li style="--t: 0.7">Trusts you</li><li style="--t: 0.93">Buys</li></ol>
         <p class="fx-gv-cap"><span class="fx-gv-cap-a">Your expertise is real. Right now, it falls short of your buyers.</span><span class="fx-gv-cap-b">FrameX builds the bridge, and it only goes up.</span></p>
-      </figure>
+      </figure></div></div>
     </div>
   </section>
 
@@ -2180,7 +2186,7 @@ html{scroll-behavior:smooth}
     var H = window.innerHeight, W = window.innerWidth, y = window.scrollY;
     scrollCounts();
     var gfig = document.querySelector('.fx-gap3');
-    if (gfig && !reduced) { var gr = gfig.getBoundingClientRect(); gfig.style.setProperty('--p', cl((H * 0.72 - gr.top) / (gr.height * 1.25)).toFixed(3)); }
+    if (gfig && !reduced) { var gpin = gfig.closest('.fx-br-pin'), gpv; if (gpin) { var gpr = gpin.getBoundingClientRect(); gpv = cl((-gpr.top / Math.max(1, gpr.height - H) - 0.2) / 0.68); } else { var gr = gfig.getBoundingClientRect(); gpv = cl((H * 0.72 - gr.top) / (gr.height * 1.25)); } gfig.style.setProperty('--p', gpv.toFixed(3)); }
 
     if (nav && !reduced) {
       var sr = sys[0] ? sys[0].parentElement.getBoundingClientRect() : null;
