@@ -965,6 +965,51 @@ footer{padding:22px 0 26px !important}
 @media (max-width:900px){.fx-tl-cols{grid-template-columns:repeat(2,minmax(0,1fr)) !important}}
 @media (max-width:560px){.fx-tl-cols{grid-template-columns:1fr !important}}
 .fx-tl-note{margin:2px 0 0;font-size:15px;line-height:1.55;color:#5F5B53;max-width:30ch}
+/* ---------- v29 ---------- */
+.fx-tl .fx-step-n{font-weight:400;color:#3F3C36}
+
+/* Hero gap: a broken path, completed by the system */
+.fx-g2{position:relative;margin:clamp(64px,8vw,104px) 0 0;padding:clamp(28px,4vw,48px) 0}
+.fx-g2::before{content:"";position:absolute;left:10%;right:10%;top:0;bottom:0;background:radial-gradient(50% 60% at 50% 50%,rgba(255,91,46,.07),rgba(255,91,46,0) 70%);pointer-events:none}
+.fx-g2-stage{position:relative;display:grid;grid-template-columns:minmax(150px,200px) minmax(0,1fr) minmax(150px,200px);align-items:center}
+.fx-g2-end{position:relative;display:flex;flex-direction:column;gap:6px}
+.fx-g2-l{text-align:right;align-items:flex-end;padding-right:28px}
+.fx-g2-r{text-align:left;align-items:flex-start;padding-left:28px}
+.fx-g2-t{font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:clamp(22px,2vw,30px);line-height:1.05;letter-spacing:-.01em}
+.fx-g2-r .fx-g2-t{color:#E04A1F;font-style:italic}
+.fx-g2-dot{position:absolute;top:50%;width:18px;height:18px;margin-top:-9px;border-radius:50%;background:#0C0E0D}
+.fx-g2-l .fx-g2-dot{right:-9px}
+.fx-g2-r .fx-g2-dot{left:-9px;background:#FF5B2E;box-shadow:0 0 0 8px rgba(255,91,46,.14)}
+.fx-g2-line{position:relative;height:150px}
+.fx-g2-base{position:absolute;left:0;right:0;top:50%;height:0;border-top:1.5px dashed #C9C2B4}
+.fx-g2-fill{position:absolute;left:0;right:0;top:50%;height:2px;margin-top:-1px;background:linear-gradient(90deg,#0C0E0D 0%,#0C0E0D 55%,#FF5B2E 100%);transform-origin:left}
+.fx-g2-cap{position:absolute;left:50%;top:14px;transform:translateX(-50%);white-space:nowrap;font-family:'Spline Sans Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.fx-g2-cap-a{color:#5F5B53}
+.fx-g2-cap-b{color:#B83A14;font-weight:500;opacity:0}
+.fx-g2-node{position:absolute;left:var(--x);top:50%;width:0;height:0}
+.fx-g2-node i{position:absolute;left:-7px;top:-7px;width:14px;height:14px;border-radius:50%;border:1.5px solid #0C0E0D;background:#FAF8F4}
+.fx-g2-node b{position:absolute;left:50%;top:18px;transform:translateX(-50%);font-family:'Spline Sans Mono',ui-monospace,monospace;font-size:10px;font-weight:500;color:#B83A14;letter-spacing:.1em}
+.fx-g2-node em{position:absolute;left:50%;top:34px;transform:translateX(-50%);font-style:normal;font-size:13px;color:#3F3C36;white-space:nowrap}
+.fx-g2-walker{position:absolute;top:50%;left:0;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:#FF5B2E;box-shadow:0 0 0 6px rgba(255,91,46,.18);opacity:0}
+@keyframes fxg2fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes fxg2node{from{opacity:0;transform:scale(.3)}to{opacity:1;transform:none}}
+@keyframes fxg2walk{0%{left:0;opacity:0}8%{opacity:1}92%{opacity:1}100%{left:100%;opacity:0}}
+@media (prefers-reduced-motion:no-preference){
+  .fx-g2-fill{animation:fxg2fill 1.8s cubic-bezier(.6,0,.2,1) 1s both}
+  .fx-g2-node{animation:fxg2node .6s cubic-bezier(.2,.8,.2,1.4) both;animation-delay:calc(var(--k) * .3s + 1.2s)}
+  .fx-g2-cap-a{animation:fxhide .5s ease 2s both}
+  .fx-g2-cap-b{animation:fxshow .6s ease 2.6s both}
+  .fx-g2-walker{animation:fxg2walk 5s cubic-bezier(.5,0,.5,1) 3.2s infinite}
+}
+@media (prefers-reduced-motion:reduce){.fx-g2-cap-a{opacity:0}.fx-g2-cap-b{opacity:1}}
+@media (max-width:760px){
+  .fx-g2-stage{grid-template-columns:1fr;gap:8px}
+  .fx-g2-l,.fx-g2-r{text-align:left;align-items:flex-start;padding:0}
+  .fx-g2-dot{display:none}
+  .fx-g2-line{height:120px}
+  .fx-g2-node em{display:none}
+  .fx-g2-cap{font-size:9.5px;letter-spacing:.06em}
+}
 
 /* standalone site extras */
 html{scroll-behavior:smooth}
@@ -1007,39 +1052,31 @@ html{scroll-behavior:smooth}
       </div>
       <p class="fx-label fx-in fx-in-4" style="margin: 28px 0 0; display: flex; flex-wrap: wrap; gap: 8px 22px"><span>Built in 14 days</span><span aria-hidden="true" style="color: #FF5B2E">/</span><span>Live on day 15</span><span aria-hidden="true" style="color: #FF5B2E">/</span><span>In your voice</span></p>
 
-      <!-- The gap: the system builds the bridge -->
-      <figure class="fx-in fx-in-4" aria-label="The technical-to-commercial gap: what you deliver on one side, where buyers decide on the other. Five FrameX systems drop in as the bridge between them." style="margin: clamp(56px, 7vw, 96px) 0 0">
-        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 16px">
-          <span class="fx-label">The technical-to-commercial gap</span>
-        </div>
-        <div class="fx-bridge">
-          <div class="fx-cliff fx-cliff-l">
-            <span class="fx-label" style="font-size: 10px; color: #C9C4B9">Your side</span>
-            <span class="fx-cliff-t">What you can deliver</span>
-            <span class="fx-cliff-s">Expertise, capability, delivery record</span>
+      <!-- The gap: a broken path the system completes -->
+      <figure class="fx-in fx-in-4 fx-g2" aria-label="The technical-to-commercial gap. On one side, what you can deliver; on the other, where buyers decide. Five FrameX systems complete the path between them.">
+        <div class="fx-g2-stage">
+          <div class="fx-g2-end fx-g2-l">
+            <span class="fx-label" style="font-size: 10px">Your side</span>
+            <span class="fx-g2-t">What you can deliver</span>
+            <i class="fx-g2-dot" aria-hidden="true"></i>
           </div>
-          <div class="fx-cliff fx-cliff-r">
+          <div class="fx-g2-line">
+            <span class="fx-g2-base" aria-hidden="true"></span>
+            <span class="fx-g2-fill" aria-hidden="true"></span>
+            <span class="fx-g2-cap fx-g2-cap-a" aria-hidden="true">The technical-to-commercial gap</span>
+            <span class="fx-g2-cap fx-g2-cap-b" aria-hidden="true">FrameX builds the path across</span>
+              <span class="fx-g2-node" style="--x: 12%; --k: 0"><i aria-hidden="true"></i><b>01</b><em>Positioning</em></span>
+              <span class="fx-g2-node" style="--x: 31%; --k: 1"><i aria-hidden="true"></i><b>02</b><em>Authority</em></span>
+              <span class="fx-g2-node" style="--x: 50%; --k: 2"><i aria-hidden="true"></i><b>03</b><em>Resources</em></span>
+              <span class="fx-g2-node" style="--x: 69%; --k: 3"><i aria-hidden="true"></i><b>04</b><em>Signals</em></span>
+              <span class="fx-g2-node" style="--x: 88%; --k: 4"><i aria-hidden="true"></i><b>05</b><em>Conversations</em></span>
+            <span class="fx-g2-walker" aria-hidden="true"></span>
+          </div>
+          <div class="fx-g2-end fx-g2-r">
             <span class="fx-label" style="font-size: 10px">Buyer's side</span>
-            <span class="fx-cliff-t">Where buyers decide</span>
-            <span class="fx-cliff-s">Shortlist, validation, decision</span>
+            <span class="fx-g2-t">Where buyers decide</span>
+            <i class="fx-g2-dot" aria-hidden="true"></i>
           </div>
-
-          <div class="fx-bridge-stages" aria-hidden="true"><span>Find</span><span>Understand</span><span>Trust</span><span>Buy</span></div>
-
-          <div class="fx-void" aria-hidden="true">
-            <span class="fx-void-a">Without a system, buyers fall through here</span>
-            <span class="fx-void-b">FrameX builds the path across</span>
-          </div>
-
-          <ol class="fx-planks">
-            <li><span class="fx-label fx-sig" style="font-size: 10px">01</span><span class="nm">Positioning</span></li>
-            <li><span class="fx-label fx-sig" style="font-size: 10px">02</span><span class="nm">Authority content</span></li>
-            <li><span class="fx-label fx-sig" style="font-size: 10px">03</span><span class="nm">Sales resources</span></li>
-            <li><span class="fx-label fx-sig" style="font-size: 10px">04</span><span class="nm">Signal intelligence</span></li>
-            <li><span class="fx-label fx-sig" style="font-size: 10px">05</span><span class="nm">Conversations</span></li>
-          </ol>
-
-          <span class="fx-walker" aria-hidden="true"></span>
         </div>
       </figure>
     </div>
