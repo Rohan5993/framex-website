@@ -1657,6 +1657,33 @@ section[aria-label="Market evidence"] .fx-reveal{align-items:center !important}
   .fx-lp2 .fx-lp-lab span{font-size:12px}
 }
 /* ---------- /v47 ---------- */
+/* ---------- v48 ---------- */
+.fx-hv3 .tx{opacity:0;animation:fxhvFade .5s ease forwards;animation-delay:calc(1.2s + var(--t) * 2.6s);font-family:'Schibsted Grotesk',system-ui,sans-serif;fill:#0C0E0D}
+.fx-hv3 .av{font-family:'Newsreader',Georgia,serif;font-size:24px}
+.fx-hv3 .av.sm{font-size:11px}
+.fx-hv3 .nm{font-size:17px;font-weight:600}
+.fx-hv3 .nm.sm{font-size:12px}
+.fx-hv3 .dim{fill:#5F5B53;font-weight:400;font-size:13px}
+.fx-hv3 .hl{font-size:12.5px;fill:#FAF8F4;font-weight:500}
+.fx-hv3 .hl2{font-size:12.5px}
+.fx-hv3 .mt,.fx-hv3 .ts{font-size:10.5px;fill:#5F5B53}
+.fx-hv3 .pt{font-size:11.5px;font-weight:600}
+.fx-hv3 .pt.on{fill:#FAF8F4}
+.fx-hv3 .pill{--fill:#FFFDF8}
+.fx-hv3 .pill.on{--fill:#0C0E0D}
+.fx-hv3 .pill.dimp{stroke:#C9C4B9}
+.fx-hv3 .sep{stroke:#E3DCCD;stroke-width:6}
+.fx-hv3 .st{font-size:13px;font-weight:600}
+.fx-hv3 .tt{font-size:10.5px;font-weight:600}
+.fx-hv3 .tile.hot{--fill:#FF5B2E;stroke:transparent}
+.fx-hv3 .tile.in{--fill:#E9E3D8;stroke:transparent}
+.fx-hv3 .bd{font-size:11.5px;fill:#3F3C36}
+.fx-hv3 .bar.sig{--fill:#FF5B2E}
+.fx-hv3 .fx-bp2-react text{font-family:'Schibsted Grotesk',system-ui,sans-serif;text-transform:none;letter-spacing:0;font-size:10.5px}
+.fx-hv3 .fx-bp2-react text.sh{fill:#B83A14;font-weight:500}
+.fx-hv3{width:min(40%,480px);top:-34px}
+@media (prefers-reduced-motion:reduce){.fx-hv3 .tx{opacity:1}}
+/* ---------- /v48 ---------- */
 
 /* standalone site extras */
 html{scroll-behavior:smooth}
@@ -1690,38 +1717,56 @@ html{scroll-behavior:smooth}
   <section id="top" style="position: relative; padding: clamp(56px, 8vw, 112px) 0 clamp(72px, 8vw, 120px)">
     <div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; background: radial-gradient(55% 60% at 92% 0%, rgba(255,91,46,0.08) 0%, rgba(255,91,46,0.025) 45%, rgba(255,91,46,0) 72%), radial-gradient(45% 50% at 0% 100%, rgba(240,235,226,0.9) 0%, rgba(240,235,226,0) 70%)"></div>
     <div class="fx-wrap" style="position: relative">
-      <!--sp:hero--><div class="fx-hv2" aria-hidden="true"><svg viewBox="0 0 470 520">
+      <!--sp:hero--><div class="fx-hv2 fx-hv3" aria-hidden="true"><svg viewBox="0 0 470 560">
           <defs><pattern id="fxbpGrid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#E6DFD2" stroke-width="1"></path></pattern>
           <linearGradient id="fxbpFade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"></stop><stop offset="1" stop-color="#fff" stop-opacity="0"></stop></linearGradient>
-          <mask id="fxbpM"><rect width="470" height="520" fill="url(#fxbpFade)"></rect></mask></defs>
-          <rect width="470" height="520" fill="url(#fxbpGrid)" mask="url(#fxbpM)" class="fx-bp2-grid"></rect>
+          <mask id="fxbpM"><rect width="470" height="560" fill="url(#fxbpFade)"></rect></mask></defs>
+          <rect width="470" height="560" fill="url(#fxbpGrid)" mask="url(#fxbpM)" class="fx-bp2-grid"></rect>
           <g class="fx-bp2-card">
-            <rect class="d f" pathLength="1" x="70" y="40" width="300" height="300" rx="16" style="--s:0"></rect>
-            <path class="d banner" pathLength="1" d="M71 56 Q71 41 86 41 H354 Q369 41 369 56 V100 H71 Z" style="--s:.15"></path>
-            <circle class="d f" pathLength="1" cx="122" cy="104" r="30" style="--s:.3"></circle>
-            <rect class="d bar" pathLength="1" x="92" y="148" width="150" height="12" rx="3" style="--s:.42"></rect>
-            <rect class="d bar sig" pathLength="1" x="92" y="170" width="220" height="10" rx="3" style="--s:.52"></rect>
-            <rect class="d tile" pathLength="1" x="92" y="206" width="78" height="56" rx="8" style="--s:.62"></rect>
-            <rect class="d tile" pathLength="1" x="181" y="206" width="78" height="56" rx="8" style="--s:.68"></rect>
-            <rect class="d tile" pathLength="1" x="270" y="206" width="78" height="56" rx="8" style="--s:.74"></rect>
-            <rect class="d bar" pathLength="1" x="92" y="282" width="256" height="8" rx="3" style="--s:.8"></rect>
-            <rect class="d bar" pathLength="1" x="92" y="300" width="190" height="8" rx="3" style="--s:.84"></rect>
+            <rect class="d f" pathLength="1" x="60" y="30" width="320" height="346" rx="16" style="--s:0"></rect>
+            <path class="d banner" pathLength="1" d="M61 46 Q61 31 76 31 H364 Q379 31 379 46 V92 H61 Z" style="--s:.12"></path>
+            <circle class="d f" pathLength="1" cx="112" cy="96" r="32" style="--s:.25"></circle>
+            <text class="tx av" x="112" y="104" text-anchor="middle" style="--t:0">YF</text>
+            <text class="tx nm" x="80" y="152" style="--t:.1">Your Founder <tspan class="dim">· 1st</tspan></text>
+            <rect class="d bar sig" pathLength="1" x="79" y="163" width="218" height="16" rx="3" style="--s:.45"></rect>
+            <text class="tx hl" x="84" y="175" style="--t:.2">Helping fintech CISOs pass SOC 2</text>
+            <text class="tx hl2" x="80" y="194" style="--t:.25">without slowing releases</text>
+            <text class="tx mt" x="80" y="212" style="--t:.3">Founder &amp; CEO · Toronto · 4,812 followers</text>
+            <rect class="d pill on" pathLength="1" x="80" y="224" width="72" height="24" rx="12" style="--s:.55"></rect>
+            <text class="tx pt on" x="116" y="240" text-anchor="middle" style="--t:.35">Connect</text>
+            <rect class="d pill" pathLength="1" x="160" y="224" width="76" height="24" rx="12" style="--s:.6"></rect>
+            <text class="tx pt" x="198" y="240" text-anchor="middle" style="--t:.38">Message</text>
+            <rect class="d pill dimp" pathLength="1" x="244" y="224" width="50" height="24" rx="12" style="--s:.64"></rect>
+            <text class="tx pt dim" x="269" y="240" text-anchor="middle" style="--t:.4">More</text>
+            <line class="d sep" pathLength="1" x1="61" y1="262" x2="379" y2="262" style="--s:.68"></line>
+            <text class="tx st" x="80" y="284" style="--t:.45">Featured</text>
+            <rect class="d tile" pathLength="1" x="80" y="294" width="134" height="64" rx="8" style="--s:.72"></rect>
+            <rect class="d tile hot" pathLength="1" x="88" y="302" width="118" height="22" rx="4" style="--s:.76"></rect>
+            <text class="tx tt" x="88" y="340" style="--t:.5">SOC 2 readiness guide</text>
+            <text class="tx ts" x="88" y="352" style="--t:.52">PDF · 14 pages</text>
+            <rect class="d tile" pathLength="1" x="226" y="294" width="134" height="64" rx="8" style="--s:.78"></rect>
+            <rect class="d tile in" pathLength="1" x="234" y="302" width="118" height="22" rx="4" style="--s:.82"></rect>
+            <text class="tx tt" x="234" y="340" style="--t:.55">SOC 2 in 9 weeks</text>
+            <text class="tx ts" x="234" y="352" style="--t:.57">Case study</text>
           </g>
           <g class="fx-bp2-post">
-            <rect class="d f" pathLength="1" x="110" y="364" width="300" height="118" rx="14" style="--s:.9"></rect>
-            <circle class="d" pathLength="1" cx="140" cy="394" r="13" style="--s:.95"></circle>
-            <rect class="d bar" pathLength="1" x="162" y="388" width="120" height="8" rx="3" style="--s:1"></rect>
-            <rect class="d bar" pathLength="1" x="130" y="420" width="256" height="8" rx="3" style="--s:1.04"></rect>
-            <rect class="d bar" pathLength="1" x="130" y="436" width="210" height="8" rx="3" style="--s:1.08"></rect>
-            <g class="fx-bp2-react"><circle cx="138" cy="462" r="5"></circle><circle cx="150" cy="462" r="5"></circle><circle cx="162" cy="462" r="5"></circle><text x="176" y="466">Shared by a CISO</text></g>
+            <rect class="d f" pathLength="1" x="100" y="396" width="320" height="132" rx="14" style="--s:.88"></rect>
+            <circle class="d f" pathLength="1" cx="128" cy="424" r="13" style="--s:.92"></circle>
+            <text class="tx av sm" x="128" y="428" text-anchor="middle" style="--t:.6">YF</text>
+            <text class="tx nm sm" x="150" y="422" style="--t:.62">Your Founder</text>
+            <text class="tx ts" x="150" y="435" style="--t:.63">2d · Edited</text>
+            <text class="tx bd" x="118" y="462" style="--t:.66">Most SOC 2 audits fail on evidence, not</text>
+            <text class="tx bd" x="118" y="478" style="--t:.68">controls. Here's the checklist we use…</text>
+            <line class="d sep" pathLength="1" x1="101" y1="494" x2="419" y2="494" style="--s:1"></line>
+            <g class="fx-bp2-react"><circle cx="124" cy="511" r="6"></circle><circle cx="136" cy="511" r="6"></circle><circle cx="148" cy="511" r="6"></circle><text x="162" y="515">128 · 24 comments</text><text x="404" y="515" text-anchor="end" class="sh">Shared by a CISO</text></g>
           </g>
           <g class="fx-bp2-notes">
-            <g style="--n:0"><path d="M312 175 H400 V128 H420"></path><circle cx="312" cy="175" r="3"></circle><text x="426" y="124">01</text><text x="426" y="138" class="nt">Positioning</text></g>
-            <g style="--n:1"><path d="M348 234 H440"></path><circle cx="348" cy="234" r="3"></circle><text x="426" y="222">02</text><text x="426" y="252" class="nt">Proof</text></g>
-            <g style="--n:2"><path d="M70 420 H30 V470 H18"></path><circle cx="110" cy="420" r="3"></circle><path d="M110 420 H70"></path><text x="4" y="488">03</text><text x="4" y="502" class="nt">Authority</text></g>
+            <g style="--n:0"><path d="M297 171 H400 V128 H420"></path><circle cx="297" cy="171" r="3"></circle><text x="426" y="124">01</text><text x="426" y="138" class="nt">Positioning</text></g>
+            <g style="--n:1"><path d="M360 326 H440"></path><circle cx="360" cy="326" r="3"></circle><text x="426" y="314">02</text><text x="426" y="344" class="nt">Proof</text></g>
+            <g style="--n:2"><path d="M100 462 H30 V500 H18"></path><circle cx="100" cy="462" r="3"></circle><text x="4" y="518">03</text><text x="4" y="532" class="nt">Authority</text></g>
           </g>
-          <g class="fx-bp2-badge"><circle cx="352" cy="58" r="20"></circle><text x="352" y="63" text-anchor="middle">+12</text></g>
-          <g class="fx-bp2-badgelab"><path d="M372 58 H420 V30 H426"></path><text x="430" y="26">04</text><text x="430" y="40" class="nt">Signals</text></g>
+          <g class="fx-bp2-badge"><circle cx="362" cy="48" r="20"></circle><text x="362" y="53" text-anchor="middle">+12</text></g>
+          <g class="fx-bp2-badgelab"><path d="M382 48 H420 V22 H426"></path><text x="430" y="18">04</text><text x="430" y="32" class="nt">Signals</text></g>
         </svg><p class="fx-bp2-cap fx-label">12 buyers viewed this week</p></div>
       <!--/sp:hero--><p class="fx-label fx-in" style="margin: 0 0 28px">Authority-to-Pipeline System for B2B Tech Companies</p>
       <h1 class="fx-display" style="font-size: clamp(32px, 3.7vw, 56px); line-height: 1.06; max-width: 30ch"><span class="fx-ln"><span style="--d: 0">We build <em>infrastructure</em></span></span><span class="fx-ln"><span style="--d: 1">for how the market finds,</span></span><span class="fx-ln"><span style="--d: 2">understands, trusts, and buys.</span></span></h1>
