@@ -1509,6 +1509,75 @@ section[aria-label="Market evidence"] .fx-reveal{align-items:center !important}
 @media (max-width:1100px){.fx-hv{display:none}}
 @media (prefers-reduced-motion:reduce){.fx-hv-pl,.fx-hv-beam,.fx-hv-shadow{animation:none;opacity:1}.fx-hv-sig,.fx-hv-ping{display:none}}
 /* ---------- /v45 ---------- */
+/* ---------- v46 ---------- */
+/* ---- CTA pipeline ---- */
+.fx-lp-wrap{display:flex;flex-direction:column;align-items:center;text-align:center}
+.fx-lp-wrap .fx-cx-head h2{max-width:19ch}
+.fx-lp{width:100%;max-width:1100px;margin:clamp(40px,5vw,64px) 0 0}
+.fx-lp-stage{position:relative}
+.fx-lp svg{display:block;width:100%;height:auto;overflow:visible}
+.fx-lp-floor{stroke:#D9D3C7;stroke-width:1.5;stroke-dasharray:2 6}
+.fx-lp-outer{fill:none;stroke:#0C0E0D;stroke-width:42;stroke-linejoin:round}
+.fx-lp-inner{fill:none;stroke:#FBF9F4;stroke-width:38;stroke-linejoin:round}
+.fx-lp-flow{fill:none;stroke:url(#fxlpFlow);stroke-width:12;stroke-linecap:round;stroke-dasharray:16 14;animation:fxlpFlow 1.1s linear infinite}
+@keyframes fxlpFlow{to{stroke-dashoffset:-30}}
+.fx-lp-flange{fill:#0C0E0D}
+.fx-lp-crack{fill:none;stroke:#FF5B2E;stroke-width:2.4;stroke-linejoin:round}
+.fx-lp-spray{fill:none;stroke:#FF5B2E;stroke-width:1.6;stroke-linecap:round;stroke-dasharray:2 5;animation:fxlpSpray .9s linear infinite}
+@keyframes fxlpSpray{to{stroke-dashoffset:-14}}
+.fx-lp-drop{fill:#FF5B2E;opacity:0;animation-name:fxlpDrop;animation-timing-function:cubic-bezier(.55,0,.9,.5);animation-iteration-count:infinite}
+@keyframes fxlpDrop{0%{transform:translateY(0) scale(.5);opacity:0}10%{opacity:1;transform:translateY(2px) scale(1)}92%{opacity:1}100%{transform:translateY(var(--fall));opacity:0}}
+.fx-lp-pool{fill:#FF5B2E;fill-opacity:.16;stroke:#FF5B2E;stroke-width:1.2;transform-box:fill-box;transform-origin:center;animation:fxlpPool 2.4s ease-in-out infinite}
+@keyframes fxlpPool{0%,100%{transform:scaleX(.82)}50%{transform:scaleX(1.08)}}
+.fx-lp-in path{stroke:#FF5B2E;stroke-width:3;stroke-linecap:round;stroke-dasharray:6 6;animation:fxlpFlow 1.1s linear infinite}
+.fx-lp-trickle{fill:#FF5B2E;animation:fxlpTrickle 2.2s cubic-bezier(.55,0,.9,.5) infinite}
+@keyframes fxlpTrickle{0%{transform:translateY(0);opacity:0}15%{opacity:1}100%{transform:translateY(148px);opacity:.6}}
+.fx-lp-cup{fill:none;stroke:#0C0E0D;stroke-width:2;stroke-linejoin:round}
+.fx-lp-level{stroke:#FF5B2E;stroke-width:3}
+.fx-lp-end{position:absolute;font-family:'Spline Sans Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#5F5B53}
+.fx-lp-end-l{left:0;top:10%}
+.fx-lp-end-r{right:-1%;top:78%;color:#B83A14;font-weight:500}
+.fx-lp-lab{position:absolute;top:93%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:3px;text-align:center;white-space:nowrap}
+.fx-lp-lab b{font-family:'Spline Sans Mono',ui-monospace,monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#B83A14;font-weight:500}
+.fx-lp-lab span{font-family:'Newsreader',Georgia,serif;font-size:clamp(17px,1.6vw,22px);color:#0C0E0D}
+.fx-lp-lab em{font-style:normal;font-size:13px;color:#5F5B53}
+.fx-lp-wrap .fx-cx-btn{margin-top:clamp(96px,9vw,120px)}
+/* ---- hero blueprint ---- */
+.fx-hv{display:none !important}
+.fx-hv2{position:absolute;right:-24px;top:-30px;width:min(40%,470px);pointer-events:none}
+.fx-hv2 svg{display:block;width:100%;height:auto;overflow:visible}
+.fx-hv2 .d{fill:transparent;stroke:#0C0E0D;stroke-width:1.4;stroke-dasharray:1 1;stroke-dashoffset:1;animation:fxbpDraw .9s cubic-bezier(.4,0,.2,1) forwards,fxbpFill .6s ease forwards;animation-delay:calc(.4s + var(--s) * 1.7s),calc(1.4s + var(--s) * 1.7s)}
+@keyframes fxbpDraw{to{stroke-dashoffset:0}}
+@keyframes fxbpFill{to{fill:var(--fill,#FFFDF8)}}
+.fx-hv2 .banner{--fill:#E9E3D8}
+.fx-hv2 .bar{--fill:#E3DCCD;stroke:transparent}
+.fx-hv2 .bar.sig{--fill:#FF5B2E}
+.fx-hv2 .tile{--fill:#F3EFE7}
+.fx-bp2-grid{opacity:0;animation:fxhvFade 1.2s ease .2s forwards}
+.fx-bp2-react{opacity:0;animation:fxhvFade .6s ease 3.6s forwards}
+.fx-bp2-react circle{fill:#FF5B2E;stroke:#FAF8F4;stroke-width:2}
+.fx-bp2-react text{font-family:'Spline Sans Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.06em;fill:#5F5B53;text-transform:uppercase}
+.fx-bp2-notes g{opacity:0;animation:fxhvFade .6s ease forwards;animation-delay:calc(3.1s + var(--n) * .35s)}
+.fx-bp2-notes path,.fx-bp2-badgelab path{fill:none;stroke:#B83A14;stroke-width:1;stroke-dasharray:3 3}
+.fx-bp2-notes circle{fill:#FF5B2E}
+.fx-bp2-notes text,.fx-bp2-badgelab text{font-family:'Spline Sans Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.1em;fill:#B83A14;font-weight:500}
+.fx-bp2-notes text.nt,.fx-bp2-badgelab text.nt{fill:#0C0E0D;text-transform:uppercase;font-weight:400}
+.fx-bp2-badge{opacity:0;transform-box:fill-box;transform-origin:center;animation:fxbpPop .5s cubic-bezier(.2,.8,.2,1.6) 4.2s forwards,fxbpPulse 2.4s ease-in-out 5s infinite}
+.fx-bp2-badge circle{fill:#FF5B2E;stroke:#FAF8F4;stroke-width:3}
+.fx-bp2-badge text{font-family:'Spline Sans Mono',ui-monospace,monospace;font-size:12px;font-weight:500;fill:#0C0E0D}
+.fx-bp2-badgelab{opacity:0;animation:fxhvFade .5s ease 4.5s forwards}
+@keyframes fxbpPop{from{opacity:0;transform:scale(.2)}to{opacity:1;transform:scale(1)}}
+@keyframes fxbpPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+@keyframes fxhvFade{to{opacity:1}}
+.fx-bp2-cap{position:absolute;left:24%;bottom:-6px;margin:0;opacity:0;animation:fxhvFade .6s ease 4.6s forwards;color:#B83A14 !important}
+@media (max-width:1100px){.fx-hv2{display:none}}
+@media (prefers-reduced-motion:reduce){.fx-hv2 *{animation:none !important;opacity:1 !important;stroke-dashoffset:0 !important}.fx-hv2 .d{fill:var(--fill,#FFFDF8)}.fx-lp *{animation:none !important}}
+@media (max-width:760px){
+  .fx-lp-lab span{font-size:13px}.fx-lp-lab em{display:none}.fx-lp-lab b{font-size:8px}
+  .fx-lp-end{font-size:8.5px}
+  .fx-lp-wrap .fx-cx-btn{margin-top:72px}
+}
+/* ---------- /v46 ---------- */
 
 /* standalone site extras */
 html{scroll-behavior:smooth}
@@ -1542,14 +1611,39 @@ html{scroll-behavior:smooth}
   <section id="top" style="position: relative; padding: clamp(56px, 8vw, 112px) 0 clamp(72px, 8vw, 120px)">
     <div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; background: radial-gradient(55% 60% at 92% 0%, rgba(255,91,46,0.08) 0%, rgba(255,91,46,0.025) 45%, rgba(255,91,46,0) 72%), radial-gradient(45% 50% at 0% 100%, rgba(240,235,226,0.9) 0%, rgba(240,235,226,0) 70%)"></div>
     <div class="fx-wrap" style="position: relative">
-      <!--sp:hero--><div class="fx-hv" aria-hidden="true"><svg viewBox="0 0 520 500">
-          <defs><pattern id="fxhvDots" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="1.1" fill="#0C0E0D" fill-opacity=".18"></circle></pattern></defs>
-          <path d="M230 360 L380 432 L230 504 L80 432 Z" fill="url(#fxhvDots)" class="fx-hv-shadow"></path>
-          <g class="fx-hv-pl" style="--i:0"><g class="fx-hv-cols"></g><path class="fx-hv-side" d="M80 392 L230 464 L380 392 L380 404 L230 476 L80 404 Z"></path><path class="fx-hv-face" d="M230 320 L380 392 L230 464 L80 392 Z"></path><path class="fx-hv-grid" d="M155 356 L305 428 M305 356 L155 428"></path><line class="fx-hv-lead" x1="380" y1="392" x2="426" y2="392"></line><text x="434" y="396" class="fx-hv-t">Finds you</text></g><g class="fx-hv-pl" style="--i:1"><g class="fx-hv-cols"><line x1="80" y1="312" x2="80" y2="392"></line><line x1="380" y1="312" x2="380" y2="392"></line><line x1="230" y1="384" x2="230" y2="464"></line></g><path class="fx-hv-side" d="M80 300 L230 372 L380 300 L380 312 L230 384 L80 312 Z"></path><path class="fx-hv-face" d="M230 228 L380 300 L230 372 L80 300 Z"></path><path class="fx-hv-grid" d="M155 264 L305 336 M305 264 L155 336"></path><line class="fx-hv-lead" x1="380" y1="300" x2="426" y2="300"></line><text x="434" y="304" class="fx-hv-t">Understands you</text></g><g class="fx-hv-pl" style="--i:2"><g class="fx-hv-cols"><line x1="80" y1="220" x2="80" y2="300"></line><line x1="380" y1="220" x2="380" y2="300"></line><line x1="230" y1="292" x2="230" y2="372"></line></g><path class="fx-hv-side" d="M80 208 L230 280 L380 208 L380 220 L230 292 L80 220 Z"></path><path class="fx-hv-face" d="M230 136 L380 208 L230 280 L80 208 Z"></path><path class="fx-hv-grid" d="M155 172 L305 244 M305 172 L155 244"></path><line class="fx-hv-lead" x1="380" y1="208" x2="426" y2="208"></line><text x="434" y="212" class="fx-hv-t">Trusts you</text></g><g class="fx-hv-pl fx-hv-top" style="--i:3"><g class="fx-hv-cols"><line x1="80" y1="128" x2="80" y2="208"></line><line x1="380" y1="128" x2="380" y2="208"></line><line x1="230" y1="200" x2="230" y2="280"></line></g><path class="fx-hv-side" d="M80 116 L230 188 L380 116 L380 128 L230 200 L80 128 Z"></path><path class="fx-hv-face" d="M230 44 L380 116 L230 188 L80 116 Z"></path><path class="fx-hv-grid" d="M155 80 L305 152 M305 80 L155 152"></path><line class="fx-hv-lead" x1="380" y1="116" x2="426" y2="116"></line><text x="434" y="120" class="fx-hv-t">Buys from you</text></g>
-          <line class="fx-hv-beam" x1="230" y1="470" x2="230" y2="116"></line>
-          <circle class="fx-hv-sig" r="6"><animateMotion dur="3.6s" repeatCount="indefinite" path="M230 470 L230 116"></animateMotion><animate attributeName="opacity" dur="3.6s" repeatCount="indefinite" values="0;1;1;0" keyTimes="0;.1;.85;1"></animate></circle>
-          <circle class="fx-hv-ping" cx="230" cy="116" r="10"></circle>
-        </svg></div>
+      <!--sp:hero--><div class="fx-hv2" aria-hidden="true"><svg viewBox="0 0 470 520">
+          <defs><pattern id="fxbpGrid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#E6DFD2" stroke-width="1"></path></pattern>
+          <linearGradient id="fxbpFade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"></stop><stop offset="1" stop-color="#fff" stop-opacity="0"></stop></linearGradient>
+          <mask id="fxbpM"><rect width="470" height="520" fill="url(#fxbpFade)"></rect></mask></defs>
+          <rect width="470" height="520" fill="url(#fxbpGrid)" mask="url(#fxbpM)" class="fx-bp2-grid"></rect>
+          <g class="fx-bp2-card">
+            <rect class="d f" pathLength="1" x="70" y="40" width="300" height="300" rx="16" style="--s:0"></rect>
+            <path class="d banner" pathLength="1" d="M71 56 Q71 41 86 41 H354 Q369 41 369 56 V100 H71 Z" style="--s:.15"></path>
+            <circle class="d f" pathLength="1" cx="122" cy="104" r="30" style="--s:.3"></circle>
+            <rect class="d bar" pathLength="1" x="92" y="148" width="150" height="12" rx="3" style="--s:.42"></rect>
+            <rect class="d bar sig" pathLength="1" x="92" y="170" width="220" height="10" rx="3" style="--s:.52"></rect>
+            <rect class="d tile" pathLength="1" x="92" y="206" width="78" height="56" rx="8" style="--s:.62"></rect>
+            <rect class="d tile" pathLength="1" x="181" y="206" width="78" height="56" rx="8" style="--s:.68"></rect>
+            <rect class="d tile" pathLength="1" x="270" y="206" width="78" height="56" rx="8" style="--s:.74"></rect>
+            <rect class="d bar" pathLength="1" x="92" y="282" width="256" height="8" rx="3" style="--s:.8"></rect>
+            <rect class="d bar" pathLength="1" x="92" y="300" width="190" height="8" rx="3" style="--s:.84"></rect>
+          </g>
+          <g class="fx-bp2-post">
+            <rect class="d f" pathLength="1" x="110" y="364" width="300" height="118" rx="14" style="--s:.9"></rect>
+            <circle class="d" pathLength="1" cx="140" cy="394" r="13" style="--s:.95"></circle>
+            <rect class="d bar" pathLength="1" x="162" y="388" width="120" height="8" rx="3" style="--s:1"></rect>
+            <rect class="d bar" pathLength="1" x="130" y="420" width="256" height="8" rx="3" style="--s:1.04"></rect>
+            <rect class="d bar" pathLength="1" x="130" y="436" width="210" height="8" rx="3" style="--s:1.08"></rect>
+            <g class="fx-bp2-react"><circle cx="138" cy="462" r="5"></circle><circle cx="150" cy="462" r="5"></circle><circle cx="162" cy="462" r="5"></circle><text x="176" y="466">Shared by a CISO</text></g>
+          </g>
+          <g class="fx-bp2-notes">
+            <g style="--n:0"><path d="M312 175 H400 V128 H420"></path><circle cx="312" cy="175" r="3"></circle><text x="426" y="124">01</text><text x="426" y="138" class="nt">Positioning</text></g>
+            <g style="--n:1"><path d="M348 234 H440"></path><circle cx="348" cy="234" r="3"></circle><text x="426" y="222">02</text><text x="426" y="252" class="nt">Proof</text></g>
+            <g style="--n:2"><path d="M70 420 H30 V470 H18"></path><circle cx="110" cy="420" r="3"></circle><path d="M110 420 H70"></path><text x="4" y="488">03</text><text x="4" y="502" class="nt">Authority</text></g>
+          </g>
+          <g class="fx-bp2-badge"><circle cx="352" cy="58" r="20"></circle><text x="352" y="63" text-anchor="middle">+12</text></g>
+          <g class="fx-bp2-badgelab"><path d="M372 58 H420 V30 H426"></path><text x="430" y="26">04</text><text x="430" y="40" class="nt">Signals</text></g>
+        </svg><p class="fx-bp2-cap fx-label">12 buyers viewed this week</p></div>
       <!--/sp:hero--><p class="fx-label fx-in" style="margin: 0 0 28px">Authority-to-Pipeline System for B2B Tech Companies</p>
       <h1 class="fx-display" style="font-size: clamp(32px, 3.7vw, 56px); line-height: 1.06; max-width: 30ch"><span class="fx-ln"><span style="--d: 0">We build <em>infrastructure</em></span></span><span class="fx-ln"><span style="--d: 1">for how the market finds,</span></span><span class="fx-ln"><span style="--d: 2">understands, trusts, and buys.</span></span></h1>
       <p class="fx-lede fx-in fx-in-3" style="margin: 28px 0 0; max-width: 58ch">Your delivery is ahead of your market position. FrameX builds the system that closes the gap, on the channel where your buyers already vet you.</p>
@@ -2342,17 +2436,48 @@ html{scroll-behavior:smooth}
   <!-- 15 FINAL CTA -->
   <section id="contact" style="position: relative; overflow: hidden; padding: clamp(64px, 7vw, 96px) 0 clamp(88px, 9vw, 136px); background: radial-gradient(70% 85% at 50% 115%, rgba(255,91,46,0.11) 0%, rgba(255,91,46,0.035) 42%, rgba(255,91,46,0) 75%), linear-gradient(180deg, #FAF8F4 0%, #F3EFE8 100%)">
     <div aria-hidden="true" class="fx-breathe"></div><!--sp:cta-->
-    <div class="fx-wrap fx-cx" style="position: relative">
+    <div class="fx-wrap fx-lp-wrap" style="position: relative">
       <div class="fx-cx-head">
         <p class="fx-label" style="margin: 0">Book a call</p>
-        <h2 class="fx-display">Find out where your <span class="fx-drip"><em>pipeline is leaking.</em><span class="fx-drops" aria-hidden="true"><i class="fx-dr" style="left:8%; --d:0s; --t:2.6s"></i><i class="fx-dr" style="left:31%; --d:1.1s; --t:2.2s"></i><i class="fx-dr" style="left:52%; --d:0.5s; --t:2.9s"></i><i class="fx-dr" style="left:74%; --d:1.7s; --t:2.4s"></i><i class="fx-dr" style="left:93%; --d:0.9s; --t:2.7s"></i><i class="fx-rp" style="left:8%; --d:0s; --t:2.6s"></i><i class="fx-rp" style="left:31%; --d:1.1s; --t:2.2s"></i><i class="fx-rp" style="left:52%; --d:0.5s; --t:2.9s"></i><i class="fx-rp" style="left:74%; --d:1.7s; --t:2.4s"></i><i class="fx-rp" style="left:93%; --d:0.9s; --t:2.7s"></i></span></span></h2>
+        <h2 class="fx-display">Find out where your <em>pipeline is leaking.</em></h2>
       </div>
-      <div class="fx-cx-floor" aria-hidden="true"></div>
-      <div class="fx-cx-body">
-        <p class="fx-cx-intro">On the call we look at three things, then tell you where we can improve.</p>
-        <ol class="fx-cx-list"><li style="--i:0"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="17" r="8"></circle><path d="M9 41c0-9 7-14 15-14s15 5 15 14"></path></svg><span class="fx-label">01</span><strong>Your founder profile</strong><span class="fx-cx-q">Does it say who you help, and why you?</span></li><li style="--i:1"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 6h18l8 8v28H12z"></path><path d="M30 6v8h8"></path><path d="M18 24h14M18 31h14M18 38h9"></path></svg><span class="fx-label">02</span><strong>The content you publish</strong><span class="fx-cx-q">Would a buyer learn something, or scroll past?</span></li><li style="--i:2"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M7 10h26v18H17l-8 7v-7H7z"></path><path d="M23 33v3h10l7 6v-6h3V20h-6"></path></svg><span class="fx-label">03</span><strong>How your conversations start</strong><span class="fx-cx-q">Do they open with context, or a pitch?</span></li></ol>
-        <a class="fx-btn fx-btn-primary fx-cx-btn" href="#contact">Book a call</a>
-      </div>
+      <figure class="fx-lp" aria-label="A pipeline carrying demand from your market to revenue. It leaks in three places: an unclear profile, no follow-up, and pitch-first outreach. Only a trickle reaches revenue.">
+        <div class="fx-lp-stage">
+          <svg viewBox="0 0 970 400" aria-hidden="true">
+            <defs>
+              <linearGradient id="fxlpFlow" x1="40" x2="930" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FF5B2E"></stop><stop offset=".55" stop-color="#FF5B2E" stop-opacity=".55"></stop><stop offset="1" stop-color="#FF5B2E" stop-opacity=".18"></stop></linearGradient>
+              <pattern id="fxlpDots" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="1" fill="#0C0E0D" fill-opacity=".16"></circle></pattern>
+            </defs>
+            <line class="fx-lp-floor" x1="20" y1="360" x2="950" y2="360"></line>
+            <path class="fx-lp-outer" d="M40 110 H250 Q300 110 300 160 V170 Q300 220 350 220 H630 Q680 220 680 170 V160 Q680 120 730 120 H930"></path>
+            <path class="fx-lp-inner" d="M40 110 H250 Q300 110 300 160 V170 Q300 220 350 220 H630 Q680 220 680 170 V160 Q680 120 730 120 H930"></path>
+            <path class="fx-lp-flow" d="M40 110 H250 Q300 110 300 160 V170 Q300 220 350 220 H630 Q680 220 680 170 V160 Q680 120 730 120 H930"></path>
+            <rect class="fx-lp-flange" x="105" y="84" width="10" height="52" rx="2"></rect><rect class="fx-lp-flange" x="405" y="194" width="10" height="52" rx="2"></rect><rect class="fx-lp-flange" x="565" y="194" width="10" height="52" rx="2"></rect><rect class="fx-lp-flange" x="855" y="94" width="10" height="52" rx="2"></rect>
+            <g class="fx-lp-leak" style="--k:0">
+            <path class="fx-lp-crack" d="M160 129 l5 -7 l5 6 l5 -8 l5 7"></path>
+            <path class="fx-lp-spray" d="M166 131 q-14 10 -22 26 M174 131 q14 10 22 26"></path>
+            <circle class="fx-lp-drop" cx="167" cy="130" r="4" style="--fall:224px;animation-delay:0s;animation-duration:1.5s"></circle><circle class="fx-lp-drop" cx="174" cy="130" r="3" style="--fall:224px;animation-delay:0.55s;animation-duration:1.7s"></circle><circle class="fx-lp-drop" cx="170" cy="130" r="3.4" style="--fall:224px;animation-delay:1.05s;animation-duration:1.4s"></circle><circle class="fx-lp-drop" cx="164" cy="130" r="2.4" style="--fall:224px;animation-delay:0.3s;animation-duration:1.9s"></circle>
+            <ellipse class="fx-lp-pool" cx="170" cy="360" rx="46" ry="7" style="animation-delay:0.0s"></ellipse>
+          </g><g class="fx-lp-leak" style="--k:1">
+            <path class="fx-lp-crack" d="M480 239 l5 -7 l5 6 l5 -8 l5 7"></path>
+            <path class="fx-lp-spray" d="M486 241 q-14 10 -22 26 M494 241 q14 10 22 26"></path>
+            <circle class="fx-lp-drop" cx="487" cy="240" r="4" style="--fall:114px;animation-delay:0s;animation-duration:1.5s"></circle><circle class="fx-lp-drop" cx="494" cy="240" r="3" style="--fall:114px;animation-delay:0.55s;animation-duration:1.7s"></circle><circle class="fx-lp-drop" cx="490" cy="240" r="3.4" style="--fall:114px;animation-delay:1.05s;animation-duration:1.4s"></circle><circle class="fx-lp-drop" cx="484" cy="240" r="2.4" style="--fall:114px;animation-delay:0.3s;animation-duration:1.9s"></circle>
+            <ellipse class="fx-lp-pool" cx="490" cy="360" rx="46" ry="7" style="animation-delay:0.4s"></ellipse>
+          </g><g class="fx-lp-leak" style="--k:2">
+            <path class="fx-lp-crack" d="M795 139 l5 -7 l5 6 l5 -8 l5 7"></path>
+            <path class="fx-lp-spray" d="M801 141 q-14 10 -22 26 M809 141 q14 10 22 26"></path>
+            <circle class="fx-lp-drop" cx="802" cy="140" r="4" style="--fall:214px;animation-delay:0s;animation-duration:1.5s"></circle><circle class="fx-lp-drop" cx="809" cy="140" r="3" style="--fall:214px;animation-delay:0.55s;animation-duration:1.7s"></circle><circle class="fx-lp-drop" cx="805" cy="140" r="3.4" style="--fall:214px;animation-delay:1.05s;animation-duration:1.4s"></circle><circle class="fx-lp-drop" cx="799" cy="140" r="2.4" style="--fall:214px;animation-delay:0.3s;animation-duration:1.9s"></circle>
+            <ellipse class="fx-lp-pool" cx="805" cy="360" rx="46" ry="7" style="animation-delay:0.8s"></ellipse>
+          </g>
+            <g class="fx-lp-in"><path d="M8 92 h22 M8 110 h22 M8 128 h22"></path></g>
+            <g class="fx-lp-out"><circle class="fx-lp-trickle" cx="938" cy="140" r="2.6"></circle><circle class="fx-lp-trickle" cx="938" cy="140" r="2" style="animation-delay:1.1s"></circle><path class="fx-lp-cup" d="M912 236 L922 300 H954 L964 236"></path><path class="fx-lp-level" d="M921 292 H955"></path></g>
+          </svg>
+          <span class="fx-lp-end fx-lp-end-l">Your market</span>
+          <span class="fx-lp-end fx-lp-end-r">Revenue</span>
+          <div class="fx-lp-lab" style="left:17.53%"><b>Leak 01</b><span>Unclear profile</span><em>Buyers can’t tell what you do</em></div><div class="fx-lp-lab" style="left:50.52%"><b>Leak 02</b><span>No follow-up</span><em>Interest goes cold</em></div><div class="fx-lp-lab" style="left:82.99%"><b>Leak 03</b><span>Pitch-first outreach</span><em>Conversations stall</em></div>
+        </div>
+      </figure>
+      <a class="fx-btn fx-btn-primary fx-cx-btn" href="#contact">Book a call</a>
     </div>
   <!--/sp:cta--></section>
 
