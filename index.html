@@ -1222,6 +1222,17 @@ footer{padding:22px 0 26px !important}
   .fx-gapb .fx-gv-cap{height:3.2em}
 }
 @media (prefers-reduced-motion:reduce){.fx-br-mh{animation:none}.fx-br-faller,.fx-br-runner{display:none}}
+/* ---------- v37: problem section spacing ---------- */
+@media (min-width:861px){
+  .fx-hs-on .fx-hs-sticky{padding-top:clamp(40px,7vh,72px);padding-bottom:clamp(24px,4.5vh,44px)}
+  .fx-hs-on .fx-hs-viewport{padding-top:clamp(20px,4vh,40px);align-items:center}
+  .fx-hs-on .fx-stk{height:min(100%,520px);align-items:center;padding:clamp(28px,4.5vh,44px) 48px}
+  .fx-stk-head{align-self:center;padding-top:0}
+  .vz{height:auto;align-self:center;justify-content:center;gap:18px}
+  .vz .li + .fx-pill{margin-top:0;align-self:flex-start}
+  .vz::after{display:none}
+  .fx-hs-on .fx-hs-meter{padding-top:clamp(18px,3.5vh,32px)}
+}
 
 /* standalone site extras */
 html{scroll-behavior:smooth}
