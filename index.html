@@ -1701,6 +1701,33 @@ section[aria-label="Market evidence"] .fx-reveal{align-items:center !important}
 @media (max-width:560px){.fx-bn{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){.fx-bn-c *{animation:none !important}.bn-jar{display:none}.bn-clear,.bn-msg2{opacity:1}}
 /* ---------- /v50 ---------- */
+/* ---------- v51 benefits before/after ---------- */
+.fx-ba{margin-top:clamp(48px,6vw,80px);background:#FFFDF8;border:1px solid #E3DCCD;border-radius:28px;padding:clamp(24px,3.4vw,48px);box-shadow:0 40px 80px -60px rgba(120,90,40,.45)}
+.fx-ba-switch{display:flex;align-items:center;gap:14px;font-family:'Spline Sans Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:clamp(20px,3vw,36px)}
+.fx-ba-switch .l{animation:baL 9s infinite}.fx-ba-switch .r{animation:baR 9s infinite}
+.fx-ba-track{position:relative;width:58px;height:30px;border-radius:999px;background:#E3DCCD;animation:baTrack 9s infinite}
+.fx-ba-track i{position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:#FFF;box-shadow:0 2px 6px rgba(0,0,0,.18);animation:baKnob 9s cubic-bezier(.6,0,.2,1) infinite}
+@keyframes baKnob{0%,42%{transform:none}50%,92%{transform:translateX(28px)}100%{transform:none}}
+@keyframes baTrack{0%,42%{background:#E3DCCD}50%,92%{background:#FF5B2E}100%{background:#E3DCCD}}
+@keyframes baL{0%,42%{color:#0C0E0D}50%,92%{color:#A8A397}100%{color:#0C0E0D}}
+@keyframes baR{0%,42%{color:#A8A397}50%,92%{color:#B83A14}100%{color:#A8A397}}
+.fx-ba-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(28px,4vw,64px)}
+.fx-ba-r{display:grid;grid-template-columns:auto 1fr;gap:18px;padding:22px 0;border-top:1px solid #ECE7DE}
+.fx-ba-n{font-family:'Newsreader',Georgia,serif;font-size:clamp(34px,3.2vw,48px);line-height:.9;color:#D9D3C7;animation:baNum 9s infinite;animation-delay:calc(var(--i) * .12s)}
+@keyframes baNum{0%,42%{color:#D9D3C7}50%,92%{color:#FF5B2E}100%{color:#D9D3C7}}
+.fx-ba-main h3{margin:0 0 8px;font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:clamp(21px,1.9vw,26px);line-height:1.15}
+.fx-ba-swap{position:relative;height:1.6em;font-size:15px;overflow:hidden}
+.fx-ba-swap span{position:absolute;left:0;top:0;white-space:nowrap;animation-duration:9s;animation-iteration-count:infinite;animation-delay:calc(var(--i) * .12s)}
+.fx-ba-before{color:#8C877C;text-decoration:line-through;text-decoration-color:rgba(255,91,46,.7);animation-name:baOut}
+.fx-ba-after{color:#0C0E0D;font-weight:500;animation-name:baIn;opacity:0}
+@keyframes baOut{0%,42%{opacity:1;transform:none}50%,92%{opacity:0;transform:translateY(-100%)}100%{opacity:1;transform:none}}
+@keyframes baIn{0%,42%{opacity:0;transform:translateY(100%)}50%,92%{opacity:1;transform:none}100%{opacity:0;transform:translateY(100%)}}
+.fx-ba-bar{margin-top:12px;height:6px;border-radius:999px;background:#F0EBE2;overflow:hidden}
+.fx-ba-bar i{display:block;height:100%;border-radius:999px;background:#A8A397;width:calc(var(--b) * 100%);animation:baBar 9s cubic-bezier(.6,0,.2,1) infinite;animation-delay:calc(var(--i) * .12s)}
+@keyframes baBar{0%,42%{width:calc(var(--b) * 100%);background:#A8A397}50%,92%{width:calc(var(--a) * 100%);background:#FF5B2E}100%{width:calc(var(--b) * 100%);background:#A8A397}}
+@media (max-width:860px){.fx-ba-list{grid-template-columns:1fr}.fx-ba-swap{height:auto;min-height:3.2em}.fx-ba-swap span{white-space:normal}}
+@media (prefers-reduced-motion:reduce){.fx-ba *{animation:none !important}.fx-ba-before{display:none}.fx-ba-after{opacity:1;position:static}.fx-ba-bar i{width:calc(var(--a) * 100%);background:#FF5B2E}}
+/* ---------- /v51 ---------- */
 
 /* standalone site extras */
 html{scroll-behavior:smooth}
@@ -1949,7 +1976,10 @@ html{scroll-behavior:smooth}
         </div>
         <p class="fx-lede fx-bn-lede">Fix the leaks and the same expertise starts working for you: found earlier, understood faster, trusted before the first call.</p>
       </div>
-      <ol class="fx-bn"><li class="fx-bn-c" style="--i: 0"><svg viewBox="0 0 236 100" aria-hidden="true"><g class="bn-rank"><rect class="r r1" x="20" y="18" width="150" height="14" rx="4"></rect><rect class="r r2" x="20" y="44" width="120" height="14" rx="4"></rect><rect class="r r3 you" x="20" y="70" width="170" height="14" rx="4"></rect></g><text x="200" y="30" class="bn-t">#1</text><text x="200" y="56" class="bn-t">#2</text><text x="200" y="82" class="bn-t">#3</text></svg><span class="fx-label fx-sig">01</span><h3>Shortlisted earlier</h3><p>Buyers find you while they're still building the list, not after it's ranked.</p></li><li class="fx-bn-c" style="--i: 1"><svg viewBox="0 0 236 100" aria-hidden="true"><g class="bn-jar"><text x="20" y="34">Digital transformation</text><text x="20" y="58">End-to-end solutions</text></g><g class="bn-clear"><text x="20" y="46">We pass fintech SOC 2 in 9 weeks.</text><rect x="20" y="54" width="196" height="3" rx="1.5"></rect></g></svg><span class="fx-label fx-sig">02</span><h3>Understood in one read</h3><p>Your profile says who you help and why you, in a sentence a buyer can repeat.</p></li><li class="fx-bn-c" style="--i: 2"><svg viewBox="0 0 236 100" aria-hidden="true"><circle class="bn-ring" cx="118" cy="50" r="12"></circle><circle class="bn-ring b" cx="118" cy="50" r="12"></circle><circle cx="118" cy="50" r="7" class="bn-dot"></circle><path class="bn-msg" d="M160 30 h56 v26 h-40 l-8 8 v-8 h-8 z"></path><path class="bn-msg2" d="M20 58 h52 v24 h-8 v8 l-8 -8 h-36 z"></path></svg><span class="fx-label fx-sig">03</span><h3>Warmer conversations</h3><p>Outreach starts from a real trigger and business context, so replies come back.</p></li><li class="fx-bn-c" style="--i: 3"><svg viewBox="0 0 236 100" aria-hidden="true"><g class="bn-bars"><rect x="28" y="66" width="22" height="22" rx="3" style="--i:0"></rect><rect x="62" y="56" width="22" height="32" rx="3" style="--i:1"></rect><rect x="96" y="44" width="22" height="44" rx="3" style="--i:2"></rect><rect x="130" y="30" width="22" height="58" rx="3" style="--i:3"></rect><rect x="164" y="14" width="22" height="74" rx="3" style="--i:4" class="hot"></rect></g><line x1="20" y1="89" x2="216" y2="89" class="bn-base"></line></svg><span class="fx-label fx-sig">04</span><h3>Pipeline you can see</h3><p>Every signal and conversation is logged, so you know what moved and what to do next.</p></li></ol>
+      <div class="fx-ba">
+        <div class="fx-ba-switch" aria-hidden="true"><span class="l">Before FrameX</span><span class="fx-ba-track"><i></i></span><span class="r">After FrameX</span></div>
+        <ol class="fx-ba-list"><li class="fx-ba-r" style="--i: 0; --b: 0.18; --a: 0.88"><span class="fx-ba-n">01</span><div class="fx-ba-main"><h3>Shortlisted earlier</h3><div class="fx-ba-swap"><span class="fx-ba-before">Page 4, where nobody scrolls</span><span class="fx-ba-after">On the shortlist before the first call</span></div><div class="fx-ba-bar"><i></i></div></div></li><li class="fx-ba-r" style="--i: 1; --b: 0.25; --a: 0.92"><span class="fx-ba-n">02</span><div class="fx-ba-main"><h3>Understood in one read</h3><div class="fx-ba-swap"><span class="fx-ba-before">“Digital transformation partner”</span><span class="fx-ba-after">“We pass fintech SOC 2 in 9 weeks”</span></div><div class="fx-ba-bar"><i></i></div></div></li><li class="fx-ba-r" style="--i: 2; --b: 0.12; --a: 0.8"><span class="fx-ba-n">03</span><div class="fx-ba-main"><h3>Warmer conversations</h3><div class="fx-ba-swap"><span class="fx-ba-before">Cold pitch, no reply</span><span class="fx-ba-after">Trigger-led message, call booked</span></div><div class="fx-ba-bar"><i></i></div></div></li><li class="fx-ba-r" style="--i: 3; --b: 0.2; --a: 0.86"><span class="fx-ba-n">04</span><div class="fx-ba-main"><h3>Pipeline you can see</h3><div class="fx-ba-swap"><span class="fx-ba-before">Deals live in someone’s head</span><span class="fx-ba-after">Every signal logged, next step clear</span></div><div class="fx-ba-bar"><i></i></div></div></li></ol>
+      </div>
     </div>
   </section>
 
