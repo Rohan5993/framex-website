@@ -1801,6 +1801,47 @@ section[aria-label="Market evidence"] .fx-reveal{align-items:center !important}
 @media (max-width:520px){.fx-kt-cols{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){.fx-kt *{animation:none !important}.fx-kt-roll span{position:static;opacity:1;display:block}.fx-kt-roll span+span{display:none}.fx-kt-cols h3{color:#0C0E0D}}
 /* ---------- /v53 ---------- */
+/* ---------- v54 benefits split-flap ---------- */
+.fx-sf{margin-top:clamp(48px,6vw,80px);background:#E9E3D8;border-radius:24px;padding:clamp(18px,2.6vw,34px);box-shadow:inset 0 2px 0 rgba(255,255,255,.5),0 40px 80px -60px rgba(120,90,40,.5)}
+.sf-head{display:flex;justify-content:space-between;align-items:center;font-family:'Spline Sans Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#3F3C36;padding:0 4px 16px;border-bottom:1px solid #D4CCBD}
+.sf-head em{font-style:italic;color:#B83A14}
+.sf-live{display:flex;align-items:center;gap:8px;color:#B83A14}
+.sf-live i{width:8px;height:8px;border-radius:50%;background:#FF5B2E;animation:sfBlink 1.4s ease-in-out infinite}
+@keyframes sfBlink{50%{opacity:.25}}
+.sf-cols,.sf-row{display:grid;grid-template-columns:44px 360px 32px 1fr;row-gap:8px;align-items:center;column-gap:14px}
+.sf-cols{font-family:'Spline Sans Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#7A756B;padding:14px 4px 6px}
+.sf-cols span:nth-child(2){grid-column:2/3}
+.sf-board{list-style:none;margin:0;padding:0}
+.sf-row{padding:12px 4px;border-top:1px dashed #D4CCBD}
+.sf-no{font-family:'Spline Sans Mono',monospace;font-size:12px;color:#B83A14}
+.sf-f{display:flex;flex-wrap:nowrap;gap:3px}
+.sf-a{min-width:0}
+.sf-t{position:relative;width:24px;height:34px;border-radius:4px;background:#FFFDF8;box-shadow:0 1px 0 rgba(0,0,0,.08);perspective:200px;font-family:'Spline Sans Mono',monospace;font-size:18px;font-weight:500;color:#0C0E0D}
+.sf-t::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(12,14,13,.12)}
+.sf-t b,.sf-t i{position:absolute;inset:0;display:grid;place-items:center;font-style:normal;font-weight:500;backface-visibility:hidden}
+.sf-b .sf-t{background:#0C0E0D;color:#FF5B2E}
+.sf-b .sf-t::after{background:rgba(250,248,244,.12)}
+.sf-b .sf-t b{color:#5F5B53}
+.sf-t.fl b{animation:sfOut 12s infinite;animation-delay:var(--d)}
+.sf-t.fl i{animation:sfIn 12s infinite;animation-delay:var(--d);transform:rotateX(-90deg)}
+@keyframes sfOut{0%{transform:none}3%,92%{transform:rotateX(90deg)}95%,100%{transform:none}}
+@keyframes sfIn{0%,3%{transform:rotateX(-90deg)}6%,90%{transform:none}93%,100%{transform:rotateX(-90deg)}}
+.sf-gap{width:12px}
+.sf-arrow{font-size:20px;color:#B83A14;text-align:center}
+.sf-d{grid-column:4;font-size:14px;line-height:1.45;color:#3F3C36}
+@media (max-width:1180px){.sf-cols,.sf-row{grid-template-columns:44px 330px 32px 1fr}}
+@media (max-width:860px){
+  .sf-cols{display:none}
+  .sf-row{grid-template-columns:30px 1fr;row-gap:8px}
+  .sf-arrow{display:none}
+  .sf-a{min-width:0}
+  .sf-b{grid-column:2}
+  .sf-t{width:clamp(13px,3.7vw,22px);height:clamp(22px,6vw,30px);font-size:clamp(10px,3.1vw,16px)}
+  .sf-f{gap:2px}.sf-gap{width:6px}
+  .sf-d{display:block;grid-column:2;padding-left:0}
+}
+@media (prefers-reduced-motion:reduce){.sf-t.fl b{display:none}.sf-t.fl i{transform:none;animation:none}}
+/* ---------- /v54 ---------- */
 
 /* standalone site extras */
 html{scroll-behavior:smooth}
@@ -2049,10 +2090,10 @@ html{scroll-behavior:smooth}
         </div>
         <p class="fx-lede fx-bn-lede">Fix the leaks and the same expertise starts working for you: found earlier, understood faster, trusted before the first call.</p>
       </div>
-      <div class="fx-kt">
-        <p class="fx-kt-pre fx-label">With Frame<em>X</em> running</p>
-        <div class="fx-kt-line"><span class="fx-kt-fixed">Your buyers</span> <span class="fx-kt-roll" aria-label="find you first, get you in one read, trust you before the call, reply and keep replying"><span style="--i: 0">find you first.</span><span style="--i: 1">get you in one read.</span><span style="--i: 2">trust you before the call.</span><span style="--i: 3">reply, and keep replying.</span></span></div>
-        <ol class="fx-kt-cols"><li style="--i: 0"><i class="fx-kt-bar"><b></b></i><span class="fx-label">01</span><h3>Found earlier</h3><p>Buyers find you while they're still building the list, not after it's ranked.</p></li><li style="--i: 1"><i class="fx-kt-bar"><b></b></i><span class="fx-label">02</span><h3>Understood in one read</h3><p>Your profile says who you help and why you, in a sentence a buyer can repeat.</p></li><li style="--i: 2"><i class="fx-kt-bar"><b></b></i><span class="fx-label">03</span><h3>Trusted before the call</h3><p>Proof and perspective do the convincing, so the first call starts at how, not who.</p></li><li style="--i: 3"><i class="fx-kt-bar"><b></b></i><span class="fx-label">04</span><h3>Conversations that convert</h3><p>Outreach starts from real triggers, and every signal is logged so nothing goes cold.</p></li></ol>
+      <div class="fx-sf" aria-label="Benefits: found, on the shortlist. Understood, in one read. Trusted, before the call. Conversations, booked.">
+        <div class="sf-head"><span>Frame<em>X</em> · Status board</span><span class="sf-live"><i></i>Live</span></div>
+        <div class="sf-cols"><span>No.</span><span>Your buyers</span><span></span><span>Status</span></div>
+        <ol class="sf-board" aria-hidden="true"><li class="sf-row"><span class="sf-no">01</span><span class="sf-f sf-a"><span class="sf-t"><i>F</i></span><span class="sf-t"><i>O</i></span><span class="sf-t"><i>U</i></span><span class="sf-t"><i>N</i></span><span class="sf-t"><i>D</i></span></span><span class="sf-arrow">→</span><span class="sf-f sf-b"><span class="sf-t fl" style="--d:0.00s"><b>T</b><i>O</i></span><span class="sf-t fl" style="--d:0.07s"><b>Z</b><i>N</i></span><span class="sf-gap"></span><span class="sf-t fl" style="--d:0.21s"><b>B</b><i>T</i></span><span class="sf-t fl" style="--d:0.28s"><b>6</b><i>H</i></span><span class="sf-t fl" style="--d:0.35s"><b>S</b><i>E</i></span><span class="sf-gap"></span><span class="sf-t fl" style="--d:0.49s"><b>D</b><i>S</i></span><span class="sf-t fl" style="--d:0.56s"><b>L</b><i>H</i></span><span class="sf-t fl" style="--d:0.63s"><b>H</b><i>O</i></span><span class="sf-t fl" style="--d:0.70s"><b>0</b><i>R</i></span><span class="sf-t fl" style="--d:0.77s"><b>7</b><i>T</i></span><span class="sf-t fl" style="--d:0.84s"><b>S</b><i>L</i></span><span class="sf-t fl" style="--d:0.91s"><b>1</b><i>I</i></span><span class="sf-t fl" style="--d:0.98s"><b>G</b><i>S</i></span><span class="sf-t fl" style="--d:1.05s"><b>S</b><i>T</i></span></span><span class="sf-d">Buyers find you while they're still building the list.</span></li><li class="sf-row"><span class="sf-no">02</span><span class="sf-f sf-a"><span class="sf-t"><i>U</i></span><span class="sf-t"><i>N</i></span><span class="sf-t"><i>D</i></span><span class="sf-t"><i>E</i></span><span class="sf-t"><i>R</i></span><span class="sf-t"><i>S</i></span><span class="sf-t"><i>T</i></span><span class="sf-t"><i>O</i></span><span class="sf-t"><i>O</i></span><span class="sf-t"><i>D</i></span></span><span class="sf-arrow">→</span><span class="sf-f sf-b"><span class="sf-t fl" style="--d:0.90s"><b>A</b><i>I</i></span><span class="sf-t fl" style="--d:0.97s"><b>P</b><i>N</i></span><span class="sf-gap"></span><span class="sf-t fl" style="--d:1.11s"><b>3</b><i>O</i></span><span class="sf-t fl" style="--d:1.18s"><b>U</b><i>N</i></span><span class="sf-t fl" style="--d:1.25s"><b>M</b><i>E</i></span><span class="sf-gap"></span><span class="sf-t fl" style="--d:1.39s"><b>1</b><i>R</i></span><span class="sf-t fl" style="--d:1.46s"><b>L</b><i>E</i></span><span class="sf-t fl" style="--d:1.53s"><b>E</b><i>A</i></span><span class="sf-t fl" style="--d:1.60s"><b>J</b><i>D</i></span></span><span class="sf-d">Your profile says who you help, and why you.</span></li><li class="sf-row"><span class="sf-no">03</span><span class="sf-f sf-a"><span class="sf-t"><i>T</i></span><span class="sf-t"><i>R</i></span><span class="sf-t"><i>U</i></span><span class="sf-t"><i>S</i></span><span class="sf-t"><i>T</i></span><span class="sf-t"><i>E</i></span><span class="sf-t"><i>D</i></span></span><span class="sf-arrow">→</span><span class="sf-f sf-b"><span class="sf-t fl" style="--d:1.80s"><b>5</b><i>B</i></span><span class="sf-t fl" style="--d:1.87s"><b>J</b><i>E</i></span><span class="sf-t fl" style="--d:1.94s"><b>J</b><i>F</i></span><span class="sf-t fl" style="--d:2.01s"><b>A</b><i>O</i></span><span class="sf-t fl" style="--d:2.08s"><b>A</b><i>R</i></span><span class="sf-t fl" style="--d:2.15s"><b>P</b><i>E</i></span><span class="sf-gap"></span><span class="sf-t fl" style="--d:2.29s"><b>P</b><i>T</i></span><span class="sf-t fl" style="--d:2.36s"><b>L</b><i>H</i></span><span class="sf-t fl" style="--d:2.43s"><b>L</b><i>E</i></span><span class="sf-gap"></span><span class="sf-t fl" style="--d:2.57s"><b>V</b><i>C</i></span><span class="sf-t fl" style="--d:2.64s"><b>X</b><i>A</i></span><span class="sf-t fl" style="--d:2.71s"><b>N</b><i>L</i></span><span class="sf-t fl" style="--d:2.78s"><b>P</b><i>L</i></span></span><span class="sf-d">Proof does the convincing before anyone books.</span></li><li class="sf-row"><span class="sf-no">04</span><span class="sf-f sf-a"><span class="sf-t"><i>C</i></span><span class="sf-t"><i>O</i></span><span class="sf-t"><i>N</i></span><span class="sf-t"><i>V</i></span><span class="sf-t"><i>E</i></span><span class="sf-t"><i>R</i></span><span class="sf-t"><i>S</i></span><span class="sf-t"><i>A</i></span><span class="sf-t"><i>T</i></span><span class="sf-t"><i>I</i></span><span class="sf-t"><i>O</i></span><span class="sf-t"><i>N</i></span><span class="sf-t"><i>S</i></span></span><span class="sf-arrow">→</span><span class="sf-f sf-b"><span class="sf-t fl" style="--d:2.70s"><b>M</b><i>B</i></span><span class="sf-t fl" style="--d:2.77s"><b>N</b><i>O</i></span><span class="sf-t fl" style="--d:2.84s"><b>1</b><i>O</i></span><span class="sf-t fl" style="--d:2.91s"><b>W</b><i>K</i></span><span class="sf-t fl" style="--d:2.98s"><b>B</b><i>E</i></span><span class="sf-t fl" style="--d:3.05s"><b>0</b><i>D</i></span></span><span class="sf-d">Trigger-led outreach that gets replies.</span></li></ol>
       </div>
     </div>
   </section>
