@@ -2,7 +2,7 @@
     <div class="fx-wrap">
       <div class="fx-reveal" style="display: flex; flex-direction: column; gap: 22px; max-width: 820px">
         <p class="fx-label" style="margin: 0">Why LinkedIn for B2B tech companies</p>
-        <h2 class="fx-display fx-h2">You are not late to take your piece of the pie, <em>yet!</em></h2>
+        <h2 class="fx-display fx-h2">You are not late to take your<br>piece of the pie, <em>yet!</em></h2>
       </div>
 
       <!-- Lead figure -->

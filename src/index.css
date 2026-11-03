@@ -12,10 +12,22 @@ body,
    preceding FAQ section's own bottom padding, leaving a very tall empty gap
    above "Book a call" / the pipeline diagram. Trim just the top of #contact. */
 #contact {
-  padding-top: clamp(40px, 4vw, 64px) !important;
+  padding-top: clamp(80px, 9vw, 140px) !important;
+}
+
+/* .fx-hs-sticky (the pinned Problem section) is a column flexbox. Its
+   .fx-wrap child centers itself with max-width + margin:auto, but per the
+   flexbox spec, auto cross-axis margins override "stretch" sizing, so the
+   wrap shrinks to fit its content instead of filling/centering at 1240px —
+   it drifts right and no longer lines up with the navbar logo. Give it an
+   explicit width so it stretches properly, then the existing max-width +
+   auto margins center it exactly like every other .fx-wrap on the page. */
+.fx-hs-sticky > .fx-wrap {
+  width: 100%;
 }
 #faq {
   padding-bottom: clamp(40px, 4vw, 64px);
+  margin-bottom: clamp(32px, 4vw, 56px);
 }
 
 /* Match the "FrameX" wordmark style everywhere: plain, bold orange X, no italic. */

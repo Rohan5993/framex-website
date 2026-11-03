@@ -19,7 +19,9 @@ export default function System() {
                 Our 6-step Authority-to-Pipeline System
               </p>
               <h2 className="fx-display fx-sys-h2">
-                Six connected systems. <em>One commercial path.</em>
+                Six connected systems.
+                <br />
+                <em>One commercial path.</em>
               </h2>
             </div>
             <p className="fx-lede fx-sys-lede" style={{ flex: "1 1 340px", maxWidth: "50ch" }}>

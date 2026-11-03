@@ -1,5 +1,5 @@
       <div class="fx-reveal fx-faq-l" style="display: flex; flex-direction: column; gap: 22px">
         <p class="fx-label" style="margin: 0">FAQ</p>
-        <h2 class="fx-display fx-h2 fx-faq-h">Questions<br><em>founders ask</em><br>first.</h2>
+        <h2 class="fx-display fx-h2 fx-faq-h">Questions<br><em>founders ask.</em></h2>
 <div class="fx-qm fx-sp" aria-hidden="true"><svg viewBox="0 0 160 220"><path class="fx-qm-ghost" d="M38 62 C38 26 66 12 86 12 C112 12 128 32 128 56 C128 84 104 92 92 104 C84 112 82 120 82 140"></path><path class="fx-qm-line" pathLength="1" d="M38 62 C38 26 66 12 86 12 C112 12 128 32 128 56 C128 84 104 92 92 104 C84 112 82 120 82 140"></path><circle class="fx-qm-ring" cx="82" cy="184" r="12"></circle><circle class="fx-qm-dot" cx="82" cy="184" r="12"></circle></svg></div>
       </div>

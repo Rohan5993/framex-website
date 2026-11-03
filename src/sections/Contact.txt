@@ -2,7 +2,6 @@
     <div aria-hidden="true" class="fx-breathe"></div><!--sp:cta-->
     <div class="fx-wrap fx-lp2" style="position: relative">
       <div class="fx-lp2-l">
-        <p class="fx-label" style="margin: 0">Book a call</p>
         <h2 class="fx-display fx-h2">Find out where your <em>pipeline is leaking.</em></h2>
         <p class="fx-lede">Most firms lose buyers in the same few places. We'll show you where yours leaks, and what it takes to seal it.</p>
         <a class="fx-btn fx-btn-primary" href="#contact">Book a call</a>

@@ -3,7 +3,7 @@
       <div class="fx-split" style="align-items: flex-start">
         <div style="flex: 1 1 460px; display: flex; flex-direction: column; gap: 14px">
           <p class="fx-label" style="margin: 0">Benefits</p>
-          <h2 class="fx-display fx-h2">What changes when <em>the system is live.</em></h2>
+          <h2 class="fx-display fx-h2">What changes when<br><em>the system is live.</em></h2>
         </div>
         <p class="fx-lede fx-bn-lede">Fix the leaks and the same expertise starts working for you: found earlier, understood faster, trusted before the first call.</p>
       </div>

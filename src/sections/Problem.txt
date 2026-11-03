@@ -5,7 +5,7 @@
         <div class="fx-split" style="align-items: flex-end; row-gap: 14px">
           <div style="flex: 1 1 460px; display: flex; flex-direction: column; gap: 14px">
             <p class="fx-label" style="margin: 0">The problem</p>
-            <h2 class="fx-display fx-h2">Where is your revenue <em>leaking</em> from?</h2>
+            <h2 class="fx-display fx-h2">Where is your revenue<br><em>leaking</em> from?</h2>
           </div>
           <p class="fx-lede" style="flex: 1 1 320px; max-width: 44ch">More content or DMs doesn't fix a broken commercial path. We find the leak first, then build the right system.</p>
         </div>
