@@ -1,91 +1,169 @@
 export const modules = [
   {
-    id: "m01",
-    num: "01",
-    short: "Positioning",
-    title: "Positioning Architecture",
-    tag: "Be understood in one read.",
-    fixes: "Understand",
-    note: null,
-    isClose: false,
-    files: [
-      ["positioning-brief", "ICP, buying triggers, three problems you'll own", "Once"],
-      ["message-map", "Claim → consequence → proof, by stakeholder", "Once"],
-      ["founder-profile", "Founder profile, plus up to two team profiles", "Once"],
-      ["translation-table", "For your website and sales deck", "Once"],
-    ],
+    "id": "m01",
+    "num": "01",
+    "short": "Positioning",
+    "title": "Positioning Architecture",
+    "tag": "Be understood in one read, starting with your LinkedIn profile.",
+    "fixes": "Understand",
+    "note": null,
+    "isClose": false,
+    "files": [
+      [
+        "positioning-brief",
+        "ICP, buying triggers, three problems you'll own",
+        "Once"
+      ],
+      [
+        "message-map",
+        "Claim → consequence → proof, by stakeholder",
+        "Once"
+      ],
+      [
+        "linkedin-profile",
+        "Founder profile rebuilt, plus up to two team profiles",
+        "Once"
+      ],
+      [
+        "translation-table",
+        "Buyer-language, for your profile and sales deck",
+        "Once"
+      ]
+    ]
   },
   {
-    id: "m02",
-    num: "02",
-    short: "Authority content",
-    title: "Authority Content",
-    tag: "Be associated with the problems that matter.",
-    fixes: "Find + Trust",
-    note: "Nothing is published without your approval.",
-    isClose: false,
-    files: [
-      ["editorial-architecture", "Themes × stakeholder × buying stage", "Once"],
-      ["founder-posts", "Volume set by need", "8–16 / month"],
-      ["capture-interview", "Your thinking, captured in 30 minutes", "Monthly"],
-    ],
+    "id": "m02",
+    "num": "02",
+    "short": "Authority content",
+    "title": "Authority Content",
+    "tag": "Be associated with the problems that matter, in the LinkedIn feed where your buyers scroll.",
+    "fixes": "Find + Trust",
+    "note": "Nothing is posted without your approval.",
+    "isClose": false,
+    "files": [
+      [
+        "editorial-architecture",
+        "Themes × stakeholder × buying stage",
+        "Once"
+      ],
+      [
+        "founder-posts",
+        "LinkedIn posts, volume set by need",
+        "8–16 / month"
+      ],
+      [
+        "capture-interview",
+        "Your thinking, captured in 30 minutes",
+        "Monthly"
+      ]
+    ]
   },
   {
-    id: "m03",
-    num: "03",
-    short: "Sales resources",
-    title: "Sales Resources",
-    tag: "Help the champion sell you internally.",
-    fixes: "Trust + Buy",
-    note: null,
-    isClose: false,
-    files: [
-      ["flagship-resource", "Plus one or two supporting assets", "Quarterly"],
-      ["landing-page", "Copy and a short follow-up sequence", "Per resource"],
-      ["champion-kit", "Four-sentence pitch, CFO one-pager, security answers", "Once"],
-    ],
+    "id": "m03",
+    "num": "03",
+    "short": "Decision resources",
+    "title": "Decision Resources",
+    "tag": "Help the buyer make, and defend, the decision: the assets you share in a LinkedIn conversation.",
+    "fixes": "Trust + Buy",
+    "note": null,
+    "isClose": false,
+    "files": [
+      [
+        "flagship-resource",
+        "Plus one or two supporting assets",
+        "Quarterly"
+      ],
+      [
+        "landing-page",
+        "Copy and a short follow-up sequence",
+        "Per resource"
+      ],
+      [
+        "decision-kit",
+        "Four-sentence pitch, finance one-pager, FAQ answers",
+        "Once"
+      ]
+    ]
   },
   {
-    id: "m04",
-    num: "04",
-    short: "Signal intelligence",
-    title: "Signal Intelligence",
-    tag: "Know who's moving, and why.",
-    fixes: "Find + Timing",
-    note: null,
-    isClose: false,
-    files: [
-      ["trigger-map", "Buying triggers for your subsegment", "Once"],
-      ["account-lists", "Curated accounts and leads", "Ongoing"],
-      ["signal-log", "Account, trigger, stakeholder, angle", "Weekly"],
-      ["signal-review", "Which signals became conversations", "Monthly"],
-    ],
+    "id": "m04",
+    "num": "04",
+    "short": "Signal intelligence",
+    "title": "Signal Intelligence",
+    "tag": "Know who's moving, and why, read from LinkedIn and Sales Navigator.",
+    "fixes": "Find + Timing",
+    "note": null,
+    "isClose": false,
+    "files": [
+      [
+        "trigger-map",
+        "Buying triggers for your niche",
+        "Once"
+      ],
+      [
+        "account-lists",
+        "Curated accounts and leads in Sales Navigator",
+        "Ongoing"
+      ],
+      [
+        "signal-log",
+        "Account, trigger, stakeholder, angle",
+        "Weekly"
+      ],
+      [
+        "signal-review",
+        "Which signals became conversations",
+        "Monthly"
+      ]
+    ]
   },
   {
-    id: "m05",
-    num: "05",
-    short: "Conversations",
-    title: "Conversation Framework",
-    tag: "Start with business context, not a pitch.",
-    fixes: "Buy",
-    note: null,
-    isClose: false,
-    files: [
-      ["conversation-playbook", "How every conversation opens and qualifies", "Once"],
-      ["manual-handling", "By hand, every day", "Daily"],
-      ["qualification-notes", "For every handover", "Per handover"],
-      ["conversation-ledger", "Shared, so nothing relies on memory", "Ongoing"],
-    ],
+    "id": "m05",
+    "num": "05",
+    "short": "Conversations",
+    "title": "Conversation Framework",
+    "tag": "Start LinkedIn conversations with business context, not a pitch. Run by hand, from your account, in your voice, never automated.",
+    "fixes": "Buy",
+    "note": null,
+    "isClose": false,
+    "files": [
+      [
+        "conversation-playbook",
+        "How every LinkedIn conversation opens and qualifies",
+        "Once"
+      ],
+      [
+        "manual-handling",
+        "By hand, from your account, every day",
+        "Daily"
+      ],
+      [
+        "qualification-notes",
+        "For every handover",
+        "Per handover"
+      ],
+      [
+        "conversation-ledger",
+        "Shared, so nothing relies on memory",
+        "Ongoing"
+      ]
+    ]
   },
   {
-    id: "m06",
-    num: "06",
-    short: "Pipeline revenue",
-    title: "Pipeline Revenue",
-    tag: "Qualified opportunities, with context.",
-    fixes: "Pipeline",
-    note: null,
-    isClose: true,
-    files: [["opportunity-handover", "Problem, trigger, stakeholders and notes", "Per opportunity"]],
-  },
+    "id": "m06",
+    "num": "06",
+    "short": "Pipeline revenue",
+    "title": "Pipeline Revenue",
+    "tag": "Qualified opportunities, with context, handed to your team.",
+    "fixes": "Pipeline",
+    "note": null,
+    "isClose": true,
+    "files": [
+      [
+        "opportunity-handover",
+        "Problem, trigger, stakeholders and notes",
+        "Per opportunity"
+      ]
+    ]
+  }
 ];

@@ -6,7 +6,7 @@ export default function Footer() {
           Frame<span style={{ fontWeight: 700, color: "#FF5B2E" }}>X</span>
         </span>
         <span className="fx-label" style={{ fontSize: 11 }}>
-          Authority-to-Pipeline System for B2B Tech Companies
+          The LinkedIn Authority-to-Pipeline System for B2B Founders & Firms
         </span>
         <span style={{ fontSize: 13, color: "#5F5B53" }}>&copy; {new Date().getFullYear()} FrameX</span>
       </div>

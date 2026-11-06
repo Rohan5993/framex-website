@@ -60,7 +60,7 @@ export default function Navbar() {
     <header className={"fx-navbar fx-nb" + (scrolled ? " fx-nb-scrolled" : "")} id="fxNavbar">
       <div className="fx-nb-meta fx-hide-sm">
         <div className="fx-wrap fx-nb-meta-in">
-          <span>Authority-to-Pipeline System &middot; B2B Tech</span>
+          <span>LinkedIn Authority-to-Pipeline <span>Authority-to-Pipeline System &middot; B2B Tech</span>middot; B2B Founders &amp; Firms</span>
           <span className="fx-nb-live">
             <i className="fx-nb-dot" aria-hidden="true" />
             Built in 14 days &middot; live on day 15

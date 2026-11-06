@@ -1,8 +1,9 @@
   <section id="linkedin" class="fx-sec">
     <div class="fx-wrap">
       <div class="fx-reveal" style="display: flex; flex-direction: column; gap: 22px; max-width: 820px">
-        <p class="fx-label" style="margin: 0">Why LinkedIn for B2B tech companies</p>
-        <h2 class="fx-display fx-h2">You are not late to take your<br>piece of the pie, <em>yet!</em></h2>
+        <p class="fx-label" style="margin: 0">Why LinkedIn</p>
+        <h2 class="fx-display fx-h2">Why LinkedIn, and not<br><em>everything at once.</em></h2>
+        <p class="fx-lede" style="margin: 0; max-width: 60ch">We run on LinkedIn on purpose. It's the one place your buyers go to check a real person's thinking before they decide to talk, and most firms in your space barely use it well. That's the opening.</p>
       </div>
 
       <!-- Lead figure -->
@@ -31,7 +32,7 @@
   </g>
   <g class="lg-call"><line x1="404" y1="16" x2="404" y2="160"></line><text x="398" y="158" text-anchor="end" class="lg-t">First contact</text></g>
 </svg></div>
-          <div class="fx-lg-body"><span class="fx-display fx-lg-num"><span class="fx-count" data-to="94" aria-hidden="true">94</span><span class="fx-sr">94</span><em>%</em></span><div><h3>The ranking happens before you're called.</h3><p>94% of buying groups rank preferred vendors before first contact, and buy from that pre-contact favourite 77% of the time.</p><span class="fx-chip">6sense</span></div></div>
+          <div class="fx-lg-body"><span class="fx-display fx-lg-num"><span class="fx-count" data-to="94" aria-hidden="true">94</span><span class="fx-sr">94</span><em>%</em></span><div><h3>The ranking happens before you're called.</h3><p>94% of buying groups rank preferred vendors before first contact, and buy from that pre-contact favourite 77% of the time. On LinkedIn, the founder's thinking is what gets ranked.</p><span class="fx-chip">6sense</span></div></div>
         </li>
         <li class="fx-lg fx-sp">
           <div class="fx-lg-viz"><svg viewBox="0 0 420 170" aria-hidden="true">
@@ -41,7 +42,7 @@
   <text x="210" y="128" text-anchor="middle" class="lg-t">67% want it rep-free</text>
   <text x="210" y="146" text-anchor="middle" class="lg-t lg-sig">69% still want a human</text>
 </svg></div>
-          <div class="fx-lg-body"><span class="fx-display fx-lg-num"><span class="fx-count" data-to="67" aria-hidden="true">67</span><span class="fx-sr">67</span><em>%</em></span><div><h3>Buyers want to vet without being sold to.</h3><p>67% prefer a rep-free buying experience, but 69% still want a human to validate what AI told them.</p><span class="fx-chip">Gartner</span></div></div>
+          <div class="fx-lg-body"><span class="fx-display fx-lg-num"><span class="fx-count" data-to="67" aria-hidden="true">67</span><span class="fx-sr">67</span><em>%</em></span><div><h3>Buyers want to vet you without being sold to.</h3><p>67% prefer a rep-free buying experience, but 69% still want a human to validate what AI told them. A founder's visible thinking on LinkedIn lets them do exactly that.</p><span class="fx-chip">Gartner</span></div></div>
         </li>
         <li class="fx-lg fx-sp">
           <div class="fx-lg-viz"><svg viewBox="0 0 420 170" aria-hidden="true">
@@ -49,14 +50,14 @@
   <g class="lg-p lg-hid" style="--i:0"><line class="lg-ray" pathLength="1" x1="210" y1="22" x2="42" y2="96"></line><circle cx="42" cy="104" r="9"></circle><path d="M26 140 C26 120 58 120 58 140"></path></g><g class="lg-p lg-hid" style="--i:1"><line class="lg-ray" pathLength="1" x1="210" y1="22" x2="98" y2="96"></line><circle cx="98" cy="104" r="9"></circle><path d="M82 140 C82 120 114 120 114 140"></path></g><g class="lg-p lg-met" style="--i:2"><line class="lg-ray" pathLength="1" x1="210" y1="22" x2="154" y2="96"></line><circle cx="154" cy="104" r="9"></circle><path d="M138 140 C138 120 170 120 170 140"></path></g><g class="lg-p lg-hid" style="--i:3"><line class="lg-ray" pathLength="1" x1="210" y1="22" x2="210" y2="96"></line><circle cx="210" cy="104" r="9"></circle><path d="M194 140 C194 120 226 120 226 140"></path></g><g class="lg-p lg-hid" style="--i:4"><line class="lg-ray" pathLength="1" x1="210" y1="22" x2="266" y2="96"></line><circle cx="266" cy="104" r="9"></circle><path d="M250 140 C250 120 282 120 282 140"></path></g><g class="lg-p lg-met" style="--i:5"><line class="lg-ray" pathLength="1" x1="210" y1="22" x2="322" y2="96"></line><circle cx="322" cy="104" r="9"></circle><path d="M306 140 C306 120 338 120 338 140"></path></g><g class="lg-p lg-hid" style="--i:6"><line class="lg-ray" pathLength="1" x1="210" y1="22" x2="378" y2="96"></line><circle cx="378" cy="104" r="9"></circle><path d="M362 140 C362 120 394 120 394 140"></path></g>
   <text x="0" y="166" class="lg-t">5 of 7 never meet sales</text><text x="420" y="166" text-anchor="end" class="lg-t lg-sig lg-late">Thought leadership reaches them</text>
 </svg></div>
-          <div class="fx-lg-body"><span class="fx-display fx-lg-num"><span class="fx-count" data-to="71" aria-hidden="true">71</span><span class="fx-sr">71</span><em>%</em></span><div><h3>Most of the committee never meets you.</h3><p>71% of hidden buyers have little or no contact with sales, yet 95% say strong thought leadership makes them more receptive to outreach.</p><span class="fx-chip">Edelman–LinkedIn</span></div></div>
+          <div class="fx-lg-body"><span class="fx-display fx-lg-num"><span class="fx-count" data-to="71" aria-hidden="true">71</span><span class="fx-sr">71</span><em>%</em></span><div><h3>Most of the room never meets you.</h3><p>71% of hidden buyers have little or no contact with sales, yet 95% say strong expertise and point of view make them more receptive to outreach. LinkedIn is where that point of view reaches them.</p><span class="fx-chip">Edelman–LinkedIn</span></div></div>
         </li>
         <li class="fx-lg fx-sp">
           <div class="fx-lg-viz"><svg viewBox="0 0 420 170" aria-hidden="true">
   <g class="lg-co"><circle cx="70" cy="80" r="16" class="lg-co-r"></circle><circle cx="70" cy="80" r="5"></circle><text x="70" y="128" text-anchor="middle" class="lg-t">Company page</text><text x="70" y="144" text-anchor="middle" class="lg-t">1.6% reach</text></g>
   <g class="lg-fo"><circle class="lg-rip" cx="290" cy="80" r="70"></circle><circle class="lg-rip" cx="290" cy="80" r="70" style="animation-delay:-1s"></circle><circle class="lg-rip" cx="290" cy="80" r="70" style="animation-delay:-2s"></circle><circle cx="290" cy="80" r="7" class="lg-fo-c"></circle><text x="290" y="166" text-anchor="middle" class="lg-t lg-sig">A founder's perspective</text></g>
 </svg></div>
-          <div class="fx-lg-body"><span class="fx-display fx-lg-num">1.6<em>%</em></span><div><h3>People travel further than logos.</h3><p>Company-page posts reach an estimated 1.6% of followers. What gets read, forwarded and remembered is a founder's perspective.</p><span class="fx-chip">Algorithm Insights</span></div></div>
+          <div class="fx-lg-body"><span class="fx-display fx-lg-num">1.6<em>%</em></span><div><h3>People travel further than logos.</h3><p>On LinkedIn, company-page posts reach an estimated 1.6% of followers. What gets read, forwarded and remembered is a founder's perspective, not the logo.</p><span class="fx-chip">Algorithm Insights</span></div></div>
         </li>
       </ol><!--/sp:ledger-->
 

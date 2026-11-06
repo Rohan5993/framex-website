@@ -5,7 +5,7 @@
           <p class="fx-label" style="margin: 0">Benefits</p>
           <h2 class="fx-display fx-h2">What changes when<br><em>the system is live.</em></h2>
         </div>
-        <p class="fx-lede fx-bn-lede">Fix the leaks and the same expertise starts working for you: found earlier, understood faster, trusted before the first call.</p>
+        <p class="fx-lede fx-bn-lede">Fix the leaks on LinkedIn and the same expertise starts working for you, in plain sales-and-marketing terms.</p>
       </div>
       <div class="fx-ob">
         <div class="fx-ob-vis"><svg viewBox="-70 -100 740 770" aria-hidden="true"><defs><linearGradient id="obTail" gradientUnits="userSpaceOnUse" x1="14" y1="135" x2="300" y2="-30"><stop offset="0" stop-color="#FF5B2E" stop-opacity="0"></stop><stop offset="1" stop-color="#FF5B2E"></stop></linearGradient></defs>
@@ -17,7 +17,7 @@
             <circle class="ob-core" cx="300" cy="300" r="62"></circle>
             <text class="ob-c1" x="300" y="296" text-anchor="middle">Your</text><text class="ob-c2" x="300" y="320" text-anchor="middle">expertise</text>
             <g class="ob-spin" style="--d:26s"><g transform="translate(355.0 204.7)"><g class="ob-counter" style="--d:26s"><g class="ob-pl" style="--i:0"><circle class="ob-halo" r="30"></circle><circle class="ob-body" r="22"></circle><text y="5" text-anchor="middle">01</text></g></g></g></g><g class="ob-spin" style="--d:34s"><g transform="translate(422.6 402.8)"><g class="ob-counter" style="--d:34s"><g class="ob-pl" style="--i:1"><circle class="ob-halo" r="30"></circle><circle class="ob-body" r="22"></circle><text y="5" text-anchor="middle">02</text></g></g></g></g><g class="ob-spin" style="--d:44s"><g transform="translate(118.1 405.0)"><g class="ob-counter" style="--d:44s"><g class="ob-pl" style="--i:2"><circle class="ob-halo" r="30"></circle><circle class="ob-body" r="22"></circle><text y="5" text-anchor="middle">03</text></g></g></g></g><g class="ob-spin" style="--d:56s"><g transform="translate(211.1 55.7)"><g class="ob-counter" style="--d:56s"><g class="ob-pl" style="--i:3"><circle class="ob-halo" r="30"></circle><circle class="ob-body" r="22"></circle><text y="5" text-anchor="middle">04</text></g></g></g></g></svg><span class="fx-label fx-ob-cap">FrameX keeps every part of the system moving</span></div>
-        <ol class="fx-ob-list"><li class="ob-i" style="--i: 0"><span class="ob-n">01</span><div><h3>Found earlier</h3><p>Buyers find you while they're still building the list, not after it's ranked.</p></div></li><li class="ob-i" style="--i: 1"><span class="ob-n">02</span><div><h3>Understood in one read</h3><p>Your profile says who you help and why you, in a sentence a buyer can repeat.</p></div></li><li class="ob-i" style="--i: 2"><span class="ob-n">03</span><div><h3>Trusted before the call</h3><p>Proof and perspective do the convincing, so the first call starts at how, not who.</p></div></li><li class="ob-i" style="--i: 3"><span class="ob-n">04</span><div><h3>Conversations that convert</h3><p>Outreach starts from real triggers, and every signal is logged so nothing goes cold.</p></div></li></ol>
+        <div class="fx-ob-right"><ol class="fx-ob-list"><li class="ob-i" style="--i: 0"><span class="ob-n">01</span><div><h3>More qualified pipeline, without more spend</h3><p>The right buyers find you on LinkedIn earlier and reach out warm, so you add opportunities without paying for ads or lists.</p></div>
       </div>
     </div>
   </section>

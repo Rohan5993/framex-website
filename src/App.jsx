@@ -3,10 +3,12 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Marquee from "./components/Marquee";
 import Credibility from "./components/Credibility";
+import OneLine from "./components/OneLine";
 import Problem from "./components/Problem";
 import Benefits from "./components/Benefits";
 import System from "./components/System";
 import LinkedInEvidence from "./components/LinkedInEvidence";
+import WhatWeAreNot from "./components/WhatWeAreNot";
 import GettingStarted from "./components/GettingStarted";
 import FAQ from "./components/FAQ";
 import Contact from "./components/Contact";
@@ -31,10 +33,12 @@ export default function App() {
         <Hero />
         <Marquee />
         <Credibility />
+        <OneLine />
         <Problem />
         <Benefits />
         <System />
         <LinkedInEvidence />
+        <WhatWeAreNot />
         <GettingStarted />
         <FAQ />
         <Contact />

@@ -3,7 +3,7 @@
     <div class="fx-wrap fx-lp2" style="position: relative">
       <div class="fx-lp2-l">
         <h2 class="fx-display fx-h2">Find out where your <em>pipeline is leaking.</em></h2>
-        <p class="fx-lede">Most firms lose buyers in the same few places. We'll show you where yours leaks, and what it takes to seal it.</p>
+        <p class="fx-lede">Most firms lose buyers in the same few places on LinkedIn. We'll show you where yours leaks, and what it takes to seal it.</p>
         <a class="fx-btn fx-btn-primary" href="#contact">Book a call</a>
       </div>
       <div class="fx-lp2-r"><figure class="fx-lp" aria-label="A pipeline carrying demand from your market to revenue. It leaks in three places: an unclear profile, no follow-up, and pitch-first outreach. Only a trickle reaches revenue.">

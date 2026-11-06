@@ -21,11 +21,11 @@ export default function System() {
               <h2 className="fx-display fx-sys-h2">
                 Six connected systems.
                 <br />
-                <em>One commercial path.</em>
+                <em>One commercial path, on LinkedIn.</em>
               </h2>
             </div>
             <p className="fx-lede fx-sys-lede" style={{ flex: "1 1 340px", maxWidth: "50ch" }}>
-              Each system fixes a specific leak. Together they take a buyer from &ldquo;never heard of you&rdquo; to a qualified
+              Each system fixes a specific leak on LinkedIn. Together they take a buyer from &ldquo;never heard of you&rdquo; to a qualified
               conversation your team is ready to win. The first five are built in your first 14 days and go live on day 15.
             </p>
           </div>
