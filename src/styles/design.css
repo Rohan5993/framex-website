@@ -1870,8 +1870,8 @@ section[aria-label="Market evidence"] .fx-reveal{align-items:center !important}
 .vs-c.vs-lab{display:block}
 .vs-lab{font-family:'Spline Sans Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#B83A14;font-weight:500;padding-top:21px}
 .vs-row{--k:clamp(0,calc((var(--p) - var(--i) * .1) * 3.2),1)}
-.vs-c.vs-them{color:color-mix(in srgb,#A8A397 calc(var(--k) * 100%),#3F3C36)}
-.vs-c.vs-them span{text-decoration:line-through;text-decoration-thickness:1.5px;text-decoration-color:rgba(255,91,46,var(--k))}
+.vs-c.vs-them{color:#5F5B53}
+.vs-c.vs-them span{text-decoration:none}
 .vs-c.vs-us{background:#0C0E0D;color:#FAF8F4;font-weight:500;padding:18px 22px}
 .vs-row:last-child .vs-c.vs-us{border-radius:0 0 18px 18px}
 .vs-c.vs-us svg{flex:none;width:20px;height:20px;margin-top:1px;fill:none;stroke:#FF5B2E;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:20;stroke-dashoffset:calc(20 - var(--k) * 20)}
