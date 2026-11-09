@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 const LINKS = [
   { n: "01", label: "The Problem", href: "#problem" },
   { n: "02", label: "The System", href: "#system" },
-  { n: "03", label: "Getting started", href: "#start" },
+  { n: "03", label: "Getting Started", href: "#start" },
 ];
 
 export default function Navbar() {
@@ -13,6 +13,16 @@ export default function Navbar() {
   const [indicator, setIndicator] = useState({ left: 0, width: 0, visible: false });
   const navRef = useRef(null);
   const linkRefs = useRef([]);
+
+  function goTopNoHash(e) {
+    e.preventDefault();
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      if (window.location.hash === "#top") {
+        window.history.replaceState(null, "", window.location.pathname + window.location.search);
+      }
+    }
+  }
 
   // subtle elevation once the page has scrolled past the top
   useEffect(() => {
@@ -60,7 +70,7 @@ export default function Navbar() {
     <header className={"fx-navbar fx-nb" + (scrolled ? " fx-nb-scrolled" : "")} id="fxNavbar">
       <div className="fx-nb-meta fx-hide-sm">
         <div className="fx-wrap fx-nb-meta-in">
-          <span>Authority-to-Pipeline System &middot; B2B Tech</span>
+          <span aria-hidden="true" />
           <span className="fx-nb-live">
             <i className="fx-nb-dot" aria-hidden="true" />
             Built in 14 days &middot; live on day 15
@@ -69,7 +79,7 @@ export default function Navbar() {
       </div>
 
       <div className="fx-wrap fx-nb-main">
-        <a href="#top" className="fx-nb-mark">
+        <a href="/" className="fx-nb-mark" onClick={goTopNoHash}>
           <span className="fx-nb-wordmark">
             Frame<span className="fx-nb-wordmark-x">X</span>
           </span>
@@ -92,7 +102,8 @@ export default function Navbar() {
         <div className="fx-nb-actions">
           <a
             className="fx-btn fx-btn-primary fx-nb-cta fx-hide-sm"
-            href="#contact"
+            href="https://cal.com/theframex/30min"
+            data-book-call="true"
             style={{ minHeight: 44, padding: "10px 20px", fontSize: 15 }}
           >
             Book a call
@@ -125,7 +136,7 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
-          <a className="fx-btn fx-btn-primary fx-nb-drawer-cta" href="#contact" onClick={() => setOpen(false)}>
+          <a className="fx-btn fx-btn-primary fx-nb-drawer-cta" href="https://cal.com/theframex/30min" data-book-call="true" onClick={() => setOpen(false)}>
             Book a call
           </a>
         </div>

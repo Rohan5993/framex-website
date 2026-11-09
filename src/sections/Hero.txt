@@ -1,4 +1,4 @@
-  <section id="top" style="position: relative; padding: clamp(56px, 8vw, 112px) 0 clamp(72px, 8vw, 120px)">
+  <section id="top" style="position: relative; padding: clamp(48px, 7vw, 92px) 0 clamp(60px, 7vw, 96px)">
     <div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; background: radial-gradient(55% 60% at 92% 0%, rgba(255,91,46,0.08) 0%, rgba(255,91,46,0.025) 45%, rgba(255,91,46,0) 72%), radial-gradient(45% 50% at 0% 100%, rgba(240,235,226,0.9) 0%, rgba(240,235,226,0) 70%)"></div>
     <div class="fx-wrap" style="position: relative">
       <!--sp:hero--><div class="fx-hv2" aria-hidden="true"><svg viewBox="0 0 470 520">
@@ -24,7 +24,7 @@
             <rect class="d bar" pathLength="1" x="162" y="388" width="120" height="8" rx="3" style="--s:1"></rect>
             <rect class="d bar" pathLength="1" x="130" y="420" width="256" height="8" rx="3" style="--s:1.04"></rect>
             <rect class="d bar" pathLength="1" x="130" y="436" width="210" height="8" rx="3" style="--s:1.08"></rect>
-            <g class="fx-bp2-react"><circle cx="138" cy="462" r="5"></circle><circle cx="150" cy="462" r="5"></circle><circle cx="162" cy="462" r="5"></circle><text x="176" y="466">Shared by a CISO</text></g>
+            <g class="fx-bp2-react"><circle cx="138" cy="462" r="5"></circle><circle cx="150" cy="462" r="5"></circle><circle cx="162" cy="462" r="5"></circle><text x="176" y="466">Shared by a buyer</text></g>
           </g>
           <g class="fx-bp2-notes">
             <g style="--n:0"><path d="M312 175 H400 V128 H420"></path><circle cx="312" cy="175" r="3"></circle><text x="426" y="124">01</text><text x="426" y="138" class="nt">Positioning</text></g>
@@ -34,14 +34,14 @@
           <g class="fx-bp2-badge"><circle cx="352" cy="58" r="20"></circle><text x="352" y="63" text-anchor="middle">+12</text></g>
           <g class="fx-bp2-badgelab"><path d="M372 58 H420 V30 H426"></path><text x="430" y="26">04</text><text x="430" y="40" class="nt">Signals</text></g>
         </svg><p class="fx-bp2-cap fx-label">12 buyers viewed this week</p></div>
-      <!--/sp:hero--><p class="fx-label fx-in" style="margin: 0 0 28px">Authority-to-Pipeline System for B2B Tech Companies</p>
-      <h1 class="fx-display" style="font-size: clamp(32px, 3.7vw, 56px); line-height: 1.06; max-width: 30ch"><span class="fx-ln"><span style="--d: 0">We build <em>infrastructure</em></span></span><span class="fx-ln"><span style="--d: 1">for how the market finds,</span></span><span class="fx-ln"><span style="--d: 2">understands, trusts, and buys.</span></span></h1>
-      <p class="fx-lede fx-in fx-in-3" style="margin: 28px 0 0; max-width: 58ch">Your delivery is ahead of your market position. FrameX builds the system that closes the gap, on the channel where your buyers already vet you.</p>
-      <div class="fx-in fx-in-3" style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px">
+      <!--/sp:hero--><p class="fx-label fx-in" style="margin: 0 0 28px">Positioning-to-Pipeline System for B2B Founders &amp; Firms</p>
+      <h1 class="fx-display" style="font-size: clamp(32px, 3.7vw, 56px); line-height: 1.06; max-width: 30ch"><span class="fx-ln"><span style="--d: 0">We turn your expertise</span></span><span class="fx-ln"><span style="--d: 1">into <em>deals</em> <span style="font-size:.88em">on LinkedIn</span></span></span><span class="fx-ln"><span style="--d: 2"><span style="font-size:.88em">in your voice.</span></span></span></h1>
+      <p class="fx-lede fx-in fx-in-3" style="margin: 28px 0 0; max-width: 52ch">Your buyers check your LinkedIn before coming on a call with you. FrameX builds the 5-steps system so they find you, understand you, trust you, and buy from you.</p>
+      <div class="fx-in fx-in-3 fx-hero-cta-row" style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px">
         <a class="fx-btn fx-btn-primary" href="#system">See how the system works <span aria-hidden="true">↓</span></a>
-        <a class="fx-btn fx-btn-secondary" href="#contact">Book a call</a>
+        <a class="fx-btn fx-btn-secondary" href="https://cal.com/theframex/30min" data-book-call="true">Book a call</a>
       </div>
-      <p class="fx-label fx-in fx-in-4" style="margin: 28px 0 0; display: flex; flex-wrap: wrap; gap: 8px 22px"><span>Built in 14 days</span><span aria-hidden="true" style="color: #FF5B2E">/</span><span>Live on day 15</span><span aria-hidden="true" style="color: #FF5B2E">/</span><span>In your voice</span></p>
+      <p class="fx-label fx-in fx-in-4" style="margin: 28px 0 0; display: flex; flex-wrap: wrap; gap: 8px 22px"><span>Built in 14 days</span><span aria-hidden="true" style="color: #FF5B2E">/</span><span>Live on day 15</span></p>
 
       <!-- The gap: two sides apart, FrameX moves in between -->
       <div class="fx-br-pin"><div class="fx-br-sticky"><figure class="fx-in fx-in-4 fx-gap3 fx-gapv fx-gapb" aria-label="Your side holds deep expertise. Your buyers sit on higher ground across a gap, and right now what you know falls short of them. As you scroll, FrameX builds a bridge across the gap that rises all the way: buyers find you, understand you, trust you, and buy.">
@@ -70,13 +70,13 @@
             <g class="fx-br-run"><circle class="fx-br-runner" r="6"><animateMotion dur="3.4s" repeatCount="indefinite" path="M220 290 L330 290 C520 288 660 160 870 130 L1000 130"></animateMotion><animate attributeName="opacity" dur="3.4s" repeatCount="indefinite" values="0;1;1;0" keyTimes="0;.12;.88;1"></animate></circle></g>
           </svg>
           <div class="fx-br-lab fx-br-lab-l"><span class="fx-label">Your side</span><span class="fx-br-t">Deep expertise</span></div>
-          <div class="fx-br-lab fx-br-lab-r"><span class="fx-label">Your buyers</span><span class="fx-br-t fx-br-sigt">Growth</span></div>
+          <div class="fx-br-lab fx-br-lab-r"><span class="fx-label">Your buyers</span><span class="fx-br-t">Revenue</span></div>
           <div class="fx-br-name" aria-hidden="true"><b>Frame<span class="fx-br-x">X</span></b><span>builds the bridge</span></div>
           <div class="fx-br-gap" aria-hidden="true"><i></i><span>The gap</span></div>
-          <div class="fx-br-mls" aria-hidden="true"><span class="fx-br-ml" style="--t: 0.2; left: 36.58%; top: 59.40%">Finds you</span><span class="fx-br-ml" style="--t: 0.45; left: 47.26%; top: 48.85%">Understands you</span><span class="fx-br-ml" style="--t: 0.7; left: 58.05%; top: 36.05%">Trusts you</span><span class="fx-br-ml" style="--t: 0.93; left: 68.91%; top: 26.59%">Buys</span></div>
+          <div class="fx-br-mls" aria-hidden="true"><span class="fx-br-ml" style="--t: 0.2; left: 36.58%; top: 59.40%">Find you</span><span class="fx-br-ml" style="--t: 0.45; left: 47.26%; top: 48.85%">Understand you</span><span class="fx-br-ml" style="--t: 0.7; left: 58.05%; top: 36.05%">Trust you</span><span class="fx-br-ml" style="--t: 0.93; left: 68.91%; top: 26.59%">Buy from you</span></div>
         </div>
-        <ol class="fx-br-steps" aria-hidden="true"><li style="--t: 0.2">Finds you</li><li style="--t: 0.45">Understands you</li><li style="--t: 0.7">Trusts you</li><li style="--t: 0.93">Buys</li></ol>
-        <p class="fx-gv-cap"><span class="fx-gv-cap-a">Your expertise is real. Right now, it falls short of your buyers.</span><span class="fx-gv-cap-b">FrameX builds the bridge, and it only goes up.</span></p>
+        <ol class="fx-br-steps" aria-hidden="true"><li style="--t: 0.2">Find you</li><li style="--t: 0.45">Understand you</li><li style="--t: 0.7">Trust you</li><li style="--t: 0.93">Buy from you</li></ol>
+        <p class="fx-gv-cap"><span class="fx-gv-cap-b" style="position: static">FrameX builds the bridge, and it only goes up.</span></p>
       </figure></div></div>
     </div>
   </section>

@@ -5,6 +5,8 @@ function goSys(i) {
 }
 
 export default function System() {
+  const numberedSteps = modules.filter((m) => !!m.num).length;
+
   return (
     <section
       id="system"
@@ -16,24 +18,25 @@ export default function System() {
           <div className="fx-split" style={{ alignItems: "flex-end", rowGap: 14 }}>
             <div style={{ flex: "1 1 460px", display: "flex", flexDirection: "column", gap: 14 }}>
               <p className="fx-label" style={{ margin: 0 }}>
-                Our 6-step Authority-to-Pipeline System
+                Our 5-step Authority-to-Pipeline System
               </p>
               <h2 className="fx-display fx-sys-h2">
-                Six connected systems.
+                Five connected systems.
                 <br />
                 <em>One commercial path.</em>
               </h2>
             </div>
             <p className="fx-lede fx-sys-lede" style={{ flex: "1 1 340px", maxWidth: "50ch" }}>
-              Each system fixes a specific leak. Together they take a buyer from &ldquo;never heard of you&rdquo; to a qualified
-              conversation your team is ready to win. The first five are built in your first 14 days and go live on day 15.
+              Each system fixes a specific leak on LinkedIn. Together they take a buyer from &ldquo;never heard of you&rdquo; to a qualified
+              conversation your team is ready to win.
             </p>
           </div>
 
           <div className="fx-sys-body">
             <nav aria-label="System map" className="fx-sys-map fx-hide-sm">
               <p className="fx-label" style={{ margin: "0 0 18px", fontSize: 11 }}>
-                System map &middot; <span className="fx-sig" id="fxSysNavNum">01</span> / 06
+                System map &middot; <span className="fx-sig" id="fxSysNavNum">01</span>
+                <span id="fxSysNavTotal"> / {String(numberedSteps).padStart(2, "0")}</span>
               </p>
               <div style={{ position: "relative" }}>
                 <span aria-hidden="true" style={{ position: "absolute", left: 6, top: 10, bottom: 26, width: 1.5, background: "#D9D3C7" }} />
@@ -44,12 +47,17 @@ export default function System() {
                       <span aria-hidden="true" className={"fx-map-dot" + (i === 0 ? " fx-map-dot-on" : "")} data-map-dot={i} />
                       <button
                         type="button"
-                        className={"fx-map-btn" + (i === 0 ? " fx-map-on" : "")}
+                        className={"fx-map-btn" + (i === 0 ? " fx-map-on" : "") + (!m.num ? " fx-map-btn-pr" : "")}
                         data-map-btn={i}
+                        data-step-number={m.num || ""}
                         onClick={() => goSys(i)}
                       >
-                        <span className="fx-label" style={{ fontSize: 10 }}>
-                          {m.num}
+                        <span
+                          className={"fx-label fx-map-step-num" + (!m.num ? " fx-empty" : "")}
+                          style={{ fontSize: 10, minWidth: "2.1em", display: "inline-block" }}
+                          aria-hidden={!m.num}
+                        >
+                          {m.num || "00"}
                         </span>{" "}
                         {m.short}
                       </button>
@@ -69,16 +77,27 @@ export default function System() {
 
             <ol className="fx-sys-stage" id="fxSysStage">
               {modules.map((m, i) => (
-                <li key={m.id} id={m.id} className="fx-sys-card" data-sys-index={i} style={{ "--o": i }}>
+                <li key={m.id} id={m.id} className={"fx-sys-card" + (!m.num ? " fx-sys-card-pr" : "")} data-sys-index={i} style={{ "--o": i }}>
                   <div className="fx-sys-bar">
-                    <span className="fx-label fx-sig" style={{ fontSize: 11 }}>
-                      {m.num}
+                    <span
+                      className={"fx-label fx-sig fx-sys-step-num" + (!m.num ? " fx-empty" : "")}
+                      style={{ fontSize: 11 }}
+                      aria-hidden={!m.num}
+                    >
+                      {m.num || "00"}
                     </span>
-                    <h3 className="fx-sys-bar-t">{m.title}</h3>
-                    <span className="fx-chip fx-fixes fx-hide-sm">
-                      <i aria-hidden="true" />
-                      Fixes {m.fixes}
-                    </span>
+                    <h3 className={"fx-sys-bar-t" + (!m.num ? " fx-sys-bar-pr" : "")}>{m.num ? m.title : "Pipeline"}</h3>
+                    {m.num ? (
+                      <span className="fx-chip fx-fixes fx-hide-sm">
+                        <i aria-hidden="true" />
+                        Fixes {m.fixes}
+                      </span>
+                    ) : (
+                      <span className="fx-chip fx-fixes fx-hide-sm fx-chip-placeholder" aria-hidden="true">
+                        <i aria-hidden="true" />
+                        Fixes
+                      </span>
+                    )}
                   </div>
                   <div className="fx-sys-body-in">
                     <div style={{ display: "flex", flexWrap: "wrap", gap: "6px 28px", alignItems: "flex-end" }}>
@@ -89,7 +108,7 @@ export default function System() {
                         style={{
                           flex: "1 1 260px",
                           margin: "0 0 8px",
-                          fontFamily: "'Newsreader', Georgia, serif",
+                          fontFamily: "'Montserrat', sans-serif",
                           fontStyle: "italic",
                           fontSize: "clamp(22px, 2.2vw, 30px)",
                           lineHeight: 1.2,
@@ -128,7 +147,7 @@ export default function System() {
                         </span>
                         <div style={{ position: "relative", zIndex: 1 }}>
                           <strong>Your team closes.</strong>
-                          <span className="fx-close-sub">Qualified, with context, ready to win. That&rsquo;s the deal.</span>
+                          <span className="fx-close-sub">Qualified, with context, ready to win.</span>
                         </div>
                         <i className="fx-spark" aria-hidden="true" />
                         <i className="fx-spark" aria-hidden="true" />

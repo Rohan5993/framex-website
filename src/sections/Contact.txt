@@ -1,10 +1,10 @@
-  <section id="contact" style="position: relative; overflow: hidden; padding: clamp(64px, 7vw, 96px) 0 clamp(88px, 9vw, 136px); background: radial-gradient(70% 85% at 50% 115%, rgba(255,91,46,0.11) 0%, rgba(255,91,46,0.035) 42%, rgba(255,91,46,0) 75%), linear-gradient(180deg, #FAF8F4 0%, #F3EFE8 100%)">
+  <section id="contact" style="position: relative; overflow: hidden; padding: clamp(64px, 7vw, 96px) 0; background: radial-gradient(70% 85% at 50% 115%, rgba(255,91,46,0.11) 0%, rgba(255,91,46,0.035) 42%, rgba(255,91,46,0) 75%), linear-gradient(180deg, #FAF8F4 0%, #F3EFE8 100%)">
     <div aria-hidden="true" class="fx-breathe"></div><!--sp:cta-->
     <div class="fx-wrap fx-lp2" style="position: relative">
       <div class="fx-lp2-l">
         <h2 class="fx-display fx-h2">Find out where your <em>pipeline is leaking.</em></h2>
-        <p class="fx-lede">Most firms lose buyers in the same few places. We'll show you where yours leaks, and what it takes to seal it.</p>
-        <a class="fx-btn fx-btn-primary" href="#contact">Book a call</a>
+        <p class="fx-lede">Most firms lose buyers in the same few places on LinkedIn.<br>We'll show you where yours leaks, and what it takes to seal it.</p>
+        <a class="fx-btn fx-btn-primary" href="https://cal.com/theframex/30min" data-book-call="true">Book a call</a>
       </div>
       <div class="fx-lp2-r"><figure class="fx-lp" aria-label="A pipeline carrying demand from your market to revenue. It leaks in three places: an unclear profile, no follow-up, and pitch-first outreach. Only a trickle reaches revenue.">
         <div class="fx-lp-stage">

@@ -3,7 +3,7 @@
       <div class="fx-split fx-reveal" style="align-items: flex-end">
         <div style="flex: 1 1 460px; display: flex; flex-direction: column; gap: 22px">
           <p class="fx-label" style="margin: 0">How to get started</p>
-          <h2 class="fx-display fx-h2">Built in 14 days. Live on day 15. <em>Better every month.</em></h2>
+          <h2 class="fx-display fx-h2">Our simple <em>three step process.</em></h2>
         </div>
         <dl class="fx-specs">
           <div><dt>Days to build</dt><dd>14</dd></div>
@@ -21,7 +21,7 @@
               <span class="fx-tl-node" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20c1.2-3.6 4-5.5 7-5.5s5.8 1.9 7 5.5"></path></svg></span>
               <div class="fx-tl-head"><span class="fx-tl-range">Day 1 · Week 0</span><span class="fx-tl-time">Kick-off call</span></div>
               <h3 class="fx-tl-t">Onboarding</h3>
-              <p class="fx-tl-note">We align on goals, agree the plan and set up access, so the build can start the next day.</p>
+              <p class="fx-tl-note">We align on goals, get access to your LinkedIn and Sales Navigator, and agree the plan, so the build can start the next day.</p>
             </div>
             <div class="fx-tl-col" style="--i: 1">
               <span class="fx-tl-node" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16M6 20V10l6-5 6 5v10M10 20v-5h4v5"></path></svg></span>
@@ -29,8 +29,8 @@
               <h3 class="fx-tl-t">Build</h3>
               <ol class="fx-steps">
                   <li style="--d: 0"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Positioning brief and message map</span></li>
-                  <li style="--d: 1"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Profile rebuild, trigger map, account lists</span></li>
-                  <li style="--d: 2"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Content architecture, first posts, first resource</span></li>
+                  <li style="--d: 1"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">LinkedIn profile rebuild, trigger map, Sales Navigator account lists</span></li>
+                  <li style="--d: 2"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Content architecture, first posts, first decision resource</span></li>
               </ol>
               <div class="fx-tl-out"><span>Outcome</span><strong>Everything approved by day 14</strong></div>
             </div>
@@ -39,9 +39,9 @@
               <div class="fx-tl-head"><span class="fx-tl-range">Day 15 onwards</span><span class="fx-tl-time">~30 min a week</span></div>
               <h3 class="fx-tl-t">Live</h3>
               <ol class="fx-steps">
-                  <li style="--d: 0"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Profile, posts and flagship resource go live</span></li>
-                  <li style="--d: 1"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Signal monitoring and trigger-led conversations</span></li>
-                  <li style="--d: 2"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Measure what moved and improve it</span></li>
+                  <li style="--d: 0"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Profile, posts and flagship resource go live on LinkedIn</span></li>
+                  <li style="--d: 1"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Signal monitoring and trigger-led conversations, by hand</span></li>
+                  <li style="--d: 2"><span class="fx-step-dot" aria-hidden="true"></span><span class="fx-step-n">Measure what moved, and improve it</span></li>
               </ol>
               <div class="fx-tl-out"><span>Outcome</span><strong>Initial traction in month 1</strong></div>
             </div>
@@ -50,10 +50,10 @@
       </figure>
       <div class="fx-reveal fx-start-cta">
         <div style="display: flex; flex-direction: column; gap: 4px">
-          <span style="font-family: 'Newsreader', Georgia, serif; font-size: clamp(22px, 2.2vw, 30px); line-height: 1.15">Ready to start your 14-day build?</span>
+          <span style="font-family: 'Montserrat', sans-serif; font-size: clamp(22px, 2.2vw, 30px); line-height: 1.15">Ready to start your 14-day build?</span>
           <span style="font-size: 15px; color: #5F5B53">One call to see if it fits.</span>
         </div>
-        <a class="fx-btn fx-btn-primary" href="#contact">Book a call</a>
+        <a class="fx-btn fx-btn-primary" href="https://cal.com/theframex/30min" data-book-call="true">Book a call</a>
       </div>
     </div>
   </section>
