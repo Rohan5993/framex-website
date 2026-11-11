@@ -1,6 +1,6 @@
-# FrameX
+# FrameX (TheFrameX)
 
-> FrameX builds the Authority-to-Pipeline System for B2B technology companies — the
+> FrameX (TheFrameX) builds the Positioning-to-Pipeline System for B2B companies — the
 > infrastructure for how the market finds, understands, trusts, and buys from a vendor,
 > built primarily on LinkedIn. Built in 14 days, live on day 15.
 
@@ -11,20 +11,20 @@ position. Most B2B buying committees rank their shortlist, vet vendors, and buil
 before ever speaking to sales — often on LinkedIn. FrameX builds the system that makes
 sure a company is found, understood, trusted, and chosen during that invisible phase.
 
-## The six-step Authority-to-Pipeline System
+## Five connected systems + pipeline handover
 
-1. **Positioning Architecture** — ICP, buying triggers, message map, founder/team
+1. **Positioning** — ICP, buying triggers, message map, founder/team
    profiles. Fixes: being understood in one read.
 2. **Authority Content** — editorial architecture, founder posts (8–16/month), monthly
    capture interviews. Fixes: being found and trusted.
-3. **Sales Resources** — flagship resource, landing page, champion kit (internal pitch,
+3. **Lead Resources** — flagship resource, landing page, champion kit (internal pitch,
    CFO one-pager, security answers). Fixes: trust and buy-in.
-4. **Signal Intelligence** — trigger map, account lists, weekly signal log, monthly
+4. **Buyers Signal** — trigger map, account lists, weekly signal log, monthly
    signal review. Fixes: finding the right people at the right time.
-5. **Conversation Framework** — conversation playbook, manual outreach handling,
+5. **Conversations** — conversation playbook, manual outreach handling,
    qualification notes, a shared conversation ledger. Fixes: starting with context
    instead of a pitch.
-6. **Pipeline Revenue** — qualified opportunity handovers with problem, trigger,
+6. **Pipeline** — qualified opportunity handovers with problem, trigger,
    stakeholders and notes. The client's own sales team closes.
 
 ## Engagement model
@@ -47,7 +47,7 @@ it translates the client's own technical truth into what buyers need to decide).
 - 94% of B2B buying groups rank a shortlist before contacting a vendor (6sense); the
   pre-contact favorite wins 77% of the time.
 - 71% of "hidden" buyers in a deal have little or no contact with sales (Edelman–LinkedIn).
-- Only ~0.3% of B2B tech companies post more than twice a week on LinkedIn.
+- Only ~0.3% of B2B companies post more than twice a week on LinkedIn.
 
 ## Contact
 

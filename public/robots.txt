@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://theframex.com/sitemap.txt
+Sitemap: https://theframex.com/sitemap.xml
